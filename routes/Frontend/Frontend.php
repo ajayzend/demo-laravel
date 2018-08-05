@@ -5,6 +5,8 @@
  * All route names are prefixed with 'frontend.'.
  */
 Route::get('/', 'FrontendController@index')->name('index');
+Route::get('/privacy-policy', 'FrontendController@privacy')->name('privacy');
+Route::get('/evp/process1', 'FrontendController@visaProcess1')->name('visaProcess1');
 Route::post('/get/states', 'FrontendController@getStates')->name('get.states');
 Route::post('/get/cities', 'FrontendController@getCities')->name('get.cities');
 

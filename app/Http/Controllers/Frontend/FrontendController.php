@@ -19,7 +19,23 @@ class FrontendController extends Controller
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
 
-        return view('frontend.index', compact('google_analytics', $google_analytics));
+        return view('frontend.home', compact('google_analytics', $google_analytics));
+    }
+
+    public function privacy()
+    {
+        $settingData = Setting::first();
+        $google_analytics = $settingData->google_analytics;
+
+        return view('frontend.pages.privacy_policy', compact('google_analytics', $google_analytics));
+    }
+
+    public function visaProcess1()
+    {
+        $settingData = Setting::first();
+        $google_analytics = $settingData->google_analytics;
+
+        return view('frontend.visaprocess.visaprocess1', compact('google_analytics', $google_analytics));
     }
 
     /**

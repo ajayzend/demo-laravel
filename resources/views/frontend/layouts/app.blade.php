@@ -11,8 +11,8 @@
         <title>@yield('title', app_name())</title>
 
         <!-- Meta -->
-        <meta name="description" content="@yield('meta_description', 'Laravel AdminPanel')">
-        <meta name="author" content="@yield('meta_author', 'Viral Solani')">
+        <meta name="description" content="@yield('meta_description', 'e-visa-India')">
+        <meta name="author" content="@yield('meta_author', 'Ajay Sahu')">
         @yield('meta')
 
         <!-- Styles -->
@@ -20,12 +20,16 @@
 
         <!-- Check if the language is set to RTL, so apply the RTL layouts -->
         <!-- Otherwise apply the normal LTR layouts -->
-        @langRTL
+        {{--@langRTL
             {{ Html::style(getRtlCss(mix('css/frontend.css'))) }}
         @else
             {{ Html::style(mix('css/frontend.css')) }}
         @endif
-        {!! Html::style('js/select2/select2.css') !!}
+        {!! Html::style('js/select2/select2.css') !!}--}}
+
+
+        {!! Html::style('css/frontend/bootstrap.css') !!}
+        {!! Html::style('css/frontend/style.css') !!}
         @yield('after-styles')
 
         <!-- Scripts -->
@@ -33,7 +37,10 @@
             window.Laravel = <?php echo json_encode([
                 'csrfToken' => csrf_token(),
             ]); ?>
+
+
         </script>
+
         <?php
             if(!empty($google_analytics)){
                 echo $google_analytics;
@@ -42,22 +49,26 @@
     </head>
     <body id="app-layout">
         <div id="app">
-            @include('includes.partials.logged-in-as')
-            @include('frontend.includes.nav')
-
+            @include('frontend.header')
+            @include('frontend.visasteps')
+            @include('frontend.home1')
             <div class="container">
-                @include('includes.partials.messages')
+                {{--@include('includes.partials.messages')--}}
                 @yield('content')
             </div><!-- container -->
+            @include('frontend.home2')
+           {{-- @include('includes.partials.logged-in-as')--}}
+            {{--@include('frontend.includes.nav')--}}
         </div><!--#app-->
 
         <!-- Scripts -->
         @yield('before-scripts')
-        {!! Html::script(mix('js/frontend.js')) !!}
+        {!! Html::script('js/frontend/jQuery-2.1.4.min.js') !!}
+       {{-- {!! Html::script(mix('js/frontend.js')) !!}--}}
         @yield('after-scripts')
         {{ Html::script('js/jquerysession.js') }}
-        {{ Html::script('js/frontend/frontend.js') }}
-        {!! Html::script('js/select2/select2.js') !!}
+       {{-- {{ Html::script('js/frontend/frontend.js') }}
+        {!! Html::script('js/select2/select2.js') !!}--}}
 
         <script type="text/javascript">
             if("{{Route::currentRouteName()}}" !== "frontend.user.account")
@@ -65,6 +76,7 @@
                 $.session.clear();
             }
         </script>
+        @include('frontend.footer')
         @include('includes.partials.ga')
     </body>
 </html>
