@@ -2,6 +2,7 @@
 
 namespace App\Models\Visa;
 
+use App\Models\BaseModel;
 use App\Models\ModelTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Visa\Traits\VisaAttribute;
@@ -31,7 +32,10 @@ class Visa extends Model
      * @var array
      */
     protected $fillable = [
-
+        'app_type',
+        'fname',
+        'mname',
+        'lname',
     ];
 
     /**
@@ -56,6 +60,10 @@ class Visa extends Model
      * @var array
      */
     protected $guarded = [
+        'app_type',
+        'fname',
+        'mname',
+        'lname',
         'id'
     ];
 
@@ -66,5 +74,6 @@ class Visa extends Model
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
+        $this->table = config('module.visas.table');
     }
 }

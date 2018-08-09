@@ -22,12 +22,20 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.visas.table.id') }}</th>
+                            <th>{{ trans('labels.backend.visas.table.app_type') }}</th>
+                            <th>{{ trans('labels.backend.visas.table.fname') }}</th>
+                            <th>{{ trans('labels.backend.visas.table.mname') }}</th>
+                            <th>{{ trans('labels.backend.visas.table.lname') }}</th>
                             <th>{{ trans('labels.backend.visas.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
                     </thead>
                     <thead class="transparent-bg">
                         <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -55,16 +63,20 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.visas.table')}}.id'},
+                    {data: 'app_type', name: '{{config('module.visas.table')}}.app_type'},
+                    {data: 'fname', name: '{{config('module.visas.table')}}.fname'},
+                    {data: 'mname', name: '{{config('module.visas.table')}}.mname'},
+                    {data: 'lname', name: '{{config('module.visas.table')}}.lname'},
                     {data: 'created_at', name: '{{config('module.visas.table')}}.created_at'},
-                    {data: 'actions', name: 'actions', searchable: false, sortable: false}
+                    {data: 'actions', name: 'actions', searchable: true, sortable: false}
                 ],
-                order: [[0, "asc"]],
+                order: [[0, "desc"]],
                 searchDelay: 500,
                 dom: 'lBfrtip',
                 buttons: {
                     buttons: [
                         { extend: 'copy', className: 'copyButton',  exportOptions: {columns: [ 0, 1 ]  }},
-                        { extend: 'csv', className: 'csvButton',  exportOptions: {columns: [ 0, 1 ]  }},
+                        { extend: 'csv', className: 'csvButton',  exportOptions: {columns: [ 0, 1, 2, 3 ]  }},
                         { extend: 'excel', className: 'excelButton',  exportOptions: {columns: [ 0, 1 ]  }},
                         { extend: 'pdf', className: 'pdfButton',  exportOptions: {columns: [ 0, 1 ]  }},
                         { extend: 'print', className: 'printButton',  exportOptions: {columns: [ 0, 1 ]  }}

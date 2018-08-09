@@ -133,6 +133,8 @@ return [
 
                     'name'   => 'Name',
                     'system' => 'System?',
+
+
                 ],
 
                 'roles' => [
@@ -154,6 +156,14 @@ return [
                     'password'                => 'New Password',
                     'password_confirmation'   => 'New Password Confirmation',
                     'send_confirmation_email' => 'Send Confirmation E-mail',
+                ],
+
+                'visas' => [
+                    'app_type' => 'APP Type',
+                    'fname' => 'First Name',
+                    'mname' => 'Middle Name',
+                    'lname'   => 'Last Name',
+                    'status'   => 'Status',
                 ],
             ],
             'pages' => [
@@ -231,6 +241,8 @@ return [
                     'answer'   => 'Answer',
                     'status'   => 'Status',
             ],
+
+
         ],
 
         'frontend' => [

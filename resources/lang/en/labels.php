@@ -257,6 +257,10 @@ return [
 	"title" => "Visas",
 	"table" => [
 	"id" => "Id",
+	"app_type" => "APP Type",
+	"fname" => "First Name",
+	"mname" => "Middle Name",
+	"lname" => "Last Name",
 	"createdat" => "Created At",
 	],
 	],

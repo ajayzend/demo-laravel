@@ -4,11 +4,48 @@
         <!-- Look Below Example for reference -->
         {{-- {{ Form::label('name', trans('labels.backend.blogs.title'), ['class' => 'col-lg-2 control-label required']) }} --}}
 
-        <div class="col-lg-10">
+        {{--<div class="col-lg-10">--}}
             <!-- Create Your Input Field Here -->
             <!-- Look Below Example for reference -->
             {{-- {{ Form::text('name', null, ['class' => 'form-control box-size', 'placeholder' => trans('labels.backend.blogs.title'), 'required' => 'required']) }} --}}
-        </div><!--col-lg-10-->
+       {{-- </div>--}}<!--col-lg-10-->
+
+        {{-- First Name --}}
+        <div class="form-group">
+            {{ Form::label('APP Type', trans('validation.attributes.backend.access.visas.app_type'), ['class' => 'col-lg-2 control-label required']) }}
+
+            <div class="col-lg-10">
+                {{ Form::text('app_type', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.visas.app_type'), 'required' => 'required']) }}
+            </div><!--col-lg-10-->
+        </div><!--form control-->
+
+        {{-- First Name --}}
+        <div class="form-group">
+            {{ Form::label('First Name', trans('validation.attributes.backend.access.visas.fname'), ['class' => 'col-lg-2 control-label required']) }}
+
+            <div class="col-lg-10">
+                {{ Form::text('fname', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.visas.fname'), 'required' => 'required']) }}
+            </div><!--col-lg-10-->
+        </div><!--form control-->
+
+        {{-- First Name --}}
+        <div class="form-group">
+            {{ Form::label('Middle Name', trans('validation.attributes.backend.access.visas.mname'), ['class' => 'col-lg-2 control-label required']) }}
+
+            <div class="col-lg-10">
+                {{ Form::text('mname', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.visas.mname'), 'required' => 'required']) }}
+            </div><!--col-lg-10-->
+        </div><!--form control-->
+
+        {{-- Last Name --}}
+        <div class="form-group">
+            {{ Form::label('Last Name', trans('validation.attributes.backend.access.visas.lname'), ['class' => 'col-lg-2 control-label required']) }}
+
+            <div class="col-lg-10">
+                {{ Form::text('lname', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.visas.lname'), 'required' => 'required']) }}
+            </div><!--col-lg-10-->
+        </div><!--form control-->
+
     </div><!--form-group-->
 </div><!--box-body-->
 
