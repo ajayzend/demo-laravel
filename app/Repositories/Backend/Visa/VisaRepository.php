@@ -30,10 +30,10 @@ class VisaRepository extends BaseRepository
         return $this->query()
             ->select([
                 config('module.visas.table').'.id',
-                config('module.visas.table').'.app_type',
-                config('module.visas.table').'.fname',
-                config('module.visas.table').'.mname',
-                config('module.visas.table').'.lname',
+                config('module.visas.table').'.p1_app_type',
+                config('module.visas.table').'.p1_fname',
+                config('module.visas.table').'.p1_mname',
+                config('module.visas.table').'.p1_lname',
                 config('module.visas.table').'.created_at',
                 config('module.visas.table').'.updated_at',
             ]);

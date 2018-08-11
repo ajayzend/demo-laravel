@@ -22,10 +22,10 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.visas.table.id') }}</th>
-                            <th>{{ trans('labels.backend.visas.table.app_type') }}</th>
-                            <th>{{ trans('labels.backend.visas.table.fname') }}</th>
-                            <th>{{ trans('labels.backend.visas.table.mname') }}</th>
-                            <th>{{ trans('labels.backend.visas.table.lname') }}</th>
+                            <th>{{ trans('labels.backend.visas.table.p1_app_type') }}</th>
+                            <th>{{ trans('labels.backend.visas.table.p1_fname') }}</th>
+                            <th>{{ trans('labels.backend.visas.table.p1_mname') }}</th>
+                            <th>{{ trans('labels.backend.visas.table.p1_lname') }}</th>
                             <th>{{ trans('labels.backend.visas.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
@@ -63,10 +63,10 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.visas.table')}}.id'},
-                    {data: 'app_type', name: '{{config('module.visas.table')}}.app_type'},
-                    {data: 'fname', name: '{{config('module.visas.table')}}.fname'},
-                    {data: 'mname', name: '{{config('module.visas.table')}}.mname'},
-                    {data: 'lname', name: '{{config('module.visas.table')}}.lname'},
+                    {data: 'p1_app_type', name: '{{config('module.visas.table')}}.p1_app_type'},
+                    {data: 'p1_fname', name: '{{config('module.visas.table')}}.p1_fname'},
+                    {data: 'p1_mname', name: '{{config('module.visas.table')}}.p1_mname'},
+                    {data: 'p1_lname', name: '{{config('module.visas.table')}}.p1_lname'},
                     {data: 'created_at', name: '{{config('module.visas.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: true, sortable: false}
                 ],

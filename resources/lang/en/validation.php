@@ -159,10 +159,10 @@ return [
                 ],
 
                 'visas' => [
-                    'app_type' => 'APP Type',
-                    'fname' => 'First Name',
-                    'mname' => 'Middle Name',
-                    'lname'   => 'Last Name',
+                    'p1_app_type' => 'APP Type',
+                    'p1_fname' => 'First Name',
+                    'p1_mname' => 'Middle Name',
+                    'p1_lname'   => 'Last Name',
                     'status'   => 'Status',
                 ],
             ],

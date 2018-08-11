@@ -32,10 +32,10 @@ class Visa extends Model
      * @var array
      */
     protected $fillable = [
-        'app_type',
-        'fname',
-        'mname',
-        'lname',
+        'p1_app_type',
+        'p1_fname',
+        'p1_mname',
+        'p1_lname',
     ];
 
     /**
@@ -60,10 +60,10 @@ class Visa extends Model
      * @var array
      */
     protected $guarded = [
-        'app_type',
-        'fname',
-        'mname',
-        'lname',
+        'p1_app_type',
+        'p1_fname',
+        'p1_mname',
+        'p1_lname',
         'id'
     ];
 

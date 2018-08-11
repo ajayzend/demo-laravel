@@ -38,20 +38,20 @@ class VisasTableController extends Controller
     {
         return Datatables::of($this->visa->getForDataTable())
             ->escapeColumns(['id'])
-            ->addColumn('app_type', function ($visa) {
-                return $visa->app_type;
+            ->addColumn('p1_app_type', function ($visa) {
+                return $visa->p1_app_type;
             })
 
-            ->addColumn('fname', function ($visa) {
-                return $visa->fname;
+            ->addColumn('p1_fname', function ($visa) {
+                return $visa->p1_fname;
             })
 
-            ->addColumn('mname', function ($visa) {
-                return $visa->mname;
+            ->addColumn('p1_mname', function ($visa) {
+                return $visa->p1_mname;
             })
 
-            ->addColumn('lname', function ($visa) {
-                return $visa->lname;
+            ->addColumn('p1_lname', function ($visa) {
+                return $visa->p1_lname;
             })
             ->addColumn('status', function ($visa) {
                 return $visa->status;
