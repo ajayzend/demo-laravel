@@ -94,5 +94,16 @@ class VisasController extends Controller
         //return with successfull message
         return redirect()->route('admin.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
     }
+
+    /**
+     * show page by $page_slug.
+     */
+    public function showVisa($slug, VisaRepository $visa)
+    {
+        $result = $visa->findBySlug($slug);
+//echo "<pre>";print_r($result);die;
+        return view('backend.visas.show')
+            ->withvisa($result);
+    }
     
 }

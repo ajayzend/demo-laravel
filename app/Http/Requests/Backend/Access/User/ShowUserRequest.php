@@ -16,7 +16,7 @@ class ShowUserRequest extends Request
      */
     public function authorize()
     {
-        return access()->allow('show-user');
+        return access()->allow('show-visa');
     }
 
     /**

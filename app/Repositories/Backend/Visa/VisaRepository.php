@@ -80,4 +80,17 @@ class VisaRepository extends BaseRepository
         throw new GeneralException(trans('exceptions.backend.visas.update_error'));
     }
 
+
+    /*
+    * Find page by page_slug
+    */
+    public function findBySlug($visa_slug)
+    {
+        if (!is_null($this->query()->whereid($visa_slug)->firstOrFail())) {
+            return $this->query()->whereid($visa_slug)->firstOrFail();
+        }
+
+        throw new GeneralException(trans('exceptions.backend.access.visas.not_found'));
+    }
+
 }

@@ -254,6 +254,7 @@ return [
 	"create" => "Create Visa",
 	"edit" => "Edit Visa",
 	"management" => "Visa Management",
+	"view" => "View Visa",
 	"title" => "Visas",
 	"table" => [
 	"id" => "Id",
@@ -263,6 +264,11 @@ return [
 	"lname" => "Last Name",
 	"createdat" => "Created At",
 	],
+		"tabs" => ["titles" =>[
+			"step1" => "Step1",
+			"step2" => "Step2",
+		]
+		]
 	],
 	],
 	"frontend" => [
