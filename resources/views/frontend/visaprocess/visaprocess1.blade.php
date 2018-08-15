@@ -85,8 +85,7 @@
 
                         <h3 class="text-center">e-Visa-India (eVI) Application</h3>
                     </div>
-
-                    {{ Form::open(['route' => 'admin.visas.store', 'class' => 'form-horizontal', 'id' => 'process1']) }}
+                    {{ Form::open(['route' => 'frontend.visaprocess1', 'class' => 'form-horizontal', 'id' => 'process1']) }}
                         <div class="firsttype">
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span>Application
@@ -227,9 +226,10 @@
                                 <input type="submit" id="submit" value="Continue" class="btn-primary submit-btn2">
                             </div>
                         </div>
-                    </form>
+                    {{ Form::close() }}
                     <div class="title">
-                        <h3 class="text-center">e-Visa-India (eVI) Application</h3></div>
+                        <h3 class="text-center">e-Visa-India (eVI) Application</h3>
+                    </div>
                 </div>
 
             </div>
