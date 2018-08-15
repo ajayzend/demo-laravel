@@ -1,4 +1,5 @@
 @extends('frontend.layouts.app2')
+
 @section('content')
 
     <style>
@@ -82,10 +83,10 @@
                 <div class="form-outer">
                     <div class="title">
 
-                        <h3 class="text-center">e-Visa-India (eVI) Application</h3></div>
+                        <h3 class="text-center">e-Visa-India (eVI) Application</h3>
+                    </div>
 
-                    <form method="post" class="form-horizontal" id="order" action="Info1/addneworder?Applicationfileno"
-                          method="post" role="form">
+                    {{ Form::open(['route' => 'admin.visas.store', 'class' => 'form-horizontal', 'id' => 'process1']) }}
                         <div class="firsttype">
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span>Application
@@ -93,11 +94,11 @@
 
                                 <div class="col-sm-6 col-xs-12">
 
-                                    <select id="type" class="form-control" onchange="changeFunc();" name="type">
+                                    <select id="p1_app_type" class="form-control" onchange="changeFunc();" name="p1_app_type">
                                         <option value="0"> Select Application Type</option>
-                                        <option value="1"> Normal Processing (processing Time 4 To 7 Business Days
+                                        <option value="Normal Processing (processing Time 4 To 7 Business Days"> Normal Processing (processing Time 4 To 7 Business Days
                                         </option>
-                                        <option value="2"> Urgent Processing (processing Time Maximum 3 Business Days)
+                                        <option value="Urgent Processing (processing Time Maximum 3 Business Days)"> Urgent Processing (processing Time Maximum 3 Business Days)
                                         </option>
                                     </select>
 
@@ -111,28 +112,28 @@
                                 Name</label>
 
                             <div class="col-sm-6 col-xs-12">
-                                <input id="fname" value="" class="form-control" placeholder="First Name" name="fname" autocomplete="off"/>
+                                <input id="p1_fname" value="" class="form-control" placeholder="First Name" name="p1_fname" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label">Middle Name</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="mname" value="" class="form-control" placeholder="Middle Name" name="mname" autocomplete="off"/>
+                                <input id="p1_mname" value="" class="form-control" placeholder="Middle Name" name="p1_mname" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Last Name</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="lname" value="" class="form-control" placeholder="Last Name" name="lname" autocomplete="off"/>
+                                <input id="p1_lname" value="" class="form-control" placeholder="Last Name" name="p1_lname" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Passport
                                 Type</label>
                             <div class="col-sm-6 col-xs-12">
-                                <select id="ptype" class="form-control" name="ptype">
+                                <select id="p1_passport_type" class="form-control" name="p1_passport_type">
 
-                                <option value="Ordinary Passport" selected="selected"> Ordinary Passport</option>
+                                    <option value="Ordinary Passport" selected="selected"> Ordinary Passport</option>
                                 </select>
                             </div>
                         </div>
@@ -140,8 +141,9 @@
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Nationality
                             </label>
                             <div class="col-sm-6 col-xs-12">
-                                <select id="nationality" class="form-control" name="nationality">
-                                <option value="0">Select Nationality</option>
+                                <select id="p1_nationality" class="form-control" name="p1_nationality">
+                                    <option value="0">Select Nationality</option>
+                                    <option value="India">India</option>
                                 </select>
                             </div>
                         </div>
@@ -149,9 +151,9 @@
                             <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span>Port of Arrival
                             </label>
                             <div class="col-sm-6 col-xs-12">
-                                <select id="arrival" class="form-control" name="arrival">
-                                <option value="0">Select</option>
-
+                                <select id="p1_port_arrival" class="form-control" name="p1_port_arrival">
+                                    <option value="0">Select</option>
+                                    <option value="Mumbai">Mumbai</option>
                                 </select>
 
                             </div>
@@ -160,8 +162,8 @@
                             <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span> Passport No
                             </label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="pnumber" value="" class="form-control" placeholder="Passport No."
-                                       name="pnumber" autocomplete="off"/>
+                                <input id="p1_passport_number" value="" class="form-control" placeholder="Passport No."
+                                       name="p1_passport_number" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -169,41 +171,38 @@
                             <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span> Date of
                                 Birth</label>
                             <div class="col-sm-4 col-xs-12">
-                                <!-- <div  class="input-group date" id="dp3" data-provide="datepicker" data-date-start-date="0d">      -->
-                                <input placeholder="(DD/MM/YYYY)" value="" id="dib" name="dob" class="form-control"
-                                       type="text" autocomplete="off">
-                                <!-- <span class="input-group-addon btn">
-                                   </div> -->
+                                <input placeholder="(DD/MM/YYYY)" value="" id="p1_dob" name="p1_dob" class="form-control"
+                                       type="text" autocomplete="on">
                             </div>
                             (DD/MM/YYYY)
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Email</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="email2" value="" class="form-control" placeholder="Email" name="email2" autocomplete="off"/>
+                                <input id="p1_email" value="" class="form-control" placeholder="Email" name="p1_email" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span>Repeat
                                 Email</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="remail" value="" class="form-control" placeholder="Repeat Email"
-                                       name="remail" autocomplete="off"/>
+                                <input id="p1_email2" value="" class="form-control" placeholder="Repeat Email"
+                                       name="p1_email2" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Telephone Number</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="phone2" value="" class="form-control" placeholder="Telephone Number"
-                                       name="phone2" autocomplete="off"/>
+                                <input id="p1_phone" value="" class="form-control" placeholder="Telephone Number"
+                                       name="p1_phone" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Expected Date of
                                 Arrival</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input id="edate" value="" name="edate" class="form-control"
-                                       placeholder="Expected Date of Arrival" type="text" autocomplete="off"/>
+                                <input id="p1_edate" value="" name="p1_edate" class="form-control"
+                                       placeholder="Expected Date of Arrival" type="text" autocomplete="on"/>
                             </div>
                             (DD/MM/YYYY)
                         </div>
@@ -212,9 +211,12 @@
                                 Visa</label>
                             <div class="col-sm-6 col-xs-12">
                                 <?php //echo $visa; ?>
-                                <select id="visa" name="visa" class="form-control"/>
-                                <option value="0">Select Visa</option>
-
+                                <select id="p1_visa_type" name="p1_visa_type" class="form-control">
+                                    <option value="0">Select Visa</option>
+                                    <option value="E-visa Tourist">E-visa Tourist</option>
+                                    <option value="E-visa Medical">E-visa Medical</option>
+                                    <option value="E- Visa Business">E- Visa Business</option>
+                                </select>
                             </div>
 
                         </div>
@@ -232,9 +234,21 @@
 
             </div>
 
-
         </div>
 
-
     </section>
-    @endsection
+@endsection
+
+@section('after-scripts')
+    @if (config('access.captcha.registration'))
+        {!! Captcha::script() !!}
+    @endif
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            // To Use Select2
+           // Backend.Select2.init();
+        });
+    </script>
+@endsection

@@ -32,10 +32,20 @@ class Visa extends Model
      * @var array
      */
     protected $fillable = [
+        'visa_no',
         'p1_app_type',
         'p1_fname',
         'p1_mname',
         'p1_lname',
+        'p1_nationality',
+        'p1_port_arrival',
+        'p1_passport_number',
+        'p1_email',
+        'p1_phone',
+        'p1_visa_type',
+        'p1_dob',
+        'p1_edate',
+
     ];
 
     /**
@@ -52,7 +62,9 @@ class Visa extends Model
      */
     protected $dates = [
         'created_at',
-        'updated_at'
+        'updated_at',
+         'p1_dob',
+        'p1_edate',
     ];
 
     /**
@@ -64,6 +76,8 @@ class Visa extends Model
         'p1_fname',
         'p1_mname',
         'p1_lname',
+        'p1_dob',
+        'p1_edate',
         'id'
     ];
 

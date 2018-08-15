@@ -59,6 +59,12 @@ class VisasTableController extends Controller
             ->addColumn('created_at', function ($visa) {
                 return Carbon::parse($visa->created_at)->toDateString();
             })
+            ->addColumn('p1_dob', function ($visa) {
+                return Carbon::parse($visa->p1_dob)->toDateString();
+            })
+            ->addColumn('p1_edate', function ($visa) {
+                return Carbon::parse($visa->p1_edate)->toDateString();
+            })
             ->addColumn('actions', function ($visa) {
                 return $visa->action_buttons;
             })

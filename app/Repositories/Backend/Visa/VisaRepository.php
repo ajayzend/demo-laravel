@@ -57,10 +57,18 @@ class VisaRepository extends BaseRepository
         if ($visa->save($input)) {
             return true;
         }*/
+        $visa = self::MODEL;
+        $visa = new $visa();
+        $input['visa_no'] = $this->prefixRandomNumber();
+        $input['p1_dob'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_dob']));
+        $input['p1_edate'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_edate']));
 
-        if (Visa::create($input)) {
+        if ($visa->create($input)) {
             return true;
         }
+        /*if (Visa::create($input)) {
+            return true;
+        }*/
         throw new GeneralException(trans('exceptions.backend.visas.create_error'));
     }
 
@@ -93,4 +101,19 @@ class VisaRepository extends BaseRepository
         throw new GeneralException(trans('exceptions.backend.access.visas.not_found'));
     }
 
+    public function prefixRandomNumber(){
+        $start = 'IGVR';
+        $today = Carbon::today()->toDateString();
+        $start .= str_replace('-', '', $today);
+        $characters = array_merge(range('A','Z'), range('0','9'));
+        for ($i = 0; $i < 8; $i++) {
+            $rand = mt_rand(0, count($characters)-1);
+            $start .= $characters[$rand];
+        }
+        return $start;
+    }
+
+    public function parseDateValueSpecialChar($date){
+        return str_replace('/', '-', $date);
+    }
 }

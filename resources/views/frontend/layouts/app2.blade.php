@@ -87,14 +87,14 @@ use Illuminate\Support\Facades\Route;
 <script type="text/javascript">
 
     $(function(){
-        $('#dib').datepicker({
+        $('#p1_dob').datepicker({
             //inline: true,
             nextText: '&rarr;',
             prevText: '&larr;',
             showOtherMonths: true,
             dateFormat: 'dd/mm/yy',
             dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-            showOn: "button",
+            //showOn: "button",
             buttonImage: "{{ URL::asset('img/frontend/images/clander.png')}}",
             buttonImageOnly: true,
             changeMonth: true,
@@ -103,18 +103,19 @@ use Illuminate\Support\Facades\Route;
             maxDate: 0
         });
 
-        $('#edate').datepicker({
+        $('#p1_edate').datepicker({
             inline: true,
             nextText: '&rarr;',
             prevText: '&larr;',
             showOtherMonths: true,
             dateFormat: 'dd/mm/yy',
             dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-            showOn: "button",
+            //showOn: "button",
             buttonImage: "{{ URL::asset('img/frontend/images/clander.png')}}",
             buttonImageOnly: true,
             changeMonth: true,
             changeYear: true,
+            //yearRange: "+100:+0",
             minDate: 0
         });
     });
@@ -125,39 +126,39 @@ use Illuminate\Support\Facades\Route;
 <script>
     $(document).ready(function(){
 
-        var app = $("#order");
+        var app = $("#process1");
 
         var validator = app.validate({
 
             rules:{
-                type 		: { required : true, selected : true},
-                fname 		: { required : true },
-                lname 		: { required : true },
-                ptype 		: { required : true, selected : true},
-                nationality : { required : true, selected : true},
-                arrival 	: { required : true, selected : true},
-                pnumber	    : { required : true },
-                dob			: { required : true },
-                email2       : { required : true,email : true },
-                remail 	    :{required : true, equalTo: "#email2"},
-                phone2	    : { required : true, digits : true },
-                edate		: { required : true },
-                visa		: { required : true, selected : true}
+                p1_app_type 		: { required : true, selected : true},
+                p1_fname 		: { required : true },
+                p1_lname 		: { required : true },
+                p1_passport_type 		: { required : true, selected : true},
+                p1_nationality : { required : true, selected : true},
+                p1_port_arrival 	: { required : true, selected : true},
+                p1_passport_number	    : { required : true },
+                p1_dob			: { required : true },
+                p1_email       : { required : true,email : true },
+                p1_email2 	    :{required : true, equalTo: "#p1_email"},
+                p1_phone	    : { required : true, digits : true },
+                p1_edate		: { required : true },
+                p1_visa_type		: { required : true, selected : true}
             },
             messages:{
-                type : { required : "For travel within next 5 days please select Urgent Processing in the Application Type. With normal Processing you can only travel after 5 day", selected : "Please select Application Type" },
-                fname :{ required : "Please enter  First Name" },
-                lname :{ required : "Please enter  Last Name" },
-                ptype : { required : "This field is required", selected : "Please select Passport Type" },
-                nationality : { required : "This field is required", selected : "Please select Nationality" },
-                arrival : { required : "This field is required", selected : "Please select Port of Arrival" },
-                pnumber :{ required : "Please enter Passport No"},
-                dob :{ required : "Please enter Date of Birth" },
-                email2 : { required : "Please enter Email", email : "Please enter valid email address", remote : "Email already taken" },
-                remail :{ required : "Please repeat Email" },
-                phone2:{ required : "Please enter  Telephone Number", digits : "Please enter numbers only" },
-                edate:{ required : "Please enter Expected Date of Arrival" },
-                visa: { required : "This field is required", selected : "Please select Visa type" }
+                p1_app_type : { required : "For travel within next 5 days please select Urgent Processing in the Application Type. With normal Processing you can only travel after 5 day", selected : "Please select Application Type" },
+                p1_fname :{ required : "Please enter  First Name" },
+                p1_lname :{ required : "Please enter  Last Name" },
+                p1_passport_type : { required : "This field is required", selected : "Please select Passport Type" },
+                p1_nationality : { required : "This field is required", selected : "Please select Nationality" },
+                p1_port_arrival : { required : "This field is required", selected : "Please select Port of Arrival" },
+                p1_passport_number :{ required : "Please enter Passport No"},
+                p1_dob :{ required : "Please enter Date of Birth" },
+                p1_email : { required : "Please enter Email", email : "Please enter valid email address", remote : "Email already taken" },
+                p1_email2 :{ required : "Please repeat Email" },
+                p1_phone:{ required : "Please enter  Telephone Number", digits : "Please enter numbers only" },
+                p1_edate:{ required : "Please enter Expected Date of Arrival" },
+                p1_visa_type: { required : "This field is required", selected : "Please select Visa type" }
 
 
             }
