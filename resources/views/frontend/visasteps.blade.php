@@ -1,7 +1,7 @@
 <section>
     <div class="clearfix">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pad">
-            <a href="/evp/process1">
+            <a href="/visas/create">
                 <div class="box-1">
                     <h2>Step 1</h2>
                     <p>Click Here apply For Visa</P>
@@ -9,7 +9,7 @@
             </a>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pad">
-            <a href="applog/loginaplog">
+            <a href="/visaamendprocess">
                 <div class="box-1">
                     <h2>Step 2</h2>
                     <p>Click Here apply For Visa</P>

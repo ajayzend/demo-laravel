@@ -87,6 +87,8 @@ use Illuminate\Support\Facades\Route;
 <script type="text/javascript">
 
     $(function(){
+
+        // Visa Process1
         $('#p1_dob').datepicker({
             //inline: true,
             nextText: '&rarr;',
@@ -118,6 +120,54 @@ use Illuminate\Support\Facades\Route;
             //yearRange: "+100:+0",
             minDate: 0
         });
+
+        // Visa Process2
+        $('#issuedate').datepicker({
+            inline: true,
+            nextText: '&rarr;',
+            prevText: '&larr;',
+            showOtherMonths: true,
+            dateFormat: 'dd/mm/yy',
+            dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+            //showOn: "button",
+            buttonImage: "{{ URL::asset('img/frontend/images/clander.png')}}",
+            buttonImageOnly: true,
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+0",
+            maxDate: 0
+        });
+
+        $('#expdate').datepicker({
+            inline: true,
+            nextText: '&rarr;',
+            prevText: '&larr;',
+            showOtherMonths: true,
+            dateFormat: 'dd/mm/yy',
+            dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+            //showOn: "button",
+            buttonImage: "{{ URL::asset('img/frontend/images/clander.png')}}",
+            buttonImageOnly: true,
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-0:+100",
+            minDate: 0
+        });
+        $('#any_other_date_issue').datepicker({
+            inline: true,
+            nextText: '&rarr;',
+            prevText: '&larr;',
+            showOtherMonths: true,
+            dateFormat: 'dd/mm/yy',
+            dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+            //	showOn: "button",
+            buttonImage: "{{ URL::asset('img/frontend/images/clander.png')}}",
+            buttonImageOnly: true,
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+0",
+            maxDate: 0
+        });
     });
 
 
@@ -126,10 +176,8 @@ use Illuminate\Support\Facades\Route;
 <script>
     $(document).ready(function(){
 
-        var app = $("#process1");
-
-        var validator = app.validate({
-
+        var app1 = $("#process1");
+        app1.validate({
             rules:{
                 p1_app_type 		: { required : true, selected : true},
                 p1_fname 		: { required : true },
@@ -159,7 +207,55 @@ use Illuminate\Support\Facades\Route;
                 p1_phone:{ required : "Please enter  Telephone Number", digits : "Please enter numbers only" },
                 p1_edate:{ required : "Please enter Expected Date of Arrival" },
                 p1_visa_type: { required : "This field is required", selected : "Please select Visa type" }
+            }
+        });
 
+        var app2 = $("#process2");
+        app2.validate({
+            rules:{
+                fname2					: 		{ required : true },
+                mname2					: 		{ required : true },
+                lname2					: 		{ required : true },
+                cob						: 		{ required : true },
+                dob						: 		{ required : true },
+                national_id				: 		{ required : true },
+                any_other_place_issue	: 		{ required : true },
+                id_mark					: 		{ required : true },
+                place_issue				: 		{ required : true },
+                expdate					: 		{ required : true },
+                issuedate				: 		{ required : true },
+                anyother_pass_ic		: 		{ required : true },
+                any_other_date_issue	: 		{ required : true },
+                any_other_place_con		: 		{ required : true, selected : true},
+                p2_gender				:		{ required : true, selected : true},
+                country					:		{ required : true/*, selected : true*/},
+                religion				:		{ required : true, selected : true},
+                edu						:		{ required : true, selected : true},
+                birth_nationality		:		{ required : true, selected : true},
+                pre_nationality			:		{ required : false, selected : false}
+
+            },
+            messages:{
+                anyother_pass_ic				    : 		{ required : "Please enter Passport/IC No" },
+                fname2				    : 		{ required : "This field is required" },
+                mname2 					:	    { required : "This field is required" },
+                lname2				    :       { required : "This field is required" },
+                cob				  	 	:       { required : "Please enter City of Birth" },
+                dob				  		:       { required : "Please enter Date of Birth" },
+                national_id			    :       { required : "Please enter Citizenship/National Id No" },
+                any_other_place_issue   : 		{ required : "Please enter Place of Issue" },
+                id_mark  				: 		{ required : "Please enter Visible Identification Marks" },
+                place_issue  			: 		{ required : "Please enter Place of Issue" },
+                expdate  				: 		{ required : "Please enter Date of Expire" },
+                issuedate  				: 		{ required : "Please enter Date of Issue" },
+                any_other_date_issue  	: 		{ required : "Please enter Date of Issue" },
+                any_other_place_con		: 		{ required : "This field is required", selected : "Please select atleast one option" },
+                p2_gender 				:	    { required : "This field is required", selected : "Please select Gender" },
+                country 				:	    { required : "This field is required", selected : "Please select Country" },
+                religion 				:	    { required : "This field is required", selected : "Please select Religion" },
+                edu 					:	    { required : "This field is required", selected : "Please enter Education" },
+                birth_nationality		:	    { required : "This field is required", selected : "Please select Nationality By Birth or By Naturalization" },
+                pre_nationality			:	    { required : "This field is required", selected : "Please select Prev Nationality" }
 
             }
         });

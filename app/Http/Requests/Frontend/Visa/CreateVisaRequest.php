@@ -4,7 +4,7 @@ namespace App\Http\Requests\Frontend\Visa;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreVisaRequest extends FormRequest
+class CreateVisaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -14,6 +14,7 @@ class StoreVisaRequest extends FormRequest
     public function authorize()
     {
         return true;
+        //return access()->allow('create-visa');
     }
 
     /**

@@ -63,8 +63,6 @@ class Visa extends Model
     protected $dates = [
         'created_at',
         'updated_at',
-         'p1_dob',
-        'p1_edate',
     ];
 
     /**
@@ -72,12 +70,6 @@ class Visa extends Model
      * @var array
      */
     protected $guarded = [
-        'p1_app_type',
-        'p1_fname',
-        'p1_mname',
-        'p1_lname',
-        'p1_dob',
-        'p1_edate',
         'id'
     ];
 

@@ -1,22 +1,22 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace App\Http\Controllers\Frontend\Visa;
 
 use App\Models\Visa\Visa;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Settings\Setting;
-use App\Repositories\Backend\Visa\VisaRepository;
-use App\Http\Requests\Backend\Visa\ManageVisaRequest;
-use App\Http\Requests\Backend\Visa\CreateVisaRequest;
-use App\Http\Requests\Backend\Visa\StoreVisaRequest;
-use App\Http\Requests\Backend\Visa\EditVisaRequest;
-use App\Http\Requests\Backend\Visa\UpdateVisaRequest;
+use App\Repositories\Frontend\Visa\VisaRepository;
+use App\Http\Requests\Frontend\Visa\ManageVisaRequest;
+use App\Http\Requests\Frontend\Visa\CreateVisaRequest;
+use App\Http\Requests\Frontend\Visa\StoreVisaRequest;
+use App\Http\Requests\Frontend\Visa\EditVisaRequest;
+use App\Http\Requests\Frontend\Visa\UpdateVisaRequest;
 
 /**
  * VisasController
  */
-class VisasProcessController extends Controller
+class VisasController extends Controller
 {
     /**
      * variable to store the repository object
@@ -41,12 +41,13 @@ class VisasProcessController extends Controller
      */
     public function index(ManageVisaRequest $request)
     {
-        return view('backend.visas.index');
+        return view('frontend.visas.home');
     }
 
 
-    public function visaProcess1(VisaRepository $visa)
+    public function process1(VisaRepository $visa)
     {
+        die("okkk");
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
         $result = $visa->findByVisaNoSlug('blank');
@@ -72,22 +73,7 @@ class VisasProcessController extends Controller
      */
     public function create(CreateVisaRequest $request)
     {
-        return view('backend.visas.create');
-    }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  StoreVisaRequestNamespace  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function storeVisaProcess1(StoreVisaRequest $request)
-    {
-        //Input received from the request
-        $input = $request->except(['_token']);
-        //Create the model using repository create method
-        $this->repository->create($input);
-        //return with successfull message
-        return redirect()->route('admin.visas.index')->withFlashSuccess(trans('alerts.backend.visas.created'));
+        return view('frontend.visas.visaprocess1-create');
     }
 
     /**
@@ -96,14 +82,22 @@ class VisasProcessController extends Controller
      * @param  StoreVisaRequestNamespace  $request
      * @return \Illuminate\Http\Response
      */
-    public function storeVisaProcess2(StoreVisaRequest $request)
+    public function store(StoreVisaRequest $request)
     {
         //Input received from the request
         $input = $request->except(['_token']);
         //Create the model using repository create method
         $this->repository->create($input);
         //return with successfull message
-        return redirect()->route('admin.visas.index')->withFlashSuccess(trans('alerts.backend.visas.created'));
+        return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.created'));
+    }
+
+    public function getvisaamendprocess()
+    {
+        $settingData = Setting::first();
+        $google_analytics = $settingData->google_analytics;
+
+        return view('frontend.visaprocess.amendprocess', compact('google_analytics', $google_analytics));
     }
 
     /**
@@ -115,11 +109,17 @@ class VisasProcessController extends Controller
      */
     public function edit(Visa $visa, EditVisaRequest $request)
     {
-        print "<pre>";print_r($visa);exit;
-        //$result = $visa->findByVisaNoSlug('IGVR201808157OSIT8OW');
-        //$result = $visa->findByVisaNoSlug('blank');
-       // return view('frontend.visaprocess.visaprocess1', compact('visa'))->withvisa($result);
-        return view('frontend.visaprocess.visaprocess1', compact('visa'));
+       $sess_vid = session()->get('vid');
+        if($sess_vid == $visa->id && session()->get('evpuid') != '') {
+            $visa->p1_dob = date('d-m-Y', strtotime($visa->p1_dob));
+            $visa->p1_edate = date('d-m-Y', strtotime($visa->p1_edate));
+            //print "<pre>";print_r($visa);exit;
+            return view('frontend.visas.visaprocess1-edit', compact('visa'));
+        }else{
+            session()->flash('vid');
+            session()->flash('evpuid');
+            return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+        }
     }
     /**
      * Update the specified resource in storage.
@@ -130,15 +130,18 @@ class VisasProcessController extends Controller
      */
     public function update(UpdateVisaRequest $request, Visa $visa)
     {
-
         //Input received from the request
         $input = $request->except(['_token']);
-        //var_dump($visa);
-        //echo "<pre>";print_r($input);die;
-        //Update the model using repository update method
-        $this->repository->update( $visa, $input );
-        //return with successfull message
-        //return redirect()->route('admin.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+        $sess_evpuid = session()->get('evpuid');
+        session()->flash('evpuid');
+        if ($sess_evpuid == $input['evpuid']) {
+            //Update the model using repository update method
+            $this->repository->update($visa, $input);
+            //return with successfull message
+            return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+        }else{
+            return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+        }
     }
 
     /**
@@ -147,22 +150,24 @@ class VisasProcessController extends Controller
     public function showVisa($slug, VisaRepository $visa)
     {
         $result = $visa->findBySlug($slug);
-        return view('backend.visas.show')
+        return view('frontend.visas.home')
             ->withvisa($result);
     }
 
     /**
      * show Visa by evisa process uid.
      */
-    public function visaAmendmentProcess(StoreVisaRequest $request, VisaRepository $visa)
+    public function setvisaamendprocess(StoreVisaRequest $request, VisaRepository $visa)
     {
         //Input received from the request
         $input = $request->except(['_token']);
        // echo "<pre>"; print_r($input);die;
         $result = $visa->findByVisaNoSlug($input['evpuid']);
         $visa_steps = $result->process_steps;
+        session()->put('evpuid', $input['evpuid']);
+        session()->put('vid', $result->id);
         if($visa_steps == 1){
-            return redirect()->route('frontend.evp.processget1', 29);
+            return redirect()->route('frontend.visas.edit', $result->id);
            // return redirect()->route('frontend.visaprocess.visaprocess1')->withvisa($result);
            return view('frontend.visaprocess.visaprocess1')
                 ->withvisa($result);

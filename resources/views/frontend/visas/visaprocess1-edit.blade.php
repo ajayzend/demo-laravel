@@ -85,17 +85,11 @@
 
                         <h3 class="text-center">e-Visa-India (eVI) Application</h3>
                     </div>
-                   <?php if($visa->id ==  0) {?>
-                    {{ Form::open(['route' => 'frontend.visaprocess1', 'class' => 'form-horizontal', 'id' => 'process1']) }}
-                     <?php } {?>
-                    {{--{{ Form::model($visa, ['route' => 'frontend.visaprocessupdate', 'class' => 'form-horizontal', 'method' => 'PATCH']) }}--}}
-                    {{--{{ Form::model($visa, ['route' => ['frontend.visaprocessupdate', $visa], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'process1']) }}--}}
-                    {{ Form::open(['route' => ['frontend.visas', $visa], 'class' => 'form-horizontal',  'method' => 'PATCH', 'accept-charset' => 'UTF-8', 'role' => 'form', 'id'=>'edit-visa']) }}
-                    {{--{{ Form::model($visa, ['route' => ['frontend.visaprocessupdate', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => 'edit-visa']) }}--}}
-                    {{ Form::hidden('id', $visa->id ) }}
+
+                    {{ Form::model($visa, ['route' => ['frontend.visas.update', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => 'edit-visa']) }}
                     {{ Form::hidden('evpuid', $visa->visa_no ) }}
 
-                    <?php } ?>
+
                         <div class="firsttype">
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span>Application

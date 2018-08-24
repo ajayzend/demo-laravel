@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Backend\Visa;
+namespace App\Repositories\Frontend\Visa;
 
 use DB;
 use Carbon\Carbon;
@@ -46,6 +46,7 @@ class VisaRepository extends BaseRepository
      * @throws GeneralException
      * @return bool
      */
+
     public function create(array $input)
     {
 

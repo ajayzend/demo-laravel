@@ -85,17 +85,9 @@
 
                         <h3 class="text-center">e-Visa-India (eVI) Application</h3>
                     </div>
-                   <?php if($visa->id ==  0) {?>
-                    {{ Form::open(['route' => 'frontend.visaprocess1', 'class' => 'form-horizontal', 'id' => 'process1']) }}
-                     <?php } {?>
-                    {{--{{ Form::model($visa, ['route' => 'frontend.visaprocessupdate', 'class' => 'form-horizontal', 'method' => 'PATCH']) }}--}}
-                    {{--{{ Form::model($visa, ['route' => ['frontend.visaprocessupdate', $visa], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH', 'id' => 'process1']) }}--}}
-                    {{ Form::open(['route' => ['frontend.visas', $visa], 'class' => 'form-horizontal',  'method' => 'PATCH', 'accept-charset' => 'UTF-8', 'role' => 'form', 'id'=>'edit-visa']) }}
-                    {{--{{ Form::model($visa, ['route' => ['frontend.visaprocessupdate', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => 'edit-visa']) }}--}}
-                    {{ Form::hidden('id', $visa->id ) }}
-                    {{ Form::hidden('evpuid', $visa->visa_no ) }}
 
-                    <?php } ?>
+                    {{ Form::open(['route' => 'frontend.visas.store', 'class' => 'form-horizontal', 'id' => 'process1']) }}
+
                         <div class="firsttype">
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span>Application
@@ -105,9 +97,9 @@
 
                                     <select id="p1_app_type" class="form-control" onchange="changeFunc();" name="p1_app_type">
                                         <option value="0"> Select Application Type</option>
-                                        <option value="Normal Processing (processing Time 4 To 7 Business Days" {{ $visa->p1_app_type == 'Normal Processing (processing Time 4 To 7 Business Days' ? 'selected="selected"' : '' }} > Normal Processing (processing Time 4 To 7 Business Days
+                                        <option value="Normal Processing (processing Time 4 To 7 Business Days"> Normal Processing (processing Time 4 To 7 Business Days
                                         </option>
-                                        <option value="Urgent Processing (processing Time Maximum 3 Business Days)" {{ $visa->p1_app_type == 'Urgent Processing (processing Time Maximum 3 Business Days' ? 'selected="selected"' : '' }}  > Urgent Processing (processing Time Maximum 3 Business Days)
+                                        <option value="Urgent Processing (processing Time Maximum 3 Business Days)"> Urgent Processing (processing Time Maximum 3 Business Days)
                                         </option>
                                     </select>
 
@@ -121,19 +113,19 @@
                                 Name</label>
 
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_fname" value="{{ $visa->p1_fname }}" class="form-control" placeholder="First Name" name="p1_fname" autocomplete="off"/>
+                                <input id="p1_fname" value="" class="form-control" placeholder="First Name" name="p1_fname" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label">Middle Name</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_mname" value="{{ $visa->p1_mname }}" class="form-control" placeholder="Middle Name" name="p1_mname" autocomplete="off"/>
+                                <input id="p1_mname" value="" class="form-control" placeholder="Middle Name" name="p1_mname" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Last Name</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_lname" value="{{ $visa->p1_lname }}" class="form-control" placeholder="Last Name" name="p1_lname" autocomplete="off"/>
+                                <input id="p1_lname" value="" class="form-control" placeholder="Last Name" name="p1_lname" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -171,7 +163,7 @@
                             <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span> Passport No
                             </label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_passport_number" value="{{ $visa->p1_passport_number }}" class="form-control" placeholder="Passport No."
+                                <input id="p1_passport_number" value="" class="form-control" placeholder="Passport No."
                                        name="p1_passport_number" autocomplete="off"/>
                             </div>
                         </div>
@@ -180,7 +172,7 @@
                             <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span> Date of
                                 Birth</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input placeholder="(DD/MM/YYYY)" value="{{ $visa->p1_dob }}" id="p1_dob" name="p1_dob" class="form-control"
+                                <input placeholder="(DD/MM/YYYY)" value="" id="p1_dob" name="p1_dob" class="form-control"
                                        type="text" autocomplete="on">
                             </div>
                             (DD/MM/YYYY)
@@ -188,21 +180,21 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Email</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_email" value="{{ $visa->p1_email }}" class="form-control" placeholder="Email" name="p1_email" autocomplete="off"/>
+                                <input id="p1_email" value="" class="form-control" placeholder="Email" name="p1_email" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span>Repeat
                                 Email</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_email2" value="{{ $visa->p1_email }}" class="form-control" placeholder="Repeat Email"
+                                <input id="p1_email2" value="" class="form-control" placeholder="Repeat Email"
                                        name="p1_email2" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Telephone Number</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_phone" value="{{ $visa->p1_phone }}" class="form-control" placeholder="Telephone Number"
+                                <input id="p1_phone" value="" class="form-control" placeholder="Telephone Number"
                                        name="p1_phone" autocomplete="off"/>
                             </div>
                         </div>
@@ -210,7 +202,7 @@
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Expected Date of
                                 Arrival</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input id="p1_edate" value="{{ $visa->p1_edate }}" name="p1_edate" class="form-control"
+                                <input id="p1_edate" value="" name="p1_edate" class="form-control"
                                        placeholder="Expected Date of Arrival" type="text" autocomplete="on"/>
                             </div>
                             (DD/MM/YYYY)
@@ -222,9 +214,9 @@
                                 <?php //echo $visa; ?>
                                 <select id="p1_visa_type" name="p1_visa_type" class="form-control">
                                     <option value="0">Select Visa</option>
-                                    <option value="E-visa Tourist" {{ $visa->p1_visa_type = 'E-visa Tourist' ? 'selected="selected"' : '' }}>E-visa Tourist</option>
-                                    <option value="E-visa Medical" {{ $visa->p1_visa_type = 'E-visa Medical' ? 'selected="selected"' : '' }}>E-visa Medical</option>
-                                    <option value="E- Visa Business" {{ $visa->p1_visa_type = 'E- Visa Business' ? 'selected="selected"' : '' }}>E- Visa Business</option>
+                                    <option value="E-visa Tourist">E-visa Tourist</option>
+                                    <option value="E-visa Medical">E-visa Medical</option>
+                                    <option value="E- Visa Business">E- Visa Business</option>
                                 </select>
                             </div>
 

@@ -35,6 +35,7 @@ Route::group(['namespace' => 'Auth', 'as' => 'auth.'], function () {
             Route::get('register', 'RegisterController@showRegistrationForm')->name('register');
             Route::post('register', 'RegisterController@register')->name('register');
         }
+        Route::post('Visas', 'VisasController@create')->name('create');
 
         // Confirm Account Routes
         Route::get('account/confirm/{token}', 'ConfirmAccountController@confirm')->name('account.confirm');
