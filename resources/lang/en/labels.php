@@ -258,6 +258,7 @@ return [
 	"title" => "Visas",
 	"table" => [
 	"id" => "Id",
+	"visa_no" => "Temp ID",
 	"p1_app_type" => "APP Type",
 	"p1_fname" => "First Name",
 	"p1_mname" => "Middle Name",

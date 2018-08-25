@@ -22,6 +22,7 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.visas.table.id') }}</th>
+                            <th>{{ trans('labels.backend.visas.table.visa_no') }}</th>
                             <th>{{ trans('labels.backend.visas.table.p1_app_type') }}</th>
                             <th>{{ trans('labels.backend.visas.table.p1_fname') }}</th>
                             <th>{{ trans('labels.backend.visas.table.p1_mname') }}</th>
@@ -32,6 +33,7 @@
                     </thead>
                     <thead class="transparent-bg">
                         <tr>
+                            <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -63,6 +65,7 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.visas.table')}}.id'},
+                    {data: 'visa_no', name: '{{config('module.visas.table')}}.visa_no'},
                     {data: 'p1_app_type', name: '{{config('module.visas.table')}}.p1_app_type'},
                     {data: 'p1_fname', name: '{{config('module.visas.table')}}.p1_fname'},
                     {data: 'p1_mname', name: '{{config('module.visas.table')}}.p1_mname'},

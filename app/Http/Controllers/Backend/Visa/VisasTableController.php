@@ -38,6 +38,10 @@ class VisasTableController extends Controller
     {
         return Datatables::of($this->visa->getForDataTable())
             ->escapeColumns(['id'])
+            ->addColumn('visa_no', function ($visa) {
+                return $visa->visa_no;
+            })
+
             ->addColumn('p1_app_type', function ($visa) {
                 return $visa->p1_app_type;
             })
