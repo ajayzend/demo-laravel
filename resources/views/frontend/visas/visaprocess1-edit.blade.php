@@ -88,6 +88,7 @@
 
                     {{ Form::model($visa, ['route' => ['frontend.visas.update', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => 'edit-visa']) }}
                     {{ Form::hidden('evpuid', $visa->visa_no ) }}
+                    {{ Form::hidden('ps', 10001 ) }}
 
 
                         <div class="firsttype">

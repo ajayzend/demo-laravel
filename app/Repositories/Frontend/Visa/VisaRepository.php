@@ -83,9 +83,14 @@ class VisaRepository extends BaseRepository
      */
     public function update(Visa $visa, array $input)
     {
+        $process_steps = session()->get('process_steps');
+        if($process_steps == 10001 || $process_steps == ''){
+            $input['p1_dob'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_dob']));
+            $input['p1_edate'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_edate']));
+        }else{
 
-        $input['p1_dob'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_dob']));
-        $input['p1_edate'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_edate']));
+        }
+
     	if ($visa->update($input))
             return true;
 

@@ -87,7 +87,7 @@
                     </div>
 
                     {{ Form::open(['route' => 'frontend.visas.store', 'class' => 'form-horizontal', 'id' => 'process1']) }}
-
+                    {{ Form::hidden('ps', 10001 ) }}
                         <div class="firsttype">
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span>Application
