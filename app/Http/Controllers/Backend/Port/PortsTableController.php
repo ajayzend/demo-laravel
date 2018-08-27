@@ -41,6 +41,9 @@ class PortsTableController extends Controller
             ->addColumn('created_at', function ($port) {
                 return Carbon::parse($port->created_at)->toDateString();
             })
+            ->addColumn('name', function ($port) {
+                return $port->name;
+            })
             ->addColumn('actions', function ($port) {
                 return $port->action_buttons;
             })

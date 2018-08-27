@@ -31,7 +31,7 @@ class Port extends Model
      * @var array
      */
     protected $fillable = [
-
+        'name',
     ];
 
     /**

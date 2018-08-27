@@ -30,6 +30,7 @@ class PortRepository extends BaseRepository
         return $this->query()
             ->select([
                 config('module.ports.table').'.id',
+                config('module.ports.table').'.name',
                 config('module.ports.table').'.created_at',
                 config('module.ports.table').'.updated_at',
             ]);
@@ -46,7 +47,7 @@ class PortRepository extends BaseRepository
     {
         $port = self::MODEL;
         $port = new $port();
-        if ($port->save($input)) {
+        if ($port->create($input)) {
             return true;
         }
         throw new GeneralException(trans('exceptions.backend.ports.create_error'));
