@@ -63,5 +63,10 @@ return [
 	"deleted" => "The Visa was successfully deleted.",
 	"updated" => "The Visa was successfully updated.",
 	],
+	"ports" => [
+	"created" => "The Port was successfully created.",
+	"deleted" => "The Port was successfully deleted.",
+	"updated" => "The Port was successfully updated.",
+	],
 	],
 ];

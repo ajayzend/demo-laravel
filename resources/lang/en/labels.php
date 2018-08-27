@@ -265,11 +265,22 @@ return [
 	"p1_lname" => "Last Name",
 	"createdat" => "Created At",
 	],
-		"tabs" => ["titles" =>[
-			"step1" => "Step1",
-			"step2" => "Step2",
-		]
-		]
+	"tabs" => [
+	"titles" => [
+	"step1" => "Step1",
+	"step2" => "Step2",
+	],
+	],
+	],
+	"ports" => [
+	"create" => "Create Port",
+	"edit" => "Edit Port",
+	"management" => "Port Management",
+	"title" => "Ports",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
 	],
 	],
 	"frontend" => [

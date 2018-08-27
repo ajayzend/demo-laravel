@@ -92,6 +92,13 @@ return [
 	"not_found" => "That Visa does not exist.",
 	"update_error" => "There was a problem updating this Visa. Please try again.",
 	],
+	"ports" => [
+	"already_exists" => "That Port already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Port. Please try again.",
+	"delete_error" => "There was a problem deleting this Port. Please try again.",
+	"not_found" => "That Port does not exist.",
+	"update_error" => "There was a problem updating this Port. Please try again.",
+	],
 	],
 	"frontend" => [
 	"auth" => [

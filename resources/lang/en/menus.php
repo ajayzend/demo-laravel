@@ -114,6 +114,13 @@ return [
 	"management" => "Visa Management",
 	"main" => "Visas",
 	],
+	"ports" => [
+	"all" => "All Ports",
+	"create" => "Create Port",
+	"edit" => "Edit Port",
+	"management" => "Port Management",
+	"main" => "Ports",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",

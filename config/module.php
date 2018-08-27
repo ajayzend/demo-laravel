@@ -23,4 +23,7 @@ return [
 	"visas" => [
 	"table" => "visa",
 	],
+	"ports" => [
+	"table" => "ports",
+	],
 ];
