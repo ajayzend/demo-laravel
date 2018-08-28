@@ -282,6 +282,26 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"evisacountries" => [
+	"create" => "Create Evisacountry",
+	"edit" => "Edit Evisacountry",
+	"management" => "Evisacountry Management",
+	"title" => "Evisacountries",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
+	"countries" => [
+	"create" => "Create Country",
+	"edit" => "Edit Country",
+	"management" => "Country Management",
+	"title" => "Countries",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
 	],
 	"frontend" => [
 	"auth" => [

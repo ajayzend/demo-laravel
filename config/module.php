@@ -26,4 +26,10 @@ return [
 	"ports" => [
 	"table" => "ports",
 	],
+	"evisacountries" => [
+	"table" => "evisacountries",
+	],
+	"countries" => [
+	"table" => "countries",
+	],
 ];

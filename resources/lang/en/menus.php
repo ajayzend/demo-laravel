@@ -121,6 +121,20 @@ return [
 	"management" => "Port Management",
 	"main" => "Ports",
 	],
+	"evisacountries" => [
+	"all" => "All Evisacountries",
+	"create" => "Create Evisacountry",
+	"edit" => "Edit Evisacountry",
+	"management" => "Evisacountry Management",
+	"main" => "Evisacountries",
+	],
+	"countries" => [
+	"all" => "All Countries",
+	"create" => "Create Country",
+	"edit" => "Edit Country",
+	"management" => "Country Management",
+	"main" => "Countries",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",

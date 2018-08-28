@@ -20,3 +20,5 @@ require __DIR__.'/LogViewer.php';
 
 require __DIR__.'/Visa.php';
 require __DIR__.'/Port.php';
+require __DIR__.'/Evisacountry.php';
+require __DIR__.'/Country.php';

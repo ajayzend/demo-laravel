@@ -68,5 +68,15 @@ return [
 	"deleted" => "The Port was successfully deleted.",
 	"updated" => "The Port was successfully updated.",
 	],
+	"evisacountries" => [
+	"created" => "The Evisacountry was successfully created.",
+	"deleted" => "The Evisacountry was successfully deleted.",
+	"updated" => "The Evisacountry was successfully updated.",
+	],
+	"countries" => [
+	"created" => "The Country was successfully created.",
+	"deleted" => "The Country was successfully deleted.",
+	"updated" => "The Country was successfully updated.",
+	],
 	],
 ];

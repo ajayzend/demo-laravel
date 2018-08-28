@@ -99,6 +99,20 @@ return [
 	"not_found" => "That Port does not exist.",
 	"update_error" => "There was a problem updating this Port. Please try again.",
 	],
+	"evisacountries" => [
+	"already_exists" => "That Evisacountry already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Evisacountry. Please try again.",
+	"delete_error" => "There was a problem deleting this Evisacountry. Please try again.",
+	"not_found" => "That Evisacountry does not exist.",
+	"update_error" => "There was a problem updating this Evisacountry. Please try again.",
+	],
+	"countries" => [
+	"already_exists" => "That Country already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Country. Please try again.",
+	"delete_error" => "There was a problem deleting this Country. Please try again.",
+	"not_found" => "That Country does not exist.",
+	"update_error" => "There was a problem updating this Country. Please try again.",
+	],
 	],
 	"frontend" => [
 	"auth" => [
