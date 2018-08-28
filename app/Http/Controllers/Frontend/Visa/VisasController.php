@@ -12,6 +12,7 @@ use App\Http\Requests\Frontend\Visa\CreateVisaRequest;
 use App\Http\Requests\Frontend\Visa\StoreVisaRequest;
 use App\Http\Requests\Frontend\Visa\EditVisaRequest;
 use App\Http\Requests\Frontend\Visa\UpdateVisaRequest;
+use App\Models\Port\Port;
 
 /**
  * VisasController
@@ -109,14 +110,21 @@ class VisasController extends Controller
      */
     public function edit(Visa $visa, EditVisaRequest $request)
     {
+        $port = Port::getSelectData();
+        //print "<pre>";print_r($blogTags);exit;
         $sess_vid = session()->get('vid');
         $process_steps = session()->get('process_steps');
         if ($sess_vid == $visa->id && session()->get('evpuid') != '') {
             $visa->p1_dob = date('d-m-Y', strtotime($visa->p1_dob));
             $visa->p1_edate = date('d-m-Y', strtotime($visa->p1_edate));
             //print "<pre>";print_r($visa);exit;
-            if ($process_steps == 10001 || $process_steps == '')
-                return view('frontend.visas.visaprocess1-edit', compact('visa'));
+            if ($process_steps == 10001 || $process_steps == '') {
+               // return view('frontend.visas.visaprocess1-edit', compact('visa', $blogTags));
+                return view('frontend.visas.visaprocess1-edit')->with([
+                    'visa' => $visa,
+                    'port_arrival'       => $port,
+                ]);
+            }
             else
                 return view('frontend.visas.visaprocess2-edit', compact('visa'));
         } else {

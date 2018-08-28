@@ -111,6 +111,7 @@
                             </div>
                             <span id="selecttype"></span>
                         </div>
+
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>First
                                 Name</label>
@@ -151,17 +152,20 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span>Port of Arrival
-                            </label>
-                            <div class="col-sm-6 col-xs-12">
-                                <select id="p1_port_arrival" class="form-control" name="p1_port_arrival">
-                                    <option value="0">Select</option>
-                                    <option value="Mumbai">Mumbai</option>
-                                </select>
 
-                            </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Port of Arrival
+                        </label>
+                        <div class="col-sm-6 col-xs-12">
+                            @if(!empty($port_arrival))
+                            {{ Form::select('p1_port_arrival', $port_arrival, $visa->p1_port_arrival, ['class' => 'form-control select2 box-size']) }}
+                            @else
+                            {{ Form::select('p1_port_arrival', $port_arrival, '', ['class' => 'form-control select2 box-size']) }}
+                            @endif
                         </div>
+                    </div>
+
+
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span> Passport No
                             </label>

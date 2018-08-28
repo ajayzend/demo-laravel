@@ -2,12 +2,13 @@
 
 namespace App\Models\Port;
 
+use App\Models\BaseModel;
 use App\Models\ModelTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Port\Traits\PortAttribute;
 use App\Models\Port\Traits\PortRelationship;
 
-class Port extends Model
+class Port extends BaseModel
 {
     use ModelTrait,
         PortAttribute,
