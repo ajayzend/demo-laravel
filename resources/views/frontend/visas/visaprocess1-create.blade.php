@@ -138,27 +138,23 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Nationality
-                            </label>
-                            <div class="col-sm-6 col-xs-12">
-                                <select id="p1_nationality" class="form-control" name="p1_nationality">
-                                    <option value="0">Select Nationality</option>
-                                    <option value="India">India</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span>Port of Arrival
-                            </label>
-                            <div class="col-sm-6 col-xs-12">
-                                <select id="p1_port_arrival" class="form-control" name="p1_port_arrival">
-                                    <option value="0">Select</option>
-                                    <option value="Mumbai">Mumbai</option>
-                                </select>
 
-                            </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Nationality
+                        </label>
+                        <div class="col-sm-6 col-xs-12">
+                           {{ Form::select('p1_nationality', $evisa_country, 0, ['class' => 'form-control select2 box-size', 'id' => 'p1_nationality']) }}
                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Port of Arrival
+                        </label>
+                        <div class="col-sm-6 col-xs-12">
+                            {{ Form::select('p1_port_arrival', $port_arrival, 0, ['class' => 'form-control select2 box-size', 'id' => 'p1_port_arrival']) }}
+                        </div>
+                    </div>
+
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span> Passport No
                             </label>

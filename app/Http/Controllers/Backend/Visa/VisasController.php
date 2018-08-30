@@ -11,7 +11,9 @@ use App\Http\Requests\Backend\Visa\CreateVisaRequest;
 use App\Http\Requests\Backend\Visa\StoreVisaRequest;
 use App\Http\Requests\Backend\Visa\EditVisaRequest;
 use App\Http\Requests\Backend\Visa\UpdateVisaRequest;
-
+use App\Models\Port\Port;
+use App\Models\Evisacountry\Evisacountry;
+use App\Models\Country\Country;
 /**
  * VisasController
  */
@@ -100,8 +102,14 @@ class VisasController extends Controller
      */
     public function showVisa($slug, VisaRepository $visa)
     {
+        $port = Port::getSelectData();
+        $evisacountry = Evisacountry::getSelectData();
+        $country = Country::getSelectData();
         $result = $visa->findBySlug($slug);
-//echo "<pre>";print_r($result);die;
+        $result->p1_nationality = $evisacountry[$result->p1_nationality];
+        $result->p1_port_arrival = $port[$result->p1_port_arrival];
+        //echo "<pre>";print_r($port);
+        //echo "<pre>";print_r($result);die;
         return view('backend.visas.show')
             ->withvisa($result);
     }

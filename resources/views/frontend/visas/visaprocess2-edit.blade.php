@@ -3,7 +3,7 @@
 @section('content')
     <?php
     $countries = array();
-    $country = array();
+    //$country = array();
     $visa_religion = array();
     $religion = array();
     $education = array();
@@ -236,13 +236,11 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Country of Birth</label>
                             <div class="col-sm-4 col-xs-12">
-                                <select class="form-control" name="p2_country_birth" id="p2_country_birth">
-                                    <option value="0">Country of Birth</option>
-                                    <?php foreach($country as $row)
-                                    { ?>
-                                    <option value="<?php echo $row->cities;?>" <?php if($unids){ if( $countries[0] == $row->cities) echo 'selected="selected"'; } ?>><?php echo $row->cities; ?></option>
-                                    <?php } ?>
-                                </select>
+                                @if(!empty($country))
+                                    {{ Form::select('p2_country_birth', $country, $visa->p2_country_birth, ['class' => 'form-control select2 box-size', 'id' => 'p2_country_birth']) }}
+                                @else
+                                    {{ Form::select('p2_country_birth', $country, 0, ['class' => 'form-control select2 box-size', 'id' => 'p2_country_birth']) }}
+                                @endif
 
                             </div>
                             <div class="col-sm-4 col-xs-12">Country of birth
@@ -330,13 +328,11 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" >Prev Nationality</label>
                             <div class="col-sm-4 col-xs-12">
-                                <select class="form-control" name="p2_prev_nationality" id="p2_prev_nationality">
-                                    <option value="0">Prev Nationality</option>
-                                    <?php foreach($country as $row){ ?>
-                                    <option value="<?php echo $row->cities;?>" <?php if($unids){ if( $pre_nationality[0] == $row->cities) echo 'selected="selected"'; } ?>><?php echo $row->cities; ?></option>
-                                    <?php } ?>
-
-                                </select>
+                                @if(!empty($country))
+                                    {{ Form::select('p2_prev_nationality', $country, $visa->p2_prev_nationality, ['class' => 'form-control select2 box-size', 'id' => 'p2_prev_nationality']) }}
+                                @else
+                                    {{ Form::select('p2_prev_nationality', $country, 0, ['class' => 'form-control select2 box-size', 'id' => 'p2_prev_nationality']) }}
+                                @endif
                             </div>
                             <div class="col-sm-4 col-xs-12">
                                 If You Have Acquired Nationality By Naturalization
@@ -412,14 +408,11 @@
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label" >Country of Issue</label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <select class="form-control" id="p2_other_passport_country" name="p2_other_passport_country">
-                                        <option value="0">Country of Issue</option>
-                                        <?php foreach($country as $row)
-                                        { ?>
-                                        <option value="<?php echo $row->cities;?>" <?php if($unids){ if( $anyother_conissue[0] == $row->cities) echo 'selected="selected"'; } ?>><?php echo $row->cities; ?></option>
-                                        <?php } ?>
-                                    </select>
-
+                                    @if(!empty($evisa_country))
+                                        {{ Form::select('p2_other_passport_country', $evisa_country, $visa->p2_other_passport_country, ['class' => 'form-control select2 box-size', 'id' => 'p2_other_passport_country']) }}
+                                    @else
+                                        {{ Form::select('p2_other_passport_country', $evisa_country, 0, ['class' => 'form-control select2 box-size', 'id' => 'p2_other_passport_country']) }}
+                                    @endif
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     Country of Issue
@@ -457,14 +450,11 @@
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label" >Nationality mentioned therein</label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <select id="p2_other_nationality_mentioned" name="p2_other_nationality_mentioned" class="form-control">
-                                        <option value="0"> Nationality mentioned therein</option>
-                                        <?php foreach($country as $row)
-                                        { ?>
-                                        <option value="<?php echo $row->cities;?>" <?php if($unids){ if( $any_other_place_con[0] == $row->cities) echo 'selected="selected"'; } ?>><?php echo $row->cities; ?></option>
-                                        <?php } ?>
-
-                                    </select>
+                                    @if(!empty($country))
+                                        {{ Form::select('p2_other_nationality_mentioned', $country, $visa->p2_other_nationality_mentioned, ['class' => 'form-control select2 box-size', 'id' => 'p2_other_nationality_mentioned']) }}
+                                    @else
+                                        {{ Form::select('p2_other_nationality_mentioned', $country, 0, ['class' => 'form-control select2 box-size', 'id' => 'p2_other_nationality_mentioned']) }}
+                                    @endif
                                 </div>
 
                                 <div class="col-sm-4 col-xs-12">

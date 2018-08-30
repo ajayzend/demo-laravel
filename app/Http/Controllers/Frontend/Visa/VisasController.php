@@ -13,6 +13,8 @@ use App\Http\Requests\Frontend\Visa\StoreVisaRequest;
 use App\Http\Requests\Frontend\Visa\EditVisaRequest;
 use App\Http\Requests\Frontend\Visa\UpdateVisaRequest;
 use App\Models\Port\Port;
+use App\Models\Evisacountry\Evisacountry;
+use App\Models\Country\Country;
 
 /**
  * VisasController
@@ -74,7 +76,12 @@ class VisasController extends Controller
      */
     public function create(CreateVisaRequest $request)
     {
-        return view('frontend.visas.visaprocess1-create');
+        $port = Port::getSelectData();
+        $evisacountry = Evisacountry::getSelectData();
+        return view('frontend.visas.visaprocess1-create')->with([
+            'port_arrival'       => $port,
+            'evisa_country'       => $evisacountry,
+        ]);
     }
 
     /**
@@ -110,7 +117,7 @@ class VisasController extends Controller
      */
     public function edit(Visa $visa, EditVisaRequest $request)
     {
-        $port = Port::getSelectData();
+
         //print "<pre>";print_r($blogTags);exit;
         $sess_vid = session()->get('vid');
         $process_steps = session()->get('process_steps');
@@ -119,14 +126,24 @@ class VisasController extends Controller
             $visa->p1_edate = date('d-m-Y', strtotime($visa->p1_edate));
             //print "<pre>";print_r($visa);exit;
             if ($process_steps == 10001 || $process_steps == '') {
-               // return view('frontend.visas.visaprocess1-edit', compact('visa', $blogTags));
+                $port = Port::getSelectData();
+                $evisacountry = Evisacountry::getSelectData();
                 return view('frontend.visas.visaprocess1-edit')->with([
                     'visa' => $visa,
                     'port_arrival'       => $port,
+                    'evisa_country'       => $evisacountry,
                 ]);
             }
-            else
-                return view('frontend.visas.visaprocess2-edit', compact('visa'));
+            else{
+                $evisacountry = Evisacountry::getSelectData();
+                $country = Country::getSelectData();
+                return view('frontend.visas.visaprocess2-edit')->with([
+                    'visa' => $visa,
+                    'evisa_country'       => $evisacountry,
+                    'country'       => $country,
+                ]);
+            }
+
         } else {
             session()->flash('vid');
             session()->flash('evpuid');
