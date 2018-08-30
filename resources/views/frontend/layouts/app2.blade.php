@@ -32,6 +32,7 @@ use Illuminate\Support\Facades\Route;
     {!! Html::style('css/frontend/style.css') !!}
     {!! Html::style('css/frontend/normalize.css') !!}
     {!! Html::style('css/frontend/datepicker.css') !!}
+    {!! Html::style('css/frontend/custom.css') !!}
     @yield('after-styles')
 
             <!-- Scripts -->
