@@ -7,7 +7,7 @@
 
 
 Route::group(['namespace' => 'Visa'], function () {
-    Route::get('/visaamendprocess/', 'VisasController@getvisaamendprocess')->name('visaamendprocess');
+    Route::get('/visaamendprocess', 'VisasController@getvisaamendprocess')->name('visaamendprocess');
     Route::post('/visaamendprocess', 'VisasController@setvisaamendprocess')->name('visaamendprocess');
     Route::resource('visas', 'VisasController', ['except' => ['show']]);
 

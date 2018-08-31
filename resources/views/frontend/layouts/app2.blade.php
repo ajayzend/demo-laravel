@@ -123,7 +123,7 @@ use Illuminate\Support\Facades\Route;
         });
 
         // Visa Process2
-        $('#issuedate').datepicker({
+        $('#p2_passport_date_issue').datepicker({
             inline: true,
             nextText: '&rarr;',
             prevText: '&larr;',
@@ -139,7 +139,7 @@ use Illuminate\Support\Facades\Route;
             maxDate: 0
         });
 
-        $('#expdate').datepicker({
+        $('#p2_passport_date_expiry').datepicker({
             inline: true,
             nextText: '&rarr;',
             prevText: '&larr;',
@@ -154,7 +154,7 @@ use Illuminate\Support\Facades\Route;
             yearRange: "-0:+100",
             minDate: 0
         });
-        $('#any_other_date_issue').datepicker({
+        $('#p2_other_passport_date_issue').datepicker({
             inline: true,
             nextText: '&rarr;',
             prevText: '&larr;',
@@ -214,50 +214,42 @@ use Illuminate\Support\Facades\Route;
         var app2 = $("#process2");
         app2.validate({
             rules:{
-                fname2					: 		{ required : true },
-                mname2					: 		{ required : true },
-                lname2					: 		{ required : true },
-                cob						: 		{ required : true },
-                dob						: 		{ required : true },
-                national_id				: 		{ required : true },
-                any_other_place_issue	: 		{ required : true },
-                id_mark					: 		{ required : true },
-                place_issue				: 		{ required : true },
-                expdate					: 		{ required : true },
-                issuedate				: 		{ required : true },
-                anyother_pass_ic		: 		{ required : true },
-                any_other_date_issue	: 		{ required : true },
-                any_other_place_con		: 		{ required : true, selected : true},
-                p2_gender				:		{ required : true, selected : true},
-                country					:		{ required : true/*, selected : true*/},
-                religion				:		{ required : true, selected : true},
-                edu						:		{ required : true, selected : true},
-                birth_nationality		:		{ required : true, selected : true},
-                pre_nationality			:		{ required : false, selected : false}
-
+                p1_fname					        : 		{ required : true },
+                p2_previous_surname					: 		{ required : true },
+                p2_previous_name					: 		{ required : true },
+                p2_gender				            :		{ required : true, selected : true},
+                p2_town_city_birth					: 		{ required : true },
+                p2_country_birth					: 		{ required : true },
+                p2_national_id				        : 		{ required : true },
+                p2_religion                     	: 		{ required : true , selected : true},
+                p2_other_religion					: 		{ required : true },
+                p2_visible_marks    				: 		{ required : true },
+                p2_education    					: 		{ required : true , selected : true},
+                p2_other_education  				: 		{ required : true },
+                p2_birth_nationality        		: 		{ required : true , selected : true},
+                p2_passport_place_issue         	: 		{ required : true },
+                p2_passport_date_issue      		: 		{ required : true},
+                p2_passport_date_expiry 			:		{ required : true},
+                p2_other_passport_date_issue		:		{ required : true}
             },
             messages:{
-                anyother_pass_ic				    : 		{ required : "Please enter Passport/IC No" },
-                fname2				    : 		{ required : "This field is required" },
-                mname2 					:	    { required : "This field is required" },
-                lname2				    :       { required : "This field is required" },
-                cob				  	 	:       { required : "Please enter City of Birth" },
-                dob				  		:       { required : "Please enter Date of Birth" },
-                national_id			    :       { required : "Please enter Citizenship/National Id No" },
-                any_other_place_issue   : 		{ required : "Please enter Place of Issue" },
-                id_mark  				: 		{ required : "Please enter Visible Identification Marks" },
-                place_issue  			: 		{ required : "Please enter Place of Issue" },
-                expdate  				: 		{ required : "Please enter Date of Expire" },
-                issuedate  				: 		{ required : "Please enter Date of Issue" },
-                any_other_date_issue  	: 		{ required : "Please enter Date of Issue" },
-                any_other_place_con		: 		{ required : "This field is required", selected : "Please select atleast one option" },
-                p2_gender 				:	    { required : "This field is required", selected : "Please select Gender" },
-                country 				:	    { required : "This field is required", selected : "Please select Country" },
-                religion 				:	    { required : "This field is required", selected : "Please select Religion" },
-                edu 					:	    { required : "This field is required", selected : "Please enter Education" },
-                birth_nationality		:	    { required : "This field is required", selected : "Please select Nationality By Birth or By Naturalization" },
-                pre_nationality			:	    { required : "This field is required", selected : "Please select Prev Nationality" }
-
+                p1_fname			        	    : 		{ required : "Please enter Given Name/s" },
+                p2_previous_surname				    : 		{ required : "Please enter Surname" },
+                p2_previous_name				    : 		{ required : "Please enter Name" },
+                p2_gender 				            :	    { required : "This field is required", selected : "Please select Gender" },
+                p2_town_city_birth 					:	    { required : "Please enter Town/City of Birth" },
+                p2_country_birth				    :       { required : "This field is required", selected : "Please select Country of Birth" },
+                p2_national_id				  	 	:       { required : "Please enter Citizenship/National Id No." },
+                p2_religion				  		    :       { required : "This field is required", selected : "Please select Religion" },
+                p2_other_religion			        :       { required : "Please enter Other Religion" },
+                p2_visible_marks                    : 		{ required : "Please enter Visible Identification Marks" },
+                p2_education          				: 		{ required : "This field is required", selected : "Please select Educational Qualification" },
+                p2_other_education        			: 		{ required : "Please enter Other Educational Qualification" },
+                p2_birth_nationality  				: 		{ required : "This field is required", selected : "Please select Nationality By Birth or By Naturalization" },
+                p2_passport_place_issue				: 		{ required : "Please enter Place of Issue" },
+                p2_passport_date_issue            	: 		{ required : "Please enter Date of Issue" },
+                p2_passport_date_expiry     		: 		{ required : "Please enter Date of Expiry" },
+                p2_other_passport_date_issue		:	    { required : "Please enter Date of Issue" }
             }
         });
     });

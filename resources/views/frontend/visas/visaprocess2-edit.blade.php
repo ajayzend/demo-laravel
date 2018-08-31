@@ -51,26 +51,17 @@
     $anyoter_validpass	 =  "ddd";
 
 
-    //}
-    // }
-
-    if($anyoter_validpass == 'No'){ echo '<style>
-  #coupon_question{  display:none }
-  </style>';
-    }
     ?>
 
     <section class="wrapper">
         <div class="container">
             <div class="row1">
-
-                <?php //echo validation_errors(); ?>
                 <div class="form-outer">
                     <div class="title">
 
                         <h3 class="text-center">e-Visa-India (eVI) Application</h3>
                     </div>
-                    {{ Form::model($visa, ['route' => ['frontend.visas.update', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => 'pocess2']) }}
+                    {{ Form::model($visa, ['route' => ['frontend.visas.update', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => 'process2']) }}
                     {{ Form::hidden('evpuid', $visa->visa_no ) }}
                     {{ Form::hidden('ps', 10002 ) }}
                     <div class="form-group">
@@ -103,14 +94,15 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="checkbox100"class="col-sm-8 col-xs-12"><h5>Have you ever changed your name? If yes, click the box<input id="chckid" type="checkbox" <?php if($name_check) echo'Checked="Checked"' ?> id="checkfirst" name="name_check" onchange="valueChanged()" class="form-check-input" value="yes"> and give details.</h5></label>
+                            <label for="checkbox100"class="col-sm-8 col-xs-12"><h5>Have you ever changed your name? If yes, click the box
+                                    <input id="p2_changed_your_name" type="checkbox" {{ $visa->p2_changed_your_name = 'yes' ? 'Checked="Checked"' : '' }}  name="p2_changed_your_name" class="form-check-input" value="yes"> and give details.</h5></label>
                             <div class="col-sm-4 col-xs-12 des">	If You have ever changed your Name Please tell us.
                             </div>
                         </div>
 
-                        <div class="surcheck">
+                        <div id="changed_your_name">
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12 control-label" >Surname </label>
+                                <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Surname </label>
                                 <div class="col-sm-4 col-xs-12">
                                     <input class="form-control" placeholder="Surname" type="text" name="p2_previous_surname" id="p2_previous_surname" value="{{ $visa->p2_previous_surname }}"/>
                                 </div>
@@ -119,7 +111,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12 control-label" >Name </label>
+                                <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Name </label>
                                 <div class="col-sm-4 col-xs-12">
                                     <input class="form-control" placeholder="Name" type="text" name="p2_previous_name" id="p2_previous_name" value="{{ $visa->p2_previous_name }}"/>
                                 </div>
@@ -408,7 +400,7 @@
                 </div>
 
             </div>
-
+        </div>
     </section>
 @endsection
 
@@ -420,6 +412,17 @@
     <script type="text/javascript">
 
         $(document).ready(function() {
+            $("#p2_changed_your_name").change(function() {
+                if ($("#p2_changed_your_name").is(":checked")) {
+                    $("#changed_your_name").show();
+                    $("#p2_previous_surname").attr("disabled", false);
+                    $("#p2_previous_name").attr("disabled", false);
+                } else {
+                    $("#p2_previous_surname").attr("disabled", true);
+                    $("#p2_previous_name").attr("disabled", true);
+                    $("#changed_your_name").hide();
+                }
+            }).trigger('change');
             // To Use Select2
             // Backend.Select2.init();
         });

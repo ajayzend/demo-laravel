@@ -105,7 +105,7 @@ class VisasController extends Controller
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
 
-        return view('frontend.visaprocess.amendprocess', compact('google_analytics', $google_analytics));
+        return view('frontend.visas.amendprocess', compact('google_analytics', $google_analytics));
     }
 
     /**
