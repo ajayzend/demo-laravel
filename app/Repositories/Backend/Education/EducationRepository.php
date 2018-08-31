@@ -30,6 +30,7 @@ class EducationRepository extends BaseRepository
         return $this->query()
             ->select([
                 config('module.education.table').'.id',
+                config('module.education.table').'.name',
                 config('module.education.table').'.created_at',
                 config('module.education.table').'.updated_at',
             ]);
@@ -46,7 +47,7 @@ class EducationRepository extends BaseRepository
     {
         $education = self::MODEL;
         $education = new $education();
-        if ($education->save($input)) {
+        if ($education->create($input)) {
             return true;
         }
         throw new GeneralException(trans('exceptions.backend.education.create_error'));

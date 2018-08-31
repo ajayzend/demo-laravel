@@ -22,7 +22,9 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.education.table.id') }}</th>
+                            <th>Education</th>
                             <th>{{ trans('labels.backend.education.table.createdat') }}</th>
+                            <th>Updated At</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
                     </thead>
@@ -55,7 +57,9 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.education.table')}}.id'},
+                    {data: 'name', name: '{{config('module.education.table')}}.name'},
                     {data: 'created_at', name: '{{config('module.education.table')}}.created_at'},
+                    {data: 'updated_at', name: '{{config('module.ports.table')}}.updated_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],
                 order: [[0, "asc"]],

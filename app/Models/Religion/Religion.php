@@ -2,12 +2,13 @@
 
 namespace App\Models\Religion;
 
+use App\Models\BaseModel;
 use App\Models\ModelTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Religion\Traits\ReligionAttribute;
 use App\Models\Religion\Traits\ReligionRelationship;
 
-class Religion extends Model
+class Religion extends BaseModel
 {
     use ModelTrait,
         ReligionAttribute,
@@ -31,7 +32,7 @@ class Religion extends Model
      * @var array
      */
     protected $fillable = [
-
+        'name'
     ];
 
     /**

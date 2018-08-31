@@ -30,6 +30,7 @@ class ReligionRepository extends BaseRepository
         return $this->query()
             ->select([
                 config('module.religions.table').'.id',
+                config('module.religions.table').'.name',
                 config('module.religions.table').'.created_at',
                 config('module.religions.table').'.updated_at',
             ]);
@@ -46,7 +47,7 @@ class ReligionRepository extends BaseRepository
     {
         $religion = self::MODEL;
         $religion = new $religion();
-        if ($religion->save($input)) {
+        if ($religion->create($input)) {
             return true;
         }
         throw new GeneralException(trans('exceptions.backend.religions.create_error'));

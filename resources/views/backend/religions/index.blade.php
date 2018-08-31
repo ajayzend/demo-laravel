@@ -22,12 +22,16 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.religions.table.id') }}</th>
+                            <th>Religion</th>
                             <th>{{ trans('labels.backend.religions.table.createdat') }}</th>
+                            <th>Updated At</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
                     </thead>
                     <thead class="transparent-bg">
                         <tr>
+                            <th></th>
+                            <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -55,7 +59,9 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.religions.table')}}.id'},
+                    {data: 'name', name: '{{config('module.religions.table')}}.name'},
                     {data: 'created_at', name: '{{config('module.religions.table')}}.created_at'},
+                    {data: 'updated_at', name: '{{config('module.ports.table')}}.updated_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],
                 order: [[0, "asc"]],

@@ -2,12 +2,13 @@
 
 namespace App\Models\Education;
 
+use App\Models\BaseModel;
 use App\Models\ModelTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Education\Traits\EducationAttribute;
 use App\Models\Education\Traits\EducationRelationship;
 
-class Education extends Model
+class Education extends BaseModel
 {
     use ModelTrait,
         EducationAttribute,
@@ -31,7 +32,7 @@ class Education extends Model
      * @var array
      */
     protected $fillable = [
-
+        'name'
     ];
 
     /**
