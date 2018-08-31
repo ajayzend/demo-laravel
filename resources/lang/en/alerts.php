@@ -78,5 +78,15 @@ return [
 	"deleted" => "The Country was successfully deleted.",
 	"updated" => "The Country was successfully updated.",
 	],
+	"religions" => [
+	"created" => "The Religion was successfully created.",
+	"deleted" => "The Religion was successfully deleted.",
+	"updated" => "The Religion was successfully updated.",
+	],
+	"education" => [
+	"created" => "The Education was successfully created.",
+	"deleted" => "The Education was successfully deleted.",
+	"updated" => "The Education was successfully updated.",
+	],
 	],
 ];

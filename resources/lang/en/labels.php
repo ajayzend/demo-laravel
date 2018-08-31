@@ -302,6 +302,26 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"religions" => [
+	"create" => "Create Religion",
+	"edit" => "Edit Religion",
+	"management" => "Religion Management",
+	"title" => "Religions",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
+	"education" => [
+	"create" => "Create Education",
+	"edit" => "Edit Education",
+	"management" => "Education Management",
+	"title" => "Education",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
 	],
 	"frontend" => [
 	"auth" => [

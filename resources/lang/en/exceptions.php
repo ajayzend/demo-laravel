@@ -113,6 +113,20 @@ return [
 	"not_found" => "That Country does not exist.",
 	"update_error" => "There was a problem updating this Country. Please try again.",
 	],
+	"religions" => [
+	"already_exists" => "That Religion already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Religion. Please try again.",
+	"delete_error" => "There was a problem deleting this Religion. Please try again.",
+	"not_found" => "That Religion does not exist.",
+	"update_error" => "There was a problem updating this Religion. Please try again.",
+	],
+	"education" => [
+	"already_exists" => "That Education already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Education. Please try again.",
+	"delete_error" => "There was a problem deleting this Education. Please try again.",
+	"not_found" => "That Education does not exist.",
+	"update_error" => "There was a problem updating this Education. Please try again.",
+	],
 	],
 	"frontend" => [
 	"auth" => [

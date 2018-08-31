@@ -32,4 +32,10 @@ return [
 	"countries" => [
 	"table" => "countries",
 	],
+	"religions" => [
+	"table" => "religions",
+	],
+	"education" => [
+	"table" => "educations",
+	],
 ];

@@ -135,6 +135,20 @@ return [
 	"management" => "Country Management",
 	"main" => "Countries",
 	],
+	"religions" => [
+	"all" => "All Religions",
+	"create" => "Create Religion",
+	"edit" => "Edit Religion",
+	"management" => "Religion Management",
+	"main" => "Religions",
+	],
+	"education" => [
+	"all" => "All Education",
+	"create" => "Create Education",
+	"edit" => "Edit Education",
+	"management" => "Education Management",
+	"main" => "Education",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",
