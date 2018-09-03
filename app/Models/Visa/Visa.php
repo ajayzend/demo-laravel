@@ -45,6 +45,7 @@ class Visa extends Model
         'p1_visa_type',
         'p1_dob',
         'p1_edate',
+        'p2_changed_your_name',
         'p2_previous_surname',
         'p2_previous_name',
         'p2_gender',

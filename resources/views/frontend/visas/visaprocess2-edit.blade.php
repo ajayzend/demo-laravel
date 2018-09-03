@@ -1,58 +1,6 @@
 @extends('frontend.layouts.app2')
 
 @section('content')
-    <?php
-    $countries = array();
-    //$country = array();
-    $visa_religion = array();
-    $religion = array();
-    $education = array();
-    $edu = array();
-    $pre_nationality = array();
-    $anyother_conissue = array();
-    $any_other_place_con = array();
-    $unids = 1;
-    //if($unids){
-    //foreach($users as $user){
-    $unid =  "ddd";
-    $fname =  "ddd";
-    $mname =  "ddd";
-    $lname =  "ddd";
-    $type =  "ddd";
-    $price =  "ddd";
-    $date = "ddd";;
-    $type =  "ddd";
-    $arrival =  "ddd";
-    $surname =  "ddd";
-    $surfname =  "ddd";
-    $sex =  "ddd";
-    $countries[] =  "ddd";
-    $religion[] =  "ddd";
-    $cob =  "ddd";
-    $national_id =  "ddd";
-    $id_mark =  "ddd";
-    $edu[] =  "ddd";
-    $other_edu =  "ddd";
-    $pre_nationality[] =  "ddd";
-    $nationality =  "ddd";
-    $birth_nationality	 = "ddd";
-    $year	 =  "ddd";
-    $place_issue	 =  "ddd";
-    $issuedate	 =  "ddd";
-    $expdate	 =  "ddd";
-    $pnumbers	 = "ddd";
-    $any_other_place_issue	 =  "ddd";
-    $anyother_conissue[]	 =  "ddd";
-    $anyother_pass_ic	 =  "ddd";
-    $any_other_date_issue	 =  "ddd";
-    $any_other_place_con[]	 =  "ddd";
-    $other_reg	 =  "ddd";
-    $name_check	 =  "ddd";
-    $anyoter_validpass	 =  "ddd";
-
-
-    ?>
-
     <section class="wrapper">
         <div class="container">
             <div class="row1">
@@ -94,8 +42,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="checkbox100"class="col-sm-8 col-xs-12"><h5>Have you ever changed your name? If yes, click the box
-                                    <input id="p2_changed_your_name" type="checkbox" {{ $visa->p2_changed_your_name = 'yes' ? 'Checked="Checked"' : '' }}  name="p2_changed_your_name" class="form-check-input" value="yes"> and give details.</h5></label>
+                            <label for="checkbox100" class="col-sm-8 col-xs-12"><h5>Have you ever changed your name? If yes, click the box
+                                    <input name="p2_changed_your_name" id="p2_changed_your_name" type="checkbox"  {{ $visa->p2_changed_your_name == 'yes' ? 'Checked="Checked"' : '' }}  value="yes" >
+                                    and give details.</h5></label>
                             <div class="col-sm-4 col-xs-12 des">	If You have ever changed your Name Please tell us.
                             </div>
                         </div>
@@ -124,7 +73,7 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Gender</label>
                             <div class="col-sm-4 col-xs-12">
-                                <select class="form-control" id="sex" name="sex" >
+                                <select class="form-control" id="p2_gender" name="p2_gender" >
                                     <option value="0">Gender</option>
                                     <option {{ $visa->p2_gender = 'Female' ? 'selected="selected"' : '' }} value="Female">Female</option>
                                     <option {{ $visa->p2_gender = 'Male' ? 'selected="selected"' : '' }} value="Male">Male</option>
@@ -174,22 +123,16 @@
                             </div>
                             <div class="col-sm-4 col-xs-12">If not applicable Please Type NA
 
-
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Religion</label>
                             <div class="col-sm-4 col-xs-12">
-                                <select class="form-control" name="p2_religion" id="p2_religion">
-                                    <option value="0"> Select Religion </option>
-
-                                    <?php foreach($visa_religion as $reg)
-                                    { ?>
-                                    <option value="<?php echo $reg->religion;?>" <?php if($unids){ if( $religion[0] == $reg->religion) echo 'selected="selected"'; } ?>><?php echo $reg->religion; ?></option>
-
-                                    <?php } ?>
-                                    <option id="other_value" <?php  if($religion[0]=='other') echo 'selected="selected"';  ?> value="other"> OTHERS</option>
-                                </select>
+                                @if(!empty($religion))
+                                    {{ Form::select('p2_religion', $religion, $visa->p2_religion, ['class' => 'form-control select2 box-size', 'id' => 'p2_religion']) }}
+                                @else
+                                    {{ Form::select('p2_religion', $religion, 0, ['class' => 'form-control select2 box-size', 'id' => 'p2_religion']) }}
+                                @endif
 
                                 <input class="form-control" value="{{ $visa->p2_other_religion }}" placeholder="OTher Religion" name="p2_other_religion" id="p2_other_religion" />
 
@@ -209,16 +152,11 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Educational Qualification </label>
                             <div class="col-sm-4 col-xs-12">
-                                <select class="form-control" name="p2_education" id="p2_education">
-                                    <option value="0" >Select Education</option>
-                                    <?php foreach($education as $eduu)
-                                    { ?>
-                                    <option value="<?php echo $eduu->name;?>" <?php if($unids){ if( $edu[0] == $eduu->name) echo 'selected="selected"'; } ?>><?php echo $eduu->name; ?></option>
-                                    <?php } ?>
-                                    <option id="other_edu_value"  <?php  if($edu[0]=='other') echo 'selected="selected"';  ?>  value="other"> OTHER</option>
-
-                                </select>
-
+                                @if(!empty($education))
+                                    {{ Form::select('p2_education', $education, $visa->p2_education, ['class' => 'form-control select2 box-size', 'id' => 'p2_education']) }}
+                                @else
+                                    {{ Form::select('p2_education', $education, 0, ['class' => 'form-control select2 box-size', 'id' => 'p2_education']) }}
+                                @endif
                                 <input type="text" name="p2_other_education" placeholder="OTher Educational Qualification" id="p2_other_education" class="form-control" value="{{ $visa->p2_other_education }}">
                             </div>
                             <div class="col-sm-4 col-xs-12">Educational Qualification
@@ -266,8 +204,8 @@
                                 You are Applying Visa?</label>
                             <div class="col-sm-8 col-xs-12">
                                 <label>
-                                    <input type="radio"  {{ $visa->p2_lived_visa_country_years = 1 ? 'Checked="Checked"' : '' }} value="1"  id="p2_lived_visa_country_years1" name="p2_lived_visa_country_years">Yes</label>
-                                <label><input type="radio"  {{ $visa->p2_lived_visa_country_years = 0 ? 'Checked="Checked"' : '' }}   value="0" id="p2_lived_visa_country_years2" name="p2_lived_visa_country_years">No</label>
+                                    <input type="radio"  {{ $visa->p2_lived_visa_country_years == 1 ? 'Checked="Checked"' : '' }} value="1"  id="p2_lived_visa_country_years1" name="p2_lived_visa_country_years">Yes</label>
+                                <label><input type="radio"  {{ $visa->p2_lived_visa_country_years == 0 ? 'Checked="Checked"' : '' }}   value="0" id="p2_lived_visa_country_years2" name="p2_lived_visa_country_years">No</label>
                             </div>
                             <div class="col-sm-4 col-xs-12">
                             </div>
@@ -317,14 +255,14 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label">Any other valid Passport/Identity Certificate(IC) held</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input type="radio" {{ $visa->p2_any_other_valid_passport = 1 ? 'Checked="Checked"' : '' }} id="p2_any_other_valid_passport1" name="p2_any_other_valid_passport" value="1" />Yes
-                                <input type="radio" {{ $visa->p2_any_other_valid_passport = 0 ? 'Checked="Checked"' : '' }}  id="p2_any_other_valid_passport2" name="p2_any_other_valid_passport" value="0"/>No
+                                <input type="radio" {{ $visa->p2_any_other_valid_passport == 1 ? 'Checked="Checked"' : '' }} id="p2_any_other_valid_passport1" name="p2_any_other_valid_passport" value="1" />Yes
+                                <input type="radio" {{ $visa->p2_any_other_valid_passport == 0 ? 'Checked="Checked"' : '' }}  id="p2_any_other_valid_passport2" name="p2_any_other_valid_passport" value="0"/>No
                             </div>
                             <div class="col-sm-4 col-xs-12">
                                 If Yes Please give Details
                             </div>
                         </div>
-                        <div class="coupon_question" id="coupon_question">
+                        <div class="coupon_question" id="other_valid_passport_details">
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label" >Country of Issue</label>
                                 <div class="col-sm-4 col-xs-12">
@@ -421,6 +359,49 @@
                     $("#p2_previous_surname").attr("disabled", true);
                     $("#p2_previous_name").attr("disabled", true);
                     $("#changed_your_name").hide();
+                }
+            }).trigger('change');
+
+            $("#p2_religion").change(function() {
+                if ($("#p2_religion").val() == 3) {
+                    $("#p2_other_religion").show();
+                    $("#p2_other_religion").attr("disabled", false);
+                } else {
+                    $("#p2_other_religion").hide();
+                    $("#p2_other_religion").attr("disabled", true);
+                }
+            }).trigger('change');
+
+            $("#p2_education").change(function() {
+                if ($("#p2_education").val() == 3) {
+                    $("#p2_other_education").show();
+                    $("#p2_other_education").attr("disabled", false);
+                } else {
+                    $("#p2_other_education").hide();
+                    $("#p2_other_education").attr("disabled", true);
+                }
+            }).trigger('change');
+
+
+            $("#p2_any_other_valid_passport1").change(function() {
+                if ($("#p2_any_other_valid_passport1").is(":checked")) {
+                    $("#other_valid_passport_details").show();
+                    $("#p2_other_passport_country").attr("disabled", false);
+                    $("#p2_other_passport_number").attr("disabled", false);
+                    $("#p2_other_passport_date_issue").attr("disabled", false);
+                    $("#p2_other_passport_place_issue").attr("disabled", false);
+                    $("#p2_other_nationality_mentioned").attr("disabled", false);
+                }
+            }).trigger('change');
+
+            $("#p2_any_other_valid_passport2").change(function() {
+                if ($("#p2_any_other_valid_passport2").is(":checked")) {
+                    $("#other_valid_passport_details").hide();
+                    $("#p2_other_passport_country").attr("disabled", true);
+                    $("#p2_other_passport_number").attr("disabled", true);
+                    $("#p2_other_passport_date_issue").attr("disabled", true);
+                    $("#p2_other_passport_place_issue").attr("disabled", true);
+                    $("#p2_other_nationality_mentioned").attr("disabled", true);
                 }
             }).trigger('change');
             // To Use Select2

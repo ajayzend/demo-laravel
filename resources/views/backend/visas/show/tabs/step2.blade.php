@@ -9,6 +9,10 @@
         <td>{{ $visa->p1_mname }}</td>
     </tr>
 
+    <tr>
+        <th>Have you ever changed your name</th>
+        <td>{{ $visa->p2_changed_your_name }}</td>
+    </tr>
 
     <tr>
         <th>Given Name/s</th>

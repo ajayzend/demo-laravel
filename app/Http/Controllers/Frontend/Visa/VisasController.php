@@ -15,6 +15,8 @@ use App\Http\Requests\Frontend\Visa\UpdateVisaRequest;
 use App\Models\Port\Port;
 use App\Models\Evisacountry\Evisacountry;
 use App\Models\Country\Country;
+use App\Models\Religion\Religion;
+use App\Models\Education\Education;
 
 /**
  * VisasController
@@ -124,6 +126,9 @@ class VisasController extends Controller
         if ($sess_vid == $visa->id && session()->get('evpuid') != '') {
             $visa->p1_dob = date('d-m-Y', strtotime($visa->p1_dob));
             $visa->p1_edate = date('d-m-Y', strtotime($visa->p1_edate));
+            $visa->p2_passport_date_issue = date('d-m-Y', strtotime($visa->p2_passport_date_issue));
+            $visa->p2_passport_date_expiry = date('d-m-Y', strtotime($visa->p2_passport_date_expiry));
+            $visa->p2_other_passport_date_issue = date('d-m-Y', strtotime($visa->p2_other_passport_date_issue));
             //print "<pre>";print_r($visa);exit;
             if ($process_steps == 10001 || $process_steps == '') {
                 $port = Port::getSelectData();
@@ -137,10 +142,15 @@ class VisasController extends Controller
             else{
                 $evisacountry = Evisacountry::getSelectData();
                 $country = Country::getSelectData();
+                $education = Education::getSelectData();
+                $religion = Religion::getSelectData();
+                $visa->p1_nationality = $evisacountry[$visa->p1_nationality];
                 return view('frontend.visas.visaprocess2-edit')->with([
                     'visa' => $visa,
                     'evisa_country'       => $evisacountry,
                     'country'       => $country,
+                    'education'       => $education,
+                    'religion'       => $religion
                 ]);
             }
 
@@ -169,14 +179,17 @@ class VisasController extends Controller
         if ($sess_evpuid == $input['evpuid']) {
             //Update the model using repository update method
             $input['process_steps'] = $process_steps;
-            $this->repository->update($visa, $input);
             //return with successfull message
             if ($process_steps == 10001 || $process_steps == '') {
+                $this->repository->update($visa, $input);
                 session()->put('process_steps', 10002);
                 return redirect()->route('frontend.visas.edit', $vid);
             }
             else{
-                //die("else");
+                $p2_changed_your_name = @$input['p2_changed_your_name'];
+                if($p2_changed_your_name != 'yes')
+                    $input['p2_changed_your_name'] = 'no';
+                $this->repository->update($visa, $input);
                 return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
             }
 
