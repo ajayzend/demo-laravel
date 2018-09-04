@@ -252,6 +252,66 @@ use Illuminate\Support\Facades\Route;
                 p2_other_passport_date_issue		:	    { required : "Please enter Date of Issue" }
             }
         });
+
+        var app3 = $("#process3");
+        app3.validate({
+            rules:{
+                p3_house_street					                : 		{ required : true },
+                p3_village_town					                : 		{ required : true },
+                p3_state            					        : 		{ required : true },
+                p3_pincode				                        :		{ required : true},
+                p3_country          					        : 		{ required : true , selected : true},
+                p3_house_street2    					        : 		{ required : true },
+                p3_f_name       				                : 		{ required : true },
+                p3_f_nationality                         	    : 		{ required : true , selected : true},
+                p3_f_prev_nationality                      	    : 		{ required : true , selected : true},
+                p3_f_place_birth            		            :		{ required : true},
+                p3_f_country_birth            		            :		{ required : true, selected : true},
+                p3_m_name       				                : 		{ required : true },
+                p3_m_nationality                         	    : 		{ required : true , selected : true},
+                p3_m_prev_nationality                      	    : 		{ required : true , selected : true},
+                p3_m_place_birth            		            :		{ required : true},
+                p3_m_country_birth            		            :		{ required : true,  selected : true},
+                p3_marital_status            		            :		{ required : true,  selected : true},
+                p3_s_name                   		            :		{ required : true},
+                p3_s_nationality                         	    : 		{ required : true , selected : true},
+                p3_s_prev_nationality                      	    : 		{ required : true , selected : true},
+                p3_s_place_birth                          	    : 		{ required : true},
+                p3_s_country_birth          		            :		{ required : true,  selected : true},
+                p3_current_occupation          		            :		{ required : true,  selected : true},
+                p3_other_occupation          		            :		{ required : true,  selected : true},
+                p3_employer                 		            :		{ required : true},
+                p3_address                   		            :		{ required : true}
+            },
+            messages:{
+                p3_house_street			        	            : 		{ required : "Please enter House No./Street" },
+                p3_village_town				                    : 		{ required : "Please enter Village/Town/City" },
+                p3_state            				            : 		{ required : "Please enter State/Province/District" },
+                p3_pincode 				                        :	    { required : "Please enter Postal/Zip Code"},
+                p3_country 					                    :	    { required : "This field is required", selected : "Please select Country" },
+                p3_house_street2				                :       { required : "Please enter House No./Street" },
+                p3_f_name       				  	 	        :       { required : "Please enter Name" },
+                p3_f_nationality				  		        :       { required : "This field is required", selected : "Please select Nationality" },
+                p3_f_prev_nationality			  		        :       { required : "This field is required", selected : "Please select Previous Nationality" },
+                p3_f_place_birth                        		:	    { required : "Please enter Place of Birth" },
+                p3_f_country_birth                        		:	    { required : "This field is required", selected : "Please select Country of Birth" },
+                p3_m_name       				  	 	        :       { required : "Please enter Name" },
+                p3_m_nationality				  		        :       { required : "This field is required", selected : "Please select Nationality" },
+                p3_m_prev_nationality			  		        :       { required : "This field is required", selected : "Please select Previous Nationality" },
+                p3_m_place_birth                        		:	    { required : "Please enter Place of Birth" },
+                p3_m_country_birth                        		:	    { required : "This field is required", selected : "Please select Country of Birth" },
+                p3_marital_status                        		:	    { required : "This field is required", selected : "Please select Applicant's Marital Status" },
+                p3_s_name                               		:	    { required : "Please enter Name" },
+                p3_s_nationality				  		        :       { required : "This field is required", selected : "Please select Nationality" },
+                p3_s_prev_nationality			  		        :       { required : "This field is required", selected : "Please select Previous Nationality" },
+                p3_s_place_birth    			  		        :       { required : "Please enter Place of Birth" },
+                p3_s_country_birth                          	:	    { required : "This field is required", selected : "Please select Country of Birth" },
+                p3_current_occupation                          	:	    { required : "This field is required", selected : "Please select Present Occupation" },
+                p3_other_occupation                        	    :	    { required : "This field is required", selected : "Please select Present Other Occupation" },
+                p3_employer                             	    :	    { required : "Please enter Employer Name/business" },
+                p3_address                               	    :	    { required : "Please enter Address" }
+            }
+        });
     });
 
 </script>

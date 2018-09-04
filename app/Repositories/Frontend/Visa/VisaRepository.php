@@ -87,11 +87,18 @@ class VisaRepository extends BaseRepository
         if($process_steps == 10001 || $process_steps == ''){
             $input['p1_dob'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_dob']));
             $input['p1_edate'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_edate']));
-        }else{
+        }else if($process_steps == 10002){
             $input['p2_passport_date_issue'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p2_passport_date_issue']));
             $input['p2_passport_date_expiry'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p2_passport_date_expiry']));
             if($input['p2_any_other_valid_passport'] == 1)
                 $input['p2_other_passport_date_issue'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p2_other_passport_date_issue']));
+        }
+
+        else if($process_steps == 10003){
+            /*$input['p2_passport_date_issue'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p2_passport_date_issue']));
+            $input['p2_passport_date_expiry'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p2_passport_date_expiry']));
+            if($input['p2_any_other_valid_passport'] == 1)
+                $input['p2_other_passport_date_issue'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p2_other_passport_date_issue']));*/
         }
 
     	if ($visa->update($input))

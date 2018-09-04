@@ -139,7 +139,7 @@ class VisasController extends Controller
                     'evisa_country'       => $evisacountry,
                 ]);
             }
-            else{
+            else if ($process_steps == 10002){
                 $evisacountry = Evisacountry::getSelectData();
                 $country = Country::getSelectData();
                 $education = Education::getSelectData();
@@ -151,6 +151,20 @@ class VisasController extends Controller
                     'country'       => $country,
                     'education'       => $education,
                     'religion'       => $religion
+                ]);
+            }else if ($process_steps == 10003){
+                $evisacountry = Evisacountry::getSelectData();
+                $country = Country::getSelectData();
+                $education = Education::getSelectData();
+                $religion = Religion::getSelectData();
+               // $visa->p1_nationality = $evisacountry[$visa->p1_nationality];
+                return view('frontend.visas.visaprocess3-edit')->with([
+                    'visa' => $visa,
+                    'evisa_country'       => $evisacountry,
+                    'country'       => $country,
+                    'education'       => $education,
+                    'religion'       => $religion,
+                    'occupation'       => $religion
                 ]);
             }
 
@@ -173,6 +187,7 @@ class VisasController extends Controller
     {
         //Input received from the request
         $input = $request->except(['_token']);
+       // print "<pre>";print_r($input);exit;
         $vid = session()->get('vid');
         $sess_evpuid = session()->get('evpuid');
         $process_steps = session()->get('process_steps');
@@ -185,12 +200,35 @@ class VisasController extends Controller
                 session()->put('process_steps', 10002);
                 return redirect()->route('frontend.visas.edit', $vid);
             }
-            else{
+
+            else if ($process_steps == 10002) {
                 $p2_changed_your_name = @$input['p2_changed_your_name'];
                 if($p2_changed_your_name != 'yes')
                     $input['p2_changed_your_name'] = 'no';
                 $this->repository->update($visa, $input);
-                return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+                session()->put('process_steps', 10003);
+                if($input['submit'] == 'Save and Temporarily Exit')
+                    return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+                else
+                    return redirect()->route('frontend.visas.edit', $vid);
+            }
+
+            else if ($process_steps == 10003) {
+                $p3_copy_address = @$input['p3_copy_address'];
+                if($p3_copy_address != 'yes')
+                    $input['p3_copy_address'] = 'no';
+                $this->repository->update($visa, $input);
+                session()->put('process_steps', 10004);
+              //  if($input['submit'] == 'Save and Temporarily Exit')
+                    return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+               // else
+                   // return redirect()->route('frontend.visas.edit', $vid);
+            }
+            else{
+
+                $this->repository->update($visa, $input);
+                //if($input['submit'] == 'Save and Temporarily Exit')
+                    return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
             }
 
         } else {

@@ -324,8 +324,8 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" ></label>
                             <div class="col-sm-8 col-xs-12">
-                                <input type="submit" name="submit" value="Save And Continue" onclick="show12()" class="btn-primary submit-btn2">
-                                <input type="submit"  name="exit" onclick="show2()" value="Save and Register Later"   class="btn-primary submit-btn2">
+                                <input type="submit" name="submit" value="Save And Continue"  class="btn-primary submit-btn2">
+                                <input type="submit"  name="submit" value="Save and Temporarily Exit"   class="btn-primary submit-btn2">
                             </div>
                         </div>
 
