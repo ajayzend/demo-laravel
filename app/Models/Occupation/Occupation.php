@@ -2,12 +2,13 @@
 
 namespace App\Models\Occupation;
 
+use App\Models\BaseModel;
 use App\Models\ModelTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Occupation\Traits\OccupationAttribute;
 use App\Models\Occupation\Traits\OccupationRelationship;
 
-class Occupation extends Model
+class Occupation extends BaseModel
 {
     use ModelTrait,
         OccupationAttribute,
@@ -31,7 +32,7 @@ class Occupation extends Model
      * @var array
      */
     protected $fillable = [
-
+'name'
     ];
 
     /**

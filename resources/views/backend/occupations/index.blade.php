@@ -22,12 +22,16 @@
                     <thead>
                         <tr>
                             <th>{{ trans('labels.backend.occupations.table.id') }}</th>
+                            <th>Occupation</th>
                             <th>{{ trans('labels.backend.occupations.table.createdat') }}</th>
+                            <th>Updated At</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
                     </thead>
                     <thead class="transparent-bg">
                         <tr>
+                            <th></th>
+                            <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -55,7 +59,9 @@
                 },
                 columns: [
                     {data: 'id', name: '{{config('module.occupations.table')}}.id'},
+                    {data: 'name', name: '{{config('module.occupations.table')}}.name'},
                     {data: 'created_at', name: '{{config('module.occupations.table')}}.created_at'},
+                    {data: 'updated_at', name: '{{config('module.occupations.table')}}.updated_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
                 ],
                 order: [[0, "asc"]],

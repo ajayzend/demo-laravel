@@ -30,6 +30,7 @@ class OccupationRepository extends BaseRepository
         return $this->query()
             ->select([
                 config('module.occupations.table').'.id',
+                config('module.occupations.table').'.name',
                 config('module.occupations.table').'.created_at',
                 config('module.occupations.table').'.updated_at',
             ]);
@@ -46,7 +47,7 @@ class OccupationRepository extends BaseRepository
     {
         $occupation = self::MODEL;
         $occupation = new $occupation();
-        if ($occupation->save($input)) {
+        if ($occupation->create($input)) {
             return true;
         }
         throw new GeneralException(trans('exceptions.backend.occupations.create_error'));

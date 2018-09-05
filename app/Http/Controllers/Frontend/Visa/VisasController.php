@@ -17,6 +17,7 @@ use App\Models\Evisacountry\Evisacountry;
 use App\Models\Country\Country;
 use App\Models\Religion\Religion;
 use App\Models\Education\Education;
+use App\Models\Occupation\Occupation;
 
 /**
  * VisasController
@@ -157,6 +158,7 @@ class VisasController extends Controller
                 $country = Country::getSelectData();
                 $education = Education::getSelectData();
                 $religion = Religion::getSelectData();
+                $occupation = Occupation::getSelectData();
                // $visa->p1_nationality = $evisacountry[$visa->p1_nationality];
                 return view('frontend.visas.visaprocess3-edit')->with([
                     'visa' => $visa,
@@ -164,7 +166,7 @@ class VisasController extends Controller
                     'country'       => $country,
                     'education'       => $education,
                     'religion'       => $religion,
-                    'occupation'       => $religion
+                    'occupation'       => $occupation
                 ]);
             }
 
