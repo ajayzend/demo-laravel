@@ -96,7 +96,7 @@
     </tr>
 
     <tr>
-        <th>Have You Lived for At Least Two Years in the Country Where You are Applying Visa?</th>
+        <th colspan="2">Have You Lived for At Least Two Years in the Country Where You are Applying Visa?</th>
         <td>{{ $visa->p2_lived_visa_country_years }}</td>
     </tr>
 

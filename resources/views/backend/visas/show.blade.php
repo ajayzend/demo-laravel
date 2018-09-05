@@ -32,6 +32,10 @@
                     <li role="presentation">
                         <a href="#history" aria-controls="history" role="tab" data-toggle="tab">{{ trans('labels.backend.visas.tabs.titles.step2') }}</a>
                     </li>
+
+                    <li role="presentation">
+                        <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Step3</a>
+                    </li>
                 </ul>
 
                 <div class="tab-content">
@@ -42,6 +46,10 @@
 
                     <div role="tabpanel" class="tab-pane mt-30" id="history">
                         @include('backend.visas.show.tabs.step2')
+                    </div><!--tab panel history-->
+
+                    <div role="tabpanel" class="tab-pane mt-30" id="tab3">
+                        @include('backend.visas.show.tabs.step3')
                     </div><!--tab panel history-->
 
                 </div><!--tab content-->
