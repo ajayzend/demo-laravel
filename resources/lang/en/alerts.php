@@ -93,5 +93,10 @@ return [
 	"deleted" => "The Occupation was successfully deleted.",
 	"updated" => "The Occupation was successfully updated.",
 	],
+	"visatypes" => [
+	"created" => "The Visatype was successfully created.",
+	"deleted" => "The Visatype was successfully deleted.",
+	"updated" => "The Visatype was successfully updated.",
+	],
 	],
 ];

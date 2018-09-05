@@ -156,6 +156,13 @@ return [
 	"management" => "Occupation Management",
 	"main" => "Occupations",
 	],
+	"visatypes" => [
+	"all" => "All Visatypes",
+	"create" => "Create Visatype",
+	"edit" => "Edit Visatype",
+	"management" => "Visatype Management",
+	"main" => "Visatypes",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",

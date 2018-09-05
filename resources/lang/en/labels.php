@@ -332,6 +332,16 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"visatypes" => [
+	"create" => "Create Visatype",
+	"edit" => "Edit Visatype",
+	"management" => "Visatype Management",
+	"title" => "Visatypes",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
 	],
 	"frontend" => [
 	"auth" => [

@@ -134,6 +134,13 @@ return [
 	"not_found" => "That Occupation does not exist.",
 	"update_error" => "There was a problem updating this Occupation. Please try again.",
 	],
+	"visatypes" => [
+	"already_exists" => "That Visatype already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Visatype. Please try again.",
+	"delete_error" => "There was a problem deleting this Visatype. Please try again.",
+	"not_found" => "That Visatype does not exist.",
+	"update_error" => "There was a problem updating this Visatype. Please try again.",
+	],
 	],
 	"frontend" => [
 	"auth" => [

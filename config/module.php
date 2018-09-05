@@ -41,4 +41,7 @@ return [
 	"occupations" => [
 	"table" => "occupations",
 	],
+	"visatypes" => [
+	"table" => "visatypes",
+	],
 ];

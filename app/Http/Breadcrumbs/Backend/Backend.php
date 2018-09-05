@@ -25,3 +25,4 @@ require __DIR__.'/Country.php';
 require __DIR__.'/Religion.php';
 require __DIR__.'/Education.php';
 require __DIR__.'/Occupation.php';
+require __DIR__.'/Visatype.php';
