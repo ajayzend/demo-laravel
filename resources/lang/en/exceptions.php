@@ -127,6 +127,13 @@ return [
 	"not_found" => "That Education does not exist.",
 	"update_error" => "There was a problem updating this Education. Please try again.",
 	],
+	"occupations" => [
+	"already_exists" => "That Occupation already exists. Please choose a different name.",
+	"create_error" => "There was a problem creating this Occupation. Please try again.",
+	"delete_error" => "There was a problem deleting this Occupation. Please try again.",
+	"not_found" => "That Occupation does not exist.",
+	"update_error" => "There was a problem updating this Occupation. Please try again.",
+	],
 	],
 	"frontend" => [
 	"auth" => [

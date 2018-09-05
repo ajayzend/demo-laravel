@@ -322,6 +322,16 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"occupations" => [
+	"create" => "Create Occupation",
+	"edit" => "Edit Occupation",
+	"management" => "Occupation Management",
+	"title" => "Occupations",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
 	],
 	"frontend" => [
 	"auth" => [

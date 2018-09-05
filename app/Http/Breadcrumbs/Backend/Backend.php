@@ -24,3 +24,4 @@ require __DIR__.'/Evisacountry.php';
 require __DIR__.'/Country.php';
 require __DIR__.'/Religion.php';
 require __DIR__.'/Education.php';
+require __DIR__.'/Occupation.php';

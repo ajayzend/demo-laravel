@@ -38,4 +38,7 @@ return [
 	"education" => [
 	"table" => "educations",
 	],
+	"occupations" => [
+	"table" => "occupations",
+	],
 ];

@@ -149,6 +149,13 @@ return [
 	"management" => "Education Management",
 	"main" => "Education",
 	],
+	"occupations" => [
+	"all" => "All Occupations",
+	"create" => "Create Occupation",
+	"edit" => "Edit Occupation",
+	"management" => "Occupation Management",
+	"main" => "Occupations",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",

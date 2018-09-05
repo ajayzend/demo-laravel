@@ -88,5 +88,10 @@ return [
 	"deleted" => "The Education was successfully deleted.",
 	"updated" => "The Education was successfully updated.",
 	],
+	"occupations" => [
+	"created" => "The Occupation was successfully created.",
+	"deleted" => "The Occupation was successfully deleted.",
+	"updated" => "The Occupation was successfully updated.",
+	],
 	],
 ];
