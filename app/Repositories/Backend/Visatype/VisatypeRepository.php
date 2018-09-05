@@ -30,6 +30,7 @@ class VisatypeRepository extends BaseRepository
         return $this->query()
             ->select([
                 config('module.visatypes.table').'.id',
+                config('module.visatypes.table').'.name',
                 config('module.visatypes.table').'.created_at',
                 config('module.visatypes.table').'.updated_at',
             ]);
@@ -46,7 +47,7 @@ class VisatypeRepository extends BaseRepository
     {
         $visatype = self::MODEL;
         $visatype = new $visatype();
-        if ($visatype->save($input)) {
+        if ($visatype->create($input)) {
             return true;
         }
         throw new GeneralException(trans('exceptions.backend.visatypes.create_error'));

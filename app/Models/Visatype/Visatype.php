@@ -2,12 +2,13 @@
 
 namespace App\Models\Visatype;
 
+use App\Models\BaseModel;
 use App\Models\ModelTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Visatype\Traits\VisatypeAttribute;
 use App\Models\Visatype\Traits\VisatypeRelationship;
 
-class Visatype extends Model
+class Visatype extends BaseModel
 {
     use ModelTrait,
         VisatypeAttribute,
@@ -31,7 +32,7 @@ class Visatype extends Model
      * @var array
      */
     protected $fillable = [
-
+'name'
     ];
 
     /**
