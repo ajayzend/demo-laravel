@@ -8,19 +8,38 @@
             <h4 class="text-center">Data saved Successfully.Please note down the Temporary Application ID:  {{ $visa->visa_no }}</h4>
             <div class="row">
                 <div class="form-outer">
-                    <h3 class="text-center"> Applicant's Address Details</h3>
+                    <div class="title">
+                        <div class="form-group">
+                            <div class="col-sm-8 col-xs-12">
+
+                                <h3>Details of Visa Sought</h3>
+
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+
+                                <h3> 	Help</h3>
+
+                            </div>
+
+                        </div>
+                    </div>
+
                         {{ Form::model($visa, ['route' => ['frontend.visas.update', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => 'process4']) }}
                         {{ Form::hidden('evpuid', $visa->visa_no ) }}
                         {{ Form::hidden('ps', 10004 ) }}
-                        <div class="form-group">
-                            <label class="col-sm-4 col-xs-12"><span class="star">*</span>Type of Visa</label>
 
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Type of Visa</label>
+                            <div class="col-sm-4 col-xs-12">
+                                {{$visa->p1_visa_type}}
+                            </div>
                             <div class="col-sm-4 col-xs-12" >
                                 Select Visa Type You are Applying For
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label class="col-sm-4 col-xs-12"><span class="star">*</span>Duration of Visa (in Days)</label>
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Duration of Visa (in Days)</label>
                             <div class="col-sm-4 col-xs-12">
                                 <input class="form-control" type="text" disabled="disabled" value="60" />
                             </div>
@@ -28,8 +47,9 @@
                                 Duration of Visit (in Days)
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label class="col-sm-4 col-xs-12"><span class="star">*</span>No. of Entries</label>
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>No. of Entries</label>
                             <div class="col-sm-4 col-xs-12">
 
                                 <select name="visa_entry_id" class="form-control" id="old_visa_type_id">
@@ -40,63 +60,71 @@
                                 No. of Entries
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-4 col-xs-12"><span class="star">*</span>Port of Arrival in India</label>
-                            <div class="col-sm-4 col-xs-12">
-                                {{ $visa->p1_app_type }}
 
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Port of Arrival in India</label>
+                            <div class="col-sm-4 col-xs-12">
+                                {{ $visa->p1_port_arrival }}
                             </div>
                             <div class="col-sm-4 col-xs-12" >
                                 Port of Arrival in India
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label class="col-sm-4 col-xs-12">Expected Port of Exit from India</label>
+                            <label class="col-sm-4 col-xs-12 control-label">Expected Port of Exit from India</label>
                             <div class="col-sm-4 col-xs-12">
-                                <select name="exit_pointxx" class="form-control" id="exit_pointxx">
-                                    <option value="0" selected="selected">Select.....</option>
-                                    <?php foreach($port_arrival as $arriv){?>
-
-                                    <option <?php  if($unids){  if($exit_pointxx[0]==$arriv->arrival) echo 'selected="selected"';  }  ?>value="<?php echo $arriv->arrival ;?>"><?php echo $arriv->arrival ;?></option>
-                                    <?php } ?>
-
-                                </select>
+                                @if(!empty($port_arrival))
+                                    {{ Form::select('p4_expected_port_exit', $port_arrival, $visa->p4_expected_port_exit, ['class' => 'form-control select2 box-size', 'id' => 'p4_expected_port_exit']) }}
+                                @else
+                                    {{ Form::select('p4_expected_port_exit', $port_arrival, 0, ['class' => 'form-control select2 box-size', 'id' => 'p4_expected_port_exit']) }}
+                                @endif
                             </div>
                             <div class="col-sm-4 col-xs-12" >
                                 Expected Port of Exit from India
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-4 col-xs-12"><span class="star">*</span>Places Likely To Be Visited</label>
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Places Likely To Be Visited</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input class="form-control" value="<?php if($unids){echo  $placelikelyvisited ;}?>" placeholder="Places likely to be Visited" id="placelikelyvisited" name="placelikelyvisited" />
+                                <input class="form-control" value="{{$visa->p4_place_likely_visit}}" placeholder="Places likely to be Visited" id="p4_place_likely_visit" name="p4_place_likely_visit" />
                             </div>
                             <div class="col-sm-4 col-xs-12" >
                                 Places to be Visited
                             </div>
                         </div>
+
+
+                    <div class="form-group">
+                                <div class="col-sm-8 col-xs-12 title">
+                                    <h3>Previous Visa/Currently valid Visa Details</h3>
+                                </div>
+                    </div>
+
+
                         <div class="form-group">
-                            <label class="col-sm-4 col-xs-12"> <span>Have You Ever Visited India Before?</span></label>
+                            <label class="col-sm-4 col-xs-12 control-label"> <span>Have You Ever Visited India Before?</span></label>
                             <div class="col-sm-4 col-xs-12">
-                                <input  type="radio"   id="oldvisa" name="oldvisa" value="Yes"  <?php if($oldvisa=='Yes'){ echo 'checked="checked"'; } ?>/><span>Yes</span>
-                                <input  type="radio" value="No"  <?php if($oldvisa=='No'){echo 'checked="checked"'; } ?>  id="oldvisas" name="oldvisa" /><span>No</span>
+                                <input  type="radio" value="Yes"  id="p4_visit_india_before1" name="p4_visit_india_before"   {{ $visa->p4_visit_india_before == 'Yes' ? 'checked="checked"' : '' }}/><span>Yes</span>
+                                <input  type="radio" value="No" id="p4_visit_india_before2" name="p4_visit_india_before" {{ $visa->p4_visit_india_before == 'No' ? 'checked="checked"' : '' }}  /><span>No</span>
                             </div>
                             <div class="col-sm-4 col-xs-12">If Yes Please Give Details</div>
                         </div>
-                        <div id="visa_details">
+
+                        <div id="prev_visa_details">
                             <div class="form-group" >
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span>Address </label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Address </label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" placeholder="Address" value="<?php if($unids){echo  $prv_visit_add1 ;}?>" placeholder="Address" id="prv_visit_add1" name="prv_visit_add1"/>
+                                    <input class="form-control" placeholder="Address" value="{{$visa->p4_address1}}" placeholder="Address" id="p4_address1" name="p4_address1"/>
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     Enter The Address of Stay During Your Last Visit
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span>Cities Previously Visited in India  </label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Cities Previously Visited in India  </label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input type="text" value="<?php if($unids){echo  $visited_city ;}?>" placeholder="Cities Previously Visited in India" class="form-control" id="visited_city" name="visited_city" >
+                                    <input type="text" value="{{$visa->p4_city_prev_visit}}" placeholder="Cities Previously Visited in India" class="form-control" id="p4_city_prev_visit" name="p4_city_prev_visit" >
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     Cities in India visited (comma separated)
@@ -104,9 +132,9 @@
 
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span>Last Indian Visa No/Currently Valid Indian Visa No</label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Last Indian Visa No/Currently Valid Indian Visa No</label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input type="text" value="<?php if($unids){echo  $old_visa_no  ;}?>"  placeholder="Last Indian Visa No/Currently Valid Indian Visa No" class="form-control" id="old_visa_no" name="old_visa_no" >
+                                    <input type="text" value="{{$visa->p4_last_curr_visa_no}}"  placeholder="Last Indian Visa No/Currently Valid Indian Visa No" class="form-control" id="p4_last_curr_visa_no" name="p4_last_curr_visa_no" >
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     Last Indian Visa No / Currently valid Visa no
@@ -116,65 +144,31 @@
                                <input class="form-control" placeholder="House No./Street"  id="perm_address1" name="perm_address1" />
                                </div>-->
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span>Type of Visa</label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Type of Visa</label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <select name="old_visa_type_id" class="form-control" id="old_visa_type_id">
-                                        <option value="0" selected="selected">Select Type of Visa</option>
-
-                                        <option <?php if($old_visa_type_id == 'ART SURROGACY VISA') echo'Selected="Selected"'?> value="ART SURROGACY VISA"> ART SURROGACY VISA</option>
-                                        <option  <?php if($old_visa_type_id == 'BUSINESS VISA') echo'Selected="Selected"'?>  value="BUSINESS VISA"> BUSINESS VISA</option>
-                                        <option <?php if($old_visa_type_id == 'BUSINESS VISA DEPENDENTS') echo'Selected="Selected"'?>  value="BUSINESS VISA DEPENDENTS"> BUSINESS VISA DEPENDENTS</option>
-                                        <option <?php if($old_visa_type_id == 'BUSINESS VISA TRANSFER') echo'Selected="Selected"'?>  value="BUSINESS VISA TRANSFER"> BUSINESS VISA TRANSFER</option>
-                                        <option <?php if($old_visa_type_id == 'CONFERENCE/SEMINARS VISA') echo'Selected="Selected"'?>  value="CONFERENCE/SEMINARS VISA"> CONFERENCE/SEMINARS VISA</option>
-                                        <option <?php if($old_visa_type_id == 'DIPLOMATIC DEPENDENT VISA') echo'Selected="Selected"'?>  value="DIPLOMATIC DEPENDENT VISA"> DIPLOMATIC DEPENDENT VISA</option>
-                                        <option <?php if($old_visa_type_id == 'DIPLOMATIC VISA') echo'Selected="Selected"'?>  value="DIPLOMATIC VISA"> DIPLOMATIC VISA</option>
-                                        <option <?php if($old_visa_type_id == 'EMPLOYMENT  VISA') echo'Selected="Selected"'?>  value="EMPLOYMENT  VISA"> EMPLOYMENT  VISA</option>
-                                        <option <?php if($old_visa_type_id == 'EMPLOYMENT VISA DEPENDENTS') echo'Selected="Selected"'?> value="EMPLOYMENT VISA DEPENDENTS"> EMPLOYMENT VISA DEPENDENTS</option>
-                                        <option <?php if($old_visa_type_id == 'EMPLOYMENT VISA TRANSFER') echo'Selected="Selected"'?>  value="EMPLOYMENT VISA TRANSFER"> EMPLOYMENT VISA TRANSFER</option>
-                                        <option <?php if($old_visa_type_id == 'ENTRY VISA') echo'Selected="Selected"'?>  value="ENTRY VISA"> ENTRY VISA</option>
-                                        <option <?php if($old_visa_type_id == 'ENTRY VISA TRANSFER') echo'Selected="Selected"'?>  value="ENTRY VISA TRANSFER"> ENTRY VISA TRANSFER</option>
-                                        <option <?php if($old_visa_type_id == 'JOURNALIST VISA') echo'Selected="Selected"'?>  value="JOURNALIST VISA"> JOURNALIST VISA</option>
-                                        <option <?php if($old_visa_type_id == 'MEDICAL ATTENDANT') echo'Selected="Selected"'?>  value="MEDICAL ATTENDANT"> MEDICAL ATTENDANT</option>
-                                        <option <?php if($old_visa_type_id == 'MEDICAL VISA') echo'Selected="Selected"'?>  value="MEDICAL VISA"> MEDICAL  VISA</option>
-                                        <option <?php if($old_visa_type_id == 'MEDICAL VISA TRANSFER') echo'Selected="Selected"'?>  value="MEDICAL VISA TRANSFER"> MEDICAL VISA TRANSFER</option>
-                                        <!-- <option value="MISSIONARY VISA"> MISSIONARY VISA</option>
-                                         <option value="MOUNTAINEERING VISA"> MOUNTAINEERING VISA</option>
-                                         <option value="OFFICIAL DEPENDENT VISA"> OFFICIAL DEPENDENT VISA</option>
-                                         <option value="OFFICIAL VISA"> OFFICIAL VISA</option>
-                                         <option value="PILGRIMES VISA"> PILGRIMES VISA</option>
-                                         <option value="PROJECT VISA"> PROJECT VISA</option>
-                                         <option value="RESEARCH VISA"> RESEARCH VISA</option>
-                                         <option value="RESEARCH VISA DEPENDENTS"> RESEARCH VISA DEPENDENTS</option>
-                                         <option value="RESEARCH VISA TRANSFER"> RESEARCH VISA TRANSFER</option>
-                                         <option value="SOUTH ASIAN UNIVERSITY"> SOUTH ASIAN UNIVERSITY</option>
-                                         <option value="SPORTS"> SPORTS</option>
-                                         <option value="STUDENT VISA"> STUDENT VISA</option>
-                                         <option value="STUDENT VISA DEPENDENTS"> STUDENT VISA DEPENDENTS</option>
-                                         <option value="STUDENT VISA TRANSFER"> STUDENT VISA TRANSFER</option>
-                                         <option value="TOURIST VISA"> TOURIST VISA</option>
-                                         <option value="TOURIST VISA TRANSFER"> TOURIST VISA TRANSFER</option>
-                                         <option value="TRANSIT VISA"> TRANSIT VISA</option>
-                                         <option value="UN OFFICIAL"> UN OFFICIAL</option>
-                                         <option value="VISIT VISA"> VISIT VISA </option>-->
-                                    </select>
+                                    @if(!empty($visatype))
+                                        {{ Form::select('p4_type_visa', $visatype, $visa->p4_type_visa, ['class' => 'form-control select2 box-size', 'id' => 'p4_type_visa']) }}
+                                    @else
+                                        {{ Form::select('p4_type_visa', $visatype, 0, ['class' => 'form-control select2 box-size', 'id' => 'p4_type_visa']) }}
+                                    @endif
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     Type of Visa
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span>Place of Issue </label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Place of Issue </label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" placeholder="Place of Issue" id="oldvisaissueplace"  value="<?php if($unids){ echo $oldvisaissueplace; }?>" name="oldvisaissueplace"/>
+                                    <input class="form-control" placeholder="Place of Issue" id="p4_place_issue"  value="{{$visa->p4_place_issue}}" name="p4_place_issue"/>
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     Place of Issue
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span>Date of Issue </label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Date of Issue </label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" value="<?php if($unids){ echo $date_fouth; }?>"   id="date" name="date" placeholder="Date of Issue" type="text"/>
+                                    <input class="form-control" value="{{$visa->p4_date_issue}}"   id="p4_date_issue" name="p4_date_issue" placeholder="Date of Issue" type="text"/>
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     Date of Issue
@@ -183,11 +177,11 @@
 
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-4 col-xs-12">Has Permission To Visit Or To Extend Stay in India Previously Been Refused?
+                            <label class="col-sm-4 col-xs-12 control-label">Has Permission To Visit Or To Extend Stay in India Previously Been Refused?
                                 Yes  / No  </label>
                             <div class="col-sm-4 col-xs-12">
-                                Yes <input  type="radio" <?php if($permission=='Yes') echo 'checked="checked"'; ?> name="permission"  value="Yes"  id="permission"  />
-                                No  <input  type="radio" value="No"  <?php if($permission=='No') echo 'checked="checked"'; ?> name="permission"  id="permissions"  />
+                                Yes <input  type="radio" {{ $visa->p4_permission_visit == 'Yes' ? 'checked="checked"' : ''}} name="p4_permission_visit"  value="Yes"  id="p4_permission_visit1"  />
+                                No  <input  type="radio" value="No"  {{ $visa->p4_permission_visit == 'No' ? 'checked="checked"' : ''}} name="p4_permission_visit"  id="p4_permission_visit2"  />
                             </div>
                             <div class="col-sm-4 col-xs-12">
                                 Refuse Details Yes /No
@@ -196,149 +190,173 @@
                         <div class="form-group" id="perm">
                             <label class="form-check-label col-sm-4 col-xs-12">	If So, When And By Whom (Mention Control No. and Date Also)</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input class="form-control" value="<?php if($unids){echo  $refuse_details ;}?>" placeholder="By Whom" name="refuse_details"  id="refuse_details"  />
+                                <input class="form-control" value="{{$visa->p4_permission_visit_details}}" placeholder="By Whom" name="p4_permission_visit_details"  id="p4_permission_visit_details"  />
                             </div>
                             <div class="col-sm-4 col-xs-12">
                             </div>
                         </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-8 col-xs-12 title">
+                            <h3>Other Information</h3>
+                        </div>
+                    </div>
+
                         <div class="form-group">
-                            <label class="col-sm-4 col-xs-12">Countries visited in last 10 years	</label>
+                            <label class="col-sm-4 col-xs-12 control-label">Countries visited in last 10 years	</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input class="form-control" value="<?php if($unids){echo  $country_visited ;}?>"  placeholder="Countries Visited in Last 10 Years" id="country_visited" name="country_visited" />
+                                <input class="form-control" value="{{$visa->p4_country_visited_last_10_y}}"  placeholder="Countries Visited in Last 10 Years" id="p4_country_visited_last_10_y" name="p4_country_visited_last_10_y" />
                             </div>
                             <div class="col-sm-4 col-xs-12">
                                 Countries Visited in Last 10 Years (Comma Separated)
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-4 col-xs-12">Have You Visited SAARC Countries (Except Your Own Country) during last 3 years?</label>
+
+                    <div class="form-group">
+                        <div class="col-sm-8 col-xs-12 title">
+                            <h3>SAARC Country Visit Details</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label">Have You Visited SAARC Countries (Except Your Own Country) during last 3 years?</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input type="radio" <?php if($saarc=='Yes') echo 'checked="checked"'; ?>  id="saarc" name="saarc"  value="Yes"/><span>yes<span>
-                  <input type="radio"  <?php if($saarc=='No') echo 'checked="checked"'; ?> id="saarcs" name="saarc"  value="No"/><span>No<span>
+                                <input type="radio" {{$visa->p4_saarc_countries_flag == 'Yes' ? 'checked="checked"' : ''}}  id="p4_saarc_countries_flag1" name="p4_saarc_countries_flag"  value="Yes"/><span>yes</span>
+                                <input type="radio"  {{$visa->p4_saarc_countries_flag == 'No' ? 'checked="checked"' : ''}} id="p4_saarc_countries_flag2" name="p4_saarc_countries_flag"  value="No"/><span>No</span>
                             </div>
                             <div class="col-sm-4 col-xs-12">
                                 Have you visited "South Asian Association for Regional Cooperation" (SAARC) countries (except your own country) during last 3 years? Yes /No
                             </div>
+                    </div>
 
+                    <div class="form-group">
+                        <div class="col-sm-8 col-xs-12 title">
+                            <h3>Reference</h3>
+                        </div>
+                    </div>
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span>Reference Name or Hotel Name in India</label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Reference Name or Hotel Name in India</label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control"  value="<?php if($unids){echo  $nameofsponsor_ind ;}?>" placeholder="Reference Name or Hotel Name in India" id="nameofsponsor_ind" name="nameofsponsor_ind" />
+                                    <input class="form-control"  value="{{$visa->p4_r_name}}" placeholder="Reference Name or Hotel Name in India" id="p4_r_name" name="p4_r_name" />
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     Reference Name or Hotel Name in India
                                 </div>
                             </div>
+
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span>Reference Address or Hotel Address</label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Reference Address or Hotel Address</label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" value="<?php if($unids){echo  $referanceaddress ;}?>" placeholder="Reference Address or Hotel Address" id="referanceaddress" name="referanceaddress" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span> City</label>
-                                <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" placeholder="Reference City" value="<?php if($unids){echo  $referancecity ;}?>" id="referancecity" name="referancecity" />
+                                    <input class="form-control" value="{{$visa->p4_r_address}}" placeholder="Reference Address or Hotel Address" id="p4_r_address" name="p4_r_address" />
                                 </div>
                             </div>
 
-
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span> State</label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span> City</label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control"  value="<?php if($unids){echo  $referacnestate ;}?>" placeholder="Reference State" id="referacnestate" name="referacnestate" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span> Country </label>
-                                <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" placeholder="Reference country" id="referancecountry" value="<?php if($unids){echo  $referancecountry ;}?>" name="referancecountry" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span> ZIP Code / POST Code</label>
-                                <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" value="<?php if($unids){echo  $referacnepostalcode ;}?>" placeholder="Postal code" id="referacnepostalcode" name="referacnepostalcode" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span>  Phone no</label>
-                                <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" value="<?php if($unids){echo  $phoneofsponsor_ind ;}?>"  placeholder="Reference Phone no" id="phoneofsponsor_ind" name="phoneofsponsor_ind" />
+                                    <input class="form-control" placeholder="Reference City" value="{{$visa->p4_r_city}}" id="p4_r_city" name="p4_r_city" />
                                 </div>
                             </div>
 
+                            <div class="form-group">
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span> State</label>
+                                <div class="col-sm-4 col-xs-12">
+                                    <input class="form-control"  value="{{$visa->p4_r_state}}" placeholder="Reference State" id="p4_r_state" name="p4_r_state" />
+                                </div>
+                            </div>
 
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span>Reference Name in Home Country</label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span> Country </label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" placeholder="Reference Country" id="refcountry" value="<?php if($unids){echo  $refcountry ;}?>"  name="refcountry" />
+                                    <input class="form-control" placeholder="Reference country" id="p4_r_country" value="{{$visa->p4_r_country}}" name="p4_r_country" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span> ZIP Code / POST Code</label>
+                                <div class="col-sm-4 col-xs-12">
+                                    <input class="form-control" value="{{$visa->p4_r_pincode}}" placeholder="Postal code" id="p4_r_pincode" name="p4_r_pincode" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>  Phone no</label>
+                                <div class="col-sm-4 col-xs-12">
+                                    <input class="form-control" value="{{$visa->p4_r_phone}}"  placeholder="Reference Phone no" id="p4_r_phone" name="p4_r_phone" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Reference Name in Home Country</label>
+                                <div class="col-sm-4 col-xs-12">
+                                    <input class="form-control" placeholder="Reference Country" id="p4_r_h_name" value="{{$visa->p4_r_h_name}}"  name="p4_r_h_name" />
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     Reference Name and Address in Home Country
                                 </div>
                             </div>
+
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span> Address</label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span> Address</label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" value="<?php if($unids){echo  $add1ofsponsor_msn ;}?>" placeholder="Address" id="add1ofsponsor_msn" name="add1ofsponsor_msn" />
+                                    <input class="form-control" value="{{$visa->p4_r_h_address1}}" placeholder="Address" id="p4_r_h_address1" name="p4_r_h_address1" />
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     Address
                                 </div>
                             </div>
+
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12"><span class="star">*</span> Phone</label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span> Phone</label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" value="<?php if($unids){echo  $phoneofsponsor_msn ;}?>" placeholder="Phone" id="phoneofsponsor_msn" name="phoneofsponsor_msn" />
+                                    <input class="form-control" value="{{$visa->p4_r_h_phone}}" placeholder="Phone" id="p4_r_h_phone" name="p4_r_h_phone" />
                                 </div>
                                 <div class="col-sm-4 col-xs-12">
                                     Phone no
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <div class="col-sm-12 col-xs-12">
                                     <h4> To upload Photo click "Browse" .Click "Save and Continue" to directly proceed without photo upload</h4>
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <div class="col-sm-2 col-xs-12"> </div>
                                 <div class="col-sm-4 col-xs-12 picture">
-                                    <img id="blah" src="<?php echo base_url() ?>application/images/photo_not_available.png">
+                                    <img id="blah" src="{{ URL::asset('img/frontend/images/photo_not_available.png')}}">
                                 </div>
                                 <div class="col-sm-4 col-xs-12 picture">
-                                    <img src="<?php echo base_url() ?>application/images/second.png">
+                                    <img id="blah" src="{{ URL::asset('img/frontend/images/second.png')}}">
 
                                 </div>
                                 <div class="col-sm-2 col-xs-12"> </div>
                             </div>
+
                             <div class="form-group">
                                 <div class="col-sm-2 col-xs-12">
                                 </div>
                                 <div class="col-sm-10 col-xs-12">
-
-                                    </span>
                                     <!-- <input type="file" class="btn-primary" name="file" id="image" >   -->
                                     <p style="color: #f00;font-size: 18px;">Click Your Own Picture Using A Camera Phone Or Digital Camera Upload Here</p>
 <span class="btn btn-default btn-file">
-				Browse <input  onchange="readURL(this);" type="file" value="photo_not_available.png" name="file" id="image">
+				Browse <input  onchange="readURL(this);" type="file" value="photo_not_available.png" name="p4_photo_name" id="image">
 </span>
                                 </div>
                             </div>
+
                             <div class="form-group">
-                                <div class="col-sm-2 col-xs-12"></div>
+                                <label class="col-sm-4 col-xs-12 control-label" ></label>
                                 <div class="col-sm-8 col-xs-12">
-                                    <input type="submit" name="upload" value="Save and Continue" class="btn-primary submit-btn2">
-                                    <input type="submit" onclick="show2();" name="exit" value="Save and Temporarily Exit" class="btn-primary submit-btn2">
-                                </div> <div class="col-sm-2 col-xs-12"></div>
+                                    <input type="submit" name="submit" value="Save And Continue"  class="btn-primary submit-btn2">
+                                    <input type="submit"  name="submit" value="Save and Temporarily Exit"   class="btn-primary submit-btn2">
+                                </div>
                             </div>
-                        </div>
 
-                    </form>
+                    {{ Form::close() }}
                 </div>
-
-
-
             </div>
         </div>
     </section>
@@ -352,7 +370,29 @@
     <script type="text/javascript">
 
         $(document).ready(function() {
+            $("#p4_visit_india_before1").change(function() {;
+                if ($("#p4_visit_india_before1").is(":checked")) {
+                    $("#prev_visa_details").show();
+                    $("#p4_address1").attr("disabled", false);
+                    $("#p4_city_prev_visit").attr("disabled", false);
+                    $("#p4_last_curr_visa_no").attr("disabled", false);
+                    $("#p4_type_visa").attr("disabled", false);
+                    $("#p4_place_issue").attr("disabled", false);
+                    $("#p4_date_issue").attr("disabled", false);
+                }
+            }).trigger('change');
 
+            $("#p4_visit_india_before2").change(function() {
+                if ($("#p4_visit_india_before2").is(":checked")) {
+                    $("#prev_visa_details").hide();
+                    $("#p4_address1").attr("disabled", true);
+                    $("#p4_city_prev_visit").attr("disabled", true);
+                    $("#p4_last_curr_visa_no").attr("disabled", true);
+                    $("#p4_type_visa").attr("disabled", true);
+                    $("#p4_place_issue").attr("disabled", true);
+                    $("#p4_date_issue").attr("disabled", true);
+                }
+            }).trigger('change');
             // To Use Select2
             // Backend.Select2.init();
         });

@@ -18,6 +18,7 @@ use App\Models\Country\Country;
 use App\Models\Religion\Religion;
 use App\Models\Education\Education;
 use App\Models\Occupation\Occupation;
+use App\Models\Visatype\Visatype;
 
 /**
  * VisasController
@@ -169,6 +170,26 @@ class VisasController extends Controller
                     'occupation'       => $occupation
                 ]);
             }
+            else if ($process_steps == 10004){
+                $port = Port::getSelectData();
+                $visatype = Visatype::getSelectData();
+                $evisacountry = Evisacountry::getSelectData();
+                $country = Country::getSelectData();
+                $education = Education::getSelectData();
+                $religion = Religion::getSelectData();
+                $occupation = Occupation::getSelectData();
+                // $visa->p1_nationality = $evisacountry[$visa->p1_nationality];
+                return view('frontend.visas.visaprocess4-edit')->with([
+                    'visa' => $visa,
+                    'port_arrival'       => $port,
+                    'visatype'       => $visatype,
+                    'evisa_country'       => $evisacountry,
+                    'country'       => $country,
+                    'education'       => $education,
+                    'religion'       => $religion,
+                    'occupation'       => $occupation
+                ]);
+            }
 
         } else {
             session()->flash('vid');
@@ -221,10 +242,22 @@ class VisasController extends Controller
                     $input['p3_copy_address'] = 'no';
                 $this->repository->update($visa, $input);
                 session()->put('process_steps', 10004);
-              //  if($input['submit'] == 'Save and Temporarily Exit')
+               if($input['submit'] == 'Save and Temporarily Exit')
                     return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
-               // else
-                   // return redirect()->route('frontend.visas.edit', $vid);
+                else
+                    return redirect()->route('frontend.visas.edit', $vid);
+            }
+
+            else if ($process_steps == 10004) {
+                /*$p3_copy_address = @$input['p3_copy_address'];
+                if($p3_copy_address != 'yes')
+                    $input['p3_copy_address'] = 'no';*/
+                $this->repository->update($visa, $input);
+                session()->put('process_steps', 10005);
+                //  if($input['submit'] == 'Save and Temporarily Exit')
+                return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+                // else
+                // return redirect()->route('frontend.visas.edit', $vid);
             }
             else{
 

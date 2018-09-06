@@ -312,6 +312,49 @@ use Illuminate\Support\Facades\Route;
                 p3_address                               	    :	    { required : "Please enter Address" }
             }
         });
+
+        var app4 = $("#process4");
+        app4.validate({
+            rules:{
+                p4_place_likely_visit		        : 		{ required : true },
+                p4_address1     					: 		{ required : true },
+                p4_city_prev_visit					: 		{ required : true },
+                p4_last_curr_visa_no	            :		{ required : true},
+                p4_type_visa       					: 		{ required : true , selected : true},
+                p4_place_issue  					: 		{ required : true },
+                p4_date_issue				        : 		{ required : true },
+                p4_r_name                        	: 		{ required : true },
+                p4_r_address    					: 		{ required : true },
+                p4_r_city           				: 		{ required : true },
+                p4_r_state      					: 		{ required : true},
+                p4_r_country          				: 		{ required : true },
+                p4_r_pincode                		: 		{ required : true},
+                p4_r_phone                       	: 		{ required : true },
+                p4_r_h_name                  		: 		{ required : true},
+                p4_r_h_address1          			:		{ required : true},
+                p4_r_h_phone                		:		{ required : true}
+            },
+            messages:{
+                p4_place_likely_visit        	    : 		{ required : "Please enter Places Likely To Be Visited" },
+                p4_address1     				    : 		{ required : "Please enter Address" },
+                p4_city_prev_visit				    : 		{ required : "Please enter Cities Previously Visited in India" },
+                p4_last_curr_visa_no	            :	    { required : "Please enter Last Indian Visa No/Currently Valid Indian Visa No" },
+                p4_type_visa     					:	    { required : "This field is required", selected : "Please select Type of Visa" },
+                p4_place_issue  				    :       { required : "Please enter Place of Issue" },
+                p4_date_issue				  	 	:       { required : "Please enter Date of Issue" },
+                p4_r_name				  		    :       { required : "Please enter Reference Name or Hotel Name in India" },
+                p4_r_address    			        :       { required : "Please enter Reference Address or Hotel Address" },
+                p4_r_city                           : 		{ required : "Please enter City" },
+                p4_r_state          				: 		{ required : "Please enter State" },
+                p4_r_country            			: 		{ required : "Please enter Country" },
+                p4_r_pincode          				: 		{ required : "Please enter ZIP Code / POST Code" },
+                p4_r_phone          				: 		{ required : "Please enter Phone no" },
+                p4_r_h_name                     	: 		{ required : "Please enter Reference Name in Home Country" },
+                p4_r_h_address1              		: 		{ required : "Please enter Address" },
+                p4_r_h_phone                		:	    { required : "Please enter Phone" }
+            }
+        });
+
     });
 
 </script>
