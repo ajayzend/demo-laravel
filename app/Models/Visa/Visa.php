@@ -128,6 +128,7 @@ class Visa extends Model
         'p4_permission_visit_details',
         'p4_country_visited_last_10_y',
         'p4_saarc_countries_flag',
+        'p4_saarc_country_year_visit',
         'p4_r_name',
         'p4_r_address',
         'p4_r_city',

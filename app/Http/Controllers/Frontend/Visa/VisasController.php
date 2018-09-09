@@ -131,6 +131,7 @@ class VisasController extends Controller
             $visa->p2_passport_date_issue = date('d-m-Y', strtotime($visa->p2_passport_date_issue));
             $visa->p2_passport_date_expiry = date('d-m-Y', strtotime($visa->p2_passport_date_expiry));
             $visa->p2_other_passport_date_issue = date('d-m-Y', strtotime($visa->p2_other_passport_date_issue));
+            $visa->p4_date_issue = date('d-m-Y', strtotime($visa->p4_date_issue));
             //print "<pre>";print_r($visa);exit;
             if ($process_steps == 10001 || $process_steps == '') {
                 $port = Port::getSelectData();
@@ -171,6 +172,8 @@ class VisasController extends Controller
                 ]);
             }
             else if ($process_steps == 10004){
+                if($visa->p4_saarc_country_year_visit)
+                    $visa->p4_saarc_country_year_visit = \GuzzleHttp\json_decode($visa->p4_saarc_country_year_visit, true);
                 $port = Port::getSelectData();
                 $visatype = Visatype::getSelectData();
                 $evisacountry = Evisacountry::getSelectData();
@@ -178,7 +181,7 @@ class VisasController extends Controller
                 $education = Education::getSelectData();
                 $religion = Religion::getSelectData();
                 $occupation = Occupation::getSelectData();
-                // $visa->p1_nationality = $evisacountry[$visa->p1_nationality];
+                 $visa->p1_port_arrival = $port[$visa->p1_port_arrival];
                 return view('frontend.visas.visaprocess4-edit')->with([
                     'visa' => $visa,
                     'port_arrival'       => $port,
@@ -210,7 +213,7 @@ class VisasController extends Controller
     {
         //Input received from the request
         $input = $request->except(['_token']);
-       // print "<pre>";print_r($input);exit;
+        //print "<pre>";print_r($input);exit;
         $vid = session()->get('vid');
         $sess_evpuid = session()->get('evpuid');
         $process_steps = session()->get('process_steps');
@@ -252,6 +255,35 @@ class VisasController extends Controller
                 /*$p3_copy_address = @$input['p3_copy_address'];
                 if($p3_copy_address != 'yes')
                     $input['p3_copy_address'] = 'no';*/
+                $p4_saarc_countries_flag = @$input['p4_saarc_countries_flag'];
+                if($p4_saarc_countries_flag == 'yes') {
+                    $data = array();
+                    $counter = 0;
+                    $saarc_country_saved = $input['saarc_country_saved'];
+                    foreach ($saarc_country_saved as $saarc_country) {
+                        $data[$counter]['saarc_country'] = $saarc_country;
+                        $data[$counter]['saarc_year'] = $input['saarc_year_saved'][$counter];
+                        $data[$counter]['saarc_visit'] = $input['saarc_visit_saved'][$counter];;
+                        $counter++;
+                    }
+
+                    $saarcContainerCount = $input['saarcContainer_czMore_txtCount'];
+                    if ($saarcContainerCount > 0) {
+                        for ($i = 1; $i <= $saarcContainerCount; $i++) {
+                            $saarc_country = $input["saarc_" . $i . "_country"];
+                            $saarc_year = $input["saarc_" . $i . "_year"];
+                            $saarc_visit = $input["saarc_" . $i . "_visit"];
+                            $data[$counter]['saarc_country'] = $saarc_country;
+                            $data[$counter]['saarc_year'] = $saarc_year;
+                            $data[$counter]['saarc_visit'] = $saarc_visit;
+                            $counter++;
+                        }
+                        $input['p4_saarc_country_year_visit'] = json_encode($data);
+                    }
+                }else{
+                    $input['p4_saarc_country_year_visit'] = '';
+                }
+                //print "<pre>";print_r($input);exit;
                 $this->repository->update($visa, $input);
                 session()->put('process_steps', 10005);
                 //  if($input['submit'] == 'Save and Temporarily Exit')

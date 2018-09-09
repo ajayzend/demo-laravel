@@ -70,7 +70,7 @@ use Illuminate\Support\Facades\Route;
 {!! Html::script('js/frontend/calendar/jquery-ui-1.8.18.custom.min.js') !!}
 {!! Html::script('js/frontend/validation.js') !!}
 {!! Html::script('js/frontend/jquery.validate.js') !!}
-
+{!! Html::script('js/frontend/jquery.czMore-1.5.3.2.js') !!}
 @yield('after-scripts')
 {{ Html::script('js/jquerysession.js') }}
  {{--{{ Html::script('js/frontend/frontend.js') }}
@@ -155,6 +155,22 @@ use Illuminate\Support\Facades\Route;
             minDate: 0
         });
         $('#p2_other_passport_date_issue').datepicker({
+            inline: true,
+            nextText: '&rarr;',
+            prevText: '&larr;',
+            showOtherMonths: true,
+            dateFormat: 'dd/mm/yy',
+            dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+            //	showOn: "button",
+            buttonImage: "{{ URL::asset('img/frontend/images/clander.png')}}",
+            buttonImageOnly: true,
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+0",
+            maxDate: 0
+        });
+
+        $('#p4_date_issue').datepicker({
             inline: true,
             nextText: '&rarr;',
             prevText: '&larr;',

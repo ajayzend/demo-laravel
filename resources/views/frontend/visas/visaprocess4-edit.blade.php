@@ -1,5 +1,4 @@
 @extends('frontend.layouts.app2')
-
 @section('content')
     <section class="wrapper">
         <div class="container">
@@ -24,7 +23,7 @@
                         </div>
                     </div>
 
-                        {{ Form::model($visa, ['route' => ['frontend.visas.update', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => 'process4']) }}
+                        {{ Form::model($visa, ['route' => ['frontend.visas.update', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => 'process4', 'enctype' => 'multipart/form-data']) }}
                         {{ Form::hidden('evpuid', $visa->visa_no ) }}
                         {{ Form::hidden('ps', 10004 ) }}
 
@@ -230,6 +229,118 @@
                             </div>
                     </div>
 
+                    {{--start saved value populated--}}
+                    <div id="saarc_data_saved">
+                        <?php
+                            if($visa->p4_saarc_country_year_visit != '') {
+                        foreach($visa->p4_saarc_country_year_visit as $key=>$rows) {?>
+                        <div  class="fieldRow clearfix">
+                            <div class="col-md-3">
+                                <div  class="form-group">
+                                    <label for="id_saarc_2_country" class="control-label  requiredField">
+                                        Name of SAARC country<span class="star">*</span>
+                                    </label><div class="controls ">
+                                        <select required class="select form-control" id="saarc_country_saved_<?php echo $key;?>" name="saarc_country_saved[]">
+                                            {{-- <option value="" selected="selected">Select</option>--}}
+                                            <option <?php if($rows['saarc_country'] == 'AFGHANISTAN') echo 'selected="selected"' ?> value="AFGHANISTAN" title="AFGHANISTAN"> AFGHANISTAN</option>
+                                            <option <?php if($rows['saarc_country'] == 'BHUTAN') echo 'selected="selected"' ?> value="BHUTAN" title="BHUTAN"> BHUTAN</option>
+                                            <option <?php if($rows['saarc_country'] == 'PAKISTAN') echo 'selected="selected"' ?> value="PAKISTAN" title="PAKISTAN"> PAKISTAN</option>
+                                            <option <?php if($rows['saarc_country'] == 'MALDIVES') echo 'selected="selected"' ?> value="MALDIVES" title="MALDIVES"> MALDIVES</option>
+                                            <option <?php if($rows['saarc_country'] == 'BANGLADESH') echo 'selected="selected"' ?> value="BANGLADESH" title="BANGLADESH"> BANGLADESH</option>
+                                            <option <?php if($rows['saarc_country'] == 'SRI LANKA') echo 'selected="selected"' ?> value="SRI LANKA" title="SRI LANKA"> SRI LANKA</option>
+                                            <option <?php if($rows['saarc_country'] == 'NEPAL') echo 'selected="selected"' ?> value="NEPAL" title="NEPAL"> NEPAL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div id="div_id_saarc_2_year" class="form-group">
+                                    <label for="id_saarc_2_year" class="control-label  requiredField">
+                                        Year<span class="star">*</span>
+                                    </label><div class="controls ">
+                                        <select required class="select form-control" id="saarc_year_saved_<?php echo $key;?>" name="saarc_year_saved[]">
+                                            {{-- <option value="" selected="selected">Select</option>--}}
+                                            <option <?php if($rows['saarc_year'] == '2018') echo 'selected="selected"' ?> value="2018">2018</option>
+                                            <option <?php if($rows['saarc_year'] == '2017') echo 'selected="selected"' ?> value="2017">2017</option>
+                                            <option <?php if($rows['saarc_year'] == '2016') echo 'selected="selected"' ?> value="2016">2016</option>
+                                            <option <?php if($rows['saarc_year'] == '2015') echo 'selected="selected"' ?> value="2015">2015</option>
+                                            <option <?php if($rows['saarc_year'] == '2014') echo 'selected="selected"' ?> value="2014">2014</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div id="div_id_saarc_2_visit" class="form-group">
+                                    <label for="id_saarc_2_visit" class="control-label  requiredField">
+                                        No. of visits<span class="star">*</span>
+                                    </label><div class="controls ">
+                                        <input  class="numberinput form-control" required value="<?php echo $rows['saarc_visit']; ?>" id="saarc_visit_saved_<?php echo $key;?>" name="saarc_visit_saved[]" step="0.01" type="number" /> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php } }?>
+                    </div>
+                    {{--end saved value populated--}}
+                    <div id="saarcContainer">
+                        <div id="first">
+                            <div class="recordset">
+                                <div class="fieldRow clearfix">
+                                    <div class="col-md-3">
+                                        <div id="div_id_saarc_1_country" class="form-group">
+                                            <label for="id_saarc_1_country" class="control-label  requiredField">
+                                                Name of SAARC country<span class="star">*</span>
+                                            </label><div class="controls ">
+                                                <select required class="select form-control" id="id_saarc_1_country" name="saarc_1_country">
+                                                    <option value="" selected="selected">Select</option>
+                                                    <option value="AFGHANISTAN" title="AFGHANISTAN"> AFGHANISTAN</option>
+                                                    <option value="BHUTAN" title="BHUTAN"> BHUTAN</option>
+                                                    <option value="PAKISTAN" title="PAKISTAN"> PAKISTAN</option>
+                                                    <option value="MALDIVES" title="MALDIVES"> MALDIVES</option>
+                                                    <option value="BANGLADESH" title="BANGLADESH"> BANGLADESH</option>
+                                                    <option value="SRI LANKA" title="SRI LANKA"> SRI LANKA</option>
+                                                    <option value="NEPAL" title="NEPAL"> NEPAL</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div id="div_id_saarc_1_year" class="form-group">
+                                            <label for="id_saarc_1_year" class="control-label  requiredField">
+                                                Year<span class="star">*</span>
+                                            </label><div class="controls ">
+                                                <select required class="select form-control" id="id_saarc_1_year" name="saarc_1_year">
+                                                    <option value="" selected="selected">Select</option>
+                                                    <option value="2018">2018</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2016">2016</option>
+                                                    <option value="2015">2015</option>
+                                                    <option value="2014">2014</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div id="div_id_saarc_1_visit" class="form-group">
+                                            <label for="id_saarc_1_visit" class="control-label  requiredField">
+                                                No. of visits<span class="star">*</span>
+                                            </label><div class="controls ">
+                                                <input class="numberinput form-control" required id="id_saarc_1_visit" name="saarc_1_visit" step="0.01" type="number" /> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-8 col-xs-12">
+                            <h3></h3>
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <div class="col-sm-8 col-xs-12 title">
                             <h3>Reference</h3>
@@ -335,7 +446,7 @@
                                 <div class="col-sm-2 col-xs-12"> </div>
                             </div>
 
-                            <div class="form-group">
+                            {{--<div class="form-group">
                                 <div class="col-sm-2 col-xs-12">
                                 </div>
                                 <div class="col-sm-10 col-xs-12">
@@ -345,7 +456,33 @@
 				Browse <input  onchange="readURL(this);" type="file" value="photo_not_available.png" name="p4_photo_name" id="image">
 </span>
                                 </div>
+                            </div>--}}
+
+
+                    <div class="form-group">
+                        {{--{{ Form::label('logo', trans('validation.attributes.backend.settings.sitelogo'), ['class' => 'col-lg-2 control-label']) }}--}}
+
+                        <div class="col-lg-10">
+
+                            <div class="custom-file-input">
+                                <p style="color: #f00;font-size: 18px;">Click Your Own Picture Using A Camera Phone Or Digital Camera Upload Here</p>
+                                {!! Form::file('p4_photo_name', array('class'=>'form-control inputfile inputfile-1' )) !!}
+                                <label for="logo">
+                                    <i class="fa fa-upload"></i>
+                                    <span>Choose a file</span>
+                                </label>
                             </div>
+                            <div class="img-remove-logo">
+                                @if($visa->p4_photo_name)
+                                    <img height="50" width="50" src="{{ Storage::disk('public')->url('img/visaprofile/' . $visa->p4_photo_name) }}">
+                                    <i id="remove-logo-img" class="fa fa-times remove-logo" data-id="logo" aria-hidden="true"></i>
+                                @endif
+                            </div>
+                        </div>
+                        <!--col-lg-10-->
+                    </div>
+                    <!--form control-->
+
 
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label" ></label>
@@ -370,7 +507,7 @@
     <script type="text/javascript">
 
         $(document).ready(function() {
-            $("#p4_visit_india_before1").change(function() {;
+            $("#p4_visit_india_before1").change(function() {
                 if ($("#p4_visit_india_before1").is(":checked")) {
                     $("#prev_visa_details").show();
                     $("#p4_address1").attr("disabled", false);
@@ -393,8 +530,26 @@
                     $("#p4_date_issue").attr("disabled", true);
                 }
             }).trigger('change');
+
+
+            $("#p4_saarc_countries_flag1").change(function() {
+                if ($("#p4_saarc_countries_flag1").is(":checked")) {
+                    $("#saarc_data_saved").show();
+                    $("#btnPlus").show();
+                    $("#saarcContainer").show();
+                }
+            }).trigger('change');
+
+            $("#p4_saarc_countries_flag2").change(function() {
+                if ($("#p4_saarc_countries_flag2").is(":checked")) {
+                    $("#saarc_data_saved").hide();
+                    $("#btnPlus").hide();
+                    $("#saarcContainer").hide();
+                }
+            }).trigger('change');
             // To Use Select2
             // Backend.Select2.init();
         });
+        $("#saarcContainer").czMore();
     </script>
 @endsection
