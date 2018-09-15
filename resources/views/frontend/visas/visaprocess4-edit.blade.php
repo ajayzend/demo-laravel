@@ -472,12 +472,6 @@
                                     <span>Choose a file</span>
                                 </label>
                             </div>
-                            <div class="img-remove-logo">
-                                @if($visa->p4_photo_name)
-                                    <img height="50" width="50" src="{{ Storage::disk('public')->url('img/visaprofile/' . $visa->p4_photo_name) }}">
-                                    <i id="remove-logo-img" class="fa fa-times remove-logo" data-id="logo" aria-hidden="true"></i>
-                                @endif
-                            </div>
                         </div>
                         <!--col-lg-10-->
                     </div>
@@ -536,12 +530,18 @@
                 if ($("#p4_saarc_countries_flag1").is(":checked")) {
                     $("#saarc_data_saved").show();
                     $("#btnPlus").show();
+
+                    if(!$("#saarc_country_saved_0").val())
+                        $("#btnPlus").click();
+
+                    $("#btnMinus").hide();
                     $("#saarcContainer").show();
                 }
             }).trigger('change');
 
             $("#p4_saarc_countries_flag2").change(function() {
                 if ($("#p4_saarc_countries_flag2").is(":checked")) {
+                    $(".minusclick").click();
                     $("#saarc_data_saved").hide();
                     $("#btnPlus").hide();
                     $("#saarcContainer").hide();

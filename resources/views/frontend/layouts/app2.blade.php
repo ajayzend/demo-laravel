@@ -371,6 +371,15 @@ use Illuminate\Support\Facades\Route;
             }
         });
 
+        var app5 = $("#process5");
+        app5.validate({
+            rules:{
+                p5_photo_name		        : 		{ required : true }
+            },
+            messages:{
+                p5_photo_name        	    : 		{ required : "Please Upload A scanned Copy Of Your original Coloured Passport Or Take A picture Of Your Passport and Uploaded" }
+            }
+        });
     });
 
 </script>

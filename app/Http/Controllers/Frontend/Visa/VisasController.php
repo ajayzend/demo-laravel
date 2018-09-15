@@ -193,6 +193,20 @@ class VisasController extends Controller
                     'occupation'       => $occupation
                 ]);
             }
+            else if ($process_steps == 10005){
+                $evisacountry = Evisacountry::getSelectData();
+                $country = Country::getSelectData();
+                $education = Education::getSelectData();
+                $religion = Religion::getSelectData();
+                $visa->p1_nationality = $evisacountry[$visa->p1_nationality];
+                return view('frontend.visas.visaprocess5-edit')->with([
+                    'visa' => $visa,
+                    'evisa_country'       => $evisacountry,
+                    'country'       => $country,
+                    'education'       => $education,
+                    'religion'       => $religion
+                ]);
+            }
 
         } else {
             session()->flash('vid');
@@ -250,23 +264,23 @@ class VisasController extends Controller
                 else
                     return redirect()->route('frontend.visas.edit', $vid);
             }
-
             else if ($process_steps == 10004) {
                 /*$p3_copy_address = @$input['p3_copy_address'];
                 if($p3_copy_address != 'yes')
                     $input['p3_copy_address'] = 'no';*/
                 $p4_saarc_countries_flag = @$input['p4_saarc_countries_flag'];
-                if($p4_saarc_countries_flag == 'yes') {
+                if($p4_saarc_countries_flag == 'Yes') {
                     $data = array();
                     $counter = 0;
-                    $saarc_country_saved = $input['saarc_country_saved'];
-                    foreach ($saarc_country_saved as $saarc_country) {
-                        $data[$counter]['saarc_country'] = $saarc_country;
-                        $data[$counter]['saarc_year'] = $input['saarc_year_saved'][$counter];
-                        $data[$counter]['saarc_visit'] = $input['saarc_visit_saved'][$counter];;
-                        $counter++;
+                    $saarc_country_saved = @$input['saarc_country_saved'];
+                    if($saarc_country_saved != '') {
+                        foreach ($saarc_country_saved as $saarc_country) {
+                            $data[$counter]['saarc_country'] = $saarc_country;
+                            $data[$counter]['saarc_year'] = $input['saarc_year_saved'][$counter];
+                            $data[$counter]['saarc_visit'] = $input['saarc_visit_saved'][$counter];;
+                            $counter++;
+                        }
                     }
-
                     $saarcContainerCount = $input['saarcContainer_czMore_txtCount'];
                     if ($saarcContainerCount > 0) {
                         for ($i = 1; $i <= $saarcContainerCount; $i++) {
@@ -286,10 +300,19 @@ class VisasController extends Controller
                 //print "<pre>";print_r($input);exit;
                 $this->repository->update($visa, $input);
                 session()->put('process_steps', 10005);
-                //  if($input['submit'] == 'Save and Temporarily Exit')
-                return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
-                // else
-                // return redirect()->route('frontend.visas.edit', $vid);
+                 if($input['submit'] == 'Save and Temporarily Exit')
+                    return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+                else
+                    return redirect()->route('frontend.visas.edit', $vid);
+            }
+
+            else if ($process_steps == 10005) {
+                $this->repository->update($visa, $input);
+                session()->put('process_steps', 10006);
+                if($input['submit'] == 'Save and Temporarily Exit')
+                    return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+                else
+                    return redirect()->route('frontend.visas.edit', $vid);
             }
             else{
 
