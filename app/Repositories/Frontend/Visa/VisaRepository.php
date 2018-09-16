@@ -22,11 +22,18 @@ class VisaRepository extends BaseRepository
 
 
     /**
-     * Site Logo Path.
+     * Visa Profile Photo Path.
      *
      * @var string
      */
     protected $visa_profile_path;
+
+    /**
+     * Visa Passport Photo Path.
+     *
+     * @var string
+     */
+    protected $visa_passport_path;
 
     /**
      * Storage Class Object.
@@ -41,6 +48,7 @@ class VisaRepository extends BaseRepository
     public function __construct()
     {
         $this->visa_profile_path = 'img'.DIRECTORY_SEPARATOR.'visaprofile'.DIRECTORY_SEPARATOR;
+        $this->visa_passport_path = 'img'.DIRECTORY_SEPARATOR.'visapassport'.DIRECTORY_SEPARATOR;
         $this->storage = Storage::disk('public');
     }
 
@@ -129,9 +137,17 @@ class VisaRepository extends BaseRepository
         else if($process_steps == 10004){
             $input['p4_date_issue'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p4_date_issue']));
             if (!empty($input['p4_photo_name'])) {
-                $this->removeImage($visa, 'p4_photo_name');
+                $this->removeImage($visa, 'profile');
 
-                $input['p4_photo_name'] = $this->uploadImage($visa, $input['p4_photo_name'], 'p4_photo_name');
+                $input['p4_photo_name'] = $this->uploadImage($visa, $input['p4_photo_name'], 'profile');
+            }
+        }
+
+        else if($process_steps == 10005){
+            if (!empty($input['p5_passport_photo_name'])) {
+                $this->removeImage($visa, 'passport');
+
+                $input['p5_passport_photo_name'] = $this->uploadImage($visa, $input['p5_passport_photo_name'], 'passport');
             }
         }
 
@@ -146,12 +162,14 @@ class VisaRepository extends BaseRepository
     */
     public function uploadImage($setting, $logo, $type)
     {
-       // $path = $type == 'logo' ? $this->visa_profile_path : $this->favicon_path;
-        $path = $this->visa_profile_path;
+        if ($type == 'profile')
+            $path = $this->visa_profile_path;
+        elseif ($type == 'passport')
+            $path = $this->visa_passport_path;
 
-        $image_name = time().$logo->getClientOriginalName();
+        $image_name = time() . $logo->getClientOriginalName();
 
-        $this->storage->put($path.$image_name, file_get_contents($logo->getRealPath()));
+        $this->storage->put($path . $image_name, file_get_contents($logo->getRealPath()));
 
         return $image_name;
     }
@@ -161,8 +179,10 @@ class VisaRepository extends BaseRepository
         */
     public function removeImage(Visa $visa, $type)
     {
-        //$path = $type == 'logo' ? $this->visa_profile_path : $this->favicon_path;
-        $path = $this->visa_profile_path;
+        if ($type == 'profile')
+            $path = $this->visa_profile_path;
+        elseif ($type == 'passport')
+            $path = $this->visa_passport_path;
 
         if ($visa->$type && $this->storage->exists($path.$visa->$type)) {
             $this->storage->delete($path.$visa->$type);

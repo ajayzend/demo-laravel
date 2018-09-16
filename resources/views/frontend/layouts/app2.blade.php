@@ -348,7 +348,8 @@ use Illuminate\Support\Facades\Route;
                 p4_r_phone                       	: 		{ required : true },
                 p4_r_h_name                  		: 		{ required : true},
                 p4_r_h_address1          			:		{ required : true},
-                p4_r_h_phone                		:		{ required : true}
+                p4_r_h_phone                		:		{ required : true},
+                p4_photo_name                		:		{ required : true}
             },
             messages:{
                 p4_place_likely_visit        	    : 		{ required : "Please enter Places Likely To Be Visited" },
@@ -367,17 +368,18 @@ use Illuminate\Support\Facades\Route;
                 p4_r_phone          				: 		{ required : "Please enter Phone no" },
                 p4_r_h_name                     	: 		{ required : "Please enter Reference Name in Home Country" },
                 p4_r_h_address1              		: 		{ required : "Please enter Address" },
-                p4_r_h_phone                		:	    { required : "Please enter Phone" }
+                p4_r_h_phone                		:	    { required : "Please enter Phone" },
+                p4_photo_name                		:	    { required : "Please Click Your Own Picture Using A Camera Phone Or Digital Camera Upload Here" }
             }
         });
 
         var app5 = $("#process5");
         app5.validate({
             rules:{
-                p5_photo_name		        : 		{ required : true }
+                p5_passport_photo_name		        : 		{ required : true }
             },
             messages:{
-                p5_photo_name        	    : 		{ required : "Please Upload A scanned Copy Of Your original Coloured Passport Or Take A picture Of Your Passport and Uploaded" }
+                p5_passport_photo_name        	    : 		{ required : "Please Upload A scanned Copy Of Your original Coloured Passport Or Take A picture Of Your Passport and Uploaded." }
             }
         });
     });

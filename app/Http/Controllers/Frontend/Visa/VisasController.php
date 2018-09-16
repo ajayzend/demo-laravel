@@ -194,17 +194,8 @@ class VisasController extends Controller
                 ]);
             }
             else if ($process_steps == 10005){
-                $evisacountry = Evisacountry::getSelectData();
-                $country = Country::getSelectData();
-                $education = Education::getSelectData();
-                $religion = Religion::getSelectData();
-                $visa->p1_nationality = $evisacountry[$visa->p1_nationality];
                 return view('frontend.visas.visaprocess5-edit')->with([
-                    'visa' => $visa,
-                    'evisa_country'       => $evisacountry,
-                    'country'       => $country,
-                    'education'       => $education,
-                    'religion'       => $religion
+                    'visa' => $visa
                 ]);
             }
 
@@ -265,10 +256,8 @@ class VisasController extends Controller
                     return redirect()->route('frontend.visas.edit', $vid);
             }
             else if ($process_steps == 10004) {
-                /*$p3_copy_address = @$input['p3_copy_address'];
-                if($p3_copy_address != 'yes')
-                    $input['p3_copy_address'] = 'no';*/
                 $p4_saarc_countries_flag = @$input['p4_saarc_countries_flag'];
+                $input['p4_photo_name']  = @$input['p4_photo_name4'] ? @$input['p4_photo_name4'] : @$input['p4_photo_name'];
                 if($p4_saarc_countries_flag == 'Yes') {
                     $data = array();
                     $counter = 0;
@@ -307,12 +296,13 @@ class VisasController extends Controller
             }
 
             else if ($process_steps == 10005) {
+                //print "<pre>";print_r($input);exit;
                 $this->repository->update($visa, $input);
                 session()->put('process_steps', 10006);
-                if($input['submit'] == 'Save and Temporarily Exit')
+                //if($input['submit'] == 'Save and Temporarily Exit')
                     return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
-                else
-                    return redirect()->route('frontend.visas.edit', $vid);
+                //else
+                  //  return redirect()->route('frontend.visas.edit', $vid);
             }
             else{
 

@@ -436,16 +436,21 @@
 
                             <div class="form-group">
                                 <div class="col-sm-2 col-xs-12"> </div>
-                                <div class="col-sm-4 col-xs-12 picture">
-                                    <img id="blah" src="{{ URL::asset('img/frontend/images/photo_not_available.png')}}">
-                                </div>
-                                <div class="col-sm-4 col-xs-12 picture">
-                                    <img id="blah" src="{{ URL::asset('img/frontend/images/second.png')}}">
-
+                                <div class="col-sm-8 col-xs-12 picture">
+                                    <img height="220" width="220" id="profileimg" src="{{ Storage::disk('public')->url('img/visaprofile/' . $visa->p4_photo_name) }}">
+                                    {{--<img id="profileimg" height="220" width="220" src="{{ URL::asset('img/frontend/images/photo_not_available.png')}}">--}}
+                                    <img id="blah" height="220" width="220" src="{{ URL::asset('img/frontend/images/second.png')}}">
                                 </div>
                                 <div class="col-sm-2 col-xs-12"> </div>
                             </div>
 
+                    <div class="form-group">
+                        <div class="col-sm-2 col-xs-12"> </div>
+                        <div class="col-sm-8 col-xs-12 picture">
+                            <p style="color: #f00;font-size: 18px;">Click Your Own Picture Using A Camera Phone Or Digital Camera Upload Here</p>
+                        </div>
+                        <div class="col-sm-2 col-xs-12"> </div>
+                    </div>
                             {{--<div class="form-group">
                                 <div class="col-sm-2 col-xs-12">
                                 </div>
@@ -461,12 +466,11 @@
 
                     <div class="form-group">
                         {{--{{ Form::label('logo', trans('validation.attributes.backend.settings.sitelogo'), ['class' => 'col-lg-2 control-label']) }}--}}
-
-                        <div class="col-lg-10">
+                        <div class="col-sm-4 col-xs-12"> </div>
+                        <div class="col-lg-4">
 
                             <div class="custom-file-input">
-                                <p style="color: #f00;font-size: 18px;">Click Your Own Picture Using A Camera Phone Or Digital Camera Upload Here</p>
-                                {!! Form::file('p4_photo_name', array('class'=>'form-control inputfile inputfile-1' )) !!}
+                                {!! Form::file($visa->p4_photo_name ? 'p4_photo_name4' : 'p4_photo_name', array('class'=>'form-control inputfile inputfile-1', 'onchange'=>"readURL(this)")) !!}
                                 <label for="logo">
                                     <i class="fa fa-upload"></i>
                                     <span>Choose a file</span>
@@ -474,6 +478,8 @@
                             </div>
                         </div>
                         <!--col-lg-10-->
+
+                        <div class="col-sm-4 col-xs-12"> </div>
                     </div>
                     <!--form control-->
 
@@ -550,6 +556,22 @@
             // To Use Select2
             // Backend.Select2.init();
         });
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#profileimg')
+                            .attr('src', e.target.result)
+                            .width(220)
+                            .height(220);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
         $("#saarcContainer").czMore();
     </script>
 @endsection

@@ -141,7 +141,7 @@ class Visa extends Model
         'p4_r_h_address2',
         'p4_r_h_phone',
         'p4_photo_name',
-        'p4_photo_name_path',
+        'p5_passport_photo_name',
         'process_steps',
     ];
 
