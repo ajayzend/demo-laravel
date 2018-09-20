@@ -186,12 +186,13 @@
                                 Refuse Details Yes /No
                             </div>
                         </div>
-                        <div class="form-group" id="perm">
+                        <div class="form-group" id="p4_permission_visit_details_id">
                             <label class="form-check-label col-sm-4 col-xs-12">	If So, When And By Whom (Mention Control No. and Date Also)</label>
                             <div class="col-sm-4 col-xs-12">
                                 <input class="form-control" value="{{$visa->p4_permission_visit_details}}" placeholder="By Whom" name="p4_permission_visit_details"  id="p4_permission_visit_details"  />
                             </div>
                             <div class="col-sm-4 col-xs-12">
+                                If Yes, when and by whom (mention Control no and date)
                             </div>
                         </div>
 
@@ -418,6 +419,16 @@
                                 </div>
                             </div>
 
+                    <div class="form-group">
+                        <label class="col-sm-4 col-xs-12 control-label"></label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input class="form-control" value="{{$visa->p4_r_h_address2}}" placeholder="City & State" id="p4_r_h_address2" name="p4_r_h_address2" />
+                        </div>
+                        <div class="col-sm-4 col-xs-12">
+
+                        </div>
+                    </div>
+
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span> Phone</label>
                                 <div class="col-sm-4 col-xs-12">
@@ -532,6 +543,18 @@
             }).trigger('change');
 
 
+            $("#p4_permission_visit1").change(function() {
+                if ($("#p4_permission_visit1").is(":checked")) {
+                    $("#p4_permission_visit_details_id").show();
+                }
+            }).trigger('change');
+
+            $("#p4_permission_visit2").change(function() {
+                if ($("#p4_permission_visit2").is(":checked")) {
+                    $("#p4_permission_visit_details_id").hide();
+                }
+            }).trigger('change');
+
             $("#p4_saarc_countries_flag1").change(function() {
                 if ($("#p4_saarc_countries_flag1").is(":checked")) {
                     $("#saarc_data_saved").show();
@@ -553,6 +576,7 @@
                     $("#saarcContainer").hide();
                 }
             }).trigger('change');
+
             // To Use Select2
             // Backend.Select2.init();
         });

@@ -38,7 +38,7 @@
                         <div class="col-lg-4">
 
                             <div class="custom-file-input">
-                                {!! Form::file('p5_passport_photo_name', array('class'=>'form-control inputfile inputfile-1', 'id' => 'p5_passport_photo_name', 'onchange'=>"readURL(this)")) !!}
+                                {!! Form::file($visa->p5_passport_photo_name ? 'p5_passport_photo_name5' : 'p5_passport_photo_name', array('class'=>'form-control inputfile inputfile-1', 'id' => 'p5_passport_photo_name', 'onchange'=>"readURL(this)")) !!}
                                 <label for="logo">
                                     <i class="fa fa-upload"></i>
                                     <span>Choose a file</span>
