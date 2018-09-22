@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app2')
 
 @section('content')
-
+<h1>Ajay Sahu</h1>
 @endsection
 
 @section('after-scripts')

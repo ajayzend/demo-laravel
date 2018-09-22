@@ -228,6 +228,10 @@ class VisasController extends Controller
                 return view('frontend.visas.visaprocess6-edit')->with([
                     'visa' => $visa
                 ]);
+            }else if ($process_steps == 10007){
+                return view('frontend.visas.visaprocess7-edit')->with([
+                    'visa' => $visa
+                ]);
             }
 
         } else {

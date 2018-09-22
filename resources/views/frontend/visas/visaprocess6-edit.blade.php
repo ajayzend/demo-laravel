@@ -899,8 +899,9 @@
                     <div class="form-group">
                         <label class="col-sm-4 col-xs-12 control-label" ></label>
                         <div class="col-sm-8 col-xs-12">
-                            <input type="submit" name="submit" value="Modify/Edit"  class="btn-primary submit-btn2">
-                            <input type="submit"  name="submit" value="Verified and Continue"   class="btn-primary submit-btn2">
+                            <input type="submit" id="modify_edit" name="submit" value="Modify/Edit"  class="btn-primary submit-btn2">
+                            <input type="button" id="verified_continue"  name="submit" value="Verified and Continue"   class="btn-primary submit-btn2">
+                            <input style="display: none" type="submit" id="verified_continue_hidden"  name="submit" value="Verified and Continue"   class="btn-primary submit-btn2">
                         </div>
                     </div>
 
@@ -938,7 +939,17 @@
     <script type="text/javascript">
 
         $(document).ready(function() {
-
+            $("#verified_continue").click(function() {
+                var ok = '"'+"Ok"+'"';
+                var cancel = '"'+"Cancel"+'"';
+                var msg = "This application is requested to verify the particulers filled in the application Form.The application may face legal action(including refusal to enter india or deportation) in case of provision of wrong information."+ "\n \n Press "+
+                        ok+ " to proceed for Final registration OR  \n" +cancel+ " to modify details";
+                if(confirm(msg)){
+                    $("#verified_continue_hidden").click();
+                }else{
+                    $("#modify_edit").click();
+                }
+            });
             // To Use Select2
             // Backend.Select2.init();
         });
