@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', app_name())</title>
+    <title>@yield('title', (@$visa->header_title) ? @$visa->header_title : $header_title)</title>
 
     <!-- Meta -->
     <meta name="description" content="@yield('meta_description', 'e-visa-India')">
@@ -52,8 +52,8 @@ use Illuminate\Support\Facades\Route;
 </head>
 <body id="app-layout">
 <div id="app">
-    @include('frontend.header')
-
+    @include('frontend.visas.header')
+    @include('frontend.visas.banner')
     <div class="container">
         {{--@include('includes.partials.messages')--}}
         @yield('content')
@@ -82,7 +82,7 @@ use Illuminate\Support\Facades\Route;
         $.session.clear();
     }
 </script>
-@include('frontend.footer')
+{{--@include('frontend.footer')--}}
 @include('includes.partials.ga')
 
 <script type="text/javascript">

@@ -49,7 +49,8 @@
     </head>
     <body id="app-layout">
         <div id="app">
-            @include('frontend.header')
+            @include('frontend.visas.header')
+            @include('frontend.visas.banner')
             @include('frontend.visasteps')
             @include('frontend.home1')
             <div class="container">

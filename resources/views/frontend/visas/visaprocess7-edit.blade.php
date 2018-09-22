@@ -1,7 +1,118 @@
-@extends('frontend.layouts.app2')
+@extends('frontend.layouts.app4')
 
 @section('content')
-<h1>Ajay Sahu</h1>
+    <section class="wrapper">
+       {{-- <div class="container">--}}
+            <div class="row">
+                <div class="form-outer">
+                    <div class="title"> <h3 class="text-center" >Fee Payment</h3></div>
+                    <h4 class="text-center"><strong class="payment-label">Temporary Application ID:</strong> <span class="valuecolor"><strong>{{ $visa->visa_no }}</strong></span></h4>
+                    <h4 class="text-center"><strong class="payment-label">APPLICANT NAME:</strong> <span class="valuecolor"><strong>{{ $visa->p1_fname." ".$visa->p1_mname." ".$visa->p1_lname}}</strong></span></h4>
+                    <h3 class="text-center" > <strong>On pressing "Pay Now" ,the application will be redirected to Payment Gateway to pay the visa fee and will be outside the control of Visa Online Application. The responsibility of security of transaction process and details on payment page will be of Payment gateway.</strong></h3>
+                    <h3 class="text-center" > <strong>On pressing "Pay Later", you can pay the visa fee later using your Temporary Application ID and date of birth.</strong></h3>
+
+
+                    {{ Form::model($visa, ['route' => ['frontend.visas.update', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => 'process7']) }}
+                    {{ Form::hidden('evpuid', $visa->visa_no ) }}
+                    {{ Form::hidden('ps', 10007 ) }}
+
+                    <div class="form-group">
+                        <div class="col-sm-1 col-xs-12"> </div>
+                        <div class="col-sm-10 col-xs-12 payment-label">
+                            Disclaimer
+                        </div>
+                        <div class="col-sm-1 col-xs-12"> </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-1 col-xs-12"> </div>
+                        <div class="col-sm-10 col-xs-12">
+                            All travelers seeking admission to India under the e-Tourist Visa Scheme are required to carry printout of the Electronic Travel Authorisation sent through email by Bureau of Immigration.
+                        </div>
+                        <div class="col-sm-1 col-xs-12"> </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-1 col-xs-12"> </div>
+                        <div class="col-sm-10 col-xs-12">
+                            If your Electronic Travel Authorisation application is approved, it establishes that you are admissible to enter India under the e-Tourist Visa Scheme of Government of India. Upon arrival in India, records would be examined by an Immigration Officer at the port of entry.
+                        </div>
+                        <div class="col-sm-1 col-xs-12"> </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-1 col-xs-12"> </div>
+                        <div class="col-sm-10 col-xs-12">
+                            Biometric Details (Photograph & Fingerprints) of the applicant shall be mandatorily captured at Immigration on arrival in India. Non-compliance to do so would lead to denial of entry into India.
+                        </div>
+                        <div class="col-sm-1 col-xs-12"> </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-1 col-xs-12"> </div>
+                        <div class="col-sm-10 col-xs-12">
+                            A determination that you are not eligible for electronic travel authorisation does not preclude you from applying for a visa in Indian Mission for travel to India.
+                        </div>
+                        <div class="col-sm-1 col-xs-12"> </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-1 col-xs-12"> </div>
+                        <div class="col-sm-10 col-xs-12">
+                            All information provided by you, or on your behalf by a designated third party, must be true and correct. An electronic travel authorisation may be revoked at any time and for any reason, such as new information influencing eligibility. You may be subject to legal action if you make a materially false, fictitious, or fraudulent statement or representation in an electronic travel authorisation application submitted by you.
+                        </div>
+                        <div class="col-sm-1 col-xs-12"> </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-1 col-xs-12"> </div>
+                        <div class="col-sm-10 col-xs-12">
+                            {{--Blank space--}}
+                            &nbsp;
+                        </div>
+                        <div class="col-sm-1 col-xs-12"> </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-1 col-xs-12"> </div>
+                        <div class="col-sm-10 col-xs-12 payment-label">
+                           Undertaking
+                        </div>
+                        <div class="col-sm-1 col-xs-12"> </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-1 col-xs-12"> </div>
+                        <div class="col-sm-10 col-xs-12">
+                            <input name="p2_changed_your_name" id="p2_changed_your_name" type="checkbox"   value="yes" />
+                            I, the applicant, hereby certify that I agree to all the terms and conditions given on the website www.e-touristvisaindia.com and understand all the questions and statements of this application. The answers and information furnished in this application are true and correct to the best of my knowledge and belief. <strong>I understand and agree that once the fee is paid towards the Temporary application ID </strong> <span class="valuecolor"><strong>{{ $visa->visa_no }}</strong></span> <strong>is 100% non-refundable and I will not claim a refund or dispute the transaction incase of cancellation request raised at my end. I also understand that e-touristvisaindia.com is only responsible for processing my application and the visa may be granted or rejected by the indian government. I authorized them to take the payment from my card online.</strong>
+                        </div>
+                          <div class="col-sm-4 col-xs-12 des">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-4 col-xs-12"> </div>
+                        <div class="col-sm-5 col-xs-12 payment-label">
+                          <?php if(strpos($visa->p1_app_type, 'urgent') !== false){  echo 'Urgent';} else { echo 'Normal';} ?>   {{$visa->p1_visa_type}} fee = 324324
+                        </div>
+                        <div class="col-sm-3 col-xs-12"> </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 col-xs-12 control-label" ></label>
+                        <div class="col-sm-8 col-xs-12">
+                            <input type="submit" name="submit" value="Pay Now"  class="btn-primary submit-btn2">
+                            <input type="submit"  name="submit" value="Pay Later"   class="btn-primary submit-btn2">
+                        </div>
+                    </div>
+
+
+                    {{ Form::close() }}
+                </div>
+            </div>
+        {{--</div>--}}
+    </section>
 @endsection
 
 @section('after-scripts')

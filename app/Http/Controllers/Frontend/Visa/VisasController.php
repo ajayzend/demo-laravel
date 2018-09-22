@@ -51,27 +51,6 @@ class VisasController extends Controller
         return view('frontend.visas.home');
     }
 
-
-    public function process1(VisaRepository $visa)
-    {
-        die("okkk");
-        $settingData = Setting::first();
-        $google_analytics = $settingData->google_analytics;
-        $result = $visa->findByVisaNoSlug('blank');
-        return view('frontend.visaprocess.visaprocess1', compact('visa'))->withvisa($result);
-        //return view('frontend.visaprocess.visaprocess1', compact('google_analytics', $google_analytics))->withvisa($result);
-    }
-
-    public function visaGetProcess1(VisaRepository $visa)
-    {
-        die("hhh");
-        $settingData = Setting::first();
-        $google_analytics = $settingData->google_analytics;
-        $result = $visa->findByVisaNoSlug('blank');
-        return view('frontend.visaprocess.visaprocess1', compact('visa'))->withvisa($result);
-        //return view('frontend.visaprocess.visaprocess1', compact('google_analytics', $google_analytics))->withvisa($result);
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -83,6 +62,7 @@ class VisasController extends Controller
         $port = Port::getSelectData();
         $evisacountry = Evisacountry::getSelectData();
         return view('frontend.visas.visaprocess1-create')->with([
+            'header_title'       => "India Visa | Apply for Indian Visa Application",
             'port_arrival'       => $port,
             'evisa_country'       => $evisacountry,
         ]);
@@ -108,8 +88,10 @@ class VisasController extends Controller
     {
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
-
-        return view('frontend.visas.amendprocess', compact('google_analytics', $google_analytics));
+        //return view('frontend.visas.amendprocess', compact('google_analytics', $google_analytics));
+        return view('frontend.visas.amendprocess')->with([
+            'header_title'       => "Apply e-Visa to India | Indian Visa Application"
+        ]);
     }
 
     /**
@@ -132,8 +114,9 @@ class VisasController extends Controller
             $visa->p2_passport_date_expiry = date('d-m-Y', strtotime($visa->p2_passport_date_expiry));
             $visa->p2_other_passport_date_issue = date('d-m-Y', strtotime($visa->p2_other_passport_date_issue));
             $visa->p4_date_issue = date('d-m-Y', strtotime($visa->p4_date_issue));
-            //print "<pre>";print_r($visa);exit;
+           // print "<pre>";print_r($visa);exit;
             if ($process_steps == 10001 || $process_steps == '') {
+                $visa->header_title = "Online Indian Visa Form";
                 $port = Port::getSelectData();
                 $evisacountry = Evisacountry::getSelectData();
                 return view('frontend.visas.visaprocess1-edit')->with([
@@ -143,6 +126,7 @@ class VisasController extends Controller
                 ]);
             }
             else if ($process_steps == 10002){
+                $visa->header_title = "e-Visa Indian Visa Form | $visa->p1_visa_type";
                 $evisacountry = Evisacountry::getSelectData();
                 $country = Country::getSelectData();
                 $education = Education::getSelectData();
@@ -156,6 +140,7 @@ class VisasController extends Controller
                     'religion'       => $religion
                 ]);
             }else if ($process_steps == 10003){
+                $visa->header_title = "e-Visa Indian Visa Form | $visa->p1_visa_type";
                 $port = Port::getSelectData();
                 $evisacountry = Evisacountry::getSelectData();
                 $country = Country::getSelectData();
@@ -173,6 +158,7 @@ class VisasController extends Controller
                 ]);
             }
             else if ($process_steps == 10004){
+                $visa->header_title = "e-Visa Indian Visa Form | $visa->p1_visa_type";
                 if($visa->p4_saarc_country_year_visit)
                     $visa->p4_saarc_country_year_visit = \GuzzleHttp\json_decode($visa->p4_saarc_country_year_visit, true);
                 $port = Port::getSelectData();
@@ -195,12 +181,14 @@ class VisasController extends Controller
                 ]);
             }
             else if ($process_steps == 10005){
+                $visa->header_title = "Document Upload";
                 return view('frontend.visas.visaprocess5-edit')->with([
                     'visa' => $visa
                 ]);
             }
 
             else if ($process_steps == 10006){
+                $visa->header_title = "Indian e-Visa Application form";
                 $religion = Religion::getSelectData();
                 $country = Country::getSelectData();
                 $education = Education::getSelectData();
@@ -229,6 +217,7 @@ class VisasController extends Controller
                     'visa' => $visa
                 ]);
             }else if ($process_steps == 10007){
+                $visa->header_title = "Online Visa Fee Payment";
                 return view('frontend.visas.visaprocess7-edit')->with([
                     'visa' => $visa
                 ]);
