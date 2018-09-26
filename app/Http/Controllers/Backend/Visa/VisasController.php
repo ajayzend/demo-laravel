@@ -110,14 +110,14 @@ class VisasController extends Controller
         $education = Education::getSelectData();
         $religion = Religion::getSelectData();
         $result = $visa->findBySlug($slug);
-        $result->p1_nationality = $evisacountry[$result->p1_nationality];
-        $result->p1_port_arrival = $port[$result->p1_port_arrival];
-        $result->p2_country_birth = $country[$result->p2_country_birth];
-        $result->p2_prev_nationality = $country[$result->p2_prev_nationality];
-        $result->p2_other_passport_country = $evisacountry[$result->p2_other_passport_country];
-        $result->p2_other_nationality_mentioned = $country[$result->p2_other_nationality_mentioned];
-        $result->p2_religion = $religion[$result->p2_religion];
-        $result->p2_education = $education[$result->p2_education];
+        $result->p1_nationality = @$evisacountry[$result->p1_nationality];
+        $result->p1_port_arrival = @$port[$result->p1_port_arrival];
+        $result->p2_country_birth = @$country[$result->p2_country_birth];
+        $result->p2_prev_nationality = @$country[$result->p2_prev_nationality];
+        $result->p2_other_passport_country = @$evisacountry[$result->p2_other_passport_country];
+        $result->p2_other_nationality_mentioned = @$country[$result->p2_other_nationality_mentioned];
+        $result->p2_religion = @$religion[$result->p2_religion];
+       // $result->p2_education = $education[$result->p2_education];
         return view('backend.visas.show')
             ->withvisa($result);
     }
