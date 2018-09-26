@@ -79,9 +79,15 @@ class VisasController extends Controller
         //Input received from the request
         $input = $request->except(['_token']);
         //Create the model using repository create method
-        $this->repository->create($input);
+        $visa = $this->repository->create($input);
+        $vid = $visa->id;
+        $evpuid = $visa->visa_no;
+        session()->put('vid', $vid);
+        session()->put('evpuid', $evpuid);
+        session()->put('process_steps', 10002);
+        return redirect()->route('frontend.visas.edit', $vid);
         //return with successfull message
-        return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.created'));
+        // return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.created'));
     }
 
     public function getvisaamendprocess()

@@ -96,9 +96,9 @@ class VisaRepository extends BaseRepository
         $input['visa_no'] = $this->prefixRandomNumber();
         $input['p1_dob'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_dob']));
         $input['p1_edate'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_edate']));
-
-        if ($visa->create($input)) {
-            return true;
+        $res = $visa->create($input);
+        if ($res) {
+                return $res;
         }
         /*if (Visa::create($input)) {
             return true;
