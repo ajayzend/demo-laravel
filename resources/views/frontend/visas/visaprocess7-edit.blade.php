@@ -100,6 +100,15 @@
                     </div>
 
                     <div class="form-group">
+                        <label class="col-sm-4 col-xs-12 control-label"> <span>Have You Ever Visited India Before?</span></label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input  type="radio" value="Yes"  id="p4_visit_india_before1" name="p4_visit_india_before"   {{ $visa->p4_visit_india_before == 'Yes' ? 'checked="checked"' : '' }}/><span>Yes</span>
+                            <input  type="radio" value="No" id="p4_visit_india_before2" name="p4_visit_india_before" {{ $visa->p4_visit_india_before == 'No' ? 'checked="checked"' : '' }}  /><span>No</span>
+                        </div>
+                        <div class="col-sm-4 col-xs-12">If Yes Please Give Details</div>
+                    </div>
+
+                    <div class="form-group">
                         <label class="col-sm-4 col-xs-12 control-label" ></label>
                         <div class="col-sm-8 col-xs-12">
                             <input type="submit" name="submit" value="Pay Now"  class="btn-primary submit-btn2">
