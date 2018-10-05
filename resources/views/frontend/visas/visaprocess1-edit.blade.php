@@ -148,9 +148,9 @@
                                 <?php //echo $visa; ?>
                                 <select id="p1_visa_type" name="p1_visa_type" class="form-control">
                                     <option value="0">Select Visa</option>
-                                    <option value="E-visa Tourist" {{ $visa->p1_visa_type == 'e-Tourist Visa' ? 'selected="selected"' : '' }}>e-Tourist Visa</option>
-                                    <option value="E-visa Medical" {{ $visa->p1_visa_type == 'e-Medical Visa' ? 'selected="selected"' : '' }}>e-Medical Visa</option>
-                                    <option value="E- Visa Business" {{ $visa->p1_visa_type == 'e-Business Visa' ? 'selected="selected"' : '' }}>e-Business Visa</option>
+                                    <option value="e-Tourist Visa" {{ $visa->p1_visa_type == 'e-Tourist Visa' ? 'selected="selected"' : '' }}>e-Tourist Visa</option>
+                                    <option value="e-Medical Visa" {{ $visa->p1_visa_type == 'e-Medical Visa' ? 'selected="selected"' : '' }}>e-Medical Visa</option>
+                                    <option value="e-Business Visa" {{ $visa->p1_visa_type == 'e-Business Visa' ? 'selected="selected"' : '' }}>e-Business Visa</option>
                                 </select>
                             </div>
 
