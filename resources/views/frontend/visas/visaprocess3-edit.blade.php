@@ -610,7 +610,7 @@
             }).trigger('change');
 
 
-            $("#p3_flag21").change(function() {;
+            $("#p3_flag21").change(function() {
                 if ($("#p3_flag21").val() == 'Yes') {
                     $("#other_organization").show();
                     $("#p3_other_organization").attr("disabled", false);

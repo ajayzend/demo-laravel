@@ -22,7 +22,7 @@
 
                                 <div class="col-sm-6 col-xs-12">
 
-                                    <select id="p1_app_type" class="form-control" onchange="changeFunc();" name="p1_app_type">
+                                    <select id="p1_app_type" class="form-control"  name="p1_app_type">
                                         <option value="0"> Select Application Type</option>
                                         <option value="Normal Processing (processing Time 4 To 7 Business Days" {{ $visa->p1_app_type == 'Normal Processing (processing Time 4 To 7 Business Days' ? 'selected="selected"' : '' }} > Normal Processing (processing Time 4 To 7 Business Days
                                         </option>
