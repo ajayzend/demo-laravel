@@ -12,8 +12,10 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Laravel AdminPanel'),
+    'name' => env('APP_NAME', 'e-visa-India'),
 
+    'consultufee' => env('EVISA_CONSULUTFEE', 100), // Urgent Fee added by Ajay Date:13102018
+    'consultnfee' => env('EVISA_CONSULTNFEE', 60), // Normal Fee added by Ajay Date:13102018
     /*
     |--------------------------------------------------------------------------
     | Application Environment
