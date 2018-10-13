@@ -11,38 +11,60 @@
        {{-- </div>--}}<!--col-lg-10-->
 
         {{-- First Name --}}
+
         <div class="form-group">
-            {{ Form::label('APP Type', trans('validation.attributes.backend.access.visas.p1_app_type'), ['class' => 'col-lg-2 control-label required']) }}
+            {{ Form::label('Visa No', 'Visa No', ['class' => 'col-lg-2 control-label']) }}
 
             <div class="col-lg-10">
-                {{ Form::text('p1_app_type', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.visas.p1_app_type'), 'required' => 'required']) }}
+                {{ $visa->visa_no }}
+            </div><!--col-lg-10-->
+        </div><!--form control-->
+
+
+        <div class="form-group">
+            {{ Form::label('APP Type', 'APP Type', ['class' => 'col-lg-2 control-label']) }}
+
+            <div class="col-lg-10">
+                {{ $visa->p1_app_type }}
+            </div><!--col-lg-10-->
+        </div><!--form control-->
+
+        <div class="form-group">
+            {{ Form::label('Visa Type', 'Visa Type', ['class' => 'col-lg-2 control-label']) }}
+
+            <div class="col-lg-10">
+                {{ $visa->p1_visa_type }}
             </div><!--col-lg-10-->
         </div><!--form control-->
 
         {{-- First Name --}}
         <div class="form-group">
-            {{ Form::label('First Name', trans('validation.attributes.backend.access.visas.p1_fname'), ['class' => 'col-lg-2 control-label required']) }}
+            {{ Form::label('Payment Status', 'Payment Status', ['class' => 'col-lg-2 control-label']) }}
 
             <div class="col-lg-10">
-                {{ Form::text('p1_fname', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.visas.p1_fname'), 'required' => 'required']) }}
+                <select id="payment_status" name="payment_status" class="form-control box-size">
+                    <option value="0">Select Payment Status</option>
+                    <option value="wip" {{ $visa->payment_status == 'wip' ? 'selected="selected"' : '' }}>WIP</option>
+                    <option value="success" {{ $visa->payment_status == 'success' ? 'selected="selected"' : '' }}>Success</option>
+                    <option value="failed" {{ $visa->payment_status == 'failed' ? 'selected="selected"' : '' }}>Failed</option>
+                    <option value="cancelled" {{ $visa->payment_status == 'cancelled' ? 'selected="selected"' : '' }}>Cancelled</option>
+                    <option value="aborted" {{ $visa->payment_status == 'aborted' ? 'selected="selected"' : '' }}>Aborted</option>
+                </select>
             </div><!--col-lg-10-->
         </div><!--form control-->
 
-        {{-- First Name --}}
         <div class="form-group">
-            {{ Form::label('Middle Name', trans('validation.attributes.backend.access.visas.p1_mname'), ['class' => 'col-lg-2 control-label required']) }}
+            {{ Form::label('Gov Payment Status', 'Gov Payment Status', ['class' => 'col-lg-2 control-label']) }}
 
             <div class="col-lg-10">
-                {{ Form::text('p1_mname', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.visas.p1_mname'), 'required' => 'required']) }}
-            </div><!--col-lg-10-->
-        </div><!--form control-->
-
-        {{-- Last Name --}}
-        <div class="form-group">
-            {{ Form::label('Last Name', trans('validation.attributes.backend.access.visas.p1_lname'), ['class' => 'col-lg-2 control-label required']) }}
-
-            <div class="col-lg-10">
-                {{ Form::text('p1_lname', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.access.visas.p1_lname'), 'required' => 'required']) }}
+                <select id="india_gov_evisa_status" name="india_gov_evisa_status" class="form-control box-size">
+                    <option value="0">Select Payment Status</option>
+                    <option value="wip" {{ $visa->payment_status == 'wip' ? 'selected="selected"' : '' }}>WIP</option>
+                    <option value="success" {{ $visa->payment_status == 'success' ? 'selected="selected"' : '' }}>Success</option>
+                    <option value="failed" {{ $visa->payment_status == 'failed' ? 'selected="selected"' : '' }}>Failed</option>
+                    <option value="cancelled" {{ $visa->payment_status == 'cancelled' ? 'selected="selected"' : '' }}>Cancelled</option>
+                    <option value="aborted" {{ $visa->payment_status == 'aborted' ? 'selected="selected"' : '' }}>Aborted</option>
+                </select>
             </div><!--col-lg-10-->
         </div><!--form control-->
 

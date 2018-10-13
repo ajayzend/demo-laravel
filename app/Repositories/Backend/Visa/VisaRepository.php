@@ -28,15 +28,17 @@ class VisaRepository extends BaseRepository
     public function getForDataTable()
     {
         return $this->query()
+            ->leftjoin(config('module.evisacountries.table'), config('module.evisacountries.table').'.id', '=', config('module.visas.table').'.p1_nationality')
             ->select([
-                config('module.visas.table').'.id',
-                config('module.visas.table').'.visa_no',
-                config('module.visas.table').'.p1_app_type',
-                config('module.visas.table').'.p1_fname',
-                config('module.visas.table').'.p1_mname',
-                config('module.visas.table').'.p1_lname',
-                config('module.visas.table').'.created_at',
-                config('module.visas.table').'.updated_at',
+                config('module.visas.table') . '.id',
+                config('module.visas.table') . '.visa_no',
+                config('module.visas.table') . '.p1_app_type',
+                config('module.visas.table') . '.p1_visa_type',
+                config('module.evisacountries.table') . '.name',
+                config('module.visas.table') . '.payment_status',
+                config('module.visas.table') . '.india_gov_evisa_status',
+                config('module.visas.table') . '.created_at',
+                config('module.visas.table') . '.updated_at',
             ]);
     }
 
@@ -60,9 +62,9 @@ class VisaRepository extends BaseRepository
         }*/
         $visa = self::MODEL;
         $visa = new $visa();
-        $input['visa_no'] = $this->prefixRandomNumber();
+        /*$input['visa_no'] = $this->prefixRandomNumber();
         $input['p1_dob'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_dob']));
-        $input['p1_edate'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_edate']));
+        $input['p1_edate'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_edate']));*/
 
         if ($visa->create($input)) {
             return true;
@@ -84,8 +86,8 @@ class VisaRepository extends BaseRepository
     public function update(Visa $visa, array $input)
     {
 
-        $input['p1_dob'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_dob']));
-        $input['p1_edate'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_edate']));
+       /* $input['p1_dob'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_dob']));
+        $input['p1_edate'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_edate']));*/
     	if ($visa->update($input))
             return true;
 
