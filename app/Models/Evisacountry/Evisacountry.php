@@ -32,7 +32,8 @@ class Evisacountry extends BaseModel
      * @var array
      */
     protected $fillable = [
-'name'
+'name',
+'fee'
     ];
 
     /**

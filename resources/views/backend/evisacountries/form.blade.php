@@ -6,6 +6,14 @@
             {{ Form::text('name', null, ['class' => 'form-control box-size', 'placeholder' => 'E-Visa Country', 'required' => 'required']) }}
         </div><!--col-lg-10-->
     </div><!--form control-->
+
+    <div class="form-group">
+        {{ Form::label('E-Visa Fee', 'E-Visa Fee', ['class' => 'col-lg-2 control-label required']) }}
+
+        <div class="col-lg-10">
+            {{ Form::text('fee', null, ['class' => 'form-control box-size', 'placeholder' => 'E-Visa Fee', 'required' => 'required']) }}
+        </div><!--col-lg-10-->
+    </div><!--form control-->
 </div><!--box-body-->
 
 @section("after-scripts")

@@ -23,6 +23,7 @@
                         <tr>
                             <th>{{ trans('labels.backend.evisacountries.table.id') }}</th>
                             <th>E-Visa Country</th>
+                            <th>E-Visa Fee</th>
                             <th>{{ trans('labels.backend.evisacountries.table.createdat') }}</th>
                             <th>Updated At</th>
                             <th>{{ trans('labels.general.actions') }}</th>
@@ -30,6 +31,7 @@
                     </thead>
                     <thead class="transparent-bg">
                         <tr>
+                            <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -58,6 +60,7 @@
                 columns: [
                     {data: 'id', name: '{{config('module.evisacountries.table')}}.id'},
                     {data: 'name', name: '{{config('module.evisacountries.table')}}.name'},
+                    {data: 'fee', name: '{{config('module.evisacountries.table')}}.fee'},
                     {data: 'created_at', name: '{{config('module.evisacountries.table')}}.created_at'},
                     {data: 'updated_at', name: '{{config('module.evisacountries.table')}}.updated_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}

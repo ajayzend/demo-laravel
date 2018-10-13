@@ -31,6 +31,7 @@ class EvisacountryRepository extends BaseRepository
             ->select([
                 config('module.evisacountries.table').'.id',
                 config('module.evisacountries.table').'.name',
+                config('module.evisacountries.table').'.fee',
                 config('module.evisacountries.table').'.created_at',
                 config('module.evisacountries.table').'.updated_at',
             ]);
