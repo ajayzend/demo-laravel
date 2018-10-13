@@ -46,4 +46,45 @@ class BaseModel extends Model
 
         return $items;
     }
+
+    /**
+     * Generate drop-down select data with basic IDs.
+     *
+     * @param null $id
+     * @param null $val
+     *
+     * @return array
+     */
+    public static function getSelectCustomDataVisaFee($field_name = 'name')
+    {
+        $collection = parent::all();
+
+        return self::getCustomItems($collection, $field_name);
+    }
+
+    /**
+     * Generate items for drop-down select data with basic IDs.
+     *
+     * @param $collection
+     *
+     * @return array
+     */
+    public static function getCustomItems($collection, $field_name)
+    {
+        $items = [];
+
+        foreach ($collection as $model) {
+            $items[$model->id] = [
+                'id'    => $model->id,
+                'fee'  => $model->fee,
+                'model' => $model,
+            ];
+        }
+
+        foreach ($items as $id => $item) {
+            $items[$item['id']] = $item['fee'];
+        }
+
+        return $items;
+    }
 }

@@ -92,13 +92,24 @@ class VisasController extends Controller
 
     public function getvisaamendprocess()
     {
-        $settingData = Setting::first();
-        $google_analytics = $settingData->google_analytics;
+        //$settingData = Setting::first();
+       // $google_analytics = $settingData->google_analytics;
         //return view('frontend.visas.amendprocess', compact('google_analytics', $google_analytics));
         return view('frontend.visas.amendprocess')->with([
             'header_title'       => "Apply e-Visa to India | Indian Visa Application"
         ]);
     }
+
+    public function getpaymentresponse()
+    {
+        //$settingData = Setting::first();
+        // $google_analytics = $settingData->google_analytics;
+        //return view('frontend.visas.amendprocess', compact('google_analytics', $google_analytics));
+        return view('frontend.visas.payment-response')->with([
+            'header_title'       => "Apply e-Visa to India | Indian Visa Application"
+        ]);
+    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -125,6 +136,11 @@ class VisasController extends Controller
                 $visa->header_title = "Online Indian Visa Form";
                 $port = Port::getSelectData();
                 $evisacountry = Evisacountry::getSelectData();
+
+              // echo  config('app.consultufee');echo "<br>";
+              // echo  config('app.consultnfee');
+
+                //echo "<pre>";print_r($evisacountry);die;
                 return view('frontend.visas.visaprocess1-edit')->with([
                     'visa' => $visa,
                     'port_arrival'       => $port,
@@ -223,9 +239,30 @@ class VisasController extends Controller
                     'visa' => $visa
                 ]);
             }else if ($process_steps == 10007){
+                $app_type_val = 'urgent';
+                if(stripos($visa->p1_app_type, 'normal') !== false){
+                    $app_type_val = 'normal';
+                }
+                $evisacountryfee = Evisacountry::getSelectCustomDataVisaFee();
+                $visafee = $evisacountryfee[$visa->p1_nationality];
+                $consult_fee = ($app_type_val == 'normal') ? config('app.consultnfee') : config('app.consultufee');
+
+                $visafee = ($visafee) ? $visafee : 100;
+                $consult_fee = ($consult_fee) ? $consult_fee : 50;
+
+                $total_fee = $visafee + $consult_fee;
+
+                $total_fee = ($total_fee >= 50) ? $total_fee : 150;
+                session()->put('evisafeedollar', $total_fee);
+                $total_fee = number_format($total_fee*73.69, 2) ;
+
+                session()->put('visatype', $visa->p1_visa_type);
+                session()->put('evisafee', $total_fee);
+               // echo "<pre>";print_r( session()->all());die;
                 $visa->header_title = "Online Visa Fee Payment";
                 return view('frontend.visas.visaprocess7-edit')->with([
-                    'visa' => $visa
+                    'visa' => $visa,
+                    'total_fee' => $total_fee
                 ]);
             }
 
@@ -347,6 +384,20 @@ class VisasController extends Controller
                     return redirect()->route('frontend.visas.edit', $vid);
                 }
             }
+
+            else if ($process_steps == 10007) {
+                if($input['submit'] == 'Pay Later') {
+                    session()->put('process_steps', 10001);
+                    //return redirect()->route('frontend.paypal.ec-checkout');
+                    return redirect()->action('PayPalController@getExpressCheckout');
+                }
+                else {
+                    session()->put('process_steps', 10007);
+                   // return redirect()->route('frontend.paypal.ec-checkout');
+                    return redirect()->action('PayPalController@getExpressCheckout');
+                }
+            }
+
             else{
 
                 $this->repository->update($visa, $input);

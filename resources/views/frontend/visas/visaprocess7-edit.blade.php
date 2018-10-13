@@ -84,7 +84,7 @@
                     <div class="form-group">
                         <div class="col-sm-1 col-xs-12"> </div>
                         <div class="col-sm-10 col-xs-12">
-                            <input name="p2_changed_your_name" id="p2_changed_your_name" type="checkbox"   value="yes" />
+                            <input name="p7_undertaking" id="p7_undertaking" type="checkbox"   value="" />
                             I, the applicant, hereby certify that I agree to all the terms and conditions given on the website www.e-touristvisaindia.com and understand all the questions and statements of this application. The answers and information furnished in this application are true and correct to the best of my knowledge and belief. <strong>I understand and agree that once the fee is paid towards the Temporary application ID </strong> <span class="valuecolor"><strong>{{ $visa->visa_no }}</strong></span> <strong>is 100% non-refundable and I will not claim a refund or dispute the transaction incase of cancellation request raised at my end. I also understand that e-touristvisaindia.com is only responsible for processing my application and the visa may be granted or rejected by the indian government. I authorized them to take the payment from my card online.</strong>
                         </div>
                           <div class="col-sm-4 col-xs-12 des">
@@ -94,7 +94,7 @@
                     <div class="form-group">
                         <div class="col-sm-4 col-xs-12"> </div>
                         <div class="col-sm-5 col-xs-12 payment-label">
-                          <?php if(strpos($visa->p1_app_type, 'urgent') !== false){  echo 'Urgent';} else { echo 'Normal';} ?>   {{$visa->p1_visa_type}} fee = 324324
+                          <?php if(stripos($visa->p1_app_type, 'urgent') !== false){  echo 'Urgent';} else { echo 'Normal';} ?>   {{$visa->p1_visa_type}} fee = INR {{$total_fee}}
                         </div>
                         <div class="col-sm-3 col-xs-12"> </div>
                     </div>
@@ -111,7 +111,7 @@
                     <div class="form-group">
                         <label class="col-sm-4 col-xs-12 control-label" ></label>
                         <div class="col-sm-8 col-xs-12">
-                            <input type="submit" name="submit" value="Pay Now"  class="btn-primary submit-btn2">
+                            <input type="submit" name="submit" id="read_undertaking" value="Pay Now"  class="btn-primary submit-btn2">
                             <input type="submit"  name="submit" value="Pay Later"   class="btn-primary submit-btn2">
                         </div>
                     </div>
@@ -132,6 +132,24 @@
     <script type="text/javascript">
 
         $(document).ready(function() {
+            $("#read_undertaking").click(function() {
+               var p7_undertaking  = $("#p7_undertaking").val();
+                if(p7_undertaking == 'yes'){
+                    return true;
+                }else{
+                    alert("Please read the Undertaking and checked the same before to click on 'Pay Now' button.");
+                    return false;
+                }
+            });
+
+
+            $("#p7_undertaking").change(function() {
+                if ($("#p7_undertaking").is(":checked")) {
+                    $("#p7_undertaking").val('yes');
+                }else{
+                    $("#p7_undertaking").val('no');
+                }
+            }).trigger('change');
 
             // To Use Select2
             // Backend.Select2.init();
