@@ -59,11 +59,11 @@
             <div class="col-lg-10">
                 <select id="india_gov_evisa_status" name="india_gov_evisa_status" class="form-control box-size">
                     <option value="0">Select Payment Status</option>
-                    <option value="wip" {{ $visa->payment_status == 'wip' ? 'selected="selected"' : '' }}>WIP</option>
-                    <option value="success" {{ $visa->payment_status == 'success' ? 'selected="selected"' : '' }}>Success</option>
-                    <option value="failed" {{ $visa->payment_status == 'failed' ? 'selected="selected"' : '' }}>Failed</option>
-                    <option value="cancelled" {{ $visa->payment_status == 'cancelled' ? 'selected="selected"' : '' }}>Cancelled</option>
-                    <option value="aborted" {{ $visa->payment_status == 'aborted' ? 'selected="selected"' : '' }}>Aborted</option>
+                    <option value="wip" {{ $visa->india_gov_evisa_status == 'wip' ? 'selected="selected"' : '' }}>WIP</option>
+                    <option value="success" {{ $visa->india_gov_evisa_status == 'success' ? 'selected="selected"' : '' }}>Success</option>
+                    <option value="failed" {{ $visa->india_gov_evisa_status == 'failed' ? 'selected="selected"' : '' }}>Failed</option>
+                    <option value="cancelled" {{ $visa->india_gov_evisa_status == 'cancelled' ? 'selected="selected"' : '' }}>Cancelled</option>
+                    <option value="aborted" {{ $visa->india_gov_evisa_status == 'aborted' ? 'selected="selected"' : '' }}>Aborted</option>
                 </select>
             </div><!--col-lg-10-->
         </div><!--form control-->
