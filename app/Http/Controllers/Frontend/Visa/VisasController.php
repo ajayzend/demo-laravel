@@ -20,6 +20,9 @@ use App\Models\Education\Education;
 use App\Models\Occupation\Occupation;
 use App\Models\Visatype\Visatype;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMailable;
+
 /**
  * VisasController
  */
@@ -433,5 +436,14 @@ class VisasController extends Controller
         session()->put('evpuid', $input['evpuid']);
         session()->put('vid', $result->id);
         return redirect()->route('frontend.visas.edit', $result->id);
+    }
+
+    public function mail()
+    {
+        $template = "evisa-exit-process";
+        $name = 'Ajay';
+        Mail::to('ajaysearch123@gmail.com')->cc('ajay.kumar.iimt@gmail.com')->send(new SendMailable($name, $template));
+
+        return 'Email was sent';
     }
 }
