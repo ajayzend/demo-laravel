@@ -26,7 +26,7 @@
                                         <option value="0"> Select Application Type</option>
                                         <option value="Normal Processing (processing Time 4 To 7 Business Days" {{ $visa->p1_app_type == 'Normal Processing (processing Time 4 To 7 Business Days' ? 'selected="selected"' : '' }} > Normal Processing (processing Time 4 To 7 Business Days
                                         </option>
-                                        <option value="Urgent Processing (processing Time Maximum 3 Business Days)" {{ $visa->p1_app_type == 'Urgent Processing (processing Time Maximum 3 Business Days' ? 'selected="selected"' : '' }}  > Urgent Processing (processing Time Maximum 3 Business Days)
+                                        <option value="Urgent Processing (processing Time Maximum 3 Business Days)" {{ $visa->p1_app_type == 'Urgent Processing (processing Time Maximum 3 Business Days)' ? 'selected="selected"' : '' }}  > Urgent Processing (processing Time Maximum 3 Business Days)
                                         </option>
                                     </select>
 

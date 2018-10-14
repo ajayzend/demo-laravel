@@ -16,6 +16,7 @@ return [
 
     'consultufee' => env('EVISA_CONSULUTFEE', 100), // Urgent Fee added by Ajay Date:13102018
     'consultnfee' => env('EVISA_CONSULTNFEE', 60), // Normal Fee added by Ajay Date:13102018
+    'dateformat' => env('EVISA_DATEFORMAT', 'd/m/Y H:i:s'), // Date Format added by Ajay Date:13102018
     /*
     |--------------------------------------------------------------------------
     | Application Environment

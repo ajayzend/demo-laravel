@@ -16,6 +16,8 @@ use App\Models\Evisacountry\Evisacountry;
 use App\Models\Country\Country;
 use App\Models\Religion\Religion;
 use App\Models\Education\Education;
+use App\Models\Occupation\Occupation;
+use App\Models\Visatype\Visatype;
 /**
  * VisasController
  */
@@ -109,15 +111,31 @@ class VisasController extends Controller
         $country = Country::getSelectData();
         $education = Education::getSelectData();
         $religion = Religion::getSelectData();
+        $occupation = Occupation::getSelectData();
+        $visatype = Visatype::getSelectData();
         $result = $visa->findBySlug($slug);
         $result->p1_nationality = @$evisacountry[$result->p1_nationality];
         $result->p1_port_arrival = @$port[$result->p1_port_arrival];
         $result->p2_country_birth = @$country[$result->p2_country_birth];
+        $result->p2_education = @$education[$result->p2_education];
         $result->p2_prev_nationality = @$country[$result->p2_prev_nationality];
-        $result->p2_other_passport_country = @$evisacountry[$result->p2_other_passport_country];
+        $result->p2_other_passport_country = @$country[$result->p2_other_passport_country];
         $result->p2_other_nationality_mentioned = @$country[$result->p2_other_nationality_mentioned];
         $result->p2_religion = @$religion[$result->p2_religion];
-       // $result->p2_education = $education[$result->p2_education];
+        $result->p3_country = @$country[$result->p3_country];
+        $result->p3_f_nationality = @$country[$result->p3_f_nationality];
+        $result->p3_f_prev_nationality = @$country[$result->p3_f_prev_nationality];
+        $result->p3_f_country_birth = @$country[$result->p3_f_country_birth];
+        $result->p3_m_nationality = @$country[$result->p3_m_nationality];
+        $result->p3_m_prev_nationality = @$country[$result->p3_m_prev_nationality];
+        $result->p3_m_country_birth = @$country[$result->p3_m_country_birth];
+        $result->p3_current_occupation = @$occupation[$result->p3_current_occupation];
+        $result->p3_past_occupation = @$occupation[$result->p3_past_occupation];
+        $result->p4_expected_port_exit = @$port[$result->p4_expected_port_exit];
+        $result->p4_type_visa = @$visatype[$result->p4_type_visa];
+
+        if($result->p4_saarc_country_year_visit)
+            $result->p4_saarc_country_year_visit = \GuzzleHttp\json_decode($result->p4_saarc_country_year_visit, true);
         return view('backend.visas.show')
             ->withvisa($result);
     }

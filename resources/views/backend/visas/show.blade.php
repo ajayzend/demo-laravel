@@ -18,7 +18,36 @@
                 @include('backend.access.includes.partials.visas-header-buttons')
             </div>--}}<!--box-tools pull-right-->
         </div><!-- /.box-header -->
+        <table class="table">
+            <tr>
+                <th>Temp ID</th>
+                <td>{{ $visa->visa_no }}</td>
+                <th>Nationality</th>
+                <td>{{ $visa->p1_nationality }}</td>
+            </tr>
 
+            <tr>
+                <th>APP Type</th>
+                <td>{{ $visa->p1_app_type }}</td>
+                <th>Type of Visa</th>
+                <td>{{ $visa->p1_visa_type }}</td>
+            </tr>
+
+            <tr>
+                <th>Payment Status</th>
+                <td>{{ $visa->payment_status }}</td>
+                <th>Gov Payment Status</th>
+                <td>{{ $visa->india_gov_evisa_status }}</td>
+            </tr>
+
+            <tr>
+                <th>Created At</th>
+                <td>{{ Carbon\Carbon::parse($visa->created_at)->format(config('app.dateformat')) }}</td>
+                <th>Updated At</th>
+                <td>{{ Carbon\Carbon::parse($visa->updated_at)->format(config('app.dateformat')) }}</td>
+            </tr>
+
+        </table>
         <div class="box-body">
 
             <div role="tabpanel">
@@ -36,6 +65,14 @@
                     <li role="presentation">
                         <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Step3</a>
                     </li>
+
+                    <li role="presentation">
+                        <a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">Step4</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="#tab5" aria-controls="tab" role="tab" data-toggle="tab">Step5</a>
+                    </li>
                 </ul>
 
                 <div class="tab-content">
@@ -50,6 +87,14 @@
 
                     <div role="tabpanel" class="tab-pane mt-30" id="tab3">
                         @include('backend.visas.show.tabs.step3')
+                    </div><!--tab panel history-->
+
+                    <div role="tabpanel" class="tab-pane mt-30" id="tab4">
+                        @include('backend.visas.show.tabs.step4')
+                    </div><!--tab panel history-->
+
+                    <div role="tabpanel" class="tab-pane mt-30" id="tab5">
+                        @include('backend.visas.show.tabs.step5')
                     </div><!--tab panel history-->
 
                 </div><!--tab content-->

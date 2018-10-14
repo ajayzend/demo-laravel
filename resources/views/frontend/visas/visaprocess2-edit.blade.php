@@ -266,10 +266,10 @@
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label" >Country of Issue</label>
                                 <div class="col-sm-4 col-xs-12">
-                                    @if(!empty($evisa_country))
-                                        {{ Form::select('p2_other_passport_country', $evisa_country, $visa->p2_other_passport_country, ['class' => 'form-control select2 box-size', 'id' => 'p2_other_passport_country']) }}
+                                    @if(!empty($country))
+                                        {{ Form::select('p2_other_passport_country', $country, $visa->p2_other_passport_country, ['class' => 'form-control select2 box-size', 'id' => 'p2_other_passport_country']) }}
                                     @else
-                                        {{ Form::select('p2_other_passport_country', $evisa_country, 0, ['class' => 'form-control select2 box-size', 'id' => 'p2_other_passport_country']) }}
+                                        {{ Form::select('p2_other_passport_country', $country, 0, ['class' => 'form-control select2 box-size', 'id' => 'p2_other_passport_country']) }}
                                     @endif
                                 </div>
                                 <div class="col-sm-4 col-xs-12">

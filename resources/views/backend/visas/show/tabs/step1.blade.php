@@ -1,10 +1,5 @@
 <table class="table table-striped table-hover">
     <tr>
-        <th>Temp ID</th>
-        <td>{{ $visa->visa_no }}</td>
-    </tr>
-
-    <tr>
         <th>{{ trans('labels.backend.visas.table.p1_app_type') }}</th>
         <td>{{ $visa->p1_app_type }}</td>
     </tr>
@@ -45,7 +40,7 @@
 
     <tr>
         <th>Date of Birth</th>
-        <td>{{ $visa->p1_dob }}</td>
+        <td>{{ Carbon\Carbon::parse($visa->p1_dob)->format(config('app.dateformat')) }}</td>
     </tr>
 
     <tr>
@@ -60,26 +55,11 @@
 
     <tr>
         <th>Expected Date of Arrival</th>
-        <td>{{ $visa->p1_edate }}</td>
+        <td>{{ Carbon\Carbon::parse($visa->p1_edate)->format(config('app.dateformat')) }}</td>
     </tr>
 
     <tr>
         <th>Type of Visa</th>
         <td>{{ $visa->p1_visa_type }}</td>
-    </tr>
-
-    <tr>
-        <th>Created At</th>
-        <td>{{ $visa->created_at }}</td>
-    </tr>
-
-    <tr>
-        <th>Updated At</th>
-        <td>{{ $visa->updated_at }}</td>
-    </tr>
-
-    <tr>
-        <th>Payment Status</th>
-        <td>{{ $visa->payment_status }}</td>
     </tr>
 </table>
