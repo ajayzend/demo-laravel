@@ -20,9 +20,6 @@
 
     .title {
         background: #e55a15;
-        height: 45px;
-
-        padding-bottom: 41px;
     }
 
     .title h3.text-center {
@@ -41,8 +38,7 @@
 
     .form-outer {
 
-        padding: 0px 0px 40px 0px;
-
+       
     }
 
     .firsttype {
@@ -83,19 +79,22 @@
             <div class="form-outer">
                 <div class="title">
 
-                    <h3 class="text-center">e-Visa-India (eVI) Application</h3>
+                    <p class="text-center">e-Visa-India (eVI) Application</p>
                 </div>
+				
+				<br />
                 {{ Form::open(['route' => 'frontend.visaamendprocess', 'class' => 'form-horizontal', 'id' => 'process3']) }}
                 <div class="form-group">
-                    <label class="col-xs-4 control-label" >Temporary Application ID</label>
-                    <div class="col-xs-4">
+                    <label class="col-xs-12 col-md-4 control-label" >Temporary Application ID</label>
+                    <div class="col-xs-12 col-md-4">
 
                         <input   class="form-control" placeholder="Temporary Application ID" name="evpuid" id="evpuid" />
-                    </div>  <div class="col-xs-4">
+                    </div>  <div class="col-xs-4 col-md-4">
 
                         (Example : GBR9810358689)
                     </div>
                 </div>
+				<br />
                 <div class="form-group">
                     <label class="col-sm-4 col-xs-12 control-label" ></label>
                     <div class="col-sm-8 col-xs-12">
@@ -104,8 +103,9 @@
                 </div>
 
                 {{ Form::close() }}
+				<br />
                 <div class="title">
-                    <h3 class="text-center">e-Visa-India (eVI) Application</h3>
+                    <p class="text-center">e-Visa-India (eVI) Application</p>
                 </div>
             </div>
 

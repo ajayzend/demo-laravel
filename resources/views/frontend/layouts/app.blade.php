@@ -13,6 +13,7 @@
         <!-- Meta -->
         <meta name="description" content="@yield('meta_description', 'e-visa-India')">
         <meta name="author" content="@yield('meta_author', 'Ajay Sahu')">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
         @yield('meta')
 
         <!-- Styles -->
@@ -65,6 +66,7 @@
         <!-- Scripts -->
         @yield('before-scripts')
         {!! Html::script('js/frontend/jQuery-2.1.4.min.js') !!}
+		{!! Html::script('js/bootstrap.min.js') !!}
        {{-- {!! Html::script(mix('js/frontend.js')) !!}--}}
         @yield('after-scripts')
         {{ Html::script('js/jquerysession.js') }}

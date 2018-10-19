@@ -1,31 +1,38 @@
 <!-- main content -->
 <section class="wrapper">
-    <div class="container">
+    <div class="">
         <div class="row bord-main">
             <div class="clearfix main-ser">
                 <!-- Why you should apply here -->
+				
+				
+				
+				
                 <div class="provide_ser">
+				<div class="container">
+				<div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="ser_inner_main">
-                            <h4>SERVICES PROVIDED BY E-VISA INDIA</h4>
+                         
                             <img src="{{ URL::asset('img/frontend/images/bag.png')}}" alt="" class="img-responsive"/>
+							   <h4>SERVICES PROVIDED BY E-VISA INDIA</h4>
                             <p>
                             <div class="col-xs-1"><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class="col-xs-10 pad_ser_neg"><span><b>Customer Care:</b> </span> Customer Care
+                            <div class=""><span><b>Customer Care:</b> </span> Customer Care
                                 available 24X7
                                 Over the Phone as well as email.
                             </div>
                             </p>
                             <p>
-                            <div class="col-xs-1"><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class="col-xs-10 pad_ser_neg"><span><b>Processing:</b> </span> Maximum 4-7 days
+                            <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <div class=""><span><b>Processing:</b> </span> Maximum 4-7 days
                                 processing
                                 time.
                             </div>
                             </p>
                             <p>
-                            <div class="col-xs-1"><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class="col-xs-10 pad_ser_neg"><span><b>uality Check:</b> </span> Quality Check and
+                            <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <div class=""><span><b>uality Check:</b> </span> Quality Check and
                                 Required
                                 Correction is done against all the
                                 information and documents provided in
@@ -38,29 +45,30 @@
 
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="ser_inner_main">
-                            <h4>5 REASONS TO CHOOSE E-VISA INDIA</h4>
+                           
                             <img src="{{ URL::asset('img/frontend/images/hand.png')}}" alt="" class="img-responsive"/>
+							 <h4>5 REASONS TO CHOOSE E-VISA INDIA</h4>
                             <p>
-                            <div class="col-xs-1"><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class="col-xs-10 pad_ser_neg"><span><b>Hassle-free:</b> </span> Completely online
+                            <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <div class=""><span><b>Hassle-free:</b> </span> Completely online
                                 procedure, no paper work involved.
                             </div>
                             </p>
                             <p>
-                            <div class="col-xs-1"><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class="col-xs-10 pad_ser_neg"><span><b>Convenient:</b> </span> Applicable for selective
+                            <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <div class=""><span><b>Convenient:</b> </span> Applicable for selective
                                 Nationalities for Air and Sea Routes.
                             </div>
                             </p>
                             <p>
-                            <div class="col-xs-1"><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class="col-xs-10 pad_ser_neg"><span><b>Cheaper:</b> </span> Fixed fees, no hidden
+                            <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <div class=""><span><b>Cheaper:</b> </span> Fixed fees, no hidden
                                 charges.
                             </div>
                             </p>
                             <p>
-                            <div class="col-xs-1"><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class="col-xs-10 pad_ser_neg"><span><b>More accessible:</b> </span> Quickes and most
+                            <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <div class=""><span><b>More accessible:</b> </span> Quickes and most
                                 relaible method of getting Indian Visa.
                             </div>
                             </p>
@@ -69,26 +77,42 @@
 
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="ser_inner_main">
-                            <h4>E-VISA INDIA LASTEST NEWS</h4>
+                           
                             <img src="{{ URL::asset('img/frontend/images/dig.png')}}" alt="" class="img-responsive"/>
+							 <h4>E-VISA INDIA LASTEST NEWS</h4>
                             <p>
-                            <div class="col-xs-1"><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class="col-xs-10 pad_ser_neg">More Than 700 Per cent Increase in Tourist Arrivals on
+                            <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <div class="">More Than 700 Per cent Increase in Tourist Arrivals on
                                 E-Visa.
                             </div>
                             </p>
                             <p>
-                            <div class="col-xs-1"><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class="col-xs-10 pad_ser_neg">India saw a jump in foreign tourists in April 2017.</div>
+                            <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
+                            <div class="">India saw a jump in foreign tourists in April 2017.</div>
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> 
+				</div> 
+				</div>
 
+				
+				
+				
+				
+				
+				
+				
+				
+				
                 <!-- E-Visa Process Flow -->
+				<div class="container">
                 <div class="clearfix in-pages-sectn">
                     <div class="process-sec">
                         <h2>E-visa Application <span><b>Process</b></span></h2>
+						
+						
+						<div class="row">
                         <div class="col-lg-3 circle-main-out">
                             <div class="circle_1">
                                 <img src="{{ URL::asset('img/frontend/images/user.png')}}" alt="icon"
@@ -126,6 +150,10 @@
                             </figcaption>
                         </div>
                     </div>
+                    </div>
+                    </div>
+					
+					
                 </div>
             </div>
         </div>

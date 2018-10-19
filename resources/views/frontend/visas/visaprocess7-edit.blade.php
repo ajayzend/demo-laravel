@@ -5,7 +5,7 @@
        {{-- <div class="container">--}}
             <div class="row">
                 <div class="form-outer">
-                    <div class="title"> <h3 class="text-center" >Fee Payment</h3></div>
+				<div class="title"><p>Fee Payment</p></div>
                     <h4 class="text-center"><strong class="payment-label">Temporary Application ID:</strong> <span class="valuecolor"><strong>{{ $visa->visa_no }}</strong></span></h4>
                     <h4 class="text-center"><strong class="payment-label">APPLICANT NAME:</strong> <span class="valuecolor"><strong>{{ $visa->p1_fname." ".$visa->p1_mname." ".$visa->p1_lname}}</strong></span></h4>
                     <h3 class="text-center" > <strong>On pressing "Pay Now" ,the application will be redirected to Payment Gateway to pay the visa fee and will be outside the control of Visa Online Application. The responsibility of security of transaction process and details on payment page will be of Payment gateway.</strong></h3>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-sm-1 col-xs-12"> </div>
                     </div>
-
+					<br />
                     <div class="form-group">
                         <div class="col-sm-1 col-xs-12"> </div>
                         <div class="col-sm-10 col-xs-12">
@@ -39,7 +39,7 @@
                         </div>
                         <div class="col-sm-1 col-xs-12"> </div>
                     </div>
-
+<br />
                     <div class="form-group">
                         <div class="col-sm-1 col-xs-12"> </div>
                         <div class="col-sm-10 col-xs-12">
@@ -47,7 +47,7 @@
                         </div>
                         <div class="col-sm-1 col-xs-12"> </div>
                     </div>
-
+<br />
                     <div class="form-group">
                         <div class="col-sm-1 col-xs-12"> </div>
                         <div class="col-sm-10 col-xs-12">
@@ -55,7 +55,7 @@
                         </div>
                         <div class="col-sm-1 col-xs-12"> </div>
                     </div>
-
+<br />
                     <div class="form-group">
                         <div class="col-sm-1 col-xs-12"> </div>
                         <div class="col-sm-10 col-xs-12">
@@ -63,7 +63,7 @@
                         </div>
                         <div class="col-sm-1 col-xs-12"> </div>
                     </div>
-
+<br />
                     <div class="form-group">
                         <div class="col-sm-1 col-xs-12"> </div>
                         <div class="col-sm-10 col-xs-12">
@@ -80,32 +80,36 @@
                         </div>
                         <div class="col-sm-1 col-xs-12"> </div>
                     </div>
-
+<br />
                     <div class="form-group">
                         <div class="col-sm-1 col-xs-12"> </div>
                         <div class="col-sm-10 col-xs-12">
                             <input name="p7_undertaking" id="p7_undertaking" type="checkbox"   value="" />
                             I, the applicant, hereby certify that I agree to all the terms and conditions given on the website www.e-touristvisaindia.com and understand all the questions and statements of this application. The answers and information furnished in this application are true and correct to the best of my knowledge and belief. <strong>I understand and agree that once the fee is paid towards the Temporary application ID </strong> <span class="valuecolor"><strong>{{ $visa->visa_no }}</strong></span> <strong>is 100% non-refundable and I will not claim a refund or dispute the transaction incase of cancellation request raised at my end. I also understand that e-touristvisaindia.com is only responsible for processing my application and the visa may be granted or rejected by the indian government. I authorized them to take the payment from my card online.</strong>
                         </div>
-                          <div class="col-sm-4 col-xs-12 des">
+                          <div class="col-sm-4 col-xs-12">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="col-sm-4 col-xs-12"> </div>
                         <div class="col-sm-5 col-xs-12 payment-label">
-                          <?php if(stripos($visa->p1_app_type, 'urgent') !== false){  echo 'Urgent';} else { echo 'Normal';} ?>   {{$visa->p1_visa_type}} fee = INR {{$total_fee}}
+                            <?php if(stripos($visa->p1_app_type, 'urgent') !== false){  echo 'Urgent';} else { echo 'Normal';} ?>   {{$visa->p1_visa_type}} fee = INR {{$total_fee}}
                         </div>
                         <div class="col-sm-3 col-xs-12"> </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-4 col-xs-12 control-label"> <span>Have You Ever Visited India Before?</span></label>
+                        <div class="col-sm-2 col-xs-12">
+                            </div>
                         <div class="col-sm-4 col-xs-12">
-                            <input  type="radio" value="Yes"  id="p4_visit_india_before1" name="p4_visit_india_before"   {{ $visa->p4_visit_india_before == 'Yes' ? 'checked="checked"' : '' }}/><span>Yes</span>
-                            <input  type="radio" value="No" id="p4_visit_india_before2" name="p4_visit_india_before" {{ $visa->p4_visit_india_before == 'No' ? 'checked="checked"' : '' }}  /><span>No</span>
+                            <input  type="radio" value="Yes"  id="p4_visit_india_before1" name="p4_visit_india_before"   {{ $visa->p4_visit_india_before == 'Yes' ? 'checked="checked"' : '' }}/><span><img height="30" width="50" id="spass"  src="{{ URL::asset('img/frontend/images/visa.png')}}"></span>
                         </div>
-                        <div class="col-sm-4 col-xs-12">If Yes Please Give Details</div>
+                        <div class="col-sm-4 col-xs-12">
+                            <input  type="radio" value="No" id="p4_visit_india_before2" name="p4_visit_india_before" {{ $visa->p4_visit_india_before == 'No' ? 'checked="checked"' : '' }}  /><span><img height="30" width="50" id="spass"  src="{{ URL::asset('img/frontend/images/master.png')}}"></span>
+                            </div>
+                        <div class="col-sm-2 col-xs-12">
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -133,7 +137,7 @@
 
         $(document).ready(function() {
             $("#read_undertaking").click(function() {
-               var p7_undertaking  = $("#p7_undertaking").val();
+                var p7_undertaking  = $("#p7_undertaking").val();
                 if(p7_undertaking == 'yes'){
                     return true;
                 }else{

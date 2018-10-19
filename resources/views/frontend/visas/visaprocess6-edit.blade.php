@@ -4,17 +4,16 @@
     .form-group {
         margin-bottom: 0px ! important;;
     }
-
-    .form-group:hover {
-        background-color: yellow;
-    }
+	.hover-div:hover{
+		background:#ffa274;
+	}
 </style>
 @section('content')
     <section class="wrapper">
        {{-- <div class="container">--}}
             <div class="row">
                 <div class="form-outer">
-                    <div class="title"> <h3 class="text-center" ><strong>Confirm Details</strong></h3></div>
+				<div class="title"><p>Confirm Details</p></div>
                     <h3 class="text-center" > <strong>The applicant is requested to verify the particulars filled in the application Form.The applicant may face legal action(including refusal to enter India or deportation) in case of provision of wrong information.</strong></h3>
                     <p class="text-center">Please verify your Registration Details.   If all details are correct please Press <span style="font-size: large">"Verified and Continue"</span>.</p>
                     <p class="text-center">For any corrections press <span style="font-size: large">"Modify/Edit"</span>.</p>
@@ -25,10 +24,9 @@
 
 
                     <div class="form-group">
-                        <div class="col-sm-4 col-xs-12"></div>
-                        <div class="col-sm-6 col-xs-12">
+                        <div class="col-sm-6 col-xs-12 col-md-offset-5">
                             {{-- @if($visa->p5_passport_photo_name)--}}
-                            <img height="150" width="150" src="{{ Storage::disk('public')->url('img/visaprofile/' . $visa->p4_photo_name) }}">
+                            <img style="margin-bottom:20px;" class="imgbor" height="150" width="150" src="{{ Storage::disk('public')->url('img/visaprofile/' . $visa->p4_photo_name) }}">
                             {{--  @endif--}}
                         </div>
                         <div class="col-sm-2 col-xs-12"></div>
@@ -36,7 +34,7 @@
 
                     <div class="title_block">Applicant Details</div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Surname</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -46,7 +44,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Name</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -56,7 +54,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Previous Surname</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -66,7 +64,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Previous Name</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -76,7 +74,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Sex</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -86,7 +84,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Marital Status</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -96,7 +94,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Birthdate</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -106,7 +104,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Religion</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -117,7 +115,7 @@
                     </div>
 
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Place of Birth</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -127,7 +125,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Country of Birth</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -137,7 +135,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Citizenship/National Id No.</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -147,7 +145,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Educational Qualification</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -157,7 +155,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Visible Identification Marks</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -167,7 +165,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Nationality</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -177,7 +175,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Nationality by</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -187,7 +185,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Previous Nationality</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -199,7 +197,7 @@
 
                     <div class="title_block">Passport Details</div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Passport No</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -209,7 +207,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Issue Date</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -219,7 +217,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Expiry Date</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -229,7 +227,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Issue Place</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -239,7 +237,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Issue of Other Passport</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -249,7 +247,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Country of Issue of Other Passport</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -259,7 +257,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Other Passport Issue Place</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -279,7 +277,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Issue Date of Other Passport</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -289,7 +287,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Nationality Described Therein</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -301,7 +299,7 @@
 
                     <div class="title_block">Applicant's Address Details</div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Present Address</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -311,7 +309,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor"></label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -321,7 +319,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor"></label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -331,7 +329,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Postal/Zip Code</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -341,7 +339,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Present Phone No</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -351,7 +349,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Mobile</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -361,7 +359,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Email</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -371,7 +369,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Permanent Address</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -381,7 +379,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor"></label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -391,7 +389,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor"></label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -403,7 +401,7 @@
 
                     <div class="title_block">Family Details</div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Father Name</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -413,7 +411,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Father Nationality</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -423,7 +421,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Father Previous Nationality</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -433,7 +431,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Father Place of Birth</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -443,7 +441,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Father Country of Birth</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -453,7 +451,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Mother Name</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -463,7 +461,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Mother Nationality</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -473,7 +471,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Mother Previous Nationality</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -483,7 +481,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Mother Place of Birth</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -493,7 +491,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Mother Country of Birth</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -503,7 +501,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Spouse Name</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -513,7 +511,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Spouse Nationality</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -523,7 +521,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Spouse Previous Nationality</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -533,7 +531,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Spouse Place of Birth</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -543,7 +541,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Spouse Country of Birth</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -553,7 +551,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Grandparent details yes/no</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -563,7 +561,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">If Yes, give details</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -574,7 +572,7 @@
                     </div>
 
                     <div class="title_block">Profession / Occupation Details of Applicant</div>
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Occupation</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -584,7 +582,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Employee Designation</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -594,7 +592,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Employer Name</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -604,7 +602,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Employer Address</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -613,7 +611,7 @@
                         </div>
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Employer Phone</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -623,7 +621,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Previous Occupation</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -633,7 +631,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Security Agency/Organisation</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -643,7 +641,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Designation</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -653,7 +651,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Posting</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -663,7 +661,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Rank</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -673,7 +671,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="title_block">Details of Visa Sought</div>
+                    <div class="title_block hover-div">Details of Visa Sought</div>
                     <div class="form-group">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Visa Type</label>
@@ -684,7 +682,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">No of Entries</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -694,7 +692,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Duration</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -704,7 +702,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Journey Date</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -714,7 +712,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Entry Point</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -724,7 +722,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Exit Point</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -734,7 +732,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Purpose</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -755,7 +753,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Old Visa Type</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -765,7 +763,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Old Visa No</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -775,7 +773,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Old Visa Issue Place</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -785,7 +783,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Old Visa Issue Date</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -795,7 +793,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Previous Visit Address</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -805,7 +803,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Visited Cities Details</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -815,7 +813,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Countries Visited Last 10 year</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -825,7 +823,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Refuse Details/Number of Entry</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -836,7 +834,7 @@
                     </div>
 
                     <div class="title_block">Reference</div>
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Name of Sponsor in India</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -846,7 +844,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Address of Sponsor in India</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -856,7 +854,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Phone of Sponsor in India</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -866,7 +864,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Name of Sponsor in Home Country</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -876,7 +874,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Address of Sponsor in Home Country</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -886,7 +884,7 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Phone of Sponsor in Home Country</label>
                         <div class="col-sm-1 col-xs-12"></div>
@@ -913,15 +911,12 @@
                         <div class="col-sm-3 col-xs-12"></div>
                     </div>
 
-                    <div class="form-group">
-                        <div class="col-sm-1 col-xs-12"></div>
-                        <div class="col-sm-3 col-xs-12">Document Specifications</div>
-                    </div>
-
-                    <div>
-                        <p>Passport Upload- Photo page of Passport containing personal details like name,date of birth, nationality , expiry date etc. to be uploaded by the applicant.
-                            Photo page of Passport uploaded should be of the same passport whose details are provided in Passport Details section.
-                            The application is liable to be rejected if the uploaded document is not clear and as per specification.</p>
+                 
+<div class="title"><p>Document Specifications</p></div>
+                      <div class="instru">
+                        <p>i. Passport Upload- Photo page of Passport containing personal details like name,date of birth, nationality , expiry date etc. to be uploaded by the applicant.<br />
+                           ii. Photo page of Passport uploaded should be of the same passport whose details are provided in Passport Details section.<br />
+                            ii. The application is liable to be rejected if the uploaded document is not clear and as per specification.</p>
                     </div>
 
                     {{ Form::close() }}

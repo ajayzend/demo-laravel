@@ -5,7 +5,8 @@
         <div class="container">
             <div class="row">
                 <div class="form-outer">
-                    <div class="title"> <h3 class="text-center" >{{ $visa->p1_visa_type }} (eTV) Application</h3></div>
+				<div class="title"><p>{{ $visa->p1_visa_type }} (eTV) Application</p></div>
+
                     <h2 class="text-center" > <strong>Please upload a scanned copy of your original passport on this page. Please do not upload your digital picture on this page which you uploaded on the last page.</strong></h2>
                     {{ Form::model($visa, ['route' => ['frontend.visas.update', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => $visa->p5_passport_photo_name ? 'process55' : 'process5', 'enctype' => 'multipart/form-data']) }}
                     {{ Form::hidden('evpuid', $visa->visa_no ) }}
@@ -13,21 +14,20 @@
                     <h4 class="text-center"><strong>Temporary Application ID:</strong> <span style="color: #ff231c"><strong>{{ $visa->visa_no }}</strong></span></h4>
 
                     <div class="form-group">
-                        <div class="col-sm-2 col-xs-12"></div>
-                            <div class="col-sm-8 col-xs-12">
+                            <div class="col-sm-8 col-xs-12 col-md-offset-3">
                                {{-- @if($visa->p5_passport_photo_name)--}}
                                     <img height="250" width="250" id="passport" src="{{ Storage::disk('public')->url('img/visapassport/' . $visa->p5_passport_photo_name) }}">
                               {{--  @endif--}}
                                 {{--<img height="250" width="250"  id="passport" src="{{ URL::asset('img/frontend/images/china.jpg')}}">--}}
-                                <img height="250" width="250"  src="{{ URL::asset('img/frontend/images/china.jpg')}}">
+                                <img height="250" width="250" id="spass"  src="{{ URL::asset('img/frontend/images/china.jpg')}}">
                             </div>
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
                     <div class="form-group">
                         <div class="col-sm-3 col-xs-12"></div>
-                        <div class="col-sm-6 col-xs-12">
-                            <strong>Upload A scanned Copy Of Your original Coloured Passport Or Take A picture Of Your Passport and Uploaded.</strong>
+                        <div class="col-sm-6 col-xs-12 instru">
+                            <p>Upload A scanned Copy Of Your original Coloured Passport Or Take A picture Of Your Passport and Uploaded.</p>
                         </div>
                         <div class="col-sm-3 col-xs-12"></div>
                     </div>
@@ -64,16 +64,12 @@
                         </div>
                         <div class="col-sm-3 col-xs-12"></div>
                     </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-1 col-xs-12"></div>
-                        <div class="col-sm-3 col-xs-12">Document Specifications</div>
-                    </div>
-
-                    <div>
-                        <p>Passport Upload- Photo page of Passport containing personal details like name,date of birth, nationality , expiry date etc. to be uploaded by the applicant.
-                            Photo page of Passport uploaded should be of the same passport whose details are provided in Passport Details section.
-                            The application is liable to be rejected if the uploaded document is not clear and as per specification.</p>
+<div class="title"><p>Document Specifications</p></div>
+                   
+                    <div class="instru">
+                        <p>i. Passport Upload- Photo page of Passport containing personal details like name,date of birth, nationality , expiry date etc. to be uploaded by the applicant.<br />
+                           ii. Photo page of Passport uploaded should be of the same passport whose details are provided in Passport Details section.<br />
+                            ii. The application is liable to be rejected if the uploaded document is not clear and as per specification.</p>
                     </div>
 
                     {{ Form::close() }}

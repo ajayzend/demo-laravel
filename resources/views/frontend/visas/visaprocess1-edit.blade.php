@@ -5,10 +5,7 @@
         <div class="container">
             <div class="row1">
                 <div class="form-outer">
-                    <div class="title">
-
-                        <h3 class="text-center">e-Visa-India (eVI) Application</h3>
-                    </div>
+                    <div class="title"><p class="text-center">e-Visa-India (eVI) Application</p></div>
 
                     {{ Form::model($visa, ['route' => ['frontend.visas.update', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => 'edit-visa']) }}
                     {{ Form::hidden('evpuid', $visa->visa_no ) }}
@@ -22,7 +19,7 @@
 
                                 <div class="col-sm-6 col-xs-12">
 
-                                    <select id="p1_app_type" class="form-control"  name="p1_app_type">
+                                    <select id="p1_app_type" class="form-control" onchange="changeFunc();" name="p1_app_type">
                                         <option value="0"> Select Application Type</option>
                                         <option value="Normal Processing (processing Time 4 To 7 Business Days" {{ $visa->p1_app_type == 'Normal Processing (processing Time 4 To 7 Business Days' ? 'selected="selected"' : '' }} > Normal Processing (processing Time 4 To 7 Business Days
                                         </option>
@@ -41,19 +38,19 @@
                                 Name</label>
 
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_fname" value="{{ $visa->p1_fname }}" class="form-control" placeholder="First Name" name="p1_fname" autocomplete="off"/>
+                                <input  type="text" id="p1_fname" value="{{ $visa->p1_fname }}" class="form-control" placeholder="First Name" name="p1_fname" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label">Middle Name</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_mname" value="{{ $visa->p1_mname }}" class="form-control" placeholder="Middle Name" name="p1_mname" autocomplete="off"/>
+                                <input type="text" id="p1_mname" value="{{ $visa->p1_mname }}" class="form-control" placeholder="Middle Name" name="p1_mname" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Last Name</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_lname" value="{{ $visa->p1_lname }}" class="form-control" placeholder="Last Name" name="p1_lname" autocomplete="off"/>
+                                <input type="text" id="p1_lname" value="{{ $visa->p1_lname }}" class="form-control" placeholder="Last Name" name="p1_lname" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -97,7 +94,7 @@
                             <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span> Passport No
                             </label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_passport_number" value="{{ $visa->p1_passport_number }}" class="form-control" placeholder="Passport No."
+                                <input type="text" id="p1_passport_number" value="{{ $visa->p1_passport_number }}" class="form-control" placeholder="Passport No."
                                        name="p1_passport_number" autocomplete="off"/>
                             </div>
                         </div>
@@ -114,20 +111,20 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Email</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_email" value="{{ $visa->p1_email }}" class="form-control" placeholder="Email" name="p1_email" autocomplete="off"/>
+                                <input type="text" id="p1_email" value="{{ $visa->p1_email }}" class="form-control" placeholder="Email" name="p1_email" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span>Repeat
                                 Email</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_email2" value="{{ $visa->p1_email }}" class="form-control" placeholder="Repeat Email"
+                                <input type="text" id="p1_email2" value="{{ $visa->p1_email }}" class="form-control" placeholder="Repeat Email"
                                        name="p1_email2" autocomplete="off"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Telephone Number</label>
-                            <div class="col-sm-6 col-xs-12">
+                            <div type="text" class="col-sm-6 col-xs-12">
                                 <input id="p1_phone" value="{{ $visa->p1_phone }}" class="form-control" placeholder="Telephone Number"
                                        name="p1_phone" autocomplete="off"/>
                             </div>
@@ -164,9 +161,7 @@
                             </div>
                         </div>
                     {{ Form::close() }}
-                    <div class="title">
-                        <h3 class="text-center">e-Visa-India (eVI) Application</h3>
-                    </div>
+                    <div class="title"><p class="text-center">e-Visa-India (eVI) Application</p></div>
                 </div>
 
             </div>

@@ -3,12 +3,19 @@
 @section('content')
     <section class="wrapper">
         <div class="container">
-            <div class="row1">
+            <div class="row1"> 	
                 <div class="form-outer">
-                    <div class="title">
+				
+					<div class="title"><p class="text-center">e-Tourist Visa (eTV) Application (UK) 0044 203 411 6786 / (USA) 001 646 893 7849</p></div>
+					<p class="text-center"><strong>Please note the temporary Application ID:</strong> <span class="bred">BWA3128447294</span></p>
+					<p class="text-center">Your information will be saved if you click save button or continue to next page. If ou exit without doing either of that, your information will be lost.</p>
+					<p class="text-center"><strong>Application Type :</strong> <span class="bred">Urgent Processing</span></p>
 
-                        <h3 class="text-center">e-Visa-India (eVI) Application</h3>
-                    </div>
+                    <div class="title2">
+						<div class="col-md-8" >e-Visa-India (eVI) Application</div>
+						<div class="col-md-4">Help</div>
+					</div>
+					
                     {{ Form::model($visa, ['route' => ['frontend.visas.update', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => 'process2']) }}
                     {{ Form::hidden('evpuid', $visa->visa_no ) }}
                     {{ Form::hidden('ps', 10002 ) }}
@@ -16,16 +23,16 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" >Surname</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input class="form-control"  type="text" placeholder="Surname" name="p1_lname"  id="p1_lname" value="{{ $visa->p1_lname }}">
+                                <input type="text" class="form-control"  type="text" placeholder="Surname" name="p1_lname"  id="p1_lname" value="{{ $visa->p1_lname }}">
                             </div>
                             <div class="col-sm-4 col-xs-12 des">
-                                <p>Surname/Family Name (As in Passport)</p>
+                               Surname/Family Name (As in Passport)
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" >Middle Name</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input class="form-control" type="text" placeholder="Middle Name" name="p1_mname"  id="p1_mname" value="{{ $visa->p1_mname }}" />
+                                <input type="text" class="form-control" type="text" placeholder="Middle Name" name="p1_mname"  id="p1_mname" value="{{ $visa->p1_mname }}" />
                             </div>
                             <div class="col-sm-4 col-xs-12 des">
                                 Middlename/s (As in Passport)
@@ -34,7 +41,7 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>	Given Name/s </label>
                             <div class="col-sm-4 col-xs-12">
-                                <input class="form-control" placeholder="Given Name/s" type="text" name="p1_fname" id="p1_fname" value="{{ $visa->p1_fname }}"/>
+                                <input type="text" class="form-control" placeholder="Given Name/s" type="text" name="p1_fname" id="p1_fname" value="{{ $visa->p1_fname }}"/>
                             </div>
                             <div class="col-sm-4 col-xs-12 des">
                                 Given Name/s (As in Passport)
@@ -42,9 +49,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="checkbox100" class="col-sm-8 col-xs-12"><h5>Have you ever changed your name? If yes, click the box
+                            <label for="checkbox100" class="col-sm-8 col-xs-12"><h5 class="text-center"><strong style="font-size:16px;">Have you ever changed your name? If yes, click the box
                                     <input name="p2_changed_your_name" id="p2_changed_your_name" type="checkbox"  {{ $visa->p2_changed_your_name == 'yes' ? 'Checked="Checked"' : '' }}  value="yes" >
-                                    and give details.</h5></label>
+                                    and give details.</h5></label></strong>
                             <div class="col-sm-4 col-xs-12 des">	If You have ever changed your Name Please tell us.
                             </div>
                         </div>
@@ -53,7 +60,7 @@
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Surname </label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" placeholder="Surname" type="text" name="p2_previous_surname" id="p2_previous_surname" value="{{ $visa->p2_previous_surname }}"/>
+                                    <input type="text" class="form-control" placeholder="Surname" type="text" name="p2_previous_surname" id="p2_previous_surname" value="{{ $visa->p2_previous_surname }}"/>
                                 </div>
                                 <div class="col-sm-4 col-xs-12 des">
                                     Surname
@@ -62,7 +69,7 @@
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Name </label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" placeholder="Name" type="text" name="p2_previous_name" id="p2_previous_name" value="{{ $visa->p2_previous_name }}"/>
+                                    <input type="text" class="form-control" placeholder="Name" type="text" name="p2_previous_name" id="p2_previous_name" value="{{ $visa->p2_previous_name }}"/>
                                 </div>
                                 <div class="col-sm-4 col-xs-12 des">
                                     Given name
@@ -99,7 +106,7 @@
                             <div class="col-sm-4 col-xs-12">
                                 <input class="form-control" value="{{ $visa->p2_town_city_birth }}"  placeholder="Town/City of Birth" name="p2_town_city_birth" id="p2_town_city_birth" >
                             </div>
-                            <div class="col-sm-4 col-xs-12"> 	Province/Town/City of birth
+                            <div class="col-sm-4 col-xs-12 des"> 	Province/Town/City of birth
                             </div>
                         </div>
                         <div class="form-group">
@@ -112,16 +119,16 @@
                                 @endif
 
                             </div>
-                            <div class="col-sm-4 col-xs-12">Country of birth
+                            <div class="col-sm-4 col-xs-12 des">Country of birth
 
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Citizenship/National Id No.</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input class="form-control" value="{{ $visa->p2_national_id }}" placeholder="Citizenship/National Id No. " name="p2_national_id" id="p2_national_id" />
+                                <input type="text" class="form-control" value="{{ $visa->p2_national_id }}" placeholder="Citizenship/National Id No. " name="p2_national_id" id="p2_national_id" />
                             </div>
-                            <div class="col-sm-4 col-xs-12">If not applicable Please Type NA
+                            <div class="col-sm-4 col-xs-12 des">If not applicable Please Type NA
 
                             </div>
                         </div>
@@ -134,19 +141,19 @@
                                     {{ Form::select('p2_religion', $religion, 0, ['class' => 'form-control select2 box-size', 'id' => 'p2_religion']) }}
                                 @endif
 
-                                <input class="form-control" value="{{ $visa->p2_other_religion }}" placeholder="OTher Religion" name="p2_other_religion" id="p2_other_religion" />
+                                <input type="text" class="form-control" value="{{ $visa->p2_other_religion }}" placeholder="OTher Religion" name="p2_other_religion" id="p2_other_religion" />
 
                             </div>
-                            <div class="col-sm-4 col-xs-12">If Others .Please specify
+                            <div class="col-sm-4 col-xs-12 des">If Others .Please specify
                             </div>
 
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Visible Identification Marks </label>
                             <div class="col-sm-4 col-xs-12">
-                                <input class="form-control"  value="{{ $visa->p2_visible_marks }}" placeholder="Visible identification marks" name="p2_visible_marks" id="p2_visible_marks" />
+                                <input type="text" class="form-control"  value="{{ $visa->p2_visible_marks }}" placeholder="Visible identification marks" name="p2_visible_marks" id="p2_visible_marks" />
                             </div>
-                            <div class="col-sm-4 col-xs-12">Visible Identification Marks
+                            <div class="col-sm-4 col-xs-12 des">Visible Identification Marks
                             </div>
                         </div>
                         <div class="form-group">
@@ -159,14 +166,14 @@
                                 @endif
                                 <input type="text" name="p2_other_education" placeholder="OTher Educational Qualification" id="p2_other_education" class="form-control" value="{{ $visa->p2_other_education }}">
                             </div>
-                            <div class="col-sm-4 col-xs-12">Educational Qualification
+                            <div class="col-sm-4 col-xs-12 des">Educational Qualification
                             </div></div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Nationality</label>
                             <div class="col-sm-4 col-xs-12">
                                 {{ $visa->p1_nationality }}
                             </div>
-                            <div class="col-sm-4 col-xs-12">
+                            <div class="col-sm-4 col-xs-12 des">
                                 Nationality
                             </div>
                         </div>
@@ -179,7 +186,7 @@
                                     <option {{ $visa->p2_birth_nationality = 'Naturalization' ? 'selected="selected"' : '' }}  value="Naturalization">Naturalization</option>
                                 </select>
                             </div>
-                            <div class="col-sm-4 col-xs-12">
+                            <div class="col-sm-4 col-xs-12 des">
                                 Did You Acquire Nationality By Birth or By Naturalization?
                             </div>
                         </div>
@@ -192,7 +199,7 @@
                                     {{ Form::select('p2_prev_nationality', $country, 0, ['class' => 'form-control select2 box-size', 'id' => 'p2_prev_nationality']) }}
                                 @endif
                             </div>
-                            <div class="col-sm-4 col-xs-12">
+                            <div class="col-sm-4 col-xs-12 des">
                                 If You Have Acquired Nationality By Naturalization
 
                                 Specify Previous Nationality
@@ -211,7 +218,7 @@
                             </div>
                         </div>
                         <div class="title">
-                            <h3 class="text-center">Passport Details</h3>
+                            <p  class="text-center">Passport Details</p>
                         </div>
 
                         <div class="form-group">
@@ -219,16 +226,16 @@
                             <div class="col-sm-4 col-xs-12">
                                 {{ $visa->p1_passport_number }}
                             </div>
-                            <div class="col-sm-4 col-xs-12">
+                            <div class="col-sm-4 col-xs-12 des">
                                 Applicant's Passport Number
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" >	<span class="star">*</span>Place of Issue	</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input class="form-control" value="{{ $visa->p2_passport_place_issue }}" name="p2_passport_place_issue" id="p2_passport_place_issue" placeholder="Place of Issue"  />
+                                <input type="text" class="form-control" value="{{ $visa->p2_passport_place_issue }}" name="p2_passport_place_issue" id="p2_passport_place_issue" placeholder="Place of Issue"  />
                             </div>
-                            <div class="col-sm-4 col-xs-12">
+                            <div class="col-sm-4 col-xs-12 des">
                                 Place of Issue
                             </div>
                         </div>
@@ -236,9 +243,9 @@
                             <!-- Date input -->
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Date of Issue </label>
                             <div class="col-sm-4 col-xs-12">
-                                <input name="p2_passport_date_issue" id="p2_passport_date_issue" placeholder="Date of Issue"  value="{{ $visa->p2_passport_date_issue }}" class="form-control"  type="text"  >
+                                <input type="text" name="p2_passport_date_issue" id="p2_passport_date_issue" placeholder="Date of Issue"  value="{{ $visa->p2_passport_date_issue }}" class="form-control"  type="text"  >
                             </div>
-                            <div class="col-sm-4 col-xs-12">
+                            <div class="col-sm-4 col-xs-12 des">
                                 In DD/MM/YYYY format
                             </div>
                         </div>
@@ -248,7 +255,7 @@
                             <div class="col-sm-4 col-xs-12">
                                 <input  type="text" placeholder="Date of Expiry"  value="{{ $visa->p2_passport_date_expiry }}"  name="p2_passport_date_expiry" id="p2_passport_date_expiry" class="form-control">
                             </div>
-                            <div class="col-sm-4 col-xs-12">
+                            <div class="col-sm-4 col-xs-12 des">
                                 In DD/MM/YYYY format.Minimum Six Month Validity is Required.
                             </div>
                         </div>
@@ -258,7 +265,7 @@
                                 <input type="radio" {{ $visa->p2_any_other_valid_passport == 1 ? 'Checked="Checked"' : '' }} id="p2_any_other_valid_passport1" name="p2_any_other_valid_passport" value="1" />Yes
                                 <input type="radio" {{ $visa->p2_any_other_valid_passport == 0 ? 'Checked="Checked"' : '' }}  id="p2_any_other_valid_passport2" name="p2_any_other_valid_passport" value="0"/>No
                             </div>
-                            <div class="col-sm-4 col-xs-12">
+                            <div class="col-sm-4 col-xs-12 des">
                                 If Yes Please give Details
                             </div>
                         </div>
@@ -272,7 +279,7 @@
                                         {{ Form::select('p2_other_passport_country', $country, 0, ['class' => 'form-control select2 box-size', 'id' => 'p2_other_passport_country']) }}
                                     @endif
                                 </div>
-                                <div class="col-sm-4 col-xs-12">
+                                <div class="col-sm-4 col-xs-12 des">
                                     Country of Issue
                                 </div>
                             </div>
@@ -282,7 +289,7 @@
                                     <input class="form-control"  value="{{ $visa->p2_other_passport_number }}" placeholder="Passport/IC No." name="p2_other_passport_number" id="p2_other_passport_number"/>
                                 </div>
 
-                                <div class="col-sm-4 col-xs-12">
+                                <div class="col-sm-4 col-xs-12 des">
                                     Applicant's Passport Number
                                 </div>
                             </div>
@@ -292,16 +299,16 @@
                                 <div class="col-sm-4 col-xs-12">
                                     <input type="text" placeholder="Date of Issue" name="p2_other_passport_date_issue" id="p2_other_passport_date_issue" class="form-control"  value="{{ $visa->p2_other_passport_date_issue }}">
                                 </div>
-                                <div class="col-sm-4 col-xs-12">
+                                <div class="col-sm-4 col-xs-12 des">
                                     In DD/MM/YYYY format
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label" >Place of Issue </label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control" value="{{ $visa->p2_other_passport_place_issue }}" id="p2_other_passport_place_issue" placeholder="Place of Issue" name="p2_other_passport_place_issue" />
+                                    <input  type="text" class="form-control" value="{{ $visa->p2_other_passport_place_issue }}" id="p2_other_passport_place_issue" placeholder="Place of Issue" name="p2_other_passport_place_issue" />
                                 </div>
-                                <div class="col-sm-4 col-xs-12">
+                                <div class="col-sm-4 col-xs-12 des">
                                     Place of Issue
                                 </div>
                             </div>
@@ -315,7 +322,7 @@
                                     @endif
                                 </div>
 
-                                <div class="col-sm-4 col-xs-12">
+                                <div class="col-sm-4 col-xs-12 des">
                                     Applicant's Passport Number
                                 </div></div>
                         </div>
@@ -331,7 +338,7 @@
 
                         {{ Form::close() }}
                         <div class="title">
-                            <h3 class="text-center">e-Visa-India (eVI) Application</h3>
+                            <p class="text-center">e-Visa-India (eVI) Application</p>
                         </div>
                     </div>
 
