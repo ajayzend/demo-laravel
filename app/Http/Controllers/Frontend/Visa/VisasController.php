@@ -220,24 +220,24 @@ class VisasController extends Controller
                 $occupation = Occupation::getSelectData();
                 $visatype = Visatype::getSelectData();
                 $port = Port::getSelectData();
-                $visa->p2_religion = $religion[$visa->p2_religion];
-                $visa->p2_country_birth = $country[$visa->p2_country_birth];
-                $visa->p2_prev_nationality = $country[$visa->p2_prev_nationality];
-                $visa->p2_education = $education[$visa->p2_education];
-                $visa->p2_other_passport_country = $country[$visa->p2_other_passport_country];
-                $visa->p2_other_nationality_mentioned = $country[$visa->p2_other_nationality_mentioned];
+                $visa->p2_religion = @$religion[$visa->p2_religion];
+                $visa->p2_country_birth = @$country[$visa->p2_country_birth];
+                $visa->p2_prev_nationality = @$country[$visa->p2_prev_nationality];
+                $visa->p2_education = @$education[$visa->p2_education];
+                $visa->p2_other_passport_country = @$country[$visa->p2_other_passport_country];
+                $visa->p2_other_nationality_mentioned = @$country[$visa->p2_other_nationality_mentioned];
 
-                $visa->p3_f_nationality = $country[$visa->p3_f_nationality];
-                $visa->p3_f_prev_nationality = $country[$visa->p3_f_prev_nationality];
-                $visa->p3_f_country_birth = $country[$visa->p3_f_country_birth];
-                $visa->p3_m_nationality = $country[$visa->p3_m_nationality];
-                $visa->p3_m_prev_nationality = $country[$visa->p3_m_prev_nationality];
-                $visa->p3_m_country_birth = $country[$visa->p3_m_country_birth];
-                $visa->p3_current_occupation = $occupation[$visa->p3_current_occupation];
-                $visa->p3_past_occupation = $occupation[$visa->p3_past_occupation];
-                $visa->p4_type_visa = $visatype[$visa->p4_type_visa];
-                $visa->p1_port_arrival = $port[$visa->p1_port_arrival];
-                $visa->p4_expected_port_exit = $port[$visa->p4_expected_port_exit];
+                $visa->p3_f_nationality = @$country[$visa->p3_f_nationality];
+                $visa->p3_f_prev_nationality = @$country[$visa->p3_f_prev_nationality];
+                $visa->p3_f_country_birth = @$country[$visa->p3_f_country_birth];
+                $visa->p3_m_nationality = @$country[$visa->p3_m_nationality];
+                $visa->p3_m_prev_nationality = @$country[$visa->p3_m_prev_nationality];
+                $visa->p3_m_country_birth = @$country[$visa->p3_m_country_birth];
+                $visa->p3_current_occupation = @$occupation[$visa->p3_current_occupation];
+                $visa->p3_past_occupation = @$occupation[$visa->p3_past_occupation];
+                $visa->p4_type_visa = @$visatype[$visa->p4_type_visa];
+                $visa->p1_port_arrival = @$port[$visa->p1_port_arrival];
+                $visa->p4_expected_port_exit = @$port[$visa->p4_expected_port_exit];
                 return view('frontend.visas.visaprocess6-edit')->with([
                     'visa' => $visa
                 ]);

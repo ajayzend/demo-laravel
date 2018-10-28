@@ -98,23 +98,19 @@
                         </div>
                         <div class="col-sm-3 col-xs-12"> </div>
                     </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-2 col-xs-12">
-                            </div>
-                        <div class="col-sm-4 col-xs-12">
+					<br />
+                    <div class="form-group text-center">
+                    
+               
                             <input  type="radio" value="Yes"  id="p4_visit_india_before1" name="p4_visit_india_before"   {{ $visa->p4_visit_india_before == 'Yes' ? 'checked="checked"' : '' }}/><span><img height="30" width="50" id="spass"  src="{{ URL::asset('img/frontend/images/visa.png')}}"></span>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <input  type="radio" value="No" id="p4_visit_india_before2" name="p4_visit_india_before" {{ $visa->p4_visit_india_before == 'No' ? 'checked="checked"' : '' }}  /><span><img height="30" width="50" id="spass"  src="{{ URL::asset('img/frontend/images/master.png')}}"></span>
-                            </div>
-                        <div class="col-sm-2 col-xs-12">
-                        </div>
-                    </div>
 
+     
+                            <input  type="radio" value="No" id="p4_visit_india_before2" name="p4_visit_india_before" {{ $visa->p4_visit_india_before == 'No' ? 'checked="checked"' : '' }}  /><span><img height="30" width="50" id="spass"  src="{{ URL::asset('img/frontend/images/master.png')}}"></span>
+                   
+                    </div>
+<br />
                     <div class="form-group">
-                        <label class="col-sm-4 col-xs-12 control-label" ></label>
-                        <div class="col-sm-8 col-xs-12">
+                        <div class="col-sm-12 col-xs-12 text-center">
                             <input type="submit" name="submit" id="read_undertaking" value="Pay Now"  class="btn-primary submit-btn2">
                             <input type="submit"  name="submit" value="Pay Later"   class="btn-primary submit-btn2">
                         </div>

@@ -106,7 +106,7 @@
                                 <input placeholder="(DD/MM/YYYY)" value="{{ $visa->p1_dob }}" id="p1_dob" name="p1_dob" class="form-control"
                                        type="text" autocomplete="on">
                             </div>
-                            (DD/MM/YYYY)
+                           <div class="col-sm-4 col-xs-12">(DD/MM/YYYY)</div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Email</label>
@@ -136,7 +136,7 @@
                                 <input id="p1_edate" value="{{ $visa->p1_edate }}" name="p1_edate" class="form-control"
                                        placeholder="Expected Date of Arrival" type="text" autocomplete="on"/>
                             </div>
-                            (DD/MM/YYYY)
+                            <div class="col-sm-4 col-xs-12 ">(DD/MM/YYYY) </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Type of

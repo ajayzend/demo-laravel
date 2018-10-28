@@ -66,6 +66,7 @@ use Illuminate\Support\Facades\Route;
 <!-- Scripts -->
 @yield('before-scripts')
 {!! Html::script('js/frontend/jQuery-2.1.4.min.js') !!}
+{!! Html::script('js/bootstrap.min.js') !!}
 {!! Html::script('js/frontend/calendar/jquery-1.7.1.min.js') !!}
 {!! Html::script('js/frontend/calendar/jquery-ui-1.8.18.custom.min.js') !!}
 {!! Html::script('js/frontend/validation.js') !!}

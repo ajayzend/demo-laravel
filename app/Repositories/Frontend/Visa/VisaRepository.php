@@ -135,7 +135,9 @@ class VisaRepository extends BaseRepository
         }
 
         else if($process_steps == 10004){
-            $input['p4_date_issue'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p4_date_issue']));
+            if (!empty($input['p4_date_issue'])) {
+                $input['p4_date_issue'] = Carbon::parse($this->parseDateValueSpecialChar($input['p4_date_issue']));
+            }
             if (!empty($input['p4_photo_name'])) {
                 $this->removeImage($visa, 'profile');
 

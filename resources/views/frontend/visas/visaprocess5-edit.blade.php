@@ -14,7 +14,7 @@
                     <h4 class="text-center"><strong>Temporary Application ID:</strong> <span style="color: #ff231c"><strong>{{ $visa->visa_no }}</strong></span></h4>
 
                     <div class="form-group">
-                            <div class="col-sm-8 col-xs-12 col-md-offset-3">
+                            <div class="col-sm-12 col-xs-12 text-center picture">
                                {{-- @if($visa->p5_passport_photo_name)--}}
                                     <img height="250" width="250" id="passport" src="{{ Storage::disk('public')->url('img/visapassport/' . $visa->p5_passport_photo_name) }}">
                               {{--  @endif--}}

@@ -24,7 +24,7 @@
 
 
                     <div class="form-group">
-                        <div class="col-sm-6 col-xs-12 col-md-offset-5">
+                        <div class="col-sm-12 col-xs-12 text-center">
                             {{-- @if($visa->p5_passport_photo_name)--}}
                             <img style="margin-bottom:20px;" class="imgbor" height="150" width="150" src="{{ Storage::disk('public')->url('img/visaprofile/' . $visa->p4_photo_name) }}">
                             {{--  @endif--}}

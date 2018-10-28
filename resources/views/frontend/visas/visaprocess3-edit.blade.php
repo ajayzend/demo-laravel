@@ -3,9 +3,9 @@
 @section('content')
     <section class="wrapper">
         <div class="container">
-            <h4 class="text-center"><strong>Port of arrival</strong> : <span class="bred">{{ $visa->p1_port_arrival }}</span></h4>
-            <h4 class="text-center"><strong>Application Type</strong> : <span class="bred">{{ $visa->p1_app_type }}</span></h4>
-            <h4 class="text-center"><strong>Data saved Successfully.Please note down the Temporary Application ID</strong>:  <span class="bred">{{ $visa->visa_no }}</span></h4>
+            <h4 class="text-center"><strong class="bl">Port of arrival</strong> : <span class="bred">{{ $visa->p1_port_arrival }}</span></h4>
+            <h4 class="text-center"><strong class="bl">Application Type</strong> : <span class="bred">{{ $visa->p1_app_type }}</span></h4>
+            <h4 class="text-center"><strong class="bl">Data saved Successfully.Please note down the Temporary Application ID</strong>:  <span class="bred">{{ $visa->visa_no }}</span></h4>
             <div class="row1">
 
                 <div class="form-outer">
@@ -212,7 +212,7 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12"> </label>
 
-                            <div class="col-sm-8 col-xs-12"><h3 class="heading">Mother's Details</h3></div>
+                            <div class="col-sm-8 col-xs-12"><h3 class="heading"><strong>Mother's Details</strong></h3></div>
 
 
                         </div>

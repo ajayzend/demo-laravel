@@ -149,7 +149,7 @@
                                 <div class="col-sm-4 col-xs-12">
                                     <input type="text" class="form-control" placeholder="Place of Issue" id="p4_place_issue"  value="{{$visa->p4_place_issue}}" name="p4_place_issue"/>
                                 </div>
-                                <div class="col-sm-4 col-xs-12">
+                                <div class="col-sm-4 col-xs-12 des">
                                     Place of Issue
                                 </div>
                             </div>
@@ -216,7 +216,7 @@
                             if($visa->p4_saarc_country_year_visit != '') {
                         foreach($visa->p4_saarc_country_year_visit as $key=>$rows) {?>
                         <div  class="fieldRow clearfix">
-                            <div class="col-md-3 col-md-offset-2">
+                            <div class="col-md-3 col-md-offset-1">
                                 <div  class="form-group">
                                     <label for="id_saarc_2_country" class="control-label  requiredField">
                                         Name of SAARC country<span class="star">*</span>
@@ -267,7 +267,7 @@
                         <div id="first">
                             <div class="recordset">
                                 <div class="fieldRow clearfix">
-                                    <div class="col-md-3 col-md-offset-2">
+                                    <div class="col-md-3 col-md-offset-1">
                                         <div id="div_id_saarc_1_country" class="form-group">
                                             <label for="id_saarc_1_country" class="control-label  requiredField">
                                                 Name of SAARC country<span class="star">*</span>
@@ -423,13 +423,12 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="col-sm-2 col-xs-12 col-md-offset-2"> </div>
-                                <div class="col-sm-8 col-xs-12 picture">
+                                <div class="col-sm-12 col-xs-12 picture text-center">
                                     <img height="220" width="220" id="profileimg" src="{{ Storage::disk('public')->url('img/visaprofile/' . $visa->p4_photo_name) }}">
                                     {{--<img id="profileimg" height="220" width="220" src="{{ URL::asset('img/frontend/images/photo_not_available.png')}}">--}}
                                     <img id="blah" height="220" width="220" src="{{ URL::asset('img/frontend/images/second.png')}}">
                                 </div>
-                                <div class="col-sm-2 col-xs-12"> </div>
+                               
                             </div>
 
                     <div class="form-group">
