@@ -3,9 +3,10 @@
 @section('content')
     <section class="wrapper">
         <div class="container">
-            <h4 class="text-center"><strong class="bl">Port of arrival</strong> : <span class="bred">{{ $visa->p1_port_arrival }}</span></h4>
-            <h4 class="text-center"><strong class="bl">Application Type</strong> : <span class="bred">{{ $visa->p1_app_type }}</span></h4>
-            <h4 class="text-center"><strong class="bl">Data saved Successfully.Please note down the Temporary Application ID</strong>:  <span class="bred">{{ $visa->visa_no }}</span></h4>
+            <div class="title"><p class="text-center">e-Tourist Visa (eTV) Application</p></div>
+            <p class="text-center"><strong>Please note down the Temporary Application ID:</strong> <span class="bred">{{ $visa->visa_no }}</span></p>
+            <p class="text-center">Your information will be saved if you click save button or continue to next page. If ou exit without doing either of that, your information will be lost.</p>
+            <p class="text-center"><strong>Application Type :</strong> <span class="bred">{{ substr($visa->p1_app_type, 0, 17) }}</span></p>
             <div class="row1">
 
                 <div class="form-outer">
@@ -467,24 +468,27 @@
                                     Organization
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label">Designation</label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input type="text class="form-control"  value="{{ $visa->p3_other_desination }}" placeholder="Designation" name="p3_other_desination" id="p3_other_desination" />
+                                    <input type="text" class="form-control"  value="{{ $visa->p3_other_desination }}" placeholder="Designation" name="p3_other_desination" id="p3_other_desination" />
                                 </div>
                                 <div class="col-sm-4 col-xs-12 des">
                                     Designation
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label">Rank</label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input type="text" class="form-control" value="{{ $visa->p3_other_rank }}"  placeholder="Rank" name="p3_other_rank"  id="p3_other_rank" />
-                                </div> .
+                                    <input type="text" class="form-control"  value="{{ $visa->p3_other_rank }}" placeholder="Rank" name="p3_other_rank" id="p3_other_rank" />
+                                </div>
                                 <div class="col-sm-4 col-xs-12 des">
                                     Rank
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label">Place of Posting</label>
                                 <div class="col-sm-4 col-xs-12">
@@ -499,7 +503,7 @@
                     <div class="form-group">
                         <label class="col-sm-4 col-xs-12 control-label" ></label>
                         <div class="col-sm-8 col-xs-12">
-                            <input type="submit" name="submit" value="Save And Continue"  class="btn-primary submit-btn2">
+                            <input type="submit" name="submit" value="Save And Continue" id="p3_submit_button"  class="btn-primary submit-btn2">
                             <input type="submit"  name="submit" value="Save and Temporarily Exit"   class="btn-primary submit-btn2">
                         </div>
                     </div>
@@ -604,6 +608,18 @@
                     $("#p3_other_place_posting").attr("disabled", true);
                 }
             }).trigger('change');
+
+            $("#p3_submit_button").click(function() {
+                var p3_phone = $("#p3_phone").val();
+                var p3_mobile = $("#p3_mobile").val();
+                if(p3_phone == '' || p3_mobile == ''){
+                    $("#p3_phone").focus();
+                    alert("Please enter either Present Phone No. or Mobile No.");
+                    return false;
+                }else{
+                    return true;
+                }
+            });
             // To Use Select2
             // Backend.Select2.init();
         });

@@ -260,6 +260,27 @@ use Illuminate\Support\Facades\Route;
                 e.preventDefault();
             }
         });
+
+        $( "#p3_f_name" ).keypress(function(e) {
+            var key = e.keyCode;
+            if (key >= 48 && key <= 57) {
+                e.preventDefault();
+            }
+        });
+
+        $( "#p3_m_name" ).keypress(function(e) {
+            var key = e.keyCode;
+            if (key >= 48 && key <= 57) {
+                e.preventDefault();
+            }
+        });
+
+        $( "#p3_s_name" ).keypress(function(e) {
+            var key = e.keyCode;
+            if (key >= 48 && key <= 57) {
+                e.preventDefault();
+            }
+        });
         var app1 = $("#process1");
         app1.validate({
             rules:{
@@ -345,19 +366,21 @@ use Illuminate\Support\Facades\Route;
                 p3_state            					        : 		{ required : true },
                 p3_pincode				                        :		{ required : true},
                 p3_country          					        : 		{ required : true , selected : true},
+                p3_phone          					            : 		{ required : false, digits : true, maxlength : 10, minlength: 10},
+                p3_mobile          					            : 		{ required : false, digits : true, maxlength : 10, minlength: 10},
                 p3_house_street2    					        : 		{ required : true },
-                p3_f_name       				                : 		{ required : true },
+                p3_f_name       				                : 		{ required : true, maxlength : 75},
                 p3_f_nationality                         	    : 		{ required : true , selected : true},
                 p3_f_prev_nationality                      	    : 		{ required : true , selected : true},
                 p3_f_place_birth            		            :		{ required : true},
                 p3_f_country_birth            		            :		{ required : true, selected : true},
-                p3_m_name       				                : 		{ required : true },
+                p3_m_name       				                : 		{ required : true, maxlength : 75 },
                 p3_m_nationality                         	    : 		{ required : true , selected : true},
                 p3_m_prev_nationality                      	    : 		{ required : true , selected : true},
                 p3_m_place_birth            		            :		{ required : true},
                 p3_m_country_birth            		            :		{ required : true,  selected : true},
                 p3_marital_status            		            :		{ required : true,  selected : true},
-                p3_s_name                   		            :		{ required : true},
+                p3_s_name                   		            :		{ required : true, maxlength : 75},
                 p3_s_nationality                         	    : 		{ required : true , selected : true},
                 p3_s_prev_nationality                      	    : 		{ required : true , selected : true},
                 p3_s_place_birth                          	    : 		{ required : true},
@@ -365,13 +388,16 @@ use Illuminate\Support\Facades\Route;
                 p3_current_occupation          		            :		{ required : true,  selected : true},
                 p3_other_occupation          		            :		{ required : true,  selected : true},
                 p3_employer                 		            :		{ required : true},
-                p3_address                   		            :		{ required : true}
+                p3_address                   		            :		{ required : true},
+                p3_po_phone                   		            :		{ required : false, digits : true, maxlength : 10, minlength: 10}
             },
             messages:{
                 p3_house_street			        	            : 		{ required : "Please enter House No./Street" },
                 p3_village_town				                    : 		{ required : "Please enter Village/Town/City" },
                 p3_state            				            : 		{ required : "Please enter State/Province/District" },
                 p3_pincode 				                        :	    { required : "Please enter Postal/Zip Code"},
+                p3_phone                                        :       { required : "Please enter your 10 digit correct phone or mobile number without zero- Character Value not allowed!", digits : "Please enter your 10 digit correct phone number without zero- Character Value not allowed!" },
+                p3_mobile                                        :       { required : "Please enter your 10 digit correct phone or mobile number without zero- Character Value not allowed!", digits : "Please enter your 10 digit correct mobile number without zero- Character Value not allowed!" },
                 p3_country 					                    :	    { required : "This field is required", selected : "Please select Country" },
                 p3_house_street2				                :       { required : "Please enter House No./Street" },
                 p3_f_name       				  	 	        :       { required : "Please enter Name" },
@@ -393,7 +419,8 @@ use Illuminate\Support\Facades\Route;
                 p3_current_occupation                          	:	    { required : "This field is required", selected : "Please select Present Occupation" },
                 p3_other_occupation                        	    :	    { required : "This field is required", selected : "Please select Present Other Occupation" },
                 p3_employer                             	    :	    { required : "Please enter Employer Name/business" },
-                p3_address                               	    :	    { required : "Please enter Address" }
+                p3_address                               	    :	    { required : "Please enter Address" },
+                p3_po_phone                                      :       { required : "Please enter your 10 digit correct phone or mobile number without zero- Character Value not allowed!", digits : "Please enter your 10 digit correct phone number without zero- Character Value not allowed!" },
             }
         });
 

@@ -153,10 +153,12 @@ class VisasController extends Controller
             else if ($process_steps == 10002){
                 $visa->header_title = "e-Visa Indian Visa Form | $visa->p1_visa_type";
                 $evisacountry = Evisacountry::getSelectData();
+                $port = Port::getSelectData();
                 $country = Country::getSelectData();
                 $education = Education::getSelectData();
                 $religion = Religion::getSelectData();
                 $visa->p1_nationality = $evisacountry[$visa->p1_nationality];
+                $visa->p1_port_arrival = $port[$visa->p1_port_arrival];
                 return view('frontend.visas.visaprocess2-edit')->with([
                     'visa' => $visa,
                     'evisa_country'       => $evisacountry,

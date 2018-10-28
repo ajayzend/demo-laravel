@@ -3,13 +3,13 @@
 @section('content')
     <section class="wrapper">
         <div class="container">
+            <h4 class="text-center"><strong class="bl">Port of Arrival</strong> : <span class="bred">{{ $visa->p1_port_arrival }}</span></h4>
+            <h4 class="text-center"><strong class="bl">Application Type</strong> : <span class="bred">{{ substr($visa->p1_app_type, 0, 17) }}</span></h4>
             <div class="row1"> 	
                 <div class="form-outer">
 				
-					<div class="title"><p class="text-center">e-Tourist Visa (eTV) Application (UK) 0044 203 411 6786 / (USA) 001 646 893 7849</p></div>
-					<p class="text-center"><strong>Please note the temporary Application ID:</strong> <span class="bred">BWA3128447294</span></p>
-					<p class="text-center">Your information will be saved if you click save button or continue to next page. If ou exit without doing either of that, your information will be lost.</p>
-					<p class="text-center"><strong>Application Type :</strong> <span class="bred">Urgent Processing</span></p>
+					<div class="title"><p class="text-center">e-Tourist Visa (eTV) Application</p></div>
+					<p class="text-center"><strong>Data saved Successfully. Please note down the Temporary Application ID:</strong> <span class="bred">{{ $visa->visa_no }}</span></p>
 
                     <div class="title2">
 						<div class="col-md-8" >e-Visa-India (eVI) Application</div>
