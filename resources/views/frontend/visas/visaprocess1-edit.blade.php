@@ -157,7 +157,7 @@
                             <label class="col-sm-4 col-xs-12 control-label"></label>
                             <div class="col-sm-6 col-xs-12">
                                 <!--<input type="submit" id="submit" value="Continue" class="btn-primary submit-btn2">-->
-                                {{ Form::submit('Continue', ['class' => 'btn btn-primary btn-md']) }}
+                                {{ Form::submit('Continue', ['class' => 'btn btn-primary btn-md', 'id' => 'p1_submit_button']) }}
                             </div>
                         </div>
                     {{ Form::close() }}

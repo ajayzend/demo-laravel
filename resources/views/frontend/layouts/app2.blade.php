@@ -192,23 +192,90 @@ use Illuminate\Support\Facades\Route;
 </script>
 
 <script>
+
+    function showDays(firstDate, secondDate){
+        var startDay;
+        if(firstDate == ''|| firstDate == null)
+            startDay = new Date();
+        else
+            startDay = new Date(firstDate);
+
+        //var endDay = new Date(secondDate);
+        var endDay = secondDate;
+        var millisecondsPerDay = 1000 * 60 * 60 * 24;
+
+        var millisBetween = endDay.getTime() - startDay.getTime();
+        var days = millisBetween / millisecondsPerDay;
+
+        // Round down.
+        return Math.floor(days);
+    }
+
+    // mm/dd/yyyy to yyyy-mm/dd
+    function parseDate(str) {
+        var mdy = str.split('/');
+        return new Date(mdy[2], mdy[1]-1, mdy[0]);
+    }
+
+    function stringMatch(str1, str2) {
+        var status = false;
+        if (str1.indexOf(str2) != -1) {
+            status =  true
+        }
+        return status;
+    }
+
+    $("#p1_submit_button").click(function() {
+        var p1_app_type = $("#p1_app_type").val();
+        var p1_edate = $("#p1_edate").val();
+        var days = showDays(null, parseDate(p1_edate));
+        if(days > 30 && stringMatch(p1_app_type, 'Urgent')){
+            alert("Please select normal processing from the drop down because your arrival date is beyond 30 days.");
+            return false;
+        }else{
+            return true;
+        }
+    });
+
     $(document).ready(function(){
 
+
+        $( "#p1_fname" ).keypress(function(e) {
+            var key = e.keyCode;
+            if (key >= 48 && key <= 57) {
+                e.preventDefault();
+            }
+        });
+
+        $( "#p1_mname" ).keypress(function(e) {
+            var key = e.keyCode;
+            if (key >= 48 && key <= 57) {
+                e.preventDefault();
+            }
+        });
+
+        $( "#p1_lname" ).keypress(function(e) {
+            var key = e.keyCode;
+            if (key >= 48 && key <= 57) {
+                e.preventDefault();
+            }
+        });
         var app1 = $("#process1");
         app1.validate({
             rules:{
                 p1_app_type 		: { required : true, selected : true},
-                p1_fname 		: { required : true },
-                p1_lname 		: { required : true },
+                p1_fname 		: { required : true, maxlength : 25},
+                p1_mname 		: { required : false, maxlength : 25 },
+                p1_lname 		: { required : true , maxlength : 25},
                 p1_passport_type 		: { required : true, selected : true},
                 p1_nationality : { required : true, selected : true},
                 p1_port_arrival 	: { required : true, selected : true},
                 p1_passport_number	    : { required : true },
-                p1_dob			: { required : true },
+                p1_dob			: { required : true, date: true},
                 p1_email       : { required : true,email : true },
                 p1_email2 	    :{required : true, equalTo: "#p1_email"},
-                p1_phone	    : { required : true, digits : true },
-                p1_edate		: { required : true },
+                p1_phone	    : { required : true, digits : true, maxlength : 10, minlength: 10 },
+                p1_edate		: { required : true, date: true },
                 p1_visa_type		: { required : true, selected : true}
             },
             messages:{
@@ -222,7 +289,7 @@ use Illuminate\Support\Facades\Route;
                 p1_dob :{ required : "Please enter Date of Birth" },
                 p1_email : { required : "Please enter Email", email : "Please enter valid email address", remote : "Email already taken" },
                 p1_email2 :{ required : "Please repeat Email" },
-                p1_phone:{ required : "Please enter  Telephone Number", digits : "Please enter numbers only" },
+                p1_phone:{ required : "Please enter your 10 digit correct phone or mobile number without zero- Character Value not allowed!", digits : "Please enter numbers only" },
                 p1_edate:{ required : "Please enter Expected Date of Arrival" },
                 p1_visa_type: { required : "This field is required", selected : "Please select Visa type" }
             }

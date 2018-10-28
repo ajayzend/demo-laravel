@@ -128,12 +128,12 @@ class VisasController extends Controller
         $sess_vid = session()->get('vid');
         $process_steps = session()->get('process_steps');
         if ($sess_vid == $visa->id && session()->get('evpuid') != '') {
-            $visa->p1_dob = date('d-m-Y', strtotime($visa->p1_dob));
-            $visa->p1_edate = date('d-m-Y', strtotime($visa->p1_edate));
-            $visa->p2_passport_date_issue = date('d-m-Y', strtotime($visa->p2_passport_date_issue));
-            $visa->p2_passport_date_expiry = date('d-m-Y', strtotime($visa->p2_passport_date_expiry));
-            $visa->p2_other_passport_date_issue = date('d-m-Y', strtotime($visa->p2_other_passport_date_issue));
-            $visa->p4_date_issue = date('d-m-Y', strtotime($visa->p4_date_issue));
+            $visa->p1_dob = date('d/m/Y', strtotime($visa->p1_dob));
+            $visa->p1_edate = date('d/m/Y', strtotime($visa->p1_edate));
+            $visa->p2_passport_date_issue = date('d/m/Y', strtotime($visa->p2_passport_date_issue));
+            $visa->p2_passport_date_expiry = date('d/m/Y', strtotime($visa->p2_passport_date_expiry));
+            $visa->p2_other_passport_date_issue = date('d/m/Y', strtotime($visa->p2_other_passport_date_issue));
+            $visa->p4_date_issue = date('d/m/Y', strtotime($visa->p4_date_issue));
            // print "<pre>";print_r($visa);exit;
             if ($process_steps == 10001 || $process_steps == '') {
                 $visa->header_title = "Online Indian Visa Form";
