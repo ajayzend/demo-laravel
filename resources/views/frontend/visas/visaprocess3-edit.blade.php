@@ -5,7 +5,7 @@
         <div class="container">
             <div class="title"><p class="text-center">e-Tourist Visa (eTV) Application</p></div>
             <p class="text-center"><strong>Please note down the Temporary Application ID:</strong> <span class="bred">{{ $visa->visa_no }}</span></p>
-            <p class="text-center">Your information will be saved if you click save button or continue to next page. If ou exit without doing either of that, your information will be lost.</p>
+            <p class="text-center">Your information will be saved if you click save button or continue to next page. If you exit without doing either of that, your information will be lost.</p>
             <p class="text-center"><strong>Application Type :</strong> <span class="bred">{{ substr($visa->p1_app_type, 0, 17) }}</span></p>
             <div class="row1">
 
@@ -612,7 +612,7 @@
             $("#p3_submit_button").click(function() {
                 var p3_phone = $("#p3_phone").val();
                 var p3_mobile = $("#p3_mobile").val();
-                if(p3_phone == '' || p3_mobile == ''){
+                if(p3_phone == '' && p3_mobile == ''){
                     $("#p3_phone").focus();
                     alert("Please enter either Present Phone No. or Mobile No.");
                     return false;

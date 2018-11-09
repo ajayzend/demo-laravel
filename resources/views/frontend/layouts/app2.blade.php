@@ -361,14 +361,16 @@ use Illuminate\Support\Facades\Route;
         var app3 = $("#process3");
         app3.validate({
             rules:{
-                p3_house_street					                : 		{ required : true },
-                p3_village_town					                : 		{ required : true },
-                p3_state            					        : 		{ required : true },
+                p3_house_street					                : 		{ required : true, maxlength : 35 },
+                p3_village_town					                : 		{ required : true, maxlength : 35 },
+                p3_state            					        : 		{ required : true , maxlength : 35},
                 p3_pincode				                        :		{ required : true},
                 p3_country          					        : 		{ required : true , selected : true},
                 p3_phone          					            : 		{ required : false, digits : true, maxlength : 10, minlength: 10},
                 p3_mobile          					            : 		{ required : false, digits : true, maxlength : 10, minlength: 10},
-                p3_house_street2    					        : 		{ required : true },
+                p3_house_street2    					        : 		{ required : true , maxlength : 35},
+                p3_village_town2    					        : 		{ required : false , maxlength : 35},
+                p3_state2    					                : 		{ required : false , maxlength : 35},
                 p3_f_name       				                : 		{ required : true, maxlength : 75},
                 p3_f_nationality                         	    : 		{ required : true , selected : true},
                 p3_f_prev_nationality                      	    : 		{ required : true , selected : true},
