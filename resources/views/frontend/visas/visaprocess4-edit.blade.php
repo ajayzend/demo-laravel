@@ -2,7 +2,7 @@
 @section('content')
     <section class="wrapper">
         <div class="container">
-            <div class="title"><p class="text-center">e-Visa (eTV) Application</p></div>
+            <div class="title"><p class="text-center">{{ $visa->p1_visa_type }} (eTV) Application</p></div>
             <p class="text-center"><strong>Please note down the Temporary Application ID:</strong> <span class="bred">{{ $visa->visa_no }}</span></p>
             <p class="text-center">Your information will be saved if you click save button or continue to next page. If you exit without doing either of that, your information will be lost.</p>
             <p class="text-center"><strong>Application Type :</strong> <span class="bred">{{ substr($visa->p1_app_type, 0, 17) }}</span></p>
@@ -217,7 +217,7 @@
                             if($visa->p4_saarc_country_year_visit != '') {
                         foreach($visa->p4_saarc_country_year_visit as $key=>$rows) {?>
                         <div  class="fieldRow clearfix">
-                            <div class="col-md-3 col-md-offset-1">
+                            <div class="col-md-2 col-md-offset-1">
                                 <div  class="form-group">
                                     <label for="id_saarc_2_country" class="control-label  requiredField">
                                         Name of SAARC country<span class="star">*</span>
@@ -236,7 +236,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-1">
+                            <div class="col-md-2">
                                 <div id="div_id_saarc_2_year" class="form-group">
                                     <label for="id_saarc_2_year" class="control-label  requiredField">
                                         Year<span class="star">*</span>
@@ -268,7 +268,7 @@
                         <div id="first">
                             <div class="recordset">
                                 <div class="fieldRow clearfix">
-                                    <div class="col-md-3 col-md-offset-1">
+                                    <div class="col-md-2 col-md-offset-1">
                                         <div id="div_id_saarc_1_country" class="form-group">
                                             <label for="id_saarc_1_country" class="control-label  requiredField">
                                                 Name of SAARC country<span class="star">*</span>
@@ -287,7 +287,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-1">
+                                    <div class="col-md-2">
                                         <div id="div_id_saarc_1_year" class="form-group">
                                             <label for="id_saarc_1_year" class="control-label  requiredField">
                                                 Year<span class="star">*</span>

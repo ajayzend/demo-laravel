@@ -36,6 +36,13 @@ class VisaRepository extends BaseRepository
     protected $visa_passport_path;
 
     /**
+     * Visa Medical Photo Path.
+     *
+     * @var string
+     */
+    protected $visa_medical_path;
+
+    /**
      * Storage Class Object.
      *
      * @var \Illuminate\Support\Facades\Storage
@@ -49,6 +56,7 @@ class VisaRepository extends BaseRepository
     {
         $this->visa_profile_path = 'img'.DIRECTORY_SEPARATOR.'visaprofile'.DIRECTORY_SEPARATOR;
         $this->visa_passport_path = 'img'.DIRECTORY_SEPARATOR.'visapassport'.DIRECTORY_SEPARATOR;
+        $this->visa_medical_path = 'img'.DIRECTORY_SEPARATOR.'visamedical'.DIRECTORY_SEPARATOR;
         $this->storage = Storage::disk('public');
     }
 
@@ -148,8 +156,12 @@ class VisaRepository extends BaseRepository
         else if($process_steps == 10005){
             if (!empty($input['p5_passport_photo_name'])) {
                 $this->removeImage($visa, 'passport');
-
                 $input['p5_passport_photo_name'] = $this->uploadImage($visa, $input['p5_passport_photo_name'], 'passport');
+            }
+
+            if (!empty($input['p5_medical_photo_name'])) {
+                $this->removeImage($visa, 'medical');
+                $input['p5_medical_photo_name'] = $this->uploadImage($visa, $input['p5_medical_photo_name'], 'medical');
             }
         }
 
@@ -166,8 +178,10 @@ class VisaRepository extends BaseRepository
     {
         if ($type == 'profile')
             $path = $this->visa_profile_path;
-        elseif ($type == 'passport')
+        else if ($type == 'passport')
             $path = $this->visa_passport_path;
+        else if ($type == 'medical')
+            $path = $this->visa_medical_path;
 
         $image_name = time() . $logo->getClientOriginalName();
 
@@ -185,6 +199,8 @@ class VisaRepository extends BaseRepository
             $path = $this->visa_profile_path;
         elseif ($type == 'passport')
             $path = $this->visa_passport_path;
+        elseif ($type == 'medical')
+            $path = $this->visa_medical_path;
 
         if ($visa->$type && $this->storage->exists($path.$visa->$type)) {
             $this->storage->delete($path.$visa->$type);

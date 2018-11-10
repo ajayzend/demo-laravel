@@ -893,30 +893,15 @@
                         </div>
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
-
+<br>
                     <div class="form-group">
                         <label class="col-sm-4 col-xs-12 control-label" ></label>
                         <div class="col-sm-8 col-xs-12">
-                            <input type="submit" id="modify_edit" name="submit" value="Modify/Edit"  class="btn-primary submit-btn2">
+                            <input type="button" id="modify_edit"  name="submit" value="Modify/Edit"   class="btn-primary submit-btn2">
+                            <input style="display: none" type="submit" id="modify_edit_hidden"  name="submit" value="Modify/Edit"   class="btn-primary submit-btn2">
                             <input type="button" id="verified_continue"  name="submit" value="Verified and Continue"   class="btn-primary submit-btn2">
                             <input style="display: none" type="submit" id="verified_continue_hidden"  name="submit" value="Verified and Continue"   class="btn-primary submit-btn2">
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-3 col-xs-12"></div>
-                        <div class="col-sm-6 col-xs-12">
-                            Kindly ensure that the document is as par specifications mentioned below.
-                        </div>
-                        <div class="col-sm-3 col-xs-12"></div>
-                    </div>
-
-                 
-<div class="title"><p>Document Specifications</p></div>
-                      <div class="instru">
-                        <p>i. Passport Upload- Photo page of Passport containing personal details like name,date of birth, nationality , expiry date etc. to be uploaded by the applicant.<br />
-                           ii. Photo page of Passport uploaded should be of the same passport whose details are provided in Passport Details section.<br />
-                            ii. The application is liable to be rejected if the uploaded document is not clear and as per specification.</p>
                     </div>
 
                     {{ Form::close() }}
@@ -941,8 +926,13 @@
                         ok+ " to proceed for Final registration OR  \n" +cancel+ " to modify details";
                 if(confirm(msg)){
                     $("#verified_continue_hidden").click();
-                }else{
-                    $("#modify_edit").click();
+                }
+            });
+
+            $("#modify_edit").click(function() {
+                var msg = "Are you sure you want to modify Registration details?";
+                if(confirm(msg)){
+                    $("#modify_edit_hidden").click();
                 }
             });
             // To Use Select2

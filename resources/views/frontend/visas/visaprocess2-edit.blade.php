@@ -8,7 +8,7 @@
             <div class="row1"> 	
                 <div class="form-outer">
 				
-					<div class="title"><p class="text-center">e-Tourist Visa (eTV) Application</p></div>
+					<div class="title"><p class="text-center">{{ $visa->p1_visa_type }} (eTV) Application</p></div>
 					<p class="text-center"><strong>Data saved Successfully. Please note down the Temporary Application ID:</strong> <span class="bred">{{ $visa->visa_no }}</span></p>
 
                     <div class="title2">

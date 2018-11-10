@@ -474,10 +474,12 @@ use Illuminate\Support\Facades\Route;
         var app5 = $("#process5");
         app5.validate({
             rules:{
-                p5_passport_photo_name		        : 		{ required : true }
+                p5_passport_photo_name		        : 		{ required : true },
+                p5_medical_photo_name		        : 		{ required : true }
             },
             messages:{
-                p5_passport_photo_name        	    : 		{ required : "Please Upload A scanned Copy Of Your original Coloured Passport Or Take A picture Of Your Passport and Uploaded." }
+                p5_passport_photo_name        	    : 		{ required : "Please Upload A scanned Copy Of Your original Coloured Passport Or Take A picture Of Your Passport and Uploaded." },
+                p5_medical_photo_name        	    : 		{ required : "Please Upload A Scanned Copy of Letter from the Hospital concerned in India on its letterhead." }
             }
         });
     });

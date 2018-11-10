@@ -142,6 +142,7 @@ class Visa extends Model
         'p4_r_h_phone',
         'p4_photo_name',
         'p5_passport_photo_name',
+        'p5_medical_photo_name',
         'status',
         'payment_status',
         'india_gov_evisa_status',
