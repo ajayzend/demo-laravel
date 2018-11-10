@@ -422,7 +422,7 @@ use Illuminate\Support\Facades\Route;
                 p3_other_occupation                        	    :	    { required : "This field is required", selected : "Please select Present Other Occupation" },
                 p3_employer                             	    :	    { required : "Please enter Employer Name/business" },
                 p3_address                               	    :	    { required : "Please enter Address" },
-                p3_po_phone                                      :       { required : "Please enter your 10 digit correct phone or mobile number without zero- Character Value not allowed!", digits : "Please enter your 10 digit correct phone number without zero- Character Value not allowed!" },
+                p3_po_phone                                      :       { required : "Please enter your 10 digit correct phone or mobile number without zero- Character Value not allowed!", digits : "Please enter your 10 digit correct phone number without zero- Character Value not allowed!" }
             }
         });
 
@@ -436,16 +436,17 @@ use Illuminate\Support\Facades\Route;
                 p4_type_visa       					: 		{ required : true , selected : true},
                 p4_place_issue  					: 		{ required : true },
                 p4_date_issue				        : 		{ required : true },
-                p4_r_name                        	: 		{ required : true },
-                p4_r_address    					: 		{ required : true },
-                p4_r_city           				: 		{ required : true },
-                p4_r_state      					: 		{ required : true},
-                p4_r_country          				: 		{ required : true },
+                p4_r_name                        	: 		{ required : true, maxlength : 50 },
+                p4_r_address    					: 		{ required : true, maxlength : 50 },
+                p4_r_city           				: 		{ required : true, maxlength : 50 },
+                p4_r_state      					: 		{ required : true, maxlength : 50},
+                p4_r_country          				: 		{ required : true , maxlength : 50},
                 p4_r_pincode                		: 		{ required : true},
                 p4_r_phone                       	: 		{ required : true },
-                p4_r_h_name                  		: 		{ required : true},
-                p4_r_h_address1          			:		{ required : true},
-                p4_r_h_phone                		:		{ required : true},
+                p4_r_h_name                  		: 		{ required : true, maxlength : 50},
+                p4_r_h_address1          			:		{ required : true, maxlength : 35},
+                p4_r_h_address2          			:		{ required : false, maxlength : 35},
+                p4_r_h_phone                		:		{required : true , digits : true, maxlength : 10, minlength: 10},
                 p4_photo_name                		:		{ required : true}
             },
             messages:{
@@ -465,7 +466,7 @@ use Illuminate\Support\Facades\Route;
                 p4_r_phone          				: 		{ required : "Please enter Phone no" },
                 p4_r_h_name                     	: 		{ required : "Please enter Reference Name in Home Country" },
                 p4_r_h_address1              		: 		{ required : "Please enter Address" },
-                p4_r_h_phone                		:	    { required : "Please enter Phone" },
+                p4_r_h_phone                		:	    { required : "Please enter 10 digit correct phone without zero- Character Value not allowed!", digits : "Please enter 10 digit correct phone without zero- Character Value not allowed!" },
                 p4_photo_name                		:	    { required : "Please Click Your Own Picture Using A Camera Phone Or Digital Camera Upload Here" }
             }
         });
