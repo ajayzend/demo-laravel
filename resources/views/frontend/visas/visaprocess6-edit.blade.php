@@ -677,7 +677,7 @@
                         <label class="col-sm-3 labelcolor">Visa Type</label>
                         <div class="col-sm-1 col-xs-12"></div>
                         <div class="col-sm-3 uppercase valuecolor">
-                            {{$visa->p4_type_visa}}
+                            {{$visa->p1_visa_type}}
                         </div>
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
@@ -742,6 +742,78 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
+                    @if($visa->p1_visa_type == 'e-Business Visa')
+                    <div class="title_block hover-div">Details of Purpose "TO SET UP INDUSTRIAL/BUSINESS VENTURE" </div>
+                        <div class="form-group">
+                            <div class="col-sm-3 col-xs-12"><strong>Details of the Applicants Company</strong></div>
+                            <label class="col-sm-3 labelcolor">Name</label>
+                            <div class="col-sm-1 col-xs-12"></div>
+                            <div class="col-sm-3 uppercase valuecolor">
+                                {{$visa->p4_business_c_name}}
+                            </div>
+                            <div class="col-sm-2 col-xs-12"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-3 col-xs-12"></div>
+                            <label class="col-sm-3 labelcolor">Address, Phone no</label>
+                            <div class="col-sm-1 col-xs-12"></div>
+                            <div class="col-sm-3 uppercase valuecolor">
+                                {{$visa->p4_business_c_phone}}
+                            </div>
+                            <div class="col-sm-2 col-xs-12"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-3 col-xs-12"></div>
+                            <label class="col-sm-3 labelcolor">Website</label>
+                            <div class="col-sm-1 col-xs-12"></div>
+                            <div class="col-sm-3 uppercase valuecolor">
+                                {{$visa->p4_business_c_website}}
+                            </div>
+                            <div class="col-sm-2 col-xs-12"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-3 col-xs-12"><strong>Details of Indian Firm</strong></div>
+                            <label class="col-sm-3 labelcolor">Name</label>
+                            <div class="col-sm-1 col-xs-12"></div>
+                            <div class="col-sm-3 uppercase valuecolor">
+                                {{$visa->p4_business_f_name}}
+                            </div>
+                            <div class="col-sm-2 col-xs-12"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-3 col-xs-12"></div>
+                            <label class="col-sm-3 labelcolor">Address, Phone no</label>
+                            <div class="col-sm-1 col-xs-12"></div>
+                            <div class="col-sm-3 uppercase valuecolor">
+                                {{$visa->p4_business_f_phone}}
+                            </div>
+                            <div class="col-sm-2 col-xs-12"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-3 col-xs-12"></div>
+                            <label class="col-sm-3 labelcolor">Website</label>
+                            <div class="col-sm-1 col-xs-12"></div>
+                            <div class="col-sm-3 uppercase valuecolor">
+                                {{$visa->p4_business_f_website}}
+                            </div>
+                            <div class="col-sm-2 col-xs-12"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-3 col-xs-12"></div>
+                            <label class="col-sm-3 labelcolor">Name and contact number of Indian firm</label>
+                            <div class="col-sm-1 col-xs-12"></div>
+                            <div class="col-sm-3 uppercase valuecolor">
+                                {{$visa->p4_business_f_name_contact}}
+                            </div>
+                            <div class="col-sm-2 col-xs-12"></div>
+                        </div>
+                @endif
                     <div class="title_block">Previous Visa Details</div>
                     <div class="form-group">
                         <div class="col-sm-3 col-xs-12"></div>

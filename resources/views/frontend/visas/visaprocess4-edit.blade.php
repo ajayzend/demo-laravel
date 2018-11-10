@@ -87,6 +87,67 @@
                             </div>
                         </div>
 
+                    @if($visa->p1_visa_type == 'e-Business Visa')
+                        <div class="title"><p>Details of Purpose "TO SET UP INDUSTRIAL/BUSINESS VENTURE"</p></div>
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12"> </label>
+                            <div class="col-sm-8 col-xs-12"><h3 class="heading"><strong>Details of the Applicants Company</strong></h3></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Name</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control"  value="{{$visa->p4_business_c_name}}" placeholder="Name" id="p4_business_c_name" name="p4_business_c_name" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Address, Phone no</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control"  value="{{$visa->p4_business_c_phone}}" placeholder="Address, Phone no" id="p4_business_c_phone" name="p4_business_c_phone" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Website</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control"  value="{{$visa->p4_business_c_website}}" placeholder="Website" id="p4_business_c_website" name="p4_business_c_website" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12"> </label>
+                            <div class="col-sm-8 col-xs-12"><h3 class="heading"><strong>Details of Indian Firm</strong></h3></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Name</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control"  value="{{$visa->p4_business_f_name}}" placeholder="Name" id="p4_business_f_name" name="p4_business_f_name" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Address, Phone no</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control"  value="{{$visa->p4_business_f_phone}}" placeholder="Address, Phone no" id="p4_business_f_phone" name="p4_business_f_phone" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Website</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control"  value="{{$visa->p4_business_f_website}}" placeholder="Website" id="p4_business_f_website" name="p4_business_f_website" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Name and contact number of Indian firm :</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control"  value="{{$visa->p4_business_f_name_contact}}" placeholder="Name and contact number of Indian firm" id="p4_business_f_name_contact" name="p4_business_f_name_contact" />
+                            </div>
+                        </div>
+                    @endif
 					<div class="title"><p>Previous Visa/Currently valid Visa Details</p></div>
                  
 

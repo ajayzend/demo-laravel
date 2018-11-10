@@ -112,7 +112,7 @@
                     <div class="form-group">
                         <div class="col-sm-12 col-xs-12 text-center">
                             <input type="submit" name="submit" id="read_undertaking" value="Pay Now"  class="btn-primary submit-btn2">
-                            <input type="submit"  name="submit" value="Pay Later"   class="btn-primary submit-btn2">
+                            <input type="button"  name="submit" id="pay_later" value="Pay Later"   class="btn-primary submit-btn2">
                         </div>
                     </div>
 
@@ -137,7 +137,17 @@
                 if(p7_undertaking == 'yes'){
                     return true;
                 }else{
-                    alert("Please read the Undertaking and checked the same before to click on 'Pay Now' button.");
+                    alert("Before making the payment please check the box and confirm that you agree to all the terms and conditions.");
+                    return false;
+                }
+            });
+
+
+            $("#pay_later").click(function() {
+                var msg = "You must make the payment against your e-Tourist Fee within 48 hours after submitting your application to avoid rejection. You may not be able to apply on the website for next 2 weeks once application is rejected. You will receive an email with important links and information to complete your application.";
+                if(confirm(msg)){
+                    location.reload();
+                }else{
                     return false;
                 }
             });

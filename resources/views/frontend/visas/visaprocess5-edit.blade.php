@@ -42,15 +42,15 @@
                     </div>
                     {{--******************end upload passport*************************--}}
 
-                    {{--******************start upload medical doc*************************--}}
-                @if($visa->p1_visa_type == 'e-Medical Visa')
+                    {{--******************start upload Business doc*************************--}}
+                @if($visa->p1_visa_type == 'e-Business Visa')
                     <div class="form-group">
                         <div class="col-sm-12 col-xs-12 text-center picture">
                             {{-- @if($visa->p5_passport_photo_name)--}}
-                            <img height="250" width="250" id="medical" src="{{ Storage::disk('public')->url('img/visapassport/' . $visa->p5_medical_photo_name) }}">
+                            <img height="250" width="250" id="business" src="{{ Storage::disk('public')->url('img/visabusiness/' . $visa->p5_business_photo_name) }}">
                             {{--  @endif--}}
                             {{--<img height="250" width="250"  id="passport" src="{{ URL::asset('img/frontend/images/china.jpg')}}">--}}
-                            <img height="250" width="250" id="medical-default"  src="{{ URL::asset('img/frontend/images/medical.jpg')}}">
+                            <img height="250" width="250" id="business-default"  src="{{ URL::asset('img/frontend/images/business.jpg')}}">
                         </div>
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
@@ -59,8 +59,8 @@
                         <div class="col-sm-3 col-xs-12 second"></div>
                         <div class="col-lg-6">
                             <div class="custom-file-input instru">
-                                <p>Upload A Scanned Copy of Letter from the Hospital concerned in India on its letterhead.</p>
-                                {!! Form::file($visa->p5_medical_photo_name ? 'p5_medical_photo_name' : 'p5_medical_photo_name', array('class'=>'form-control inputfile inputfile-1', 'id' => 'p5_medical_photo_name', 'onchange'=>"readURL(this, 'p5_medical_photo_name')")) !!}
+                                <p>Upload A Scanned Copy of Business Card.</p>
+                                {!! Form::file($visa->p5_business_photo_name ? 'p5_business_photo_name' : 'p5_business_photo_name', array('class'=>'form-control inputfile inputfile-1', 'id' => 'p5_business_photo_name', 'onchange'=>"readURL(this, 'p5_business_photo_name')")) !!}
                                 <label for="logo">
                                     <i class="fa fa-upload"></i>
                                     {{--<span>Choose a file</span>--}}
@@ -70,6 +70,37 @@
                         <div class="col-sm-3 col-xs-12 second"></div>
                         <!--col-lg-10-->
                     </div>
+                    @endif;
+                    {{--******************end upload Business doc*************************--}}
+
+                    {{--******************start upload medical doc*************************--}}
+                    @if($visa->p1_visa_type == 'e-Medical Visa')
+                        <div class="form-group">
+                            <div class="col-sm-12 col-xs-12 text-center picture">
+                                {{-- @if($visa->p5_passport_photo_name)--}}
+                                <img height="250" width="250" id="medical" src="{{ Storage::disk('public')->url('img/visapassport/' . $visa->p5_medical_photo_name) }}">
+                                {{--  @endif--}}
+                                {{--<img height="250" width="250"  id="passport" src="{{ URL::asset('img/frontend/images/china.jpg')}}">--}}
+                                <img height="250" width="250" id="medical-default"  src="{{ URL::asset('img/frontend/images/medical.jpg')}}">
+                            </div>
+                            <div class="col-sm-2 col-xs-12"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-3 col-xs-12 second"></div>
+                            <div class="col-lg-6">
+                                <div class="custom-file-input instru">
+                                    <p>Upload A Scanned Copy of Letter from the Hospital concerned in India on its letterhead.</p>
+                                    {!! Form::file($visa->p5_medical_photo_name ? 'p5_medical_photo_name' : 'p5_medical_photo_name', array('class'=>'form-control inputfile inputfile-1', 'id' => 'p5_medical_photo_name', 'onchange'=>"readURL(this, 'p5_medical_photo_name')")) !!}
+                                    <label for="logo">
+                                        <i class="fa fa-upload"></i>
+                                        {{--<span>Choose a file</span>--}}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-12 second"></div>
+                            <!--col-lg-10-->
+                        </div>
                     @endif;
                     {{--******************end upload medical doc*************************--}}
 
@@ -127,6 +158,15 @@
                                 .width(245)
                                 .height(245);
                     }
+
+                    else if(field == 'p5_business_photo_name'){
+                        $('#business')
+                                .attr('src', e.target.result)
+                                .width(245)
+                                .height(245);
+
+                    }
+
                     else if(field == 'p5_medical_photo_name'){
                         $('#medical')
                                 .attr('src', e.target.result)

@@ -430,6 +430,13 @@ use Illuminate\Support\Facades\Route;
         app4.validate({
             rules:{
                 p4_place_likely_visit		        : 		{ required : true },
+                p4_business_c_name		            : 		{ required : true , maxlength : 250},
+                p4_business_c_phone		            : 		{ required : true , maxlength : 250},
+                p4_business_c_website		        : 		{ required : true , maxlength : 100},
+                p4_business_f_name		            : 		{ required : true , maxlength : 250},
+                p4_business_f_phone		            : 		{ required : true , maxlength : 250},
+                p4_business_f_website		        : 		{ required : true , maxlength : 100},
+                p4_business_f_name_contact          : 		{ required : true , maxlength : 250},
                 p4_address1     					: 		{ required : true },
                 p4_city_prev_visit					: 		{ required : true },
                 p4_last_curr_visa_no	            :		{ required : true},
@@ -451,6 +458,13 @@ use Illuminate\Support\Facades\Route;
             },
             messages:{
                 p4_place_likely_visit        	    : 		{ required : "Please enter Places Likely To Be Visited" },
+                p4_business_c_name     				: 		{ required : "Please enter Name" },
+                p4_business_c_phone     			: 		{ required : "Please enter Address, Phone no" },
+                p4_business_c_website     			: 		{ required : "Please enter Website " },
+                p4_business_f_name     				: 		{ required : "Please enter Name" },
+                p4_business_f_phone     			: 		{ required : "Please enter Address, Phone no" },
+                p4_business_f_website     			: 		{ required : "Please enter Website " },
+                p4_business_f_name_contact  		: 		{ required : "Please enter Name and contact number of Indian firm" },
                 p4_address1     				    : 		{ required : "Please enter Address" },
                 p4_city_prev_visit				    : 		{ required : "Please enter Cities Previously Visited in India" },
                 p4_last_curr_visa_no	            :	    { required : "Please enter Last Indian Visa No/Currently Valid Indian Visa No" },
@@ -475,11 +489,13 @@ use Illuminate\Support\Facades\Route;
         app5.validate({
             rules:{
                 p5_passport_photo_name		        : 		{ required : true },
-                p5_medical_photo_name		        : 		{ required : true }
+                p5_medical_photo_name		        : 		{ required : true },
+                p5_business_photo_name		        : 		{ required : true }
             },
             messages:{
                 p5_passport_photo_name        	    : 		{ required : "Please Upload A scanned Copy Of Your original Coloured Passport Or Take A picture Of Your Passport and Uploaded." },
-                p5_medical_photo_name        	    : 		{ required : "Please Upload A Scanned Copy of Letter from the Hospital concerned in India on its letterhead." }
+                p5_medical_photo_name        	    : 		{ required : "Please Upload A Scanned Copy of Letter from the Hospital concerned in India on its letterhead." },
+                p5_business_photo_name        	    : 		{ required : "Upload A Scanned Copy of Business Card." }
             }
         });
     });
