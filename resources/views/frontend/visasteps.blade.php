@@ -18,7 +18,7 @@
             </a>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pad">
-            <a href="info1">
+            <a href="/paymentprocess">
                 <div class="box-1 box-3">
                     <h2>Step 3</h2>
                     <p>Make Payment for <span>Completed Form</span></P>

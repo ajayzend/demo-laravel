@@ -98,8 +98,24 @@ class VisasController extends Controller
         //$settingData = Setting::first();
        // $google_analytics = $settingData->google_analytics;
         //return view('frontend.visas.amendprocess', compact('google_analytics', $google_analytics));
+        $visa_notfound = session()->get('visa_notfound2');
+        session()->put('visa_notfound2', null);
         return view('frontend.visas.amendprocess')->with([
-            'header_title'       => "Apply e-Visa to India | Indian Visa Application"
+            'header_title'       => "Apply e-Visa to India | Indian Visa Application",
+            'visa_notfound'       => $visa_notfound
+        ]);
+    }
+
+    public function dopaymentprocess()
+    {
+        //$settingData = Setting::first();
+        // $google_analytics = $settingData->google_analytics;
+        //return view('frontend.visas.amendprocess', compact('google_analytics', $google_analytics));
+        $visa_notfound = session()->get('visa_notfound');
+        session()->put('visa_notfound', null);
+        return view('frontend.visas.dopaymentprocess')->with([
+            'header_title'       => "Apply e-Visa to India | Indian Visa Application",
+            'visa_notfound'       => $visa_notfound
         ]);
     }
 
@@ -434,10 +450,36 @@ class VisasController extends Controller
         //Input received from the request
         $input = $request->except(['_token']);
         $result = $visa->findByVisaNoSlug($input['evpuid']);
-        session()->put('process_steps', 10001);
-        session()->put('evpuid', $input['evpuid']);
-        session()->put('vid', $result->id);
-        return redirect()->route('frontend.visas.edit', $result->id);
+        if (!empty($result)) {
+            session()->put('process_steps', 10001);
+            session()->put('evpuid', $input['evpuid']);
+            session()->put('vid', $result->id);
+            return redirect()->route('frontend.visas.edit', $result->id);
+        } else {
+            session()->put('visa_notfound2', 'Your Temporary Application ID Is Not Found!');
+            return redirect()->route('frontend.visaamendprocess');
+        }
+    }
+
+    public function setpaymentprocess(StoreVisaRequest $request, VisaRepository $visa)
+    {
+        //Input received from the request
+        $input = $request->except(['_token']);
+
+        $result = $visa->findByVisaNoSlug($input['evpuid']);
+        if(!empty(@$result)) {
+            if (!empty(@$result->p5_passport_photo_name)) {
+                session()->put('process_steps', 10007);
+            } else {
+                session()->put('process_steps', 10001);
+            }
+            session()->put('evpuid', $input['evpuid']);
+            session()->put('vid', $result->id);
+            return redirect()->route('frontend.visas.edit', $result->id);
+        }else{
+            session()->put('visa_notfound', 'Your Temporary Application ID Is Not Found!');
+            return redirect()->route('frontend.paymentprocess');
+        }
     }
 
     public function mail()

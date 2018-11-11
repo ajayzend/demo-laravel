@@ -8,8 +8,10 @@
 
 Route::group(['namespace' => 'Visa'], function () {
     Route::get('/visaamendprocess', 'VisasController@getvisaamendprocess')->name('visaamendprocess');
+    Route::get('/paymentprocess', 'VisasController@dopaymentprocess')->name('paymentprocess');
     Route::get('/payment-update', 'VisasController@getpaymentresponse')->name('payment-update');
     Route::post('/visaamendprocess', 'VisasController@setvisaamendprocess')->name('visaamendprocess');
+    Route::post('/paymentprocess', 'VisasController@setpaymentprocess')->name('paymentprocess');
     Route::resource('visas', 'VisasController', ['except' => ['show']]);
 
     //For DataTables

@@ -83,6 +83,12 @@
                 </div>
 				
 				<br />
+                @if($visa_notfound != null)
+                    <div>
+                        <h2 class="text-center error">{{$visa_notfound}}</h2>
+                    </div>
+                @endif
+
                 {{ Form::open(['route' => 'frontend.visaamendprocess', 'class' => 'form-horizontal', 'id' => 'process3']) }}
                 <div class="form-group">
                     <label class="col-xs-12 col-md-4 control-label" >Temporary Application ID</label>
