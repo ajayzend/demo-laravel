@@ -6,5 +6,17 @@
         <th>Passport Photo</th>
         <td><img height="220" width="220" id="profileimg" src="{{ Storage::disk('public')->url('img/visapassport/' . $visa->p5_passport_photo_name) }}"></td>
     </tr>
+    @if($visa->p1_visa_type == 'e-Business Visa' )
+    <tr>
+        <th>Business Photo</th>
+        <td><img height="220" width="220" id="businessimg" src="{{ Storage::disk('public')->url('img/visabusiness/' . $visa->p5_business_photo_name) }}"></td>
+    </tr>
+    @endif
 
+    @if($visa->p1_visa_type == 'e-Medical Visa' )
+    <tr>
+        <th>Medical Photo</th>
+        <td><img height="220" width="220" id="medicalimg" src="{{ Storage::disk('public')->url('img/visamedical/' . $visa->p5_medical_photo_name) }}"></td>
+    </tr>
+    @endif
 </table>

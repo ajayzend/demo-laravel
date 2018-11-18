@@ -32,6 +32,50 @@
         <td>{{ $visa->p4_place_likely_visit }}</td>
     </tr>
 
+    @if($visa->p1_visa_type == 'e-Business Visa' )
+        <tr>
+            <th colspan="2" style="text-align: center"> <h3>Previous Visa/Currently valid Visa Details</h3></th>
+        </tr>
+
+        <tr>
+            <th colspan="2" style="text-align: center"> <h5>Details of the Applicants Company</h5></th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{ $visa->p4_business_c_name }}</td>
+        </tr>
+        <tr>
+            <th>Address, Phone no</th>
+            <td>{{ $visa->p4_business_c_phone }}</td>
+        </tr>
+        <tr>
+            <th>Website</th>
+            <td>{{ $visa->p4_business_c_website }}</td>
+        </tr>
+
+
+        <tr>
+            <th colspan="2" style="text-align: center"> <h5>Details of Indian Firm</h5></th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{ $visa->p4_business_f_name }}</td>
+        </tr>
+        <tr>
+            <th>Address, Phone no</th>
+            <td>{{ $visa->p4_business_f_phone }}</td>
+        </tr>
+        <tr>
+            <th>Website</th>
+            <td>{{ $visa->p4_business_f_website }}</td>
+        </tr>
+        <tr>
+            <th>Name and contact number of Indian firm.</th>
+            <td>{{ $visa->p4_business_f_name_contact }}</td>
+        </tr>
+    @endif
+
+
     <tr>
         <th colspan="2" style="text-align: center"> <h3>Previous Visa/Currently valid Visa Details</h3></th>
     </tr>
