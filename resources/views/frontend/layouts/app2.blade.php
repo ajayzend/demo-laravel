@@ -229,56 +229,91 @@ use Illuminate\Support\Facades\Route;
         var p1_app_type = $("#p1_app_type").val();
         var p1_edate = $("#p1_edate").val();
         var days = showDays(null, parseDate(p1_edate));
+        var return_bool = false;
         if(days > 30 && stringMatch(p1_app_type, 'Urgent')){
             alert("Please select normal processing from the drop down because your arrival date is beyond 30 days.");
-            return false;
+            return_bool =  false;
+            return return_bool;
         }else{
-            return true;
+            return_bool =  true;
         }
+
+        if(days <= 4 && stringMatch(p1_app_type, 'Normal')){
+            alert("For travel within next 5 days please select Urgent Processing in the Application Type. With normal Processing you can only travel after 5 day.");
+            return_bool =  false;
+            return return_bool;
+        }else{
+            return_bool =  true;
+        }
+
+        return return_bool;
     });
 
     $(document).ready(function(){
-
-
-        $( "#p1_fname" ).keypress(function(e) {
-            var key = e.keyCode;
-            if (key >= 48 && key <= 57) {
+        $( "#p1_fname" ).keydown(function(e) {
+            if (e.ctrlKey || e.altKey) {
                 e.preventDefault();
+            } else {
+                var key = e.keyCode;
+                if (!((key == 8) || (key == 9) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+                    e.preventDefault();
+                }
             }
         });
 
-        $( "#p1_mname" ).keypress(function(e) {
-            var key = e.keyCode;
-            if (key >= 48 && key <= 57) {
+        $( "#p1_mname" ).keydown(function(e) {
+            if (e.ctrlKey || e.altKey) {
+                //alert("okk");
                 e.preventDefault();
+            } else {
+                var key = e.keyCode;
+                if (!((key == 8) || (key == 9) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+                    e.preventDefault();
+                }
             }
         });
 
-        $( "#p1_lname" ).keypress(function(e) {
-            var key = e.keyCode;
-            if (key >= 48 && key <= 57) {
+        $( "#p1_lname" ).keydown(function(e) {
+            if (e.ctrlKey || e.altKey) {
                 e.preventDefault();
+            } else {
+                var key = e.keyCode;
+                if (!((key == 8) || (key == 9) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+                    e.preventDefault();
+                }
             }
         });
 
-        $( "#p3_f_name" ).keypress(function(e) {
-            var key = e.keyCode;
-            if (key >= 48 && key <= 57) {
+        $( "#p3_f_name" ).keydown(function(e) {
+            if (e.ctrlKey || e.altKey) {
                 e.preventDefault();
+            } else {
+                var key = e.keyCode;
+                if (!((key == 8) || (key == 9) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+                    e.preventDefault();
+                }
             }
         });
 
-        $( "#p3_m_name" ).keypress(function(e) {
-            var key = e.keyCode;
-            if (key >= 48 && key <= 57) {
+        $( "#p3_m_name" ).keydown(function(e) {
+            if (e.ctrlKey || e.altKey) {
                 e.preventDefault();
+            } else {
+                var key = e.keyCode;
+                if (!((key == 8) || (key == 9) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+                    e.preventDefault();
+                }
             }
         });
 
-        $( "#p3_s_name" ).keypress(function(e) {
-            var key = e.keyCode;
-            if (key >= 48 && key <= 57) {
+        $( "#p3_s_name" ).keydown(function(e) {
+            if (e.ctrlKey || e.altKey) {
                 e.preventDefault();
+            } else {
+                var key = e.keyCode;
+                if (!((key == 8) || (key == 9) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+                    e.preventDefault();
+                }
             }
         });
         var app1 = $("#process1");
@@ -292,11 +327,11 @@ use Illuminate\Support\Facades\Route;
                 p1_nationality : { required : true, selected : true},
                 p1_port_arrival 	: { required : true, selected : true},
                 p1_passport_number	    : { required : true },
-                p1_dob			: { required : true, date: true},
+                p1_dob			: { required : true/*, date: true*/},
                 p1_email       : { required : true,email : true },
                 p1_email2 	    :{required : true, equalTo: "#p1_email"},
                 p1_phone	    : { required : true, digits : true, maxlength : 10, minlength: 10 },
-                p1_edate		: { required : true, date: true },
+                p1_edate		: { required : true/*, date: true*/ },
                 p1_visa_type		: { required : true, selected : true}
             },
             messages:{

@@ -8,7 +8,16 @@
 				<div class="title"><p>{{ $visa->p1_visa_type }} (eTV) Application</p></div>
 
                     <h2 class="text-center" > <strong>Please upload a scanned copy of your original passport on this page. Please do not upload your digital picture on this page which you uploaded on the last page.</strong></h2>
-                    {{ Form::model($visa, ['route' => ['frontend.visas.update', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => $visa->p5_passport_photo_name ? 'process55' : 'process5', 'enctype' => 'multipart/form-data']) }}
+                    <?php $validate = false;?>
+                    @if($visa->p1_visa_type == 'e-Tourist Visa' && !$visa->p5_passport_photo_name)
+                        <?php $validate = true;?>
+                    @elseif($visa->p1_visa_type == 'e-Business Visa' && !$visa->p5_business_photo_name)
+                        <?php $validate = true;?>
+                    @elseif($visa->p1_visa_type == 'e-Medical Visa' && !$visa->p5_medical_photo_name)
+                        <?php $validate = true;?>
+                    @endif
+
+                    {{ Form::model($visa, ['route' => ['frontend.visas.update', $visa], 'class' => 'form-horizontal', 'method' => 'PATCH',  'id' => $validate ? 'process5' : 'process55', 'enctype' => 'multipart/form-data']) }}
                     {{ Form::hidden('evpuid', $visa->visa_no ) }}
                     {{ Form::hidden('ps', 10005 ) }}
                     <h4 class="text-center"><strong>Temporary Application ID:</strong> <span style="color: #ff231c"><strong>{{ $visa->visa_no }}</strong></span></h4>
@@ -78,7 +87,7 @@
                         <div class="form-group">
                             <div class="col-sm-12 col-xs-12 text-center picture">
                                 {{-- @if($visa->p5_passport_photo_name)--}}
-                                <img height="250" width="250" id="medical" src="{{ Storage::disk('public')->url('img/visapassport/' . $visa->p5_medical_photo_name) }}">
+                                <img height="250" width="250" id="medical" src="{{ Storage::disk('public')->url('img/visamedical/' . $visa->p5_medical_photo_name) }}">
                                 {{--  @endif--}}
                                 {{--<img height="250" width="250"  id="passport" src="{{ URL::asset('img/frontend/images/china.jpg')}}">--}}
                                 <img height="250" width="250" id="medical-default"  src="{{ URL::asset('img/frontend/images/medical.jpg')}}">
@@ -108,7 +117,7 @@
                         <label class="col-sm-4 col-xs-12 control-label" ></label>
                         <div class="col-sm-8 col-xs-12">
                             <input type="submit" name="submit" value="Save And Continue"  class="btn-primary submit-btn2">
-                            <input type="submit"  name="submit" value="Save and Temporarily Exit"   class="btn-primary submit-btn2">
+                            <input type="submit"  name="submit" id="p5_submit_button_exit" value="Save and Temporarily Exit"   class="btn-primary submit-btn2">
                         </div>
                     </div>
 
@@ -179,5 +188,17 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
+
+        $("#p5_submit_button_exit").click(function() {
+            var return_bool = false;
+            var msg1 = 'Are you sure you want to Temporary Exit?';
+            if(confirm(msg1)){
+                alert("Your Reference No. is {{$visa->visa_no}}");
+                return true;
+            }else{
+                return_bool = false;
+            }
+            return return_bool;
+        });
     </script>
 @endsection

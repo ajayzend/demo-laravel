@@ -504,7 +504,7 @@
                         <label class="col-sm-4 col-xs-12 control-label" ></label>
                         <div class="col-sm-8 col-xs-12">
                             <input type="submit" name="submit" value="Save And Continue" id="p3_submit_button"  class="btn-primary submit-btn2">
-                            <input type="submit"  name="submit" value="Save and Temporarily Exit"   class="btn-primary submit-btn2">
+                            <input type="submit"  name="submit" value="Save and Temporarily Exit" id="p3_submit_button_exit"   class="btn-primary submit-btn2">
                         </div>
                     </div>
 
@@ -555,14 +555,14 @@
             }).trigger('change');
 
             $("#p3_flag11").change(function() {
-                if ($("#p3_flag11").val() == 1) {
+                if ($("#p3_flag11").is(":checked")) {
                     $("#p3_flag1_detail").show();
                     $("#p3_flag1_detail").attr("disabled", false);
                 }
             }).trigger('change');
 
             $("#p3_flag12").change(function() {
-                if ($("#p3_flag12").val() == 0) {
+                if ($("#p3_flag12").is(":checked")) {
                     $("#p3_flag1_detail").hide();
                     $("#p3_flag1_detail").attr("disabled", true);
                 }
@@ -590,7 +590,7 @@
 
 
             $("#p3_flag21").change(function() {
-                if ($("#p3_flag21").val() == 'Yes') {
+                if ($("#p3_flag21").is(":checked")) {
                     $("#other_organization").show();
                     $("#p3_other_organization").attr("disabled", false);
                     $("#p3_other_desination").attr("disabled", false);
@@ -600,7 +600,7 @@
             }).trigger('change');
 
             $("#p3_flag22").change(function() {
-                if ($("#p3_flag22").val() == 'No') {
+                if ($("#p3_flag22").is(":checked")) {
                     $("#other_organization").hide();
                     $("#p3_other_organization").attr("disabled", true);
                     $("#p3_other_desination").attr("disabled", true);
@@ -619,6 +619,18 @@
                 }else{
                     return true;
                 }
+            });
+
+            $("#p3_submit_button_exit").click(function() {
+                var return_bool = false;
+                var msg1 = 'Are you sure you want to Temporary Exit?';
+                if(confirm(msg1)){
+                    alert("Your Reference No. is {{$visa->visa_no}}");
+                    return true;
+                }else{
+                    return_bool = false;
+                }
+                return return_bool;
             });
             // To Use Select2
             // Backend.Select2.init();

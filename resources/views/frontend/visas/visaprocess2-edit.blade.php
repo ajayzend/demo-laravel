@@ -81,10 +81,10 @@
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Gender</label>
                             <div class="col-sm-4 col-xs-12">
                                 <select class="form-control" id="p2_gender" name="p2_gender" >
-                                    <option value="0">Gender</option>
-                                    <option {{ $visa->p2_gender = 'Female' ? 'selected="selected"' : '' }} value="Female">Female</option>
-                                    <option {{ $visa->p2_gender = 'Male' ? 'selected="selected"' : '' }} value="Male">Male</option>
-                                    <option {{ $visa->p2_gender = 'Transgender' ? 'selected="selected"' : '' }} value="Transgender">Transgender</option>
+                                    <option value="0">Please Select</option>
+                                    <option {{ $visa->p2_gender == 'Female' ? 'selected="selected"' : '' }} value="Female">Female</option>
+                                    <option {{ $visa->p2_gender == 'Male' ? 'selected="selected"' : '' }} value="Male">Male</option>
+                                    <option {{ $visa->p2_gender == 'Transgender' ? 'selected="selected"' : '' }} value="Transgender">Transgender</option>
                                 </select>
                             </div>
                             <div class="col-sm-4 col-xs-12 des">
@@ -181,9 +181,9 @@
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span> Did You Acquire Nationality By Birth or By Naturalization?</label>
                             <div class="col-sm-4 col-xs-12">
                                 <select class="form-control" name="p2_birth_nationality" id="p2_birth_nationality">
-                                    <option value="0"> Did You Acquire Nationality By Birth or By Naturalization?</option>
-                                    <option {{ $visa->p2_birth_nationality = 'By Birth' ? 'selected="selected"' : '' }}  value="By Birth">By Birth</option>
-                                    <option {{ $visa->p2_birth_nationality = 'Naturalization' ? 'selected="selected"' : '' }}  value="Naturalization">Naturalization</option>
+                                    <option value="0"> Please Select</option>
+                                    <option {{ $visa->p2_birth_nationality == 'By Birth' ? 'selected="selected"' : '' }}  value="By Birth">By Birth</option>
+                                    <option {{ $visa->p2_birth_nationality == 'Naturalization' ? 'selected="selected"' : '' }}  value="Naturalization">Naturalization</option>
                                 </select>
                             </div>
                             <div class="col-sm-4 col-xs-12 des">
@@ -290,7 +290,7 @@
                                 </div>
 
                                 <div class="col-sm-4 col-xs-12 des">
-                                    Applicant's Passport Number
+                                    Passport No
                                 </div>
                             </div>
                             <div class="form-group">
@@ -323,7 +323,7 @@
                                 </div>
 
                                 <div class="col-sm-4 col-xs-12 des">
-                                    Applicant's Passport Number
+                                    Nationality described therein
                                 </div></div>
                         </div>
                         <div class="title">
@@ -331,8 +331,8 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" ></label>
                             <div class="col-sm-8 col-xs-12">
-                                <input type="submit" name="submit" value="Save And Continue"  class="btn-primary submit-btn2">
-                                <input type="submit"  name="submit" value="Save and Temporarily Exit"   class="btn-primary submit-btn2">
+                                <input type="submit" name="submit" id="p2_submit_button" value="Save And Continue"  class="btn-primary submit-btn2">
+                                <input type="submit"  name="submit" id="p2_submit_button_exit" value="Save and Temporarily Exit"   class="btn-primary submit-btn2">
                             </div>
                         </div>
 
@@ -411,6 +411,43 @@
                     $("#p2_other_nationality_mentioned").attr("disabled", true);
                 }
             }).trigger('change');
+
+            $("#p2_submit_button").click(function() {
+                var p2_birth_nationality = $("#p2_birth_nationality").val();
+                var p2_passport_date_expiry = $("#p2_passport_date_expiry").val();
+                var return_bool = false;
+                if(p2_birth_nationality == 'Naturalization' && $("#p2_prev_nationality").val() == 0){
+                    $("#p2_prev_nationality").focus();
+                    alert("Please select Prev Nationality.");
+                   return false;
+                }else{
+                    return_bool = true;
+                }
+
+
+                var days = showDays(null, parseDate(p2_passport_date_expiry));
+                if(days <= 179){
+                    $("#p2_passport_date_expiry").val('');
+                    $("#p2_passport_date_expiry").focus();
+                    alert("Minimum Six Month Validity is Required.");
+                    return false;
+                }else{
+                    return_bool =  true;
+                }
+                return return_bool;
+            });
+
+            $("#p2_submit_button_exit").click(function() {
+                var return_bool = false;
+                var msg1 = 'Are you sure you want to Temporary Exit?';
+                if(confirm(msg1)){
+                    alert("Your Reference No. is {{$visa->visa_no}}");
+                    return true;
+                }else{
+                    return_bool = false;
+                }
+                return return_bool;
+            });
             // To Use Select2
             // Backend.Select2.init();
         });

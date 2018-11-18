@@ -537,7 +537,7 @@
                                 <label class="col-sm-4 col-xs-12 control-label" ></label>
                                 <div class="col-sm-8 col-xs-12">
                                     <input type="submit" name="submit" value="Save And Continue"  class="btn-primary submit-btn2">
-                                    <input type="submit"  name="submit" value="Save and Temporarily Exit"   class="btn-primary submit-btn2">
+                                    <input type="submit"  name="submit" id="p4_submit_button_exit" value="Save and Temporarily Exit"   class="btn-primary submit-btn2">
                                 </div>
                             </div>
 
@@ -633,6 +633,18 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
+
+        $("#p4_submit_button_exit").click(function() {
+            var return_bool = false;
+            var msg1 = 'Are you sure you want to Temporary Exit?';
+            if(confirm(msg1)){
+                alert("Your Reference No. is {{$visa->visa_no}}");
+                return true;
+            }else{
+                return_bool = false;
+            }
+            return return_bool;
+        });
 
         $("#saarcContainer").czMore();
     </script>

@@ -36,6 +36,20 @@ class VisaRepository extends BaseRepository
     protected $visa_passport_path;
 
     /**
+     * Visa Business Photo Path.
+     *
+     * @var string
+     */
+    protected  $visa_business_path;
+
+    /**
+     * Visa Medical Photo Path.
+     *
+     * @var string
+     */
+    protected $visa_medical_path;
+
+    /**
      * Storage Class Object.
      *
      * @var \Illuminate\Support\Facades\Storage
@@ -49,6 +63,8 @@ class VisaRepository extends BaseRepository
     {
         $this->visa_profile_path = 'img'.DIRECTORY_SEPARATOR.'visaprofile'.DIRECTORY_SEPARATOR;
         $this->visa_passport_path = 'img'.DIRECTORY_SEPARATOR.'visapassport'.DIRECTORY_SEPARATOR;
+        $this->visa_medical_path = 'img'.DIRECTORY_SEPARATOR.'visamedical'.DIRECTORY_SEPARATOR;
+        $this->visa_business_path = 'img'.DIRECTORY_SEPARATOR.'visbusiness'.DIRECTORY_SEPARATOR;
         $this->storage = Storage::disk('public');
     }
 
@@ -98,7 +114,7 @@ class VisaRepository extends BaseRepository
         $input['p1_edate'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p1_edate']));
         $res = $visa->create($input);
         if ($res) {
-                return $res;
+            return $res;
         }
         /*if (Visa::create($input)) {
             return true;
@@ -148,12 +164,22 @@ class VisaRepository extends BaseRepository
         else if($process_steps == 10005){
             if (!empty($input['p5_passport_photo_name'])) {
                 $this->removeImage($visa, 'passport');
-
                 $input['p5_passport_photo_name'] = $this->uploadImage($visa, $input['p5_passport_photo_name'], 'passport');
+            }
+
+            if (!empty($input['p5_business_photo_name'])) {
+                $this->removeImage($visa, 'business');
+                $input['p5_business_photo_name'] = $this->uploadImage($visa, $input['p5_business_photo_name'], 'business');
+            }
+
+
+            if (!empty($input['p5_medical_photo_name'])) {
+                $this->removeImage($visa, 'medical');
+                $input['p5_medical_photo_name'] = $this->uploadImage($visa, $input['p5_medical_photo_name'], 'medical');
             }
         }
 
-    	if ($visa->update($input))
+        if ($visa->update($input))
             return true;
 
         throw new GeneralException(trans('exceptions.backend.visas.update_error'));
@@ -166,8 +192,12 @@ class VisaRepository extends BaseRepository
     {
         if ($type == 'profile')
             $path = $this->visa_profile_path;
-        elseif ($type == 'passport')
+        else if ($type == 'passport')
             $path = $this->visa_passport_path;
+        else if ($type == 'business')
+            $path = $this->visa_business_path;
+        else if ($type == 'medical')
+            $path = $this->visa_medical_path;
 
         $image_name = time() . $logo->getClientOriginalName();
 
@@ -185,6 +215,10 @@ class VisaRepository extends BaseRepository
             $path = $this->visa_profile_path;
         elseif ($type == 'passport')
             $path = $this->visa_passport_path;
+        elseif ($type == 'business')
+            $path = $this->visa_business_path;
+        elseif ($type == 'medical')
+            $path = $this->visa_medical_path;
 
         if ($visa->$type && $this->storage->exists($path.$visa->$type)) {
             $this->storage->delete($path.$visa->$type);
@@ -220,7 +254,7 @@ class VisaRepository extends BaseRepository
             return $this->query()->wherevisa_no($visa_slug)->firstOrFail();
         }
         return false;
-        //throw new GeneralException(trans('exceptions.backend.access.visas.not_found'));
+       // throw new GeneralException(trans('exceptions.backend.access.visas.not_found'));
     }
 
     public function prefixRandomNumber(){

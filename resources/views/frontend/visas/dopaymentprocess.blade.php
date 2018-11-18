@@ -96,7 +96,7 @@
                         <label class="col-xs-12 col-md-4 control-label" >Temporary Application ID</label>
                         <div class="col-xs-12 col-md-4">
 
-                            <input   class="form-control" placeholder="Temporary Application ID" name="evpuid" id="evpuid" />
+                            <input   class="form-control" placeholder="Temporary Application ID" name="evpuid" id="evpuid" autocomplete="off"/>
                         </div>  <div class="col-xs-4 col-md-4">
 
                             (Example : GBR9810358689)

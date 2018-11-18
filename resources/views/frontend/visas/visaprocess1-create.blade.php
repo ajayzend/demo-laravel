@@ -58,10 +58,7 @@
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Passport
                                 Type</label>
                             <div class="col-sm-6 col-xs-12">
-                                <select id="p1_passport_type" class="form-control" name="p1_passport_type">
-
-                                    <option value="Ordinary Passport" selected="selected"> Ordinary Passport</option>
-                                </select>
+                                <input id="p1_passport_type" disabled type="text" value="Ordinary Passport" class="form-control" placeholder="Ordinary Passport" name="p1_passport_type" autocomplete="off"/>
                             </div>
                         </div>
 
