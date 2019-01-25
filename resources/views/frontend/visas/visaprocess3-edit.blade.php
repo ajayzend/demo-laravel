@@ -569,7 +569,7 @@
             }).trigger('change');
 
             $("#p3_current_occupation").change(function() {
-                if ($("#p3_current_occupation").val() == 3) { // Other
+                if ($("#p3_current_occupation").val() == 23) { // Other
                     $("#p3_other_occupation").show();
                     $("#p3_other_occupation").attr("disabled", false);
                 }else{
@@ -579,7 +579,7 @@
             }).trigger('change');
 
             $("#p3_past_occupation").change(function() {
-                if ($("#p3_past_occupation").val() == 3) { // Other
+                if ($("#p3_past_occupation").val() == 23) { // Other
                     $("#p3_other_past_occupation").show();
                     $("#p3_other_past_occupation").attr("disabled", false);
                 }else{

@@ -370,7 +370,7 @@
             }).trigger('change');
 
             $("#p2_religion").change(function() {
-                if ($("#p2_religion").val() == 3) {
+                if ($("#p2_religion").val() == 11) {
                     $("#p2_other_religion").show();
                     $("#p2_other_religion").attr("disabled", false);
                 } else {
@@ -380,7 +380,7 @@
             }).trigger('change');
 
             $("#p2_education").change(function() {
-                if ($("#p2_education").val() == 3) {
+                if ($("#p2_education").val() == 8) {
                     $("#p2_other_education").show();
                     $("#p2_other_education").attr("disabled", false);
                 } else {
