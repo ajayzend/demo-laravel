@@ -33,32 +33,32 @@
                 <div class="asides2">
                     <h2>Indian Visa Informatione</h2>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="active"><img class="tick"
+                        <li><a href="/" class="active"><img class="tick"
                                                             src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Home</a>
                         </li>
                         <li><a href="#info1"><img class="tick"
                                                   src="{{ URL::asset('img/frontend/images/tick.jpg')}}">
                                 Urgent e-Visa</a></li>
-                        <li><a href="#Instruction"><img class="tick"
+                        <li><a href="instruction"><img class="tick"
                                                         src="{{ URL::asset('img/frontend/images/tick.jpg')}}">
                                 Instruction for Applicant</a></li>
 
-                        <li><a href="#document"><img class="tick"
+                        <li><a href="document"><img class="tick"
                                                      src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Document
                                 Requirement </a></li>
                         <li><a href="privacy-policy"><img class="tick"
                                                     src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Privacy
                                 Policy </a></li>
-                        <li><a href="#condition"><img class="tick"
+                        <li><a href="condition"><img class="tick"
                                                       src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Terms
                                 & Condition </a></li>
-                        <li><a href="#about"><img class="tick"
+                        <li><a href="about-us"><img class="tick"
                                                   src="{{ URL::asset('img/frontend/images/tick.jpg')}}">About
                                 Us Policy</a></li>
-                        <li><a href="#contact"><img class="tick"
+                        <li><a href="contact"><img class="tick"
                                                     src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Contact
                                 Us</a></li>
-                        <li><a href="#Disclaimer"><img class="tick"
+                        <li><a href="disclaimer"><img class="tick"
                                                        src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Disclaimer</a>
                         </li>
                         <li><a href="#FAQ"><img class="tick"

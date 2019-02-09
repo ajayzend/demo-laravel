@@ -7,16 +7,52 @@
                     <div class="about_us">
                         <h4>Welcome to Indian</br> <span>Visa Online</span></h4>
                         <h3>e-Visa India</h3>
-                        <p>All foreign nationals travelling to India must have a valid passport and a print out of the Indian tourist visa approval sent to their email before leaving the country they are travelling from. All tourist are requested to apply for visa to India through the online e-tourist visa link. 
-</p>
-<p><strong>Indian Visa Process:</strong></p>
+                        <p>It is mandatory for all the foreign nationals to carry valid passport along with the print out of Indian tourist visa approval sent to their email, before leaving the country of travel origin. Visa to India can be applied through the online e-tourist visa link.</p>
+<p><strong>Important guidelines for the Indian Visa Process</strong></p>
 
+ <ul><li><p>After the initiation or submission of an application, one must not start any other application against the same passport number.  The consecutive applications will be rejected by the Government of India due to redundancy.</p>
+     </li>
+     <li><p>One shall not be granted new e-Visa against the same passport until the expiry of the existing e-Visa, this is applicable even if the details are incorrect.</p></li>
+     <li><p>There can be no cancellation, amendment or refund once the visa is granted or an application is submitted against a passport.</p></li>
+     <li><p>It is strictly advisable to submit only one e-Visa India application form at a timeand complete the same application that was initiated.</p></li>
+     <li><p>Applicants are advised to carefully fill in the details in the application and review the same before makingthefinalpayment.</p></li>
+     <li><p>In case if the application ID cannot be traced, then one must immediately contact the 24/7 Customer Care service to get it checked before making further process.</p></li>
+ </ul>
 
-<p>It is extremely important to understand the process of the online India Visa. Once an application is initiated or submitted then you must not start or submit any other application against the same passport number at any source. All subsequent Indian Visa applications shall be rejected by the Government of India due to redundancy/duplicity. It is strictly advised to complete and submit only one e-Visa India application form and not submit more than one application. You shall not be granted any other Indian e-visa against the same passport till the time your previous e-visa is valid even if details are incorrect in the existing visa. Once an application is submitted or visa is granted against a passport, it cannot be cancelled, amended or refunded. Applicants are advised to be utmost careful about the details submitted in the applications and must review before finally making the payment. It is strictly advised not submit more than one applications at the same time and only the same application be completed that was initiated. If you are unable to trace the application ID the you must contact the 24/7 Customer care number immediately and get it checked before proceeding further to avoid any sort of complications.
-
-</p>
+ <p><strong>Checklist for Indian Visa Application</strong></p>
+    <ul>
+        <li><p>Scanned copy of front page of the original passport.</p></li>
+        <li><p>Recent digital photograph with white background.</p></li>
+    </ul>
+<p>Make sure that these documents are ready and at hands reach, as it is required to upload them along with the application. Also, to note that visa fees are non-refundable.</p>
+<p><strong>e-Tourist Visa India requirement</strong></p>
+    <ul>
+        <li><p>An applicant's passport is required to have a minimum validity of six months from the date of arrival in India.</p></li>
+        <li><p>It is necessary that the passport has at least two blank pages for Visa stamping.</p></li>
+        <li><p>At the time of arrival travelers should carry an onward journey ticket or a return ticket.</p></li>
+        <li><p>Sufficient expenditure money should be at one’s disposal during the stay in India.</p></li>
+        <li><p>Applications need to be made online minimum of 4 days and maximum of 120 days prior to the date of arrival.</p></li>
+    </ul>
+<p>The validity of Indian Visa is for 60 days from the date of arrival. The visa is to be availed during the validity period.</p>
+<p><strong> The Indian e-Visa is divided into three categories</strong> </p>
+     <ul>
+         <li><p><strong>e-Tourist Visa</strong></p></li>
+         <p>Valid for two entries from the first arrival date.</p>
+         <li><p><strong>e-Business Visa </strong></p></li>
+         <p>Also Valid for two entries from the first arrival date.</p>
+         <li><p><strong>e-Medical Visa</strong></p></li>
+         <p>Two e-Medical Attendant Visas are granted against one e-Medical Visa.</p>
+     </ul>
+ <p>Valid for three entries from the first arrival date</p>
+  <p>Indian Entry Points that Accept e-Visas</p>
+  <p><strong>One can get entry through 26 international airports in India</strong></P>
+   <p>Ahmedabad, Amritsar, Bagdogra, Bangalore, Calicut, Chennai, Chandigarh, Kochi, Coimbatore, Delhi, Gaya, Goa, Guwahati, Hyderabad, Jaipur, Kolkata, Lucknow, Madurai, Mangalore, Mumbai, Nagpur, Pune, Tiruchirapalli, Trivandrum, Varanasi, and Vishakhapatnam</p>
+<p><strong>One can also enter through the five designated seaports in India</strong> </p>
+ <p>Kochi, Goa, Mangalore, Mumbai, Chennai.</p>
+ <p>Foreigners are allowedto exit from any of the authorized Immigration Check Posts (ICPs) in India.</p>
+ <p>Finally, the Indian Embassy reserves the authority to the grant or reject the Indian Visa.</p>
 <p><strong> List of Countries eligible for Indian e Visa:</strong> </p>
-<p> <strong>Click here to view the complete list </strong></p>
+{{--<p> <strong>Click here to view the complete list </strong></p>--}}
 
 <div class="panel clum_new" style="display: block;">
                         <div class="clum_new">
@@ -555,7 +591,7 @@
 					  
 					  
 					  <br /><br /><br />
-<p> <strong>Indian Visa Application
+{{--<p> <strong>Indian Visa Application
 Checklist: </strong></p>
 <p>For obtaining the Visa for India, visitors would only need to upload a scanned copy of the front page of the original passport and a digital photograph with white background which can be taken at home with your digital camera or camera phone. It must be with a white background. Please make sure your have these documents ready on your system, laptop, IPAD or smart phone before you start filling the application form because you will be required to upload them with the application. Visa fees are non-refundable.
 
@@ -569,7 +605,7 @@ Checklist: </strong></p>
 
 </p>
                         <button class="btn-info about_read">Read More</button>
-                    </div>
+           --}}         </div>
 
 
             
