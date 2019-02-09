@@ -146,7 +146,7 @@ class VisasController extends Controller
         if ($sess_vid == $visa->id && session()->get('evpuid') != '') {
             $visa->p1_dob = date('d/m/Y', strtotime($visa->p1_dob));
             $visa->p1_edate = date('d/m/Y', strtotime($visa->p1_edate));
-            if(isset($visa->p2_passport_date_issu))
+            if(isset($visa->p2_passport_date_issue))
                 $visa->p2_passport_date_issue = date('d/m/Y', strtotime($visa->p2_passport_date_issue));
             if(isset($visa->p2_passport_date_expiry))
                 $visa->p2_passport_date_expiry = date('d/m/Y', strtotime($visa->p2_passport_date_expiry));
@@ -330,8 +330,10 @@ class VisasController extends Controller
                     $input['p2_changed_your_name'] = 'no';
                 $this->repository->update($visa, $input);
                 session()->put('process_steps', 10003);
-                if($input['submit'] == 'Save and Temporarily Exit')
+                if($input['submit'] == 'Save and Temporarily Exit') {
+                    $this->exit_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_type);
                     return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+                }
                 else
                     return redirect()->route('frontend.visas.edit', $vid);
             }
@@ -342,8 +344,10 @@ class VisasController extends Controller
                     $input['p3_copy_address'] = 'no';
                 $this->repository->update($visa, $input);
                 session()->put('process_steps', 10004);
-               if($input['submit'] == 'Save and Temporarily Exit')
-                    return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+               if($input['submit'] == 'Save and Temporarily Exit') {
+                   $this->exit_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_type);
+                   return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+               }
                 else
                     return redirect()->route('frontend.visas.edit', $vid);
             }
@@ -382,8 +386,10 @@ class VisasController extends Controller
                 //print "<pre>";print_r($input);exit;
                 $this->repository->update($visa, $input);
                 session()->put('process_steps', 10005);
-                 if($input['submit'] == 'Save and Temporarily Exit')
-                    return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+                 if($input['submit'] == 'Save and Temporarily Exit') {
+                     $this->exit_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_type);
+                     return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+                 }
                 else
                     return redirect()->route('frontend.visas.edit', $vid);
             }
@@ -393,8 +399,10 @@ class VisasController extends Controller
                     $input['p5_passport_photo_name'] = @$input['p5_passport_photo_name5'];
                 $this->repository->update($visa, $input);
                 session()->put('process_steps', 10006);
-                if($input['submit'] == 'Save and Temporarily Exit')
+                if($input['submit'] == 'Save and Temporarily Exit') {
+                    $this->exit_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_type);
                     return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+                }
                 else
                     return redirect()->route('frontend.visas.edit', $vid);
             }
@@ -486,11 +494,14 @@ class VisasController extends Controller
         }
     }
 
-    public function mail()
+    public function exit_email($name, $email, $visatype)
     {
         $template = "evisa-exit-process";
-        $name = 'Ajay';
-        Mail::to('ajaysearch123@gmail.com')->cc('ajay.kumar.iimt@gmail.com')->send(new SendMailable($name, $template));
+        $subject = "$visatype Application Request for India";
+        //$name = 'Ajay';
+       // Mail::to($email)->cc('ajay.kumar.iimt@gmail.com')->send(new SendMailable($name, $template));
+        $name = ucfirst(strtolower($name));
+        Mail::to($email)->cc('ajay.kumar.iimt@gmail.com')->send(new SendMailable($name, $template, $subject, $visatype));
 
         return 'Email was sent';
     }
