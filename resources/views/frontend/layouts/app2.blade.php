@@ -230,7 +230,12 @@ use Illuminate\Support\Facades\Route;
         var p1_edate = $("#p1_edate").val();
         var days = showDays(null, parseDate(p1_edate));
         var return_bool = false;
-        if(days > 30 && stringMatch(p1_app_type, 'Urgent')){
+        var today = new Date();
+        if (days < -1) {
+            alert("Your arrival date must be greater than or equal to current date.");
+            return false;
+        }
+            if(days >= 28 && stringMatch(p1_app_type, 'Urgent')){
             alert("Please select normal processing from the drop down because your arrival date is beyond 30 days.");
             return_bool =  false;
             return return_bool;

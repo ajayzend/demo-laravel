@@ -96,15 +96,6 @@
 				</div> 
 				</div>
 
-				
-				
-				
-				
-				
-				
-				
-				
-				
                 <!-- E-Visa Process Flow -->
 				<div class="container">
                 <div class="clearfix in-pages-sectn">
@@ -164,11 +155,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="{{ URL::asset('img/frontend/images/logo-foo.png')}}" alt="logo" class="img-responsive"/>
+                <img src="{{ URL::asset('img/frontend/images/logo.png')}}" alt="logo" class="img-responsive"/>
                 <p>Site Hosted & Maintained by National Informatics Centre Content provided by Ministry of Home Affairs,
                     Government of India.</p>
             </div>
-            <div class="col-md-3">
+            {{--<div class="col-md-3">
                 <div class="links">
                     <h3>Links</h3>
                     <ul class="list-unstyled">
@@ -180,33 +171,32 @@
                         <li><a href="#">Faq Axis Payment Related</a></li>
                     </ul>
                 </div>
-            </div>
+            </div>--}}
             <div class="col-md-3">
                 <div class="links">
                     <h3>Links</h3>
                     <ul class="list-unstyled">
-                        <li><a href="#">e-visa</a></li>
-                        <li><a href="#">Instruction For Applicant</a></li>
-                        <li><a href="#">Document Requirement</a></li>
-                        <li><a href="#">Useful Web Links</a></li>
-                        <li><a href="#">Faq-sbi Payment Related</a></li>
-                        <li><a href="#">Faq Axis Payment Related</a></li>
+                        <li><a href="/">e-visa</a></li>
+                        <li><a href="/instruction">Instruction For Applicant</a></li>
+                        <li><a href="/document">Document Requirement</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                       {{-- <li><a href="#">Faq-sbi Payment Related</a></li>
+                        <li><a href="#">Faq Axis Payment Related</a></li>--}}
                     </ul>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="address">
                     <h3>Contact Us</h3>
-                    <p><i class="fa fa-phone" aria-hidden="true"></i> +91 -1124300666</p>
-                    <p><i class="fa fa-envelope" aria-hidden="true"></i> indiatvoa@gov.in</p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i> +91 -88888888888888</p>
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i>support@evisaindia.in</p>
                     <p></p>
                 </div>
             </div>
         </div>
     </div>
     <div class="bottom_footer">
-        <p>Copyright &copy 2018</p>
-    </div>
+        <p>Copyright &copy {{date('Y')}}</p>
     </div>
 </footer>
 

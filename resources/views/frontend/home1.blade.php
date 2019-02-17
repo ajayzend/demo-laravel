@@ -18,13 +18,13 @@
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="asides">
                     <h2><i class="fa fa-phone"></i> &nbsp24/7 Customer Care</h2>
-                    <p><i class="fa fa-envelope" aria-hidden="true"></i> info@e-vsaindia.co</P>
+                    {{--<p><i class="fa fa-envelope" aria-hidden="true"></i> support@evisaindia.in</P>--}}
                     <ul class="list-unstyled">
                         <li><a href="#"><img src="{{ URL::asset('img/frontend/images/india.png')}}" alt=""
                                              class="img-responsive"/> 24/7 Customer Care</a>
                         <li>
                         <li><a href="#"><img src="{{ URL::asset('img/frontend/images/india.png')}}" alt=""
-                                             class="img-responsive"/>abc@evisaindia.com</a>
+                                             class="img-responsive"/>support@evisaindia.in</a>
                         <li>
 
                     </ul>
@@ -55,13 +55,13 @@
                         <li><a href="about-us"><img class="tick"
                                                   src="{{ URL::asset('img/frontend/images/tick.jpg')}}">About
                                 Us Policy</a></li>
-                        <li><a href="contact"><img class="tick"
+                       {{-- <li><a href="contact"><img class="tick"
                                                     src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Contact
-                                Us</a></li>
+                                Us</a></li>--}}
                         <li><a href="disclaimer"><img class="tick"
                                                        src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Disclaimer</a>
                         </li>
-                        <li><a href="#FAQ"><img class="tick"
+                        <li><a href="/faq"><img class="tick"
                                                 src="{{ URL::asset('img/frontend/images/tick.jpg')}}">FAQ</a>
                         </li>
 

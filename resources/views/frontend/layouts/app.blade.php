@@ -78,6 +78,86 @@
             {
                 $.session.clear();
             }
+                    (function () {
+                        /*var findTextInTable = function ($tableElements, text) {
+                         // highlights if text found (not highlighting during typing)
+                         var matched = false;
+                         $tableElements.removeClass('highlight');
+
+                         $.each($tableElements, function (index, item) {
+                         var $el = $(item);
+                         if ($el.html() == text && !matched) {
+                         console.log("matched", $el, $el.html());
+                         $el.addClass('highlight');
+                         matched = true;
+                         }
+                         });
+                         };*/
+                        var removeHighlight = function () {
+                            $('span.highlight').contents().unwrap();
+                        };
+
+                        var wrapContent = function (index, $el, text) {
+                            var $highlight = $('<span class="highlight"/>')
+                                    .text(text.substring(0, index));
+                            //console.log(text.substring(0, index));
+                            var normalText = document.createTextNode(text.substring(index, text.length));
+                            //console.log(index, $highlight.text(), normalText);
+                            $el.html($highlight).append(normalText);
+                        };
+
+                        var highlightTextInTable = function ($tableElements, searchText) {
+                            // highlights if text found (during typing)
+                            var matched = false;
+                            //remove spans
+                            removeHighlight();
+
+                            $.each($tableElements, function (index, item) {
+                                var $el = $(item);
+                                if ($el.text().toLowerCase().search(searchText) != -1 && !matched) {
+                                    //console.log("matched", $el, $el.html());
+                                    wrapContent(searchText.length, $el, $el.html());
+                                    //console.log(searchText, $el.text());
+                                    if (searchText == $el.text().toLowerCase()) {
+                                        // found the entry
+                                        //console.log("matched");
+                                        matched = true;
+                                    }
+                                }
+                            });
+                        };
+
+                        $(function () {
+                            //load table into object
+
+
+                            //console.log($tableRows, $tableElements);
+
+                            $('#search').on('keyup', function (e) {
+
+                                var searchText = $(this).val().toLowerCase();
+                                $("#evisa-country tr").filter(function() {
+                                    $(this).toggle($(this).text().toLowerCase().indexOf(searchText) > -1);
+                                    var $tableRows = $('table tr');
+                                    var $tableElements = $tableRows.children();
+
+
+
+                                //var searchText = $(this).val();
+                                if (searchText.length == 0) {
+                                    // catches false triggers with empty input (e.g. backspace delete or case lock switch would trigger the function)
+                                    removeHighlight(); // remove last remaining highlight
+                                    return;
+                                }
+                                //findTextInTable($tableElements, searchText);
+
+                                highlightTextInTable($tableElements, searchText);
+                                });
+                            });
+                        });
+
+                    })();
+
         </script>
         @include('frontend.footer')
         @include('includes.partials.ga')

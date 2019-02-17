@@ -44,6 +44,7 @@ class BaseModel extends Model
             $items[$item['id']] = $item['name'];
         }
 
+        sort($items);
         return $items;
     }
 

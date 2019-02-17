@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Settings\Setting;
 use App\Repositories\Frontend\Pages\PagesRepository;
-
+use App\Models\Evisacountry\Evisacountry;
+use App\Models\Port\Port;
 /**
  * Class FrontendController.
  */
@@ -16,10 +17,13 @@ class FrontendController extends Controller
      */
     public function index()
     {
+        $evisacountry = Evisacountry::getSelectData();
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
 
-        return view('frontend.home', compact('google_analytics', $google_analytics));
+        return view('frontend.home', compact('google_analytics', $google_analytics))->with([
+            'evisa_country'       => $evisacountry
+        ]);
     }
 
         public function privacy()
@@ -68,6 +72,19 @@ class FrontendController extends Controller
         $google_analytics = $settingData->google_analytics;
 
         return view('frontend.pages.disclaimer', compact('google_analytics', $google_analytics));
+    }
+
+    public function faq()
+    {
+        $evisacountry = Evisacountry::getSelectData();
+        $port = Port::getSelectData();
+        $settingData = Setting::first();
+        $google_analytics = $settingData->google_analytics;
+
+        return view('frontend.pages.faq', compact('google_analytics', $google_analytics))->with([
+            'evisa_country'       => $evisacountry,
+            'port_arrival'       => $port
+        ]);
     }
 
     public function visaProcess2()
