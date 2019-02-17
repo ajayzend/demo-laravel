@@ -15,12 +15,12 @@
                         <div class="ser_inner_main">
                          
                             <img src="{{ URL::asset('img/frontend/images/bag.png')}}" alt="" class="img-responsive"/>
-							   <h4>SERVICES PROVIDED BY E-VISA INDIA</h4>
+							   <h4>SERVICES PROVIDED BY e-VISA INDIA</h4>
                             <p>
                             <div class="col-xs-1"><i class="fa fa-check" aria-hidden="true"></i></div>
                             <div class=""><span><b>Customer Care:</b> </span> Customer Care
                                 available 24X7
-                                Over the Phone as well as email.
+                                Over the email as well as chat.
                             </div>
                             </p>
                             <p>
@@ -47,7 +47,7 @@
                         <div class="ser_inner_main">
                            
                             <img src="{{ URL::asset('img/frontend/images/hand.png')}}" alt="" class="img-responsive"/>
-							 <h4>5 REASONS TO CHOOSE E-VISA INDIA</h4>
+							 <h4>5 REASONS TO CHOOSE e-VISA INDIA</h4>
                             <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
                             <div class=""><span><b>Hassle-free:</b> </span> Completely online
@@ -79,7 +79,7 @@
                         <div class="ser_inner_main">
                            
                             <img src="{{ URL::asset('img/frontend/images/dig.png')}}" alt="" class="img-responsive"/>
-							 <h4>E-VISA INDIA LASTEST NEWS</h4>
+							 <h4>e-VISA INDIA LASTEST NEWS</h4>
                             <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
                             <div class="">More Than 700 Per cent Increase in Tourist Arrivals on

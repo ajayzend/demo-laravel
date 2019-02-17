@@ -25,10 +25,8 @@
                 At the moment of application, it is not necessary to have the extra information as you can provide them at a later date.</p>
 <tr></tr>
             <p><strong>Who is eligible to apply for Electronic Visa (e-Visa)?</strong></p>
-            <p>Citizens of the 166 countries listed below are eligible for the e-Visa, including the US, the UK, Canada and Australia (see full list below). Note all Pakistani nationals and foreign citizens who have Pakistani relatives, are required to apply for the traditional Indian Visa.
-
-                Please find below the complete list of the 166 countries whose citizens are eligible to apply for the e-Visa:</p>
-
+            <?php $visa_count = count($evisa_country);?>
+            <p>Citizens of the <?=$visa_count;?> countries listed below are eligible for the e-Visa, including the US, the UK, Canada and Australia (see full list below). Note all Pakistani nationals and foreign citizens who have Pakistani relatives, are required to apply for the traditional Indian Visa. Please find below the complete list of the <?=$visa_count;?> countries whose citizens are eligible to apply for the e-Visa:</p>
             <div class="panel clum_new" style="display: block;">
                 <div class="clum_new">
                     <input class="form-control" id="search" type="text" placeholder="Search your country.....">
@@ -37,7 +35,6 @@
                     <table class="table table-bordered table-striped" id="evisa-country">
                         <?php
                         $j = -1;
-                        $visa_count = count($evisa_country);
                         for($i = 0; $i < $visa_count; $i++){
                         if($j >= $visa_count)
                             break;
@@ -61,8 +58,6 @@
                                 $k4 = ++$j;
                                 if($j < $visa_count && $evisa_country[$k4]){ echo $evisa_country[$k4];} ?>
                             </td>
-
-
                         </tr>
                         <?php
 

@@ -5,9 +5,9 @@
     <div class="row">
         <div class="about_us">
             <h4>Privacy- <span>Policy</span></h4>
-            <p>This privacy policy sets out how (-----website name-------) uses and protects any information that providedby the applicant to (-----website name-------) whentheapplicant uses this website.</p>
-            <p>(-----website name-------) ensures that the applicant'sprivacy is protected. The data and information provided by the applicant is completely secured and it is assured that it will only be used in accordance to this privacy statement.</p>
-            <p>The policy may be changed from time to time by (-----website name-------) while updating the website. It is advisable that the applicant is aware of the updates made on this page.</p>
+            <p>This privacy policy sets out how <a href ="/">www.evisaindia.in</a> uses and protects any information that providedby the applicant to <a href ="/">www.evisaindia.in</a> whentheapplicant uses this website.</p>
+            <p><a href ="/">www.evisaindia.in</a> ensures that the applicant'sprivacy is protected. The data and information provided by the applicant is completely secured and it is assured that it will only be used in accordance to this privacy statement.</p>
+            <p>The policy may be changed from time to time by <a href ="/">www.evisaindia.in</a> while up support@evisaindia.in dating the website. It is advisable that the applicant is aware of the updates made on this page.</p>
             <p><strong>What we collect</strong></p>
             <p>We may collect the following information</p>
             <ul>
@@ -40,7 +40,7 @@
             <p>One may choose to restrict the use of personal information in following ways:</p>
             <ul>
                 <li><p>whenever you are asked to fill in a form on the website, look for the box that you can click to indicate that you do not want the information to be used by anybody for direct marketing purposes.</p></li>
-                <li><p>If you have previously agreed for using your personal information for direct marketing, then you may change the settings by writing us at (-----website email-------).</p></li>
+                <li><p>If you have previously agreed for using your personal information for direct marketing, then you may change the settings by writing us at support@evisaindia.in .</p></li>
                 <li><p>We will not sell, distribute or lease your personal information to third parties unless we have your permission or are required by law to do so. We may use your personal information to send you promotional information about third parties which we think you may find interesting if you tell us that you wish this to happen.</p></li>
                 <li><p>You may request details of personal information which we hold about you under the Data Protection Act 1998. A small fee is payable for the same. If you would like a copy of the information held on you please email us.</p></li>
                 <li><p>If you believe that any information, that we are holding on you is incorrect or incomplete, please write to or email us as soon as possible, at the above address. We will promptly make the needful changes.</p></li>

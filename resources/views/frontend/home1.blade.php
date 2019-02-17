@@ -36,7 +36,7 @@
                         <li><a href="/" class="active"><img class="tick"
                                                             src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Home</a>
                         </li>
-                        <li><a href="#info1"><img class="tick"
+                        <li><a href="/visas/create"><img class="tick"
                                                   src="{{ URL::asset('img/frontend/images/tick.jpg')}}">
                                 Urgent e-Visa</a></li>
                         <li><a href="instruction"><img class="tick"
