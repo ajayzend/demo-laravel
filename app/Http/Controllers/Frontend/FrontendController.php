@@ -26,7 +26,7 @@ class FrontendController extends Controller
         ]);
     }
 
-        public function privacy()
+    public function privacy()
     {
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
@@ -44,8 +44,8 @@ class FrontendController extends Controller
 
     public function instruction()
     {
-        $evisacountry = Evisacountry::getSelectData();
-        $port = Port::getSelectData();
+        $evisacountry = Evisacountry::getSelectData('name', 1);
+        $port = Port::getSelectData('name', 1);
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
 
@@ -81,8 +81,8 @@ class FrontendController extends Controller
 
     public function faq()
     {
-        $evisacountry = Evisacountry::getSelectData();
-        $port = Port::getSelectData();
+        $evisacountry = Evisacountry::getSelectData('name', 1);
+        $port = Port::getSelectData('name', 1);
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
 

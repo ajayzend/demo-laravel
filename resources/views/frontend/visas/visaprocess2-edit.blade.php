@@ -211,8 +211,8 @@
                                 You are Applying Visa?</label>
                             <div class="col-sm-8 col-xs-12">
                                 <label>
-                                    <input type="radio"  {{ $visa->p2_lived_visa_country_years == 1 ? 'Checked="Checked"' : '' }} value="1"  id="p2_lived_visa_country_years1" name="p2_lived_visa_country_years">Yes</label>
-                                <label><input type="radio"  {{ $visa->p2_lived_visa_country_years == 0 ? 'Checked="Checked"' : '' }}   value="0" id="p2_lived_visa_country_years2" name="p2_lived_visa_country_years">No</label>
+                                    <input type="radio"  {{ $visa->p2_lived_visa_country_years == 'Yes' ? 'Checked="Checked"' : '' }} value="Yes"  id="p2_lived_visa_country_years1" name="p2_lived_visa_country_years">Yes</label>
+                                <label><input type="radio"  {{ $visa->p2_lived_visa_country_years == 'No' ? 'Checked="Checked"' : '' }}   value="No" id="p2_lived_visa_country_years2" name="p2_lived_visa_country_years">No</label>
                             </div>
                             <div class="col-sm-4 col-xs-12">
                             </div>
@@ -262,8 +262,8 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label">Any other valid Passport/Identity Certificate(IC) held</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input type="radio" {{ $visa->p2_any_other_valid_passport == 1 ? 'Checked="Checked"' : '' }} id="p2_any_other_valid_passport1" name="p2_any_other_valid_passport" value="1" />Yes
-                                <input type="radio" {{ $visa->p2_any_other_valid_passport == 0 ? 'Checked="Checked"' : '' }}  id="p2_any_other_valid_passport2" name="p2_any_other_valid_passport" value="0"/>No
+                                <input type="radio" {{ $visa->p2_any_other_valid_passport == 'Yes' ? 'Checked="Checked"' : '' }} id="p2_any_other_valid_passport1" name="p2_any_other_valid_passport" value="Yes" />Yes
+                                <input type="radio" {{ $visa->p2_any_other_valid_passport == 'No' ? 'Checked="Checked"' : '' }}  id="p2_any_other_valid_passport2" name="p2_any_other_valid_passport" value="No"/>No
                             </div>
                             <div class="col-sm-4 col-xs-12 des">
                                 If Yes Please give Details
@@ -409,6 +409,13 @@
                     $("#p2_other_passport_date_issue").attr("disabled", true);
                     $("#p2_other_passport_place_issue").attr("disabled", true);
                     $("#p2_other_nationality_mentioned").attr("disabled", true);
+                }else if (!$("#p2_any_other_valid_passport1").is(":checked")) {
+                    $("#other_valid_passport_details").hide();
+                    $("#p2_other_passport_country").attr("disabled", true);
+                    $("#p2_other_passport_number").attr("disabled", true);
+                    $("#p2_other_passport_date_issue").attr("disabled", true);
+                    $("#p2_other_passport_place_issue").attr("disabled", true);
+                    $("#p2_other_nationality_mentioned").attr("disabled", true);
                 }
             }).trigger('change');
 
@@ -424,6 +431,14 @@
                     return_bool = true;
                 }
 
+                if ((!$("#p2_lived_visa_country_years1").is(":checked")) && (!$("#p2_lived_visa_country_years2").is(":checked"))) {
+                    $("#p2_lived_visa_country_years1").focus();
+                    $("#p2_lived_visa_country_years2").focus();
+                    alert("Please choose Yes or No option for (Have You Lived for At Least Two Years in the Country Where You are Applying Visa?)");
+                    return false;
+                }else{
+                    return_bool = true;
+                }
 
                 var days = showDays(null, parseDate(p2_passport_date_expiry));
                 if(days <= 179){
@@ -434,6 +449,16 @@
                 }else{
                     return_bool =  true;
                 }
+
+                if ((!$("#p2_any_other_valid_passport1").is(":checked")) && (!$("#p2_any_other_valid_passport2").is(":checked"))) {
+                    $("#p2_any_other_valid_passport1").focus();
+                    $("#p2_any_other_valid_passport2").focus();
+                    alert("Please choose Yes or No option for (Any other valid Passport/Identity Certificate(IC) held.)");
+                    return false;
+                }else{
+                    return_bool = true;
+                }
+
                 return return_bool;
             });
 

@@ -355,6 +355,7 @@
                                             </label><div class="controls ">
                                                 <select required class="select form-control" id="id_saarc_1_year" name="saarc_1_year">
                                                     <option value="" selected="selected">Select</option>
+                                                    <option value="2019">2019</option>
                                                     <option value="2018">2018</option>
                                                     <option value="2017">2017</option>
                                                     <option value="2016">2016</option>
@@ -536,7 +537,7 @@
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label" ></label>
                                 <div class="col-sm-8 col-xs-12">
-                                    <input type="submit" name="submit" value="Save And Continue"  class="btn-primary submit-btn2">
+                                    <input type="submit" name="submit" value="Save And Continue" id="p4_submit_button" class="btn-primary submit-btn2">
                                     <input type="submit"  name="submit" id="p4_submit_button_exit" value="Save and Temporarily Exit"   class="btn-primary submit-btn2">
                                 </div>
                             </div>
@@ -577,6 +578,14 @@
                     $("#p4_type_visa").attr("disabled", true);
                     $("#p4_place_issue").attr("disabled", true);
                     $("#p4_date_issue").attr("disabled", true);
+                }else if (!$("#p4_visit_india_before1").is(":checked")) {
+                    $("#prev_visa_details").hide();
+                    $("#p4_address1").attr("disabled", true);
+                    $("#p4_city_prev_visit").attr("disabled", true);
+                    $("#p4_last_curr_visa_no").attr("disabled", true);
+                    $("#p4_type_visa").attr("disabled", true);
+                    $("#p4_place_issue").attr("disabled", true);
+                    $("#p4_date_issue").attr("disabled", true);
                 }
             }).trigger('change');
 
@@ -589,6 +598,8 @@
 
             $("#p4_permission_visit2").change(function() {
                 if ($("#p4_permission_visit2").is(":checked")) {
+                    $("#p4_permission_visit_details_id").hide();
+                }else if (!$("#p4_permission_visit1").is(":checked")) {
                     $("#p4_permission_visit_details_id").hide();
                 }
             }).trigger('change');
@@ -633,6 +644,38 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
+
+        $("#p4_submit_button").click(function() {
+            var return_bool = false;
+            if ((!$("#p4_visit_india_before1").is(":checked")) && (!$("#p4_visit_india_before2").is(":checked"))) {
+                $("#p4_visit_india_before1").focus();
+                $("#p4_visit_india_before2").focus();
+                alert("Please choose Yes or No option for (Have You Ever Visited India Before?)");
+                return false;
+            }else{
+                return_bool = true;
+            }
+
+            if ((!$("#p4_permission_visit1").is(":checked")) && (!$("#p4_permission_visit2").is(":checked"))) {
+                $("#p4_permission_visit1").focus();
+                $("#p4_permission_visit2").focus();
+                alert("Please choose Yes or No option for (Has Permission To Visit Or To Extend Stay in India Previously Been Refused? Yes / No)");
+                return false;
+            }else{
+                return_bool = true;
+            }
+
+            if ((!$("#p4_saarc_countries_flag1").is(":checked")) && (!$("#p4_saarc_countries_flag2").is(":checked"))) {
+                $("#p4_saarc_countries_flag1").focus();
+                $("#p4_saarc_countries_flag2").focus();
+                alert("Please choose Yes or No option for (Have You Visited SAARC Countries (Except Your Own Country) during last 3 years?)");
+                return false;
+            }else{
+                return_bool = true;
+            }
+
+            return return_bool;
+        });
 
         $("#p4_submit_button_exit").click(function() {
             var return_bool = false;

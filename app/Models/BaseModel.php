@@ -14,11 +14,11 @@ class BaseModel extends Model
      *
      * @return array
      */
-    public static function getSelectData($field_name = 'name')
+    public static function getSelectData($field_name = 'name', $req = 0)
     {
         $collection = parent::all();
 
-        return self::getItems($collection, $field_name);
+        return self::getItems($collection, $field_name, $req);
     }
 
     /**
@@ -28,7 +28,7 @@ class BaseModel extends Model
      *
      * @return array
      */
-    public static function getItems($collection, $field_name)
+    public static function getItems($collection, $field_name, $req)
     {
         $items = [];
 
@@ -44,7 +44,9 @@ class BaseModel extends Model
             $items[$item['id']] = $item['name'];
         }
 
-        sort($items);
+        if($req == 1)
+            unset($items[0]);
+        asort($items);
         return $items;
     }
 

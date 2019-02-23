@@ -363,8 +363,8 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label">Were your Grandfather/ Grandmother (paternal/maternal) Pakistan Nationals or Belong to Pakistan held area.</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input type="radio"  {{ $visa->p3_flag1 == 1 ? 'Checked="Checked"' : '' }} value="1"  id="p3_flag11" name="p3_flag1"><span>Yes</span>
-                                <input type="radio"  {{ $visa->p3_flag1 == 0 ? 'Checked="Checked"' : '' }}   value="0" id="p3_flag12" name="p3_flag1"><span>No</span>
+                                <input type="radio"  {{ $visa->p3_flag1 == 'Yes' ? 'Checked="Checked"' : '' }} value="Yes"  id="p3_flag11" name="p3_flag1"><span>Yes</span>
+                                <input type="radio"  {{ $visa->p3_flag1 == 'No' ? 'Checked="Checked"' : '' }}   value="No" id="p3_flag12" name="p3_flag1"><span>No</span>
                                 <div id="grandparent_div">
                                     <input type="text" class="form-control" id="p3_flag1_detail" name="p3_flag1_detail"  placeholder="If Yes, give details"  value="{{ $visa->p3_flag1_detail }}" />
                                 </div>
@@ -523,12 +523,12 @@
     <script type="text/javascript">
 
         $(document).ready(function() {
-            $("#p3_copy_address").change(function() {
+            $("#p3_copy_address").click(function() {
                 if ($("#p3_copy_address").is(":checked")) {
                     $("#p3_house_street2").val($("#p3_house_street").val());
                     $("#p3_village_town2").val($("#p3_village_town").val());
                     $("#p3_state2").val($("#p3_state").val());
-                } else {
+                }  else if (!$("#p3_copy_address").is(":checked")) {
                     $("#p3_house_street2").val('');
                     $("#p3_village_town2").val('');
                     $("#p3_state2").val('');
@@ -563,6 +563,9 @@
 
             $("#p3_flag12").change(function() {
                 if ($("#p3_flag12").is(":checked")) {
+                    $("#p3_flag1_detail").hide();
+                    $("#p3_flag1_detail").attr("disabled", true);
+                }else if (!$("#p3_flag11").is(":checked")) {
                     $("#p3_flag1_detail").hide();
                     $("#p3_flag1_detail").attr("disabled", true);
                 }
@@ -606,19 +609,46 @@
                     $("#p3_other_desination").attr("disabled", true);
                     $("#p3_other_rank").attr("disabled", true);
                     $("#p3_other_place_posting").attr("disabled", true);
+                }else if (!$("#p3_flag21").is(":checked")) {
+                    $("#other_organization").hide();
+                    $("#p3_other_organization").attr("disabled", true);
+                    $("#p3_other_desination").attr("disabled", true);
+                    $("#p3_other_rank").attr("disabled", true);
+                    $("#p3_other_place_posting").attr("disabled", true);
                 }
             }).trigger('change');
 
             $("#p3_submit_button").click(function() {
                 var p3_phone = $("#p3_phone").val();
                 var p3_mobile = $("#p3_mobile").val();
+                var returnbool = true;
                 if(p3_phone == '' && p3_mobile == ''){
                     $("#p3_phone").focus();
                     alert("Please enter either Present Phone No. or Mobile No.");
                     return false;
                 }else{
-                    return true;
+                    returnbool = true;
                 }
+
+                if ((!$("#p3_flag11").is(":checked")) && (!$("#p3_flag12").is(":checked"))) {
+                    $("#p3_flag11").focus();
+                    $("#p3_flag12").focus();
+                    alert("Please choose Yes or No option for (Were your Grandfather/ Grandmother (paternal/maternal) Pakistan Nationals or Belong to Pakistan held area.)");
+                    return false;
+                }else{
+                    returnbool = true;
+                }
+
+                if ((!$("#p3_flag21").is(":checked")) && (!$("#p3_flag22").is(":checked"))) {
+                    $("#p3_flag21").focus();
+                    $("#p3_flag22").focus();
+                    alert("Please choose Yes or No option for (Are/were you in a Military/Semi-Military/Police/Security. Organization?)");
+                    returnbool = false;
+                }else{
+                    returnbool = true;
+                }
+
+                return returnbool;
             });
 
             $("#p3_submit_button_exit").click(function() {
