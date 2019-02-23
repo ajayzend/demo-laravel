@@ -243,7 +243,7 @@
                             <!-- Date input -->
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Date of Issue </label>
                             <div class="col-sm-4 col-xs-12">
-                                <input type="text" name="p2_passport_date_issue" id="p2_passport_date_issue" placeholder="Date of Issue"  value="{{ $visa->p2_passport_date_issue }}" class="form-control"  type="text"  >
+                                <input type="text" name="p2_passport_date_issue" id="p2_passport_date_issue" placeholder="Date of Issue"  value="{{ $visa->p2_passport_date_issue }}" class="form-control" autocomplete="off" >
                             </div>
                             <div class="col-sm-4 col-xs-12 des">
                                 In DD/MM/YYYY format
@@ -253,7 +253,7 @@
                             <!-- Date input -->
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Date of Expiry</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input  type="text" placeholder="Date of Expiry"  value="{{ $visa->p2_passport_date_expiry }}"  name="p2_passport_date_expiry" id="p2_passport_date_expiry" class="form-control">
+                                <input  type="text" placeholder="Date of Expiry"  value="{{ $visa->p2_passport_date_expiry }}"  name="p2_passport_date_expiry" id="p2_passport_date_expiry" class="form-control" autocomplete="off" >
                             </div>
                             <div class="col-sm-4 col-xs-12 des">
                                 In DD/MM/YYYY format.Minimum Six Month Validity is Required.
