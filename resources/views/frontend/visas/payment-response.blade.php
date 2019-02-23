@@ -8,7 +8,6 @@
                     <div class="title"> <h3 class="text-center" >{{ session()->get('evpuid') }} (eTV) Application</h3></div>
                     <h2 class="text-center" > <strong> {{ session()->get('message') }} </strong></h2>
 
-
                       <div class="form-group">
                         {{--{{ Form::label('logo', trans('validation.attributes.backend.settings.sitelogo'), ['class' => 'col-lg-2 control-label']) }}--}}
                         <div class="col-sm-4 col-xs-12 second"></div>

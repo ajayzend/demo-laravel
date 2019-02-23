@@ -258,7 +258,7 @@ class VisaRepository extends BaseRepository
     }
 
     public function prefixRandomNumber(){
-        $start = 'IGVR';
+        $start = 'IVIAASR';
         $today = Carbon::today()->toDateString();
         $start .= str_replace('-', '', $today);
         $characters = array_merge(range('A','Z'), range('0','9'));

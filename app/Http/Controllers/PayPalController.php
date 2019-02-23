@@ -234,7 +234,8 @@ class PayPalController extends Controller
             $invoice->paid = 0;
         }
         $invoice->save();
-
+        session()->put('payment_mail_flag', true);
+        session()->put('payment_price', $cart['total']);
         /*collect($cart['items'])->each(function ($product) use ($invoice) {
             $item = new Item();
             $item->invoice_id = $invoice->id;

@@ -14,6 +14,7 @@ return [
 
     'name' => env('APP_NAME', 'e-visa-India'),
 
+    'mailbcc' => env('MAIL_BCC', 'ajay.kumar.iimt@gmail.com'), // email
     'consultufee' => env('EVISA_CONSULUTFEE', 100), // Urgent Fee added by Ajay Date:13102018
     'consultnfee' => env('EVISA_CONSULTNFEE', 60), // Normal Fee added by Ajay Date:13102018
     'dateformat' => env('EVISA_DATEFORMAT', 'd/m/Y H:i:s'), // Date Format added by Ajay Date:13102018

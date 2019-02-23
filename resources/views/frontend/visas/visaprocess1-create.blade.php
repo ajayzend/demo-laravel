@@ -122,7 +122,7 @@
                                 Arrival</label>
                             <div class="col-sm-4 col-xs-12">
                                 <input id="p1_edate" value="" type="text" name="p1_edate" class="form-control"
-                                       placeholder="Expected Date of Arrival"  autocomplete="on"/>
+                                       placeholder="Expected Date of Arrival"  autocomplete="off"/>
                             </div>
                             <div class="col-sm-4 col-xs-12">(DD/MM/YYYY)</div>
                         </div>

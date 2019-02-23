@@ -124,14 +124,36 @@ class VisasController extends Controller
         ]);
     }
 
-    public function getpaymentresponse()
+    public function getpaymentresponse(StoreVisaRequest $request, VisaRepository $visa)
     {
+        $evpuid = session()->get('evpuid');
+        $payment_price = session()->get('payment_price');
+        $payment_mail_flag = session()->get('payment_mail_flag');
+        $payment_status = session()->get('code'); // success or danger
+        session()->put('payment_mail_flag', false);
+
         //$settingData = Setting::first();
         // $google_analytics = $settingData->google_analytics;
         //return view('frontend.visas.amendprocess', compact('google_analytics', $google_analytics));
-        return view('frontend.visas.payment-response')->with([
-            'header_title'       => "Apply e-Visa to India | Indian Visa Application"
-        ]);
+        $result = $visa->findByVisaNoSlug($evpuid);
+
+        if(!empty(@$result) && $payment_mail_flag) {
+            $visaobj = Visa::find(@$result->id);
+            $visaobj->payment_status = ($payment_status) ? 'success' : 'failed';
+            $visaobj->payment_price = $payment_price;
+            if($payment_status == 'success')
+                $this->payment_success_email(@$result->p1_fname, @$result->p1_email, @$result->p1_visa_type);
+            else
+                $this->payment_success_email(@$result->p1_fname, @$result->p1_email, @$result->p1_visa_type);
+            $visaobj->save();
+            session()->put('payment_mail_flag', false);
+            session()->put('payment_price', 0);
+            return view('frontend.visas.payment-response')->with([
+                'header_title'       => "Apply e-Visa to India | Indian Visa Application"
+            ]);
+        }
+        return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+
     }
 
 
@@ -282,17 +304,18 @@ class VisasController extends Controller
 
                 $total_fee = $visafee + $consult_fee;
 
-                $total_fee = ($total_fee >= 50) ? $total_fee : 150;
-                session()->put('evisafeedollar', $total_fee);
-                $total_fee = number_format($total_fee*73.69, 2) ;
+                $total_fee_usd = ($total_fee >= 50) ? $total_fee : 150;
+                session()->put('evisafeedollar', $total_fee_usd);
+                $total_fee_inr = number_format($total_fee_usd*73.69, 2) ;
 
                 session()->put('visatype', $visa->p1_visa_type);
-                session()->put('evisafee', $total_fee);
+                session()->put('evisafee', $total_fee_inr);
                // echo "<pre>";print_r( session()->all());die;
                 $visa->header_title = "Online Visa Fee Payment";
                 return view('frontend.visas.visaprocess7-edit')->with([
                     'visa' => $visa,
-                    'total_fee' => $total_fee
+                    'total_fee' => $total_fee_inr,
+                    'evisafeedollar' => $total_fee_usd
                 ]);
             }
 
@@ -427,6 +450,7 @@ class VisasController extends Controller
                 if($input['submit'] == 'Pay Later') {
                     session()->put('process_steps', 10001);
                     //return redirect()->route('frontend.paypal.ec-checkout');
+                    $this->payment_later_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_typ);
                     return redirect()->action('PayPalController@getExpressCheckout');
                 }
                 else {
@@ -503,10 +527,50 @@ class VisasController extends Controller
     {
         $template = "evisa-exit-process";
         $subject = "$visatype Application Request for India";
+        $bcc = config('app.mailbcc');
         //$name = 'Ajay';
        // Mail::to($email)->cc('ajay.kumar.iimt@gmail.com')->send(new SendMailable($name, $template));
         $name = ucfirst(strtolower($name));
-        Mail::to($email)->cc('ajay.kumar.iimt@gmail.com')->send(new SendMailable($name, $template, $subject, $visatype));
+            Mail::to($email)->bcc($bcc)->send(new SendMailable($name, $template, $subject, $visatype));
+
+        return 'Email was sent';
+    }
+
+    public function payment_later_email($name, $email, $visatype)
+    {
+        $template = "payment-later";
+        $subject = "$visatype Application Request for India";
+        $bcc = config('app.mailbcc');
+        //$name = 'Ajay';
+        // Mail::to($email)->cc('ajay.kumar.iimt@gmail.com')->send(new SendMailable($name, $template));
+        $name = ucfirst(strtolower($name));
+        Mail::to($email)->bcc($bcc)->send(new SendMailable($name, $template, $subject, $visatype));
+
+        return 'Email was sent';
+    }
+
+    public function payment_success_email($name, $email, $visatype)
+    {
+        $template = "payment-success";
+        $subject = "$visatype Application Request for India";
+        $bcc = config('app.mailbcc');
+        //$name = 'Ajay';
+        // Mail::to($email)->cc('ajay.kumar.iimt@gmail.com')->send(new SendMailable($name, $template));
+        $name = ucfirst(strtolower($name));
+        Mail::to($email)->bcc($bcc)->send(new SendMailable($name, $template, $subject, $visatype));
+
+        return 'Email was sent';
+    }
+
+    public function payment_failed_email($name, $email, $visatype)
+    {
+        $template = "payment-fail";
+        $subject = "$visatype Application Request for India";
+        $bcc = config('app.mailbcc');
+        //$name = 'Ajay';
+        // Mail::to($email)->cc('ajay.kumar.iimt@gmail.com')->send(new SendMailable($name, $template));
+        $name = ucfirst(strtolower($name));
+        Mail::to($email)->bcc($bcc)->send(new SendMailable($name, $template, $subject, $visatype));
 
         return 'Email was sent';
     }

@@ -23,12 +23,17 @@
                 </tr>
                 <tr>
                     <td>
-                        <p style="margin-top:20px;padding:0px 20px;">Thanks for apply {{$visatype}}.</p>
+                        <p style="margin-top:20px;padding:0px 20px;">Congratulations! Thanks for apply {{$visatype}}.</p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <p style="margin-top:10px;padding:0px 20px;">Please note down below your registration number to complete remaining visa steps.</p>
+                        <p style="margin-top:10px;padding:0px 20px;">You have paid ${{ session()->get('payment_price')  }}USD</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p style="margin-top:10px;padding:0px 20px;">We will process it ASAP and will keep you update regarding your visa process.</p>
                     </td>
                 </tr>
                 <tr>
@@ -37,6 +42,7 @@
                             Visa Registration Number : {{ session()->get('evpuid') }}</p>
                     </td>
                 </tr>
+
                 <tr>
                     <td>
                         <p style="margin-top:20px;padding:0px 20px;">Please feel free to get in touch in case of any assistant require.</p>

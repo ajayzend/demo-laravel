@@ -94,7 +94,7 @@
                     <div class="form-group">
                         <div class="col-sm-4 col-xs-12"> </div>
                         <div class="col-sm-5 col-xs-12 payment-label">
-                            <?php if(stripos($visa->p1_app_type, 'urgent') !== false){  echo 'Urgent';} else { echo 'Normal';} ?>   {{$visa->p1_visa_type}} fee = INR {{$total_fee}}
+                            <?php if(stripos($visa->p1_app_type, 'urgent') !== false){  echo 'Urgent';} else { echo 'Normal';} ?>   {{$visa->p1_visa_type}} fee = ${{$evisafeedollar}} USD
                         </div>
                         <div class="col-sm-3 col-xs-12"> </div>
                     </div>

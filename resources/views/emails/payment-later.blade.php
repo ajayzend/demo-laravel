@@ -28,7 +28,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <p style="margin-top:10px;padding:0px 20px;">Please note down below your registration number to complete remaining visa steps.</p>
+                        <p style="margin-top:10px;padding:0px 20px;">Please note down below your registration number and make the payment to complete the e-Visa process.</p>
                     </td>
                 </tr>
                 <tr>
