@@ -36,6 +36,7 @@ class VisaRepository extends BaseRepository
                 config('module.visas.table') . '.p1_visa_type',
                 config('module.evisacountries.table') . '.name',
                 config('module.visas.table') . '.payment_status',
+                config('module.visas.table') . '.payment_price',
                 config('module.visas.table') . '.india_gov_evisa_status',
                 config('module.visas.table') . '.created_at',
                 config('module.visas.table') . '.updated_at',
