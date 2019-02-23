@@ -220,7 +220,7 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span>Name</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input class="form-control" value="{{ $visa->p3_m_name }}"   placeholder="Name" id="p3_m_name" name="p3_m_name"/>
+                                <input type="text" class="form-control" value="{{ $visa->p3_m_name }}"   placeholder="Name" id="p3_m_name" name="p3_m_name"/>
                             </div>
                             <div class="col-sm-4 col-xs-12 des">
                                 Applicant's Mother Name

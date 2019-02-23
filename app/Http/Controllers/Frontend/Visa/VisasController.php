@@ -51,7 +51,12 @@ class VisasController extends Controller
      */
     public function index(ManageVisaRequest $request)
     {
-        return view('frontend.visas.home');
+        $evisacountry = Evisacountry::getSelectData('name', 1);
+        $settingData = Setting::first();
+        $google_analytics = $settingData->google_analytics;
+        return view('frontend.home', compact('google_analytics', $google_analytics))->with([
+            'evisa_country'       => $evisacountry
+        ]);
     }
 
     /**

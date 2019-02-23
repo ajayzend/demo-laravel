@@ -104,7 +104,7 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label" ><span class="star">*</span>Town/City of Birth</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input class="form-control" value="{{ $visa->p2_town_city_birth }}"  placeholder="Town/City of Birth" name="p2_town_city_birth" id="p2_town_city_birth" >
+                                <input type="text" class="form-control" value="{{ $visa->p2_town_city_birth }}"  placeholder="Town/City of Birth" name="p2_town_city_birth" id="p2_town_city_birth" >
                             </div>
                             <div class="col-sm-4 col-xs-12 des"> 	Province/Town/City of birth
                             </div>
@@ -286,7 +286,7 @@
                             <div class="form-group">
                                 <label class="col-sm-4 col-xs-12 control-label" >	Passport/IC No.</label>
                                 <div class="col-sm-4 col-xs-12">
-                                    <input class="form-control"  value="{{ $visa->p2_other_passport_number }}" placeholder="Passport/IC No." name="p2_other_passport_number" id="p2_other_passport_number"/>
+                                    <input type="text" class="form-control"  value="{{ $visa->p2_other_passport_number }}" placeholder="Passport/IC No." name="p2_other_passport_number" id="p2_other_passport_number"/>
                                 </div>
 
                                 <div class="col-sm-4 col-xs-12 des">

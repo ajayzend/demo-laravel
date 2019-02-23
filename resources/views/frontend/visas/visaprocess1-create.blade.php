@@ -113,7 +113,7 @@
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Telephone Number</label>
                             <div class="col-sm-6 col-xs-12">
-                                <input id="p1_phone" value="" type="text" class="form-control" placeholder="Telephone Number"
+                                <input  id="p1_phone" value="" type="text" class="form-control" placeholder="Telephone Number"
                                        name="p1_phone" autocomplete="off"/>
                             </div>
                         </div>

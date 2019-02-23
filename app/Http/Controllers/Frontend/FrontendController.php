@@ -17,7 +17,7 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        $evisacountry = Evisacountry::getSelectData();
+        $evisacountry = Evisacountry::getSelectData('name', 1);
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
 

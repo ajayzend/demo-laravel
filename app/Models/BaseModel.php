@@ -44,9 +44,12 @@ class BaseModel extends Model
             $items[$item['id']] = $item['name'];
         }
 
-        if($req == 1)
+        if($req == 1) {
             unset($items[0]);
-        asort($items);
+            sort($items);
+        }else{
+            asort($items);
+        }
         return $items;
     }
 

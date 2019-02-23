@@ -240,7 +240,7 @@
                         <div class="form-group" id="p4_permission_visit_details_id">
                             <label class="form-check-label col-sm-4 col-xs-12">	If So, When And By Whom (Mention Control No. and Date Also)</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input class="form-control" value="{{$visa->p4_permission_visit_details}}" placeholder="By Whom" name="p4_permission_visit_details"  id="p4_permission_visit_details"  />
+                                <input type="text" class="form-control" value="{{$visa->p4_permission_visit_details}}" placeholder="By Whom" name="p4_permission_visit_details"  id="p4_permission_visit_details"  />
                             </div>
                             <div class="col-sm-4 col-xs-12 des">
                                 If Yes, when and by whom (mention Control no and date)

@@ -139,7 +139,7 @@ class VisaRepository extends BaseRepository
         }else if($process_steps == 10002){
             $input['p2_passport_date_issue'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p2_passport_date_issue']));
             $input['p2_passport_date_expiry'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p2_passport_date_expiry']));
-            if($input['p2_any_other_valid_passport'] == 1)
+            if($input['p2_any_other_valid_passport'] == 'Yes')
                 $input['p2_other_passport_date_issue'] = Carbon::parse($this->parseDateValueSpecialChar( $input['p2_other_passport_date_issue']));
         }
 

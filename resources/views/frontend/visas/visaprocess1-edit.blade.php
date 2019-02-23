@@ -121,8 +121,8 @@
                         </div>
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Telephone Number</label>
-                            <div type="text" class="col-sm-6 col-xs-12">
-                                <input id="p1_phone" value="{{ $visa->p1_phone }}" class="form-control" placeholder="Telephone Number"
+                            <div  class="col-sm-6 col-xs-12">
+                                <input type="text" id="p1_phone" value="{{ $visa->p1_phone }}" class="form-control" placeholder="Telephone Number"
                                        name="p1_phone" autocomplete="off"/>
                             </div>
                         </div>
