@@ -97,7 +97,7 @@
                         <input   class="form-control" placeholder="Temporary Application ID" name="evpuid" id="evpuid" autocomplete="off"  />
                     </div>  <div class="col-xs-4 col-md-4">
 
-                        (Example : GBR9810358689)
+                        (Example : IVIAASR20121111LG5RNGS)
                     </div>
                 </div>
 				<br />

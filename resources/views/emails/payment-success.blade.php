@@ -14,7 +14,7 @@
         <td>
             <table align="center" border="0" cellpadding="0" cellspacing="0" width="655" style=" border-spacing: 0;margin:0 auto;background:#fff;">
                 <tr>
-                    <td><img src="{{ URL::asset('img/frontend/images/email-logo.png')}}" alt="logo" style="width:100%;"></td>
+                    <td><a href="https://www.evisaindia.in" target="_blank"><img src="{{ URL::asset('img/frontend/images/email-logo.png')}}" alt="logo" style="width:100%;"></a></td>
                 </tr>
                 <tr style="">
                     <td>
@@ -33,7 +33,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <p style="margin-top:10px;padding:0px 20px;">We will process it ASAP and will keep you update regarding your visa process.</p>
+                        <p style="margin-top:10px;padding:0px 20px;">We will process it ASAP and will keep you updated regarding your visa process.</p>
                     </td>
                 </tr>
                 <tr>
@@ -45,7 +45,7 @@
 
                 <tr>
                     <td>
-                        <p style="margin-top:20px;padding:0px 20px;">Please feel free to get in touch in case of any assistant require.</p>
+                        <p style="margin-top:20px;padding:0px 20px;">Please feel free to get in touch in case of any assistant required.</p>
                     </td>
                 </tr>
                 <tr>
@@ -56,7 +56,7 @@
 
                 <tr>
                     <td style="text-align:center;">
-                        <p style="color:#808080;margin-bottom:5px;"><a href="http://evisaindia.in" target="_blank">evisaindia.in</a></p>
+                        <p style="color:#808080;margin-bottom:5px;"><a href="https://www.evisaindia.in" target="_blank">evisaindia.in</a></p>
                     </td>
                 </tr>
                 <!--<tr>

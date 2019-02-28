@@ -188,7 +188,7 @@
             <div class="col-md-3">
                 <div class="address">
                     <h3>Contact Us</h3>
-                    <p><i class="fa fa-phone" aria-hidden="true"></i> +91 -88888888888888</p>
+                    {{--<p><i class="fa fa-phone" aria-hidden="true"></i> +91 -88888888888888</p>--}}
                     <p><i class="fa fa-envelope" aria-hidden="true"></i>support@evisaindia.in</p>
                     <p></p>
                 </div>
