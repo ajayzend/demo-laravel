@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img src="{{ URL::asset('img/frontend/images/logo.png')}}" alt="logo" class="img-responsive"></a>
+                <a class="navbar-brand" href="/"><img src="{{ URL::asset('img/frontend/images/logo.png')}}" alt="e Visa India" title="e Visa India" class="img-responsive"></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">

@@ -69,14 +69,14 @@
                 </div>
 
                 <div class="asides3">
-                    <img src="{{ URL::asset('img/frontend/images/secure.png')}}" alt="" class="img-responsive"/>
+                    <img src="{{ URL::asset('img/frontend/images/secure.png')}}" alt="e Visa Online Secure" title="e Visa Online Secure" class="img-responsive"/>
                 </div>
 
                 <div class="asides4">
-                    <img src="{{ URL::asset('img/frontend/images/PayPal.png')}}" alt="" class="img-responsive"/>
+                    <img src="{{ URL::asset('img/frontend/images/PayPal.png')}}" alt="e Visa Online Tourist Visa" title="e Visa Online Tourist Visa" class="img-responsive"/>
                 </div>
                 <div class="asides4">
-                    <img src="{{ URL::asset('img/frontend/images/secure-payment.jpg')}}" alt=""
+                    <img src="{{ URL::asset('img/frontend/images/secure-payment.jpg')}}" alt="e Visa Online Tourist Visa" title="e Visa Online Tourist Visa"
                          class="img-responsive"/>
                 </div>
             </div>

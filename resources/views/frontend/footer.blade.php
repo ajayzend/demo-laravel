@@ -14,7 +14,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="ser_inner_main">
                          
-                            <img src="{{ URL::asset('img/frontend/images/bag.png')}}" alt="" class="img-responsive"/>
+                            <img src="{{ URL::asset('img/frontend/images/bag.png')}}" alt="indian e visa application guide" title="indian e visa application guide" class="img-responsive"/>
 							   <h4>SERVICES PROVIDED BY e-VISA INDIA</h4>
                             <p>
                             <div class="col-xs-1"><i class="fa fa-check" aria-hidden="true"></i></div>
@@ -46,7 +46,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="ser_inner_main">
                            
-                            <img src="{{ URL::asset('img/frontend/images/hand.png')}}" alt="" class="img-responsive"/>
+                            <img src="{{ URL::asset('img/frontend/images/hand.png')}}" alt="e visa india online application" title="e visa india online application" class="img-responsive"/>
 							 <h4>5 REASONS TO CHOOSE e-VISA INDIA</h4>
                             <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
@@ -78,7 +78,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="ser_inner_main">
                            
-                            <img src="{{ URL::asset('img/frontend/images/dig.png')}}" alt="" class="img-responsive"/>
+                            <img src="{{ URL::asset('img/frontend/images/dig.png')}}" alt="e-Visa - Indian Visa Online"  title="e-Visa - Indian Visa Online" class="img-responsive"/>
 							 <h4>e-VISA INDIA LASTEST NEWS</h4>
                             <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
@@ -106,7 +106,7 @@
 						<div class="row">
                         <div class="col-lg-3 circle-main-out">
                             <div class="circle_1">
-                                <img src="{{ URL::asset('img/frontend/images/user.png')}}" alt="icon"
+                                <img src="{{ URL::asset('img/frontend/images/user.png')}}" alt="Indian Tourist e Visa" title="Indian Tourist e Visa"
                                      class="img-responsive"/>
                             </div>
                             <figcaption class="cap_main">
@@ -115,7 +115,7 @@
                         </div>
                         <div class="col-lg-3 circle-main-out">
                             <div class="circle_2">
-                                <img src="{{ URL::asset('img/frontend/images/credit.png')}}" alt="icon"
+                                <img src="{{ URL::asset('img/frontend/images/credit.png')}}" alt="Indian Tourist e Visa" title="Indian Tourist e Visa"
                                      class="img-responsive"/>
                             </div>
                             <figcaption class="cap_main">
@@ -124,7 +124,7 @@
                         </div>
                         <div class="col-lg-3 circle-main-out">
                             <div class="circle_1">
-                                <img src="{{ URL::asset('img/frontend/images/email.png')}}" alt="icon"
+                                <img src="{{ URL::asset('img/frontend/images/email.png')}}" alt="Indian Medical e Visa" title="Indian Medical e Visa"
                                      class="img-responsive"/>
                             </div>
                             <figcaption class="cap_main">
@@ -133,7 +133,7 @@
                         </div>
                         <div class="col-lg-3 circle-main-out">
                             <div class="circle_3">
-                                <img src="{{ URL::asset('img/frontend/images/british-airways.png')}}" alt="icon"
+                                <img src="{{ URL::asset('img/frontend/images/british-airways.png')}}" title="Indian Business e Visa" alt="Indian Business e Visa"
                                      class="img-responsive"/>
                             </div>
                             <figcaption class="cap_main">
@@ -155,7 +155,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="{{ URL::asset('img/frontend/images/logo.png')}}" alt="logo" class="img-responsive"/>
+                <img src="{{ URL::asset('img/frontend/images/logo.png')}}" alt="e Visa India" title="e Visa India" class="img-responsive"/>
                 <p>Site Hosted & Maintained by National Informatics Centre Content provided by Ministry of Home Affairs,
                     Government of India.</p>
             </div>
