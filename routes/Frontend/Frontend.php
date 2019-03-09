@@ -13,6 +13,7 @@ Route::get('/condition', 'FrontendController@condition')->name('condition');
 Route::get('/about-us', 'FrontendController@about')->name('about');
 Route::get('/disclaimer', 'FrontendController@disclaimer')->name('disclaimer');
 Route::get('/faq', 'FrontendController@faq')->name('faq');
+Route::get('/sitemap', 'FrontendController@sitemap')->name('sitemap');
 Route::get('/evp/process1', 'VisasProcessController@visaProcess1')->name('evp.process1');
 //Route::get('/evp/processget1/{slug}/edit', 'VisasProcessController@edit')->name('evp.processget1');
 

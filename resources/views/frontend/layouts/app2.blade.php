@@ -12,7 +12,25 @@ use Illuminate\Support\Facades\Route;
 
     <!-- Meta -->
     <meta name="description" content="@yield('meta_description', 'e-visa-India')">
-    <meta name="author" content="@yield('meta_author', 'Ajay Sahu')">
+    <meta name="page-topic" content="e-Visa India" />
+    <meta name="copyright" content="I9 Technologies Pvt. Ltd." />
+    <meta name="author" content="I9 Technologies Pvt. Ltd." />
+    <meta name="Robots" content="INDEX, FOLLOW" />
+    <meta name="rating" content="safe for kids" />
+    <meta name="googlebot" content=" index, follow " />
+    <meta name="bingbot" content=" index, follow " />
+    <meta name="reply-to" content="support@evisaindia.in" />
+    <meta name="allow-search" content="yes" />
+    <meta name="revisit-after" content="daily" />
+    <meta name="distribution" content="global" />
+    <meta name="expires" content="never" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="en" />
+    <meta name="title" content="e-Tourist Visa">
+    <meta name="doc-type" content="Public"/>
+    <meta http-equiv="content-language" content="ll-cc"/>
+    <meta name="distribution" content="web"/>
+    <meta name="googlebot" content="all" />
     @yield('meta')
 
             <!-- Styles -->

@@ -180,6 +180,7 @@
                         <li><a href="/instruction">Instruction For Applicant</a></li>
                         <li><a href="/document">Document Requirement</a></li>
                         <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/sitemap">SiteMap</a></li>
                        {{-- <li><a href="#">Faq-sbi Payment Related</a></li>
                         <li><a href="#">Faq Axis Payment Related</a></li>--}}
                     </ul>
