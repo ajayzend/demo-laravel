@@ -99,10 +99,6 @@
                                 $k3 = ++$j;
                                 if($j < $visa_count && $evisa_country[$k3]){ echo $evisa_country[$k3];} ?>
                             </td>
-                            <td><?php
-                                $k4 = ++$j;
-                                if($j < $visa_count && $evisa_country[$k4]){ echo $evisa_country[$k4];} ?>
-                            </td>
 
                         </tr>
                         <?php

@@ -32,7 +32,7 @@
                             </p>
                             <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class=""><span><b>uality Check:</b> </span> Quality Check and
+                            <div class=""><span><b>Quality Check:</b> </span> Quality Check and
                                 Required
                                 Correction is done against all the
                                 information and documents provided in
