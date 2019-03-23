@@ -5,7 +5,7 @@
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
     <div class="row">
         <div class="about_us">
-            <h4>Welcome to Indian</br> <span>Visa Online</span></h4>
+            <h1>Welcome to Indian</br> <span>Visa Online</span></h1>
             <h3>e-Visa India</h3>
             <p>It is mandatory for all the foreign nationals to carry valid passport along with the print out of Indian
                 tourist visa approval sent to their email, before leaving the country of travel origin. Visa to India

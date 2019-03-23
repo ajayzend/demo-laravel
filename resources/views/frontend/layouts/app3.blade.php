@@ -11,7 +11,9 @@ use Illuminate\Support\Facades\Route;
     <title>@yield('title', @$visa->header_title)</title>
 
     <!-- Meta -->
-    <meta name="description" content="@yield('meta_description', 'e-visa-India')">
+    <meta name="description" content="Official Indian e Visa website for e tourist visa (eTV) for 180+ countries across the World such as UK, USA, Australia, Canada, Japan, UAE, NZ, European Countries & Singapore and so many." />
+    <meta name="keywords" content="e Tourist Visa India, Indian Visa, Visa to India, india Visa Requirement, Online Indian Visa Application, e visa india, Indian e visa, Apply Visa for India, Indian visa on arrival"/>
+
     <meta name="page-topic" content="e-Visa India" />
     <meta name="copyright" content="I9 Technologies Pvt. Ltd." />
     <meta name="author" content="I9 Technologies Pvt. Ltd." />
