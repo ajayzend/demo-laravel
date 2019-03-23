@@ -451,6 +451,10 @@ use Illuminate\Support\Facades\Route;
                 p3_other_occupation          		            :		{ required : true,  selected : true},
                 p3_employer                 		            :		{ required : true},
                 p3_address                   		            :		{ required : true},
+                p3_other_organization                   		:		{ required : true},
+                p3_other_desination                   		    :		{ required : true},
+                p3_other_rank                   		        :		{ required : true},
+                p3_other_place_posting                   		:		{ required : true},
                 p3_po_phone                   		            :		{ required : false, digits : true, maxlength : 10, minlength: 10}
             },
             messages:{
@@ -482,6 +486,10 @@ use Illuminate\Support\Facades\Route;
                 p3_other_occupation                        	    :	    { required : "This field is required", selected : "Please select Present Other Occupation" },
                 p3_employer                             	    :	    { required : "Please enter Employer Name/business" },
                 p3_address                               	    :	    { required : "Please enter Address" },
+                p3_other_organization                           :	    { required : "Please enter Organisation" },
+                p3_other_desination                             :	    { required : "Please enter Designation" },
+                p3_other_rank                                   :	    { required : "Please enter Rank" },
+                p3_other_place_posting                           :	    { required : "Please enter Place of Postin" },
                 p3_po_phone                                      :       { required : "Please enter your 10 digit correct phone or mobile number without zero- Character Value not allowed!", digits : "Please enter your 10 digit correct phone number without zero- Character Value not allowed!" }
             }
         });

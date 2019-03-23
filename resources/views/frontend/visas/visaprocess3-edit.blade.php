@@ -460,7 +460,7 @@
                         </div>
                         <div id="other_organization">
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12 control-label">Organisation</label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Organisation</label>
                                 <div class="col-sm-4 col-xs-12">
                                     <input type="text" class="form-control"   value="{{ $visa->p3_other_organization }}"  placeholder="Organisation" name="p3_other_organization" id="p3_other_organization" />
                                 </div>
@@ -470,7 +470,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12 control-label">Designation</label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Designation</label>
                                 <div class="col-sm-4 col-xs-12">
                                     <input type="text" class="form-control"  value="{{ $visa->p3_other_desination }}" placeholder="Designation" name="p3_other_desination" id="p3_other_desination" />
                                 </div>
@@ -480,7 +480,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12 control-label">Rank</label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Rank</label>
                                 <div class="col-sm-4 col-xs-12">
                                     <input type="text" class="form-control"  value="{{ $visa->p3_other_rank }}" placeholder="Rank" name="p3_other_rank" id="p3_other_rank" />
                                 </div>
@@ -490,7 +490,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-4 col-xs-12 control-label">Place of Posting</label>
+                                <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Place of Posting</label>
                                 <div class="col-sm-4 col-xs-12">
                                     <input type="text" class="form-control" value="{{ $visa->p3_other_place_posting }}"  placeholder="Place of Posting" name="p3_other_place_posting" id="p3_other_place_posting" />
                                 </div>
