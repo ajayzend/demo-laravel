@@ -250,8 +250,9 @@ class VisaRepository extends BaseRepository
    */
     public function findByVisaNoSlug($visa_slug)
     {
-        if (!is_null($this->query()->wherevisa_no($visa_slug)->first())) {
-            return $this->query()->wherevisa_no($visa_slug)->firstOrFail();
+        $status = 0;
+        if (!is_null($this->query()->wherevisa_no($visa_slug)->wherestatus($status)->first())) {
+            return $this->query()->wherevisa_no($visa_slug)->wherestatus($status)->firstOrFail();
         }
         return false;
        // throw new GeneralException(trans('exceptions.backend.access.visas.not_found'));
