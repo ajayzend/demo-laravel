@@ -32,6 +32,7 @@ public/js/skins/*.js
 
 public/img
 public/js/frontend
+public/Masters
 
 composer.lock
 public/img/backend/blog_images/*

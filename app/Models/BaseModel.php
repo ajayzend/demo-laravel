@@ -67,7 +67,7 @@ class BaseModel extends Model
         $encodedString = json_encode($items);
 //Save the JSON string to a text file.
         file_put_contents('Masters/'.$json_filename, $encodedString);
-        
+
         return $items;
     }
 
