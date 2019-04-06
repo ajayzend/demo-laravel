@@ -156,8 +156,6 @@
         <div class="row">
             <div class="col-md-3">
                 <img src="{{ URL::asset('img/frontend/images/logo.png')}}" alt="e Visa India" title="e Visa India" class="img-responsive"/>
-                <p>Site Hosted & Maintained by National Informatics Centre Content provided by Ministry of Home Affairs,
-                    Government of India.</p>
             </div>
             {{--<div class="col-md-3">
                 <div class="links">
@@ -176,7 +174,8 @@
                 <div class="links">
                     <h3>Links</h3>
                     <ul class="list-unstyled">
-                        <li><a href="/">e-visa</a></li>
+                        <li><a href="/">e-Visa</a></li>
+                        <li><a href="/evisa-fee">e-Visa Fee</a></li>
                         <li><a href="/instruction">Instruction For Applicant</a></li>
                         <li><a href="/document">Document Requirement</a></li>
                         <li><a href="/faq">FAQ</a></li>

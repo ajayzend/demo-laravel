@@ -39,6 +39,11 @@
                         <li><a href="/visas/create"><img class="tick"
                                                   src="{{ URL::asset('img/frontend/images/tick.jpg')}}">
                                 Urgent e-Visa</a></li>
+
+                        <li><a href="/evisa-fee"><img class="tick"
+                                                         src="{{ URL::asset('img/frontend/images/tick.jpg')}}">
+                                e-Visa Fee</a></li>
+
                         <li><a href="instruction"><img class="tick"
                                                         src="{{ URL::asset('img/frontend/images/tick.jpg')}}">
                                 Instruction for Applicant</a></li>
@@ -46,6 +51,11 @@
                         <li><a href="document"><img class="tick"
                                                      src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Document
                                 Requirement </a></li>
+
+                        <li><a href="/faq"><img class="tick"
+                                                src="{{ URL::asset('img/frontend/images/tick.jpg')}}">FAQ</a>
+                        </li>
+
                         <li><a href="privacy-policy"><img class="tick"
                                                     src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Privacy
                                 Policy </a></li>
@@ -60,9 +70,6 @@
                                 Us</a></li>--}}
                         <li><a href="disclaimer"><img class="tick"
                                                        src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Disclaimer</a>
-                        </li>
-                        <li><a href="/faq"><img class="tick"
-                                                src="{{ URL::asset('img/frontend/images/tick.jpg')}}">FAQ</a>
                         </li>
 
                     </ul>

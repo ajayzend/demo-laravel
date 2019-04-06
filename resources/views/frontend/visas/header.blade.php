@@ -16,7 +16,9 @@
                     <li><a href="/visas/create"> Tourist e-Visa</a></li>
                     <li><a href="/visas/create"> Medical e-Visa</a></li>
                     <li><a href="/visas/create"> Business e-Visa</a></li>
-                    <li><a href="/document">Document Requirement </a></li><!--
+                    <li><a href="/evisa-fee">e-Visa Fee </a></li>
+                    <li><a href="/document">Document Requirement </a></li>
+                    <!--
 			<li><a href="# condition">Terms & Condition </a></li>-->
                     <!--<li><a href="#about">About Us Policy</a></li>-->
                    {{-- <li><a href="/contact">Contact Us</a></li>--}}

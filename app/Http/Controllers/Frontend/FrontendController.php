@@ -92,6 +92,42 @@ class FrontendController extends Controller
         ]);
     }
 
+    public function sitemap()
+    {
+        $settingData = Setting::first();
+        $google_analytics = $settingData->google_analytics;
+
+        return view('frontend.pages.sitemap', compact('google_analytics', $google_analytics))->with([
+            'header_title'       => "Apply e-Visa to India | Indian Visa Application"
+        ]);
+    }
+
+    public function visafee()
+    {
+        $evisacountry = Evisacountry::getSelectData('name', 0);
+        $settingData = Setting::first();
+        $google_analytics = $settingData->google_analytics;
+
+        return view('frontend.pages.visafee', compact('google_analytics', $google_analytics))->with([
+            'evisa_country'       => $evisacountry
+        ]);
+    }
+
+    public  function visafeecal()
+    {
+        $country = @$_GET['country'];
+        $visa_type = @$_GET['visa_type'];
+        if($country > 0 && $visa_type > 0) {
+            $evisacountryfee = Evisacountry::getSelectCustomDataVisaFee();
+            $visafee = $evisacountryfee[$country];
+            $consult_fee = ($visa_type == 1) ? config('app.consultnfee') : config('app.consultufee');
+            echo $totalvisafee = $visafee + $consult_fee;
+        }else{
+            echo "Please select options to Calculate eVisa Fee";
+        }
+        die;
+    }
+
     public function visaProcess2()
     {
         $settingData = Setting::first();
