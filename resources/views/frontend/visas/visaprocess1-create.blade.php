@@ -136,6 +136,7 @@
                                     <option value="e-Tourist Visa">e-Tourist Visa</option>
                                     <option value="e-Medical Visa">e-Medical Visa</option>
                                     <option value="e-Business Visa">e-Business Visa</option>
+                                    <option value="e-Attendant Visa">e-Attendant Visa</option>
                                 </select>
                             </div>
 

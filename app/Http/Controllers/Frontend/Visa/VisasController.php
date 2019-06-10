@@ -67,10 +67,30 @@ class VisasController extends Controller
      */
     public function create(CreateVisaRequest $request)
     {
+        $title = 'India Visa | Apply for Indian Visa Application';
+        $description = 'Official Indian e Visa website for e tourist visa (eTV) for 180+ countries across the World such as UK, USA, Australia, Canada, Japan, UAE, NZ, European Countries & Singapore and so many';
+        if(strtolower($request->path()) == 'visas/urgent-visa'){
+            $title = 'Urgent E- Visa India | Emergency Visa Application Services - Evisaindia.in';
+            $description = 'Apply for urgent e-Visa India online by visiting EvisaIndia.in website. All foreigners across the globe can get medical e-visa, business and e-tourist visa.';
+        }
+        elseif(strtolower($request->path()) == 'visas/tourist-visa'){
+            $title = 'Indian Tourist visa Online | Tourist India E-VISA - Evisaindia.in';
+            $description = 'Evisaindia.in offers online applications for an Indian tourist e-visa and online assistance for travelers. Apply Online Today.';
+        }
+        elseif(strtolower($request->path()) == 'visas/medical-visa'){
+            $title = 'Indian E-Medical Visa | Online Medical Visa to India - Evisaindia.in';
+            $description = 'Evisaindia.in offers medical e-visa for those seeking medical treatment in India reputed specialized hospitals. Apply Online Today!';
+        }
+
+        elseif(strtolower($request->path()) == 'visas/business-visa'){
+            $title = ' Indian e-Business Visa Online Services | India Business Visa - Evisaindia.in';
+            $description = 'Apply for business e-Visa online by visiting the Evisa India website for those seeking business-related trips to India making sales or within and out of the country.';
+        }
         $port = Port::getSelectData();
         $evisacountry = Evisacountry::getSelectData();
         return view('frontend.visas.visaprocess1-create')->with([
-            'header_title'       => "India Visa | Apply for Indian Visa Application",
+            'header_title'       => $title,
+            'header_description'       => $description,
             'port_arrival'       => $port,
             'evisa_country'       => $evisacountry,
         ]);
@@ -260,6 +280,12 @@ class VisasController extends Controller
                     'visa' => $visa
                 ]);
             }
+            else if ($process_steps == 100051){
+                $visa->header_title = "Additional Question Details";
+                return view('frontend.visas.visaprocess51-edit')->with([
+                    'visa' => $visa
+                ]);
+            }
 
             else if ($process_steps == 10006){
                 $visa->header_title = "Indian e-Visa Application form";
@@ -426,6 +452,17 @@ class VisasController extends Controller
                 if(@$input['p5_passport_photo_name5'] != '')
                     $input['p5_passport_photo_name'] = @$input['p5_passport_photo_name5'];
                 $this->repository->update($visa, $input);
+                session()->put('process_steps', 100051);
+                if($input['submit'] == 'Save and Temporarily Exit') {
+                    $this->exit_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_type);
+                    return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
+                }
+                else
+                    return redirect()->route('frontend.visas.edit', $vid);
+            }
+
+            else if ($process_steps == 100051) {
+                $this->repository->update($visa, $input);
                 session()->put('process_steps', 10006);
                 if($input['submit'] == 'Save and Temporarily Exit') {
                     $this->exit_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_type);
@@ -451,7 +488,8 @@ class VisasController extends Controller
                     session()->put('process_steps', 10001);
                     //return redirect()->route('frontend.paypal.ec-checkout');
                     $this->payment_later_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_typ);
-                    return redirect()->action('PayPalController@getExpressCheckout');
+                    //return redirect()->action('PayPalController@getExpressCheckout');
+                    return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
                 }
                 else {
                     session()->put('process_steps', 10007);

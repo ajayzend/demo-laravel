@@ -40,9 +40,9 @@
                                                   src="{{ URL::asset('img/frontend/images/tick.jpg')}}">
                                 Urgent e-Visa</a></li>
 
-                        <li><a href="/evisa-fee"><img class="tick"
+                        {{--<li><a href="/evisa-fee"><img class="tick"
                                                          src="{{ URL::asset('img/frontend/images/tick.jpg')}}">
-                                e-Visa Fee</a></li>
+                                e-Visa Fee</a></li>--}}
 
                         <li><a href="instruction"><img class="tick"
                                                         src="{{ URL::asset('img/frontend/images/tick.jpg')}}">
@@ -75,15 +75,15 @@
                     </ul>
                 </div>
 
-                <div class="asides3">
+                {{--<div class="asides3">
                     <img src="{{ URL::asset('img/frontend/images/secure.png')}}" alt="e Visa Online Secure" title="e Visa Online Secure" class="img-responsive"/>
                 </div>
-
-                <div class="asides4">
+--}}
+                {{--<div class="asides4">
                     <img src="{{ URL::asset('img/frontend/images/PayPal.png')}}" alt="e Visa Online Tourist Visa" title="e Visa Online Tourist Visa" class="img-responsive"/>
                 </div>
                 <div class="asides4">
                     <img src="{{ URL::asset('img/frontend/images/secure-payment.jpg')}}" alt="e Visa Online Tourist Visa" title="e Visa Online Tourist Visa"
                          class="img-responsive"/>
-                </div>
+                </div>--}}
             </div>

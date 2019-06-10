@@ -13,6 +13,10 @@ Route::group(['namespace' => 'Visa'], function () {
     Route::post('/visaamendprocess', 'VisasController@setvisaamendprocess')->name('visaamendprocess');
     Route::post('/paymentprocess', 'VisasController@setpaymentprocess')->name('paymentprocess');
     Route::resource('visas', 'VisasController', ['except' => ['show']]);
+    Route::get('/visas/urgent-visa', 'VisasController@create')->name('create');
+    Route::get('/visas/tourist-visa', 'VisasController@create')->name('create');
+    Route::get('/visas/medical-visa', 'VisasController@create')->name('create');
+    Route::get('/visas/business-visa', 'VisasController@create')->name('create');
 
     //For DataTables
     Route::post('visas/get', 'VisasTableController')->name('visas.get');

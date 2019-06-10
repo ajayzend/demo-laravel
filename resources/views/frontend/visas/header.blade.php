@@ -12,11 +12,11 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/" >Home</a></li>
-                    <li><a href="/visas/create"> Urgent e-Visa</a></li>
-                    <li><a href="/visas/create"> Tourist e-Visa</a></li>
-                    <li><a href="/visas/create"> Medical e-Visa</a></li>
-                    <li><a href="/visas/create"> Business e-Visa</a></li>
-                    <li><a href="/evisa-fee">e-Visa Fee </a></li>
+                    <li><a href="/visas/urgent-visa"> Urgent e-Visa</a></li>
+                    <li><a href="/visas/tourist-visa"> Tourist e-Visa</a></li>
+                    <li><a href="/visas/medical-visa"> Medical e-Visa</a></li>
+                    <li><a href="/visas/business-visa"> Business e-Visa</a></li>
+                    {{--<li><a href="/evisa-fee">e-Visa Fee </a></li>--}}
                     <li><a href="/document">Document Requirement </a></li>
                     <!--
 			<li><a href="# condition">Terms & Condition </a></li>-->

@@ -1,5 +1,5 @@
 <!-- main content -->
-<section class="wrapper">
+<section class="wrapper" xmlns="http://www.w3.org/1999/html">
     <div class="">
         <div class="row bord-main">
             <div class="clearfix main-ser">
@@ -60,12 +60,12 @@
                                 Nationalities for Air and Sea Routes.
                             </div>
                             </p>
-                            <p>
+                           {{-- <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
                             <div class=""><span><b>Cheaper:</b> </span> Fixed fees, no hidden
                                 charges.
                             </div>
-                            </p>
+                            </p>--}}
                             <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
                             <div class=""><span><b>More accessible:</b> </span> Quickes and most
@@ -100,7 +100,7 @@
 				<div class="container">
                 <div class="clearfix in-pages-sectn">
                     <div class="process-sec">
-                        <h2>E-visa Application <span><b>Process</b></span></h2>
+                        <h2>How to Apply eVisa:<span><b>Easy Application Process</b></span></h2>
 						
 						
 						<div class="row">
@@ -154,8 +154,11 @@
 <footer class="sec-footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <img src="{{ URL::asset('img/frontend/images/logo.png')}}" alt="e Visa India" title="e Visa India" class="img-responsive"/>
+            <div class="col-md-6">
+                <div class="links">
+                    <h3>Disclaimer</h3>
+                <p><a href="/"><strong>www.evisaindia.in</strong></a> is the website to obtain the <a href="/"><strong>Official India e-Visa</strong></a>. This is a commercial website and you will be charged a fee for using our services. Read the Terms and Conditions carefully before submitting the <a href="/visas/create"><strong>"Indian Visa Online Application"</strong></a>.</p>
+                </div>
             </div>
             {{--<div class="col-md-3">
                 <div class="links">
@@ -175,7 +178,8 @@
                     <h3>Links</h3>
                     <ul class="list-unstyled">
                         <li><a href="/">e-Visa</a></li>
-                        <li><a href="/evisa-fee">e-Visa Fee</a></li>
+                        <li><a href="/visas/create">Urgent Apply</a></li>
+                        {{--<li><a href="/evisa-fee">e-Visa Fee</a></li>--}}
                         <li><a href="/instruction">Instruction For Applicant</a></li>
                         <li><a href="/document">Document Requirement</a></li>
                         <li><a href="/faq">FAQ</a></li>
@@ -196,7 +200,7 @@
         </div>
     </div>
     <div class="bottom_footer">
-        <p>Copyright &copy {{date('Y')}}</p>
+        <p>All rights reserved. e-Visa Copyright &copy {{date('Y')}}</p>
     </div>
 </footer>
 

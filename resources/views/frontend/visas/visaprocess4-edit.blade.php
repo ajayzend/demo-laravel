@@ -37,7 +37,7 @@
                                 <input class="form-control" type="text" disabled="disabled" value="60" />
                             </div>
                             <div class="col-sm-4 col-xs-12 des" >
-                                Duration of Visit (in Days)
+                                Duration of Visa is 60 days from date of arrival
                             </div>
                         </div>
 
@@ -46,7 +46,7 @@
                             <div class="col-sm-4 col-xs-12">
 
                                 <select name="visa_entry_id" class="form-control" id="old_visa_type_id">
-                                    <option value="Double" selected="selected">Double</option>
+                                    <option value="Double" selected="selected">@if($visa->p1_visa_type == 'e-Attendant Visa')Triple @else Double @endif</option>
                                 </select >
                             </div>
                             <div class="col-sm-4 col-xs-12 des" >
@@ -148,6 +148,75 @@
                             </div>
                         </div>
                     @endif
+
+                    @if($visa->p1_visa_type == 'e-Attendant Visa')
+                        <div class="title"><p>Details of Purpose "TO ACCOMPANY PATIENT TRAVELLING TO INDIA ON EMEDICAL VISA"</p></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Name of the principal e-Medical Visa holder (i.e. the patient)</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control"  value="{{$visa->p4_medical_name}}" placeholder="Name of the principal e-Medical Visa holder" id="p4_medical_name" name="p4_medical_name" />
+                            </div>
+
+                            <div class="col-sm-4 col-xs-12 des">
+                                Name of the principal e-Medical Visa holder (i.e. the patient)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label"> <span class="star">*</span>Visa No. / Application id of principal e-Medical Visa holder</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input  type="radio" value="Yes"  id="p4_medical_id_flag1" name="p4_medical_id_flag"   {{ $visa->p4_medical_id_flag == 'Yes' ? 'checked="checked"' : '' }}/><span>Visa No</span>
+                                <input  type="radio" value="No" id="p4_medical_id_flag2" name="p4_medical_id_flag" {{ $visa->p4_medical_id_flag == 'No' ? 'checked="checked"' : '' }}  /><span>Application id</span>
+                            </div>
+                            <div class="col-sm-4 col-xs-12 des">Please select Visa No or Application id</div>
+                        </div>
+
+                        <div class="form-group" >
+                            <label class="col-sm-4 col-xs-12 control-label" id="label_change"><span class="star">*</span>Application id of principal e-Medical Visa holder </label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control" value="{{$visa->p4_medical_id}}" placeholder="Visa number or Application id or of principal e-Medical Visa holde" id="p4_medical_id" name="p4_medical_id"/>
+                            </div>
+                            <div class="col-sm-4 col-xs-12 des">
+                                Visa number or Application id or of principal e-Medical Visa holder
+                            </div>
+                        </div>
+
+                        <div class="form-group" >
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Passport number of principal e-Medical Visa holder </label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control" placeholder="Passport number of principal e-Medical Visa holder" value="{{$visa->p4_medical_passport}}" placeholder="" id="p4_medical_passport" name="p4_medical_passport"/>
+                            </div>
+                            <div class="col-sm-4 col-xs-12 des">
+                                Passport number of principal e-Medical Visa holder
+                            </div>
+                        </div>
+
+                        <div class="form-group" >
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Date of birth of principal e-Medical Visa holder </label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control" placeholder="Date of birth of principal e-Medical Visa holder" value="{{$visa->p4_medical_dob}}" id="p1_dob" name="p4_medical_dob"/>
+                            </div>
+                            <div class="col-sm-4 col-xs-12 des">
+                                (DD/MM/YYYY)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Nationality of principal e-Medical Visa holder </label>
+                            <div class="col-sm-4 col-xs-12">
+                                @if(!empty($country))
+                                    {{ Form::select('p4_medical_nationality', $country, $visa->p4_medical_nationality, ['class' => 'form-control select2 box-size', 'id' => 'p4_medical_nationality']) }}
+                                @else
+                                    {{ Form::select('p4_medical_nationality', $country, 0, ['class' => 'form-control select2 box-size', 'id' => 'p4_medical_nationality']) }}
+                                @endif
+                            </div>
+                            <div class="col-sm-4 col-xs-12 des">
+                                Nationality of principal e-Medical Visa holder
+                            </div>
+                        </div>
+                    @endif
+
 					<div class="title"><p>Previous Visa/Currently valid Visa Details</p></div>
                  
 
@@ -626,6 +695,21 @@
                 }
             }).trigger('change');
 
+
+            $("#p4_medical_id_flag1").change(function() {
+                if ($("#p4_medical_id_flag1").is(":checked")) {
+                    $("#label_change").html('<span class="star">*</span>Visa number of principal e-Medical Visa holder');
+                }
+            }).trigger('change');
+
+            $("#p4_medical_id_flag2").change(function() {
+                if ($("#p4_medical_id_flag2").is(":checked")) {
+                    $("#label_change").html('<span class="star">*</span>Application id of principal e-Medical Visa holder');
+                }else if (!$("#p4_medical_id_flag1").is(":checked")) {
+                    $("#label_change").html('<span class="star">*</span>Visa number of principal e-Medical Visa holder')
+                }
+            }).trigger('change');
+
             // To Use Select2
             // Backend.Select2.init();
         });
@@ -647,6 +731,16 @@
 
         $("#p4_submit_button").click(function() {
             var return_bool = false;
+
+            if ((!$("#p4_medical_id_flag1").is(":checked")) && (!$("#p4_medical_id_flag2").is(":checked"))) {
+                $("#p4_medical_id_flag1").focus();
+                $("#p4_medical_id_flag2").focus();
+                alert("Please choose Visa No. / Application id of principal e-Medical Visa holder");
+                return false;
+            }else{
+                return_bool = true;
+            }
+
             if ((!$("#p4_visit_india_before1").is(":checked")) && (!$("#p4_visit_india_before2").is(":checked"))) {
                 $("#p4_visit_india_before1").focus();
                 $("#p4_visit_india_before2").focus();

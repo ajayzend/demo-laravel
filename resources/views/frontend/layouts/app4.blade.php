@@ -32,6 +32,19 @@ use Illuminate\Support\Facades\Route;
     <meta http-equiv="content-language" content="ll-cc"/>
     <meta name="distribution" content="web"/>
     <meta name="googlebot" content="all" />
+
+    <meta name="description" content="EvisaIndia.in website provides online services for India E-Visa applications also available for tourist, business & medical visits. Apply Online Today!."/>
+    <link rel="canonical" href="https://evisaindia.in/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="India Visa Online | India e-Visa Tourist & Business | eVisa India" />
+    <meta property="og:description" content=" Official Indian Visa website for e-Visa, e tourist Visa (eTV) India for 180+ countries across the Globe such as UK, USA & Canada, UAE, Australia " />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="" />
+
     @yield('meta')
 
             <!-- Styles -->

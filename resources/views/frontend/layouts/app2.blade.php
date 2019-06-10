@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
     <title>@yield('title', (@$visa->header_title) ? @$visa->header_title : $header_title)</title>
 
     <!-- Meta -->
-    <meta name="description" content="Official Indian e Visa website for e tourist visa (eTV) for 180+ countries across the World such as UK, USA, Australia, Canada, Japan, UAE, NZ, European Countries & Singapore and so many." />
+    <meta name="description" content=<?php if(isset($header_description)) { echo "'$header_description'";} else { echo "'Official Indian e Visa website for e tourist visa (eTV) for 180+ countries across the World such as UK, USA, Australia, Canada, Japan, UAE, NZ, European Countries & Singapore and so many.'";}?> />
     <meta name="keywords" content="e Tourist Visa India, Indian Visa, Visa to India, india Visa Requirement, Online Indian Visa Application, e visa india, Indian e visa, Apply Visa for India, Indian visa on arrival"/>
 
     <meta name="page-topic" content="e-Visa India" />
@@ -33,6 +33,18 @@ use Illuminate\Support\Facades\Route;
     <meta http-equiv="content-language" content="ll-cc"/>
     <meta name="distribution" content="web"/>
     <meta name="googlebot" content="all" />
+
+    <meta name="description" content=" Official Indian Visa website for e-Visa, e tourist Visa (eTV) India for 180+ countries across the Globe such as UK, USA & Canada, UAE, Australia "/>
+    <link rel="canonical" href="https://evisaindia.in/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="India Visa Online | India e-Visa Tourist & Business | eVisa India" />
+    <meta property="og:description" content=" Official Indian Visa website for e-Visa, e tourist Visa (eTV) India for 180+ countries across the Globe such as UK, USA & Canada, UAE, Australia " />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="" />
     @yield('meta')
 
             <!-- Styles -->
@@ -104,6 +116,9 @@ use Illuminate\Support\Facades\Route;
     }
 </script>
 {{--@include('frontend.footer')--}}
+
+        <!-- Global site tag (gtag.js) - Google Ads: 757972711 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-757972711"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-757972711'); </script>
+
 @include('includes.partials.ga')
 
 <script type="text/javascript">
@@ -505,7 +520,12 @@ use Illuminate\Support\Facades\Route;
                 p4_business_f_phone		            : 		{ required : true , maxlength : 250},
                 p4_business_f_website		        : 		{ required : true , maxlength : 100},
                 p4_business_f_name_contact          : 		{ required : true , maxlength : 250},
+                p4_medical_name		                : 		{ required : true , maxlength : 100},
+                p4_medical_id		                : 		{ required : true , maxlength : 30},
+                p4_medical_passport	                : 		{ required : true , maxlength : 30},
+                p4_medical_dob  	                : 		{ required : true , maxlength : 30},
                 p4_address1     					: 		{ required : true },
+                p4_medical_nationality              : { required : true, selected : true},
                 p4_city_prev_visit					: 		{ required : true },
                 p4_last_curr_visa_no	            :		{ required : true},
                 p4_type_visa       					: 		{ required : true , selected : true},
@@ -529,6 +549,11 @@ use Illuminate\Support\Facades\Route;
                 p4_business_c_name     				: 		{ required : "Please enter Name" },
                 p4_business_c_phone     			: 		{ required : "Please enter Address" },
                 p4_business_c_website     			: 		{ required : "Please enter Address" },
+                p4_medical_name     			    : 		{ required : "Please enter Name of the principal e-Medical Visa holder" },
+                p4_medical_id        			    : 		{ required : "Please enter Visa number or Application id or of principal e-Medical Visa holder" },
+                p4_medical_passport  				: 		{ required : "Please enter Passport number of principal e-Medical Visa holder" },
+                p4_medical_dob     				    : 		{ required : "Please select Date of birth of principal e-Medical Visa holder" },
+                p4_medical_nationality			    : 		{ required : "This field is required", selected : "Please select Nationality of principal e-Medical Visa holder" },
                 p4_address1     				    : 		{ required : "Please enter Address" },
                 p4_city_prev_visit				    : 		{ required : "Please enter Cities Previously Visited in India" },
                 p4_last_curr_visa_no	            :	    { required : "Please enter Last Indian Visa No/Currently Valid Indian Visa No" },
@@ -560,6 +585,26 @@ use Illuminate\Support\Facades\Route;
                 p5_passport_photo_name        	    : 		{ required : "Please Upload A scanned Copy Of Your original Coloured Passport Or Take A picture Of Your Passport and Uploaded." },
                 p5_medical_photo_name        	    : 		{ required : "Please Upload A Scanned Copy of Letter from the Hospital concerned in India on its letterhead." },
                 p5_business_photo_name        	    : 		{ required : "Upload A Scanned Copy of Business Card." }
+            }
+        });
+
+        var app51 = $("#process51");
+        app51.validate({
+            rules:{
+                p51_details1		        : 		{ required : true },
+                p51_details2		        : 		{ required : true },
+                p51_details3		        : 		{ required : true },
+                p51_details4		        : 		{ required : true },
+                p51_details5		        : 		{ required : true },
+                p51_details6		        : 		{ required : true }
+            },
+            messages:{
+                p51_details1        	    : 		{ required : "Please give details" },
+                p51_details2        	    : 		{ required : "Please give details" },
+                p51_details3        	    : 		{ required : "Please give details." },
+                p51_details4        	    : 		{ required : "Please give details." },
+                p51_details5        	    : 		{ required : "Please give details." },
+                p51_details6        	    : 		{ required : "Please give details." }
             }
         });
     });

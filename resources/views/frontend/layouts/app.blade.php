@@ -11,7 +11,7 @@
         <title>@yield('title', app_name())</title>
         <meta name="google-site-verification" content="80oFWWlwO9ySj29V2e4_L46FLzr1ceiC6TCFFjPHUPw" />
         <!-- Meta -->
-        <meta name="description" content="Official Indian e Visa website for e tourist visa (eTV) for 180+ countries across the World such as UK, USA, Australia, Canada, Japan, UAE, NZ, European Countries & Singapore and so many." />
+        <meta name="description" content="EvisaIndia.in website provides online services for India E-Visa applications also available for tourist, business & medical visits. Apply Online Today!." />
         <meta name="keywords" content="e Tourist Visa India, Indian Visa, Visa to India, india Visa Requirement, Online Indian Visa Application, e visa india, Indian e visa, Apply Visa for India, Indian visa on arrival"/>
 
         <meta name="page-topic" content="e-Visa India" />
@@ -34,6 +34,17 @@
         <meta name="distribution" content="web"/>
         <meta name="googlebot" content="all" />
 
+        <meta name="description" content=" Official Indian Visa website for e-Visa, e tourist Visa (eTV) India for 180+ countries across the Globe such as UK, USA & Canada, UAE, Australia "/>
+        <link rel="canonical" href="https://evisaindia.in/" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="India Visa Online | India e-Visa Tourist & Business | eVisa India" />
+        <meta property="og:description" content=" Official Indian Visa website for e-Visa, e tourist Visa (eTV) India for 180+ countries across the Globe such as UK, USA & Canada, UAE, Australia " />
+        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:title" content="" />
 
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
         @yield('meta')

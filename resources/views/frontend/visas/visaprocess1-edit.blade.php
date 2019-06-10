@@ -145,6 +145,7 @@
                                     <option value="e-Tourist Visa" {{ $visa->p1_visa_type == 'e-Tourist Visa' ? 'selected="selected"' : '' }}>e-Tourist Visa</option>
                                     <option value="e-Medical Visa" {{ $visa->p1_visa_type == 'e-Medical Visa' ? 'selected="selected"' : '' }}>e-Medical Visa</option>
                                     <option value="e-Business Visa" {{ $visa->p1_visa_type == 'e-Business Visa' ? 'selected="selected"' : '' }}>e-Business Visa</option>
+                                    <option value="e-Attendant Visa" {{ $visa->p1_visa_type == 'e-Attendant Visa' ? 'selected="selected"' : '' }}>e-Attendant Visa</option>
                                 </select>
                             </div>
 
