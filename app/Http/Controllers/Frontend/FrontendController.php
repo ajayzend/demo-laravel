@@ -17,12 +17,12 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        $evisacountry = Evisacountry::getSelectData('name', 1);
+       // $evisacountry = Evisacountry::getSelectData('name', 1);
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
 
         return view('frontend.home', compact('google_analytics', $google_analytics))->with([
-            'evisa_country'       => $evisacountry
+            //'evisa_country'       => $evisacountry
         ]);
     }
 
@@ -100,6 +100,14 @@ class FrontendController extends Controller
         return view('frontend.pages.sitemap', compact('google_analytics', $google_analytics))->with([
             'header_title'       => "Apply e-Visa to India | Indian Visa Application"
         ]);
+    }
+
+    public function customerCare()
+    {
+        $settingData = Setting::first();
+        $google_analytics = $settingData->google_analytics;
+
+        return view('frontend.pages.customecare', compact('google_analytics', $google_analytics));
     }
 
     public function visafee()

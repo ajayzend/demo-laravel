@@ -71,42 +71,18 @@
             <p><strong> List of Countries eligible for Indian e Visa:</strong></p>
             {{--<p> <strong>Click here to view the complete list </strong></p>--}}
 
-            <div class="panel clum_new" style="display: block;">
-                <div class="clum_new">
-                    <input class="form-control" id="search" type="text" placeholder="Search your country.....">
-                    <br>
-
-                    <table class="table table-bordered table-striped" id="evisa-country">
-                        <?php
-                            $j = -1;
-                        $visa_count = count($evisa_country);
-                        for($i = 0; $i < $visa_count; $i++){
-                        if($j >= $visa_count)
-                            break;
-                        ?>
-
-                        <tr>
-                            <td><?php
-                                $k1 = ++$j;
-                                if($j < $visa_count && $evisa_country[$k1]){ echo $evisa_country[$k1];}
-                                ?>
-                            </td>
-                            <td><?php
-                                $k2 = ++$j;
-                                if($j < $visa_count && $evisa_country[$k2]){ echo $evisa_country[$k2];} ?>
-                            </td>
-                            <td><?php
-                                $k3 = ++$j;
-                                if($j < $visa_count && $evisa_country[$k3]){ echo $evisa_country[$k3];} ?>
-                            </td>
-
-                        </tr>
-                        <?php
-
-                            } ?>
-                    </table>
+            <div class="form-group">
+                <div class="autocomplete col-sm-5 col-xs-12">
+                    <input class="visacountrysearch visacountrysearch2" id="myInput" type="text" name="myCountry" placeholder="Search your country...">
                 </div>
+                <div class="col-sm-6 col-xs-12">
+                    <button class="btn btn-primary btn-md" onclick="location.href='/visas/create'">Apply Visa Now</button>
+                </div>
+
             </div>
+<br>
+<br>
+<br>
 
             <br/><br/><br/>
             {{--<p> <strong>Indian Visa Application

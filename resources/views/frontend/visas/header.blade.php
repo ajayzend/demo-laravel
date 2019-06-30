@@ -11,7 +11,8 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/" >Home</a></li>
+                    <li><button class="btn btn-primary btn-md" onclick="location.href='/visas/create'">Apply Visa Now</button></li>
+                    &nbsp;&nbsp;&nbsp;<li><a href="/" >Home</a></li>
                     <li><a href="/visas/urgent-visa"> Urgent e-Visa</a></li>
                     <li><a href="/visas/tourist-visa"> Tourist e-Visa</a></li>
                     <li><a href="/visas/medical-visa"> Medical e-Visa</a></li>

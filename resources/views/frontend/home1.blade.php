@@ -20,10 +20,10 @@
                     <h2><i class="fa fa-phone"></i> &nbsp24/7 Customer Care</h2>
                     {{--<p><i class="fa fa-envelope" aria-hidden="true"></i> support@evisaindia.in</P>--}}
                     <ul class="list-unstyled">
-                        <li><a href="#"><img src="{{ URL::asset('img/frontend/images/india.png')}}" alt=""
+                        <li><a href="customer-care"><img src="{{ URL::asset('img/frontend/images/india.png')}}" alt=""
                                              class="img-responsive"/> 24/7 Customer Care</a>
                         <li>
-                        <li><a href="#"><img src="{{ URL::asset('img/frontend/images/india.png')}}" alt=""
+                        <li><a href="customer-care"><img src="{{ URL::asset('img/frontend/images/india.png')}}" alt=""
                                              class="img-responsive"/>support@evisaindia.in</a>
                         <li>
 

@@ -17,8 +17,8 @@ Route::get('/sitemap', 'FrontendController@sitemap')->name('sitemap');
 Route::get('/evisa-fee', 'FrontendController@visafee')->name('visafee');
 Route::get('/evisa-fee-cal', 'FrontendController@visafeecal')->name('visafeecal');
 Route::get('/evp/process1', 'VisasProcessController@visaProcess1')->name('evp.process1');
+Route::get('/customer-care', 'FrontendController@customerCare')->name('customerCare');
 //Route::get('/evp/processget1/{slug}/edit', 'VisasProcessController@edit')->name('evp.processget1');
-
 
 Route::get('/evp/process2', 'FrontendController@visaProcess2')->name('visaProcess2');
 

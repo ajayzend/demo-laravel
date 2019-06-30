@@ -253,6 +253,8 @@ class VisasController extends Controller
             }
             else if ($process_steps == 10004){
                 $visa->header_title = "e-Visa Indian Visa Form | $visa->p1_visa_type";
+                if(isset($visa->p4_medical_dob))
+                    $visa->p4_medical_dob = date('d/m/Y', strtotime($visa->p4_medical_dob));
                 if($visa->p4_saarc_country_year_visit)
                     $visa->p4_saarc_country_year_visit = \GuzzleHttp\json_decode($visa->p4_saarc_country_year_visit, true);
                 $port = Port::getSelectData();
