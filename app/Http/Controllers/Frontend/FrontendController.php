@@ -20,9 +20,10 @@ class FrontendController extends Controller
        // $evisacountry = Evisacountry::getSelectData('name', 1);
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
-
         return view('frontend.home', compact('google_analytics', $google_analytics))->with([
-            //'evisa_country'       => $evisacountry
+            'header_title'       => config('seo.home.title'),
+            'header_description'       => config('seo.home.description'),
+            'header_keywords'       => config('seo.home.keywords')
         ]);
     }
 
@@ -31,7 +32,10 @@ class FrontendController extends Controller
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
 
-        return view('frontend.pages.privacy_policy', compact('google_analytics', $google_analytics));
+        return view('frontend.pages.privacy_policy', compact('google_analytics', $google_analytics))->with([
+            'header_title'       => config('seo.privacy-policy.title'),
+            'header_description'       => config('seo.privacy-policy.description')
+        ]);
     }
 
     public function document()
@@ -39,7 +43,10 @@ class FrontendController extends Controller
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
 
-        return view('frontend.pages.document', compact('google_analytics', $google_analytics));
+        return view('frontend.pages.document', compact('google_analytics', $google_analytics))->with([
+            'header_title'       => config('seo.document.title'),
+            'header_description'       => config('seo.document.description')
+        ]);
     }
 
     public function instruction()
@@ -51,7 +58,9 @@ class FrontendController extends Controller
 
         return view('frontend.pages.instruction', compact('google_analytics', $google_analytics))->with([
             'evisa_country'       => $evisacountry,
-            'port_arrival'       => $port
+            'port_arrival'       => $port,
+            'header_title'       => config('seo.instruction.title'),
+            'header_description'       => config('seo.instruction.description')
         ]);
     }
 
@@ -60,7 +69,10 @@ class FrontendController extends Controller
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
 
-        return view('frontend.pages.condition', compact('google_analytics', $google_analytics));
+        return view('frontend.pages.condition', compact('google_analytics', $google_analytics))->with([
+            'header_title'       => config('seo.condition.title'),
+            'header_description'       => config('seo.condition.description')
+        ]);
     }
 
     public function about()
@@ -68,7 +80,10 @@ class FrontendController extends Controller
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
 
-        return view('frontend.pages.about', compact('google_analytics', $google_analytics));
+        return view('frontend.pages.about', compact('google_analytics', $google_analytics))->with([
+            'header_title'       => config('seo.about-us.title'),
+            'header_description'       => config('seo.about-us.description')
+        ]);
     }
 
     public function disclaimer()
@@ -76,7 +91,10 @@ class FrontendController extends Controller
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
 
-        return view('frontend.pages.disclaimer', compact('google_analytics', $google_analytics));
+        return view('frontend.pages.disclaimer', compact('google_analytics', $google_analytics))->with([
+            'header_title'       => config('seo.disclaimer.title'),
+            'header_description'       => config('seo.disclaimer.description')
+        ]);
     }
 
     public function faq()
@@ -88,7 +106,9 @@ class FrontendController extends Controller
 
         return view('frontend.pages.faq', compact('google_analytics', $google_analytics))->with([
             'evisa_country'       => $evisacountry,
-            'port_arrival'       => $port
+            'port_arrival'       => $port,
+            'header_title'       => config('seo.faq.title'),
+            'header_description'       => config('seo.faq.description')
         ]);
     }
 
@@ -107,7 +127,10 @@ class FrontendController extends Controller
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
 
-        return view('frontend.pages.customecare', compact('google_analytics', $google_analytics));
+        return view('frontend.pages.customecare', compact('google_analytics', $google_analytics))->with([
+            'header_title'       => config('seo.customer-care.title'),
+            'header_description'       => config('seo.customer-care.description')
+        ]);
     }
 
     public function visafee()

@@ -5,7 +5,7 @@
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
     <div class="row">
         <div class="about_us">
-            <h4>Document <span>Requirement</span></h4>
+            <h1>Document <span>Requirement</span></h1>
             <p><strong>The documents required for e-Tourist Visa (eTV) are</strong></p>
             <ul>
                 <li><p>Scanned First Page of Passport.</p></li>

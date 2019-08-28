@@ -5,7 +5,7 @@
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
     <div class="row">
         <div class="about_us">
-            <h4>Disclaimer</h4>
+            <h1>Disclaimer</h1>
             <ul>
                 <li><p><a href ="/">www.evisaindia.in</a> is a commercial website used for applying eVisa to India through Indian Government website. Our website is responsible for full visa services to India. Theservices on this website are chargeable. The fee on this website is higher compared to the Indian Government if you apply through the Indian Embassy or online website. Read all the terms and conditions before using the services.a</p></li>
                 <li><p>Our website is not affiliated to the Indian Government or any other government body. Applicant can also apply for the eVisa at the official Government source instead of our website. We abide by the Data Protection Act and all the data provided by the applicant is solely used for the purpose of visa application.</p></li>

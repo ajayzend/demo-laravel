@@ -3,13 +3,16 @@
 @section('content')
     <section class="wrapper">
         <div class="container">
-            <div class="row1">
 
+            <div class="row1">
+                <h1 style="text-align: center"><strong><?php echo $h1;?></strong></h1>
                 <?php //echo validation_errors(); ?>
                 <div class="form-outer">
+
                     <div class="title">
+
 <div class="title"><p class="text-center">e-Visa-India (eVI) Application</p></div>
-                     
+
                     </div>
 
                     {{ Form::open(['route' => 'frontend.visas.store', 'class' => 'form-horizontal', 'id' => 'process1']) }}

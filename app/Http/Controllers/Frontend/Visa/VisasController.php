@@ -67,32 +67,45 @@ class VisasController extends Controller
      */
     public function create(CreateVisaRequest $request)
     {
-        $title = 'India Visa | Apply for Indian Visa Application';
-        $description = 'Official Indian e Visa website for e tourist visa (eTV) for 180+ countries across the World such as UK, USA, Australia, Canada, Japan, UAE, NZ, European Countries & Singapore and so many';
+        $title = config('seo.create.title');
+        $description = config('seo.create.title');
+        $keywords = config('seo.create.title');
+        $h1 = config('seo.create.h1');
         if(strtolower($request->path()) == 'visas/urgent-visa'){
-            $title = 'Urgent E- Visa India | Emergency Visa Application Services - Evisaindia.in';
-            $description = 'Apply for urgent e-Visa India online by visiting EvisaIndia.in website. All foreigners across the globe can get medical e-visa, business and e-tourist visa.';
+            $title = config('seo.urgent-visa.title');
+            $description = config('seo.urgent-visa.title');
+            $keywords = config('seo.urgent-visa.title');
+            $h1 = config('seo.urgent-visa.h1');
         }
         elseif(strtolower($request->path()) == 'visas/tourist-visa'){
-            $title = 'Indian Tourist visa Online | Tourist India E-VISA - Evisaindia.in';
-            $description = 'Evisaindia.in offers online applications for an Indian tourist e-visa and online assistance for travelers. Apply Online Today.';
+            $title = config('seo.tourist-visa.title');
+            $description = config('seo.tourist-visa.title');
+            $keywords = config('seo.tourist-visa.title');
+            $h1 = config('seo.tourist-visa.h1');
         }
         elseif(strtolower($request->path()) == 'visas/medical-visa'){
-            $title = 'Indian E-Medical Visa | Online Medical Visa to India - Evisaindia.in';
-            $description = 'Evisaindia.in offers medical e-visa for those seeking medical treatment in India reputed specialized hospitals. Apply Online Today!';
+            $title = config('seo.medical-visa.title');
+            $description = config('seo.medical-visa.title');
+            $keywords = config('seo.medical-visa.title');
+            $h1 = config('seo.medical-visa.h1');
         }
 
         elseif(strtolower($request->path()) == 'visas/business-visa'){
-            $title = ' Indian e-Business Visa Online Services | India Business Visa - Evisaindia.in';
-            $description = 'Apply for business e-Visa online by visiting the Evisa India website for those seeking business-related trips to India making sales or within and out of the country.';
+            $title = config('seo.business-visa.title');
+            $description = config('seo.business-visa.title');
+            $keywords = config('seo.business-visa.title');
+            $h1 = config('seo.business-visa.h1');
+
         }
         $port = Port::getSelectData();
         $evisacountry = Evisacountry::getSelectData();
         return view('frontend.visas.visaprocess1-create')->with([
             'header_title'       => $title,
             'header_description'       => $description,
+            'header_keywords'       => $keywords,
             'port_arrival'       => $port,
             'evisa_country'       => $evisacountry,
+            'h1'       => $h1,
         ]);
     }
 
@@ -327,7 +340,8 @@ class VisasController extends Controller
                 $visafee = $evisacountryfee[$visa->p1_nationality];
                 $consult_fee = ($app_type_val == 'normal') ? config('app.consultnfee') : config('app.consultufee');
 
-                $visafee = ($visafee) ? $visafee : 100;
+                if(!$visafee === 0)
+                    $visafee = ($visafee) ? $visafee : 100;
                 $consult_fee = ($consult_fee) ? $consult_fee : 50;
 
                 $total_fee = $visafee + $consult_fee;

@@ -5,7 +5,7 @@
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
     <div class="row">
         <div class="about_us">
-            <h4>Customer <span>Care 24/7</span></h4>
+            <h1>Customer <span>Care 24/7</span></h1>
             <p><strong>Chat Support</strong></p>
             <p>We are here to assit you. Please initiate a chat for any kind of help, Our team will try to response you as soon as possible.</p>
             <p><strong>Email Support</strong></p>

@@ -5,7 +5,7 @@
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
     <div class="row">
         <div class="about_us">
-            <h4>Terms and <span>conditions</span></h4>
+            <h1>Terms and <span>conditions</span></h1>
             <ul>
                 <li><p>Welcome to our website. The Website Owner, including subsidiaries and affiliates provides the information contained on the website or any other pages comprising the website to the visitors, subject to the terms and conditions set out in this website’s privacy policy and any other relevant terms and conditions, policies and notices which may be applicable to a specific section or module of the website.</p></li>
                 <li><p>If one continues to browse and use this website then the person is agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern the relationship of the visitor in relation to this website.</p></li>

@@ -4,7 +4,7 @@
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
     <div class="row">
         <div class="about_us">
-            <h4>Privacy- <span>Policy</span></h4>
+            <h1>Privacy- <span>Policy</span></h1>
             <p>This privacy policy sets out how <a href ="/">www.evisaindia.in</a> uses and protects any information that providedby the applicant to <a href ="/">www.evisaindia.in</a> whentheapplicant uses this website.</p>
             <p><a href ="/">www.evisaindia.in</a> ensures that the applicant'sprivacy is protected. The data and information provided by the applicant is completely secured and it is assured that it will only be used in accordance to this privacy statement.</p>
             <p>The policy may be changed from time to time by <a href ="/">www.evisaindia.in</a> while up support@evisaindia.in dating the website. It is advisable that the applicant is aware of the updates made on this page.</p>

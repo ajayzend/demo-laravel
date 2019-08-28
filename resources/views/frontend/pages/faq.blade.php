@@ -5,7 +5,7 @@
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
     <div class="row">
         <div class="about_us">
-            <h4>Frequently Asked Questions</h4>
+            <h1>Frequently Asked Questions</h1>
             <p><strong>What is the Electronic Visa (e-Visa)?</strong></p>
             <p>The Electronic Visa or e-Visa is an online visa issued by the Indian Government for citizens of 161 countries, who wish to visit India for touristic, business or medical reasons, for a maximum stay of 60 consecutive days. You can apply for an e-Tourist, e-Business or e-Medical Visa twice in a calendar year.
 

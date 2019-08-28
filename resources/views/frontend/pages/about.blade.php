@@ -5,7 +5,7 @@
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
     <div class="row">
         <div class="about_us">
-            <h4>About <span>Us</span></h4>
+            <h1>About <span>Us</span></h1>
             <p><strong>Who is e-Visa India?</strong></p>
             <p>e-Visa India is the organization responsible for marketing India to the world as a tourist destination. The major tool we use to do this is the 100% pure e-Visa India marketing campaign, a campaign that has evolved over the past couple of months to make e-Visa India one of the world's most well-respected tourism brands for India.</p>
             <p>e-Visa has helped Indian tourism grow leaps and bounce through the eTourist Visa facility given by the Indian government. During December 2014, a total of 14083 eTV were issued in comparison to 2700 eTV during December 2013 to tourist visiting India. By January 2015 a total of 39046 eTV were issued which registered an overall growth of 421.6% in Indian tourism. This whole process has brought in a huge influx of tourist in India and as a brand we www.e-visaindia.com are playing a major role in dealing with this flood or tourists.</p>
