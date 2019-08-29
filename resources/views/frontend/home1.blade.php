@@ -20,10 +20,10 @@
                     <h2><i class="fa fa-phone"></i> &nbsp24/7 Customer Care</h2>
                     {{--<p><i class="fa fa-envelope" aria-hidden="true"></i> support@evisaindia.in</P>--}}
                     <ul class="list-unstyled">
-                        <li><a href="customer-care"><img src="{{ URL::asset('img/frontend/images/india.png')}}" alt=""
+                        <li><a href="customer-care"><img src="{{ URL::asset('img/frontend/images/india.png')}}" alt="Indian Visa Online"
                                              class="img-responsive"/> 24/7 Customer Care</a>
                         <li>
-                        <li><a href="customer-care"><img src="{{ URL::asset('img/frontend/images/india.png')}}" alt=""
+                        <li><a href="customer-care"><img src="{{ URL::asset('img/frontend/images/india.png')}}" alt="Indian Visa Online"
                                              class="img-responsive"/>support@evisaindia.in</a>
                         <li>
 
@@ -34,10 +34,10 @@
                     <h2>Indian Visa Informatione</h2>
                     <ul class="list-unstyled">
                         <li><a href="/" class="active"><img class="tick"
-                                                            src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Home</a>
+                                                            src="{{ URL::asset('img/frontend/images/tick.jpg')}}" alt="E-visa India ">Home</a>
                         </li>
                         <li><a href="/visas/create"><img class="tick"
-                                                  src="{{ URL::asset('img/frontend/images/tick.jpg')}}">
+                                                  src="{{ URL::asset('img/frontend/images/tick.jpg')}}"alt="E-visa India ">
                                 Urgent e-Visa</a></li>
 
                         {{--<li><a href="/evisa-fee"><img class="tick"
@@ -45,31 +45,31 @@
                                 e-Visa Fee</a></li>--}}
 
                         <li><a href="instruction"><img class="tick"
-                                                        src="{{ URL::asset('img/frontend/images/tick.jpg')}}">
+                                                        src="{{ URL::asset('img/frontend/images/tick.jpg')}}" alt="E-visa India ">
                                 Instruction for Applicant</a></li>
 
                         <li><a href="document"><img class="tick"
-                                                     src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Document
+                                                     src="{{ URL::asset('img/frontend/images/tick.jpg')}}" alt="E-visa India ">Document
                                 Requirement </a></li>
 
                         <li><a href="/faq"><img class="tick"
-                                                src="{{ URL::asset('img/frontend/images/tick.jpg')}}">FAQ</a>
+                                                src="{{ URL::asset('img/frontend/images/tick.jpg')}}" alt="E-visa India ">FAQ</a>
                         </li>
 
                         <li><a href="privacy-policy"><img class="tick"
-                                                    src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Privacy
+                                                    src="{{ URL::asset('img/frontend/images/tick.jpg')}}" alt="E-visa India ">Privacy
                                 Policy </a></li>
                         <li><a href="condition"><img class="tick"
-                                                      src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Terms
+                                                      src="{{ URL::asset('img/frontend/images/tick.jpg')}}" alt="E-visa India ">Terms
                                 & Condition </a></li>
                         <li><a href="about-us"><img class="tick"
-                                                  src="{{ URL::asset('img/frontend/images/tick.jpg')}}">About
+                                                  src="{{ URL::asset('img/frontend/images/tick.jpg')}}" alt="E-visa India ">About
                                 Us Policy</a></li>
                        {{-- <li><a href="contact"><img class="tick"
                                                     src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Contact
                                 Us</a></li>--}}
                         <li><a href="disclaimer"><img class="tick"
-                                                       src="{{ URL::asset('img/frontend/images/tick.jpg')}}">Disclaimer</a>
+                                                       src="{{ URL::asset('img/frontend/images/tick.jpg')}}" alt="E-visa India ">Disclaimer</a>
                         </li>
 
                     </ul>
