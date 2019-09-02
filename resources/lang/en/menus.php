@@ -163,6 +163,13 @@ return [
 	"management" => "Visatype Management",
 	"main" => "Visatypes",
 	],
+	"contactuses" => [
+	"all" => "All Contactuses",
+	"create" => "Create Contactus",
+	"edit" => "Edit Contactus",
+	"management" => "Contactus Management",
+	"main" => "Contactuses",
+	],
 	],
 	"language-picker" => [
 	"language" => "Language",

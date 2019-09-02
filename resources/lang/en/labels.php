@@ -342,6 +342,16 @@ return [
 	"createdat" => "Created At",
 	],
 	],
+	"contactuses" => [
+	"create" => "Create Contactus",
+	"edit" => "Edit Contactus",
+	"management" => "Contactus Management",
+	"title" => "Contactuses",
+	"table" => [
+	"id" => "Id",
+	"createdat" => "Created At",
+	],
+	],
 	],
 	"frontend" => [
 	"auth" => [

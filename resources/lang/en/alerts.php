@@ -98,5 +98,10 @@ return [
 	"deleted" => "The Visatype was successfully deleted.",
 	"updated" => "The Visatype was successfully updated.",
 	],
+	"contactuses" => [
+	"created" => "The Contactus was successfully created.",
+	"deleted" => "The Contactus was successfully deleted.",
+	"updated" => "The Contactus was successfully updated.",
+	],
 	],
 ];

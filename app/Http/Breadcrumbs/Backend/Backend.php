@@ -26,3 +26,4 @@ require __DIR__.'/Religion.php';
 require __DIR__.'/Education.php';
 require __DIR__.'/Occupation.php';
 require __DIR__.'/Visatype.php';
+require __DIR__.'/Contactus.php';
