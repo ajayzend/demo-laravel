@@ -40,7 +40,19 @@ class VisasController extends Controller
      */
     public function __construct(VisaRepository $repository)
     {
+        //die("home");
         $this->repository = $repository;
+    }
+
+
+    public function home()
+    {
+        $evisacountry = Evisacountry::getSelectData('name', 1);
+        $settingData = Setting::first();
+        $google_analytics = $settingData->google_analytics;
+        return view('frontend.home', compact('google_analytics', $google_analytics))->with([
+            'evisa_country'       => $evisacountry
+        ]);
     }
 
     /**
@@ -68,32 +80,32 @@ class VisasController extends Controller
     public function create(CreateVisaRequest $request)
     {
         $title = config('seo.create.title');
-        $description = config('seo.create.title');
-        $keywords = config('seo.create.title');
+        $description = config('seo.create.description');
+        $keywords = config('seo.create.keywords');
         $h1 = config('seo.create.h1');
         if(strtolower($request->path()) == 'visas/urgent-visa'){
             $title = config('seo.urgent-visa.title');
-            $description = config('seo.urgent-visa.title');
-            $keywords = config('seo.urgent-visa.title');
+            $description = config('seo.urgent-visa.description');
+            $keywords = config('seo.urgent-visa.keywords');
             $h1 = config('seo.urgent-visa.h1');
         }
         elseif(strtolower($request->path()) == 'visas/tourist-visa'){
             $title = config('seo.tourist-visa.title');
-            $description = config('seo.tourist-visa.title');
-            $keywords = config('seo.tourist-visa.title');
+            $description = config('seo.tourist-visa.description');
+            $keywords = config('seo.tourist-visa.keywords');
             $h1 = config('seo.tourist-visa.h1');
         }
         elseif(strtolower($request->path()) == 'visas/medical-visa'){
             $title = config('seo.medical-visa.title');
-            $description = config('seo.medical-visa.title');
-            $keywords = config('seo.medical-visa.title');
+            $description = config('seo.medical-visa.description');
+            $keywords = config('seo.medical-visa.keywords');
             $h1 = config('seo.medical-visa.h1');
         }
 
         elseif(strtolower($request->path()) == 'visas/business-visa'){
             $title = config('seo.business-visa.title');
-            $description = config('seo.business-visa.title');
-            $keywords = config('seo.business-visa.title');
+            $description = config('seo.business-visa.description');
+            $keywords = config('seo.business-visa.keywords');
             $h1 = config('seo.business-visa.h1');
 
         }

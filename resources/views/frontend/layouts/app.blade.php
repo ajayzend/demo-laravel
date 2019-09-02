@@ -35,7 +35,6 @@
         <meta name="distribution" content="web"/>
         <meta name="googlebot" content="all" />
 
-        <meta name="description" content=" Official Indian Visa website for e-Visa, e tourist Visa (eTV) India for 180+ countries across the Globe such as UK, USA & Canada, UAE, Australia "/>
         <link rel="canonical" href="https://evisaindia.in/" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
