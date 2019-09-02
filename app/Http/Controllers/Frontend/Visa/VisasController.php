@@ -19,6 +19,7 @@ use App\Models\Religion\Religion;
 use App\Models\Education\Education;
 use App\Models\Occupation\Occupation;
 use App\Models\Visatype\Visatype;
+use App\Models\Contactus\Contactus;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMailable;
@@ -138,6 +139,10 @@ class VisasController extends Controller
         session()->put('vid', $vid);
         session()->put('evpuid', $evpuid);
         session()->put('process_steps', 10002);
+        $name = $input['p1_fname'];
+        $email = $input['p1_email'];
+        $p1_visa_type = $input['p1_visa_type'];
+        $this->exit_email($name, $email, $p1_visa_type);
         return redirect()->route('frontend.visas.edit', $vid);
         //return with successfull message
         // return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.created'));
@@ -589,6 +594,38 @@ class VisasController extends Controller
         }
     }
 
+    public function contactus()
+    {
+        $settingData = Setting::first();
+        $google_analytics = $settingData->google_analytics;
+
+        return view('frontend.visas.contactus', compact('google_analytics', $google_analytics))->with([
+            'header_title'       => config('seo.contact-us.title'),
+            'header_description'       => config('seo.contact-us.description'),
+            'h1'       => config('seo.contact-us.h1')
+        ]);
+    }
+
+    public function setcontactus(StoreVisaRequest $request, VisaRepository $visa)
+    {
+        //Input received from the request
+        $date = date('Y-m-d H:i:s');
+        $input = $request->except(['_token']);
+        $name = $input['cu_name'];
+        $email = $input['cu_email'];
+        $contactus = new Contactus();
+        $contactus->name = $name;
+        $contactus->email = $email;
+        $contactus->mobile = $input['cu_phone'];
+        $contactus->query = $input['cu_query'];
+        $contactus->created_at = $date;
+        $contactus->updated_at = $date;
+        if($contactus->save()){
+            $this->contact_us_email($name, $email);
+        }
+        return redirect()->route('frontend.visas.index');
+    }
+
     public function exit_email($name, $email, $visatype)
     {
         $template = "evisa-exit-process";
@@ -640,4 +677,19 @@ class VisasController extends Controller
 
         return 'Email was sent';
     }
+
+    public function contact_us_email($name, $email)
+    {
+        $visatype = "";
+        $template = "contact-us";
+        $subject = "Help Request for e-Visa India";
+        $bcc = config('app.mailbcc');
+        //$name = 'Ajay';
+        // Mail::to($email)->cc('ajay.kumar.iimt@gmail.com')->send(new SendMailable($name, $template));
+        $name = ucfirst(strtolower($name));
+        Mail::to($email)->bcc($bcc)->send(new SendMailable($name, $template, $subject, $visatype));
+
+        return 'Email was sent';
+    }
+
 }

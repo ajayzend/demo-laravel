@@ -90,4 +90,11 @@ return [
         'description' => "Evisaindia.in website provides you Indian e visa online, if you apply Indian visa application. Read all the terms and conditions before using the services.",
         'keywords'      => "temp"
     ],
+
+    'contact-us' => [
+        'title'     => "Indian E Visa Online Services | Contact Us - Evisaindia.in",
+        'description' => "Evisaindia.in is a leading visa consultancy website to apply Indian e visa visit us now and get more details contact us.",
+        'keywords'      => "temp",
+        'h1'      => "Contact US"
+    ],
 ];

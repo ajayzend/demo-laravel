@@ -72,6 +72,10 @@
                                                        src="{{ URL::asset('img/frontend/images/tick.jpg')}}" alt="E-visa India ">Disclaimer</a>
                         </li>
 
+                        <li><a href="/contact-us"><img class="tick"
+                                                         src="{{ URL::asset('img/frontend/images/tick.jpg')}}"alt="E-visa India ">
+                                Contact US</a></li>
+
                     </ul>
                 </div>
 

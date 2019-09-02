@@ -34,7 +34,6 @@ use Illuminate\Support\Facades\Route;
     <meta name="distribution" content="web"/>
     <meta name="googlebot" content="all" />
 
-    <meta name="description" content=" Official Indian Visa website for e-Visa, e tourist Visa (eTV) India for 180+ countries across the Globe such as UK, USA & Canada, UAE, Australia "/>
     <link rel="canonical" href="https://evisaindia.in/" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
@@ -605,6 +604,20 @@ use Illuminate\Support\Facades\Route;
                 p51_details4        	    : 		{ required : "Please give details." },
                 p51_details5        	    : 		{ required : "Please give details." },
                 p51_details6        	    : 		{ required : "Please give details." }
+            }
+        });
+
+        var app6 = $("#contact-us");
+        app6.validate({
+            rules:{
+                cu_name		        : 		    { required : true },
+                cu_email		        : 		    { required : true, email: true },
+                cu_query		        : 		    { required : true }
+            },
+            messages:{
+                cu_name        	    : 		    { required : "Please enter your name." },
+                cu_email        	    : 		    { required : "Please enter your email", email : "Please enter valid email address", remote : "Email already taken" },
+                cu_query        	    : 		    { required : "Please enter query." }
             }
         });
     });

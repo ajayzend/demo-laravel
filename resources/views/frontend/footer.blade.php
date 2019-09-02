@@ -157,7 +157,7 @@
             <div class="col-md-6">
                 <div class="links">
                     <h3>Disclaimer</h3>
-                <p><a href="/"><strong>www.evisaindia.in</strong></a> is the website to obtain the <a href="/"><strong>Official India e-Visa</strong></a>. This is a commercial website and you will be charged a fee for using our services. Read the Terms and Conditions carefully before submitting the <a href="/visas/create"><strong>"Indian Visa Online Application"</strong></a>.</p>
+                <p><a href="/"><strong>This</strong></a> is the website to obtain the <a href="/"><strong>Official India e-Visa</strong></a>. This is a commercial website and you will be charged a fee for using our services. Read the Terms and Conditions carefully before submitting the <a href="/visas/create"><strong>"Indian Visa Online Application"</strong></a>.</p>
                 </div>
             </div>
             {{--<div class="col-md-3">
@@ -177,12 +177,12 @@
                 <div class="links">
                     <h3>Links</h3>
                     <ul class="list-unstyled">
-                        <li><a href="/">e-Visa</a></li>
-                        <li><a href="/visas/create">Urgent Apply</a></li>
+                        <li><a href="/visas/create">Apply Urgent e Visa India</a></li>
                         {{--<li><a href="/evisa-fee">e-Visa Fee</a></li>--}}
                         <li><a href="/instruction">Instruction For Applicant</a></li>
                         <li><a href="/document">Document Requirement</a></li>
                         <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/contact-us">Contact US</a></li>
                         <li><a href="/sitemap">SiteMap</a></li>
                        {{-- <li><a href="#">Faq-sbi Payment Related</a></li>
                         <li><a href="#">Faq Axis Payment Related</a></li>--}}

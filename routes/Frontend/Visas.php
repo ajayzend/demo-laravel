@@ -11,6 +11,8 @@ Route::group(['namespace' => 'Visa'], function () {
     Route::get('/paymentprocess', 'VisasController@dopaymentprocess')->name('paymentprocess');
     Route::get('/payment-update', 'VisasController@getpaymentresponse')->name('payment-update');
     Route::post('/visaamendprocess', 'VisasController@setvisaamendprocess')->name('visaamendprocess');
+    Route::get('/contact-us', 'VisasController@contactus')->name('contactus');
+    Route::post('/contact-us', 'VisasController@setcontactus')->name('setcontactus');
     Route::post('/paymentprocess', 'VisasController@setpaymentprocess')->name('paymentprocess');
     Route::resource('visas', 'VisasController', ['except' => ['show']]);
     Route::get('/visas/urgent-visa', 'VisasController@create')->name('create');
