@@ -200,7 +200,7 @@
         </div>
     </div>
     <div class="bottom_footer">
-        <p>All rights reserved. e-Visa Copyright &copy {{date('Y')}}</p>
+        <p>Copyright &copy 2018-{{date('Y')}} I Nine Technologies</p>
     </div>
 </footer>
 
