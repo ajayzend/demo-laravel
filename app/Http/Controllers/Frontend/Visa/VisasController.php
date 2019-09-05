@@ -80,6 +80,7 @@ class VisasController extends Controller
      */
     public function create(CreateVisaRequest $request)
     {
+        $url_action = 'C';
         $title = config('seo.create.title');
         $description = config('seo.create.description');
         $keywords = config('seo.create.keywords');
@@ -89,18 +90,21 @@ class VisasController extends Controller
             $description = config('seo.urgent-visa.description');
             $keywords = config('seo.urgent-visa.keywords');
             $h1 = config('seo.urgent-visa.h1');
+            $url_action = 'U';
         }
         elseif(strtolower($request->path()) == 'visas/tourist-visa'){
             $title = config('seo.tourist-visa.title');
             $description = config('seo.tourist-visa.description');
             $keywords = config('seo.tourist-visa.keywords');
             $h1 = config('seo.tourist-visa.h1');
+            $url_action = 'T';
         }
         elseif(strtolower($request->path()) == 'visas/medical-visa'){
             $title = config('seo.medical-visa.title');
             $description = config('seo.medical-visa.description');
             $keywords = config('seo.medical-visa.keywords');
             $h1 = config('seo.medical-visa.h1');
+            $url_action = 'M';
         }
 
         elseif(strtolower($request->path()) == 'visas/business-visa'){
@@ -108,7 +112,7 @@ class VisasController extends Controller
             $description = config('seo.business-visa.description');
             $keywords = config('seo.business-visa.keywords');
             $h1 = config('seo.business-visa.h1');
-
+            $url_action = 'B';
         }
         $port = Port::getSelectData();
         $evisacountry = Evisacountry::getSelectData();
@@ -119,6 +123,7 @@ class VisasController extends Controller
             'port_arrival'       => $port,
             'evisa_country'       => $evisacountry,
             'h1'       => $h1,
+            'url_action'       => $url_action
         ]);
     }
 

@@ -7,71 +7,30 @@
         <div class="about_us">
             <h1>Welcome to Indian</br> <span>Visa Online</span></h1>
             <h3>e-Visa India</h3>
-            <p>It is mandatory for all the foreign nationals to carry valid passport along with the print out of Indian
-                tourist visa approval sent to their email, before leaving the country of travel origin. Visa to India
-                can be applied through the online e-tourist visa link.</p>
-            <p><strong>Important guidelines for the Indian Visa Process</strong></p>
+            <p>All tourists to India require an <strong>Indian visa</strong>, only the residents of Nepal & Bhutan can enter India without a visa. So, the visitors can apply for a regular visa or an e-Visa, it is easily available, and suitable for those who don’t want a visa for a long time. Here are some important things you should know about E Visa.</p>
+            <p>The <strong>Indian e visa</strong> is an electronic travel authorization to visit India for tourism, business or medical condition. One of the biggest advantages of applying <strong>online Indian visa application</strong> is that it is not necessary to submit your passport or other documents to the embassy. The entire procedure can be done online and we at evisaindia.in make applying for an India e-Visa simple. The e-Visa authorization will be issued beforehand electronically before your landing in India. At the immigration counter, the authentic India visa will be presented with your passport.</p>
+            <p>The Indian Government introduced this e-visa program in 2014 only for 43 nations, to promote travel to India without the hassle of waiting in long lines in the front of the embassy. And in 2017, India modified <strong>e visa India</strong> program by introducing new visa subcategories for tourists, business travelers, and medical visits. And now, travelers from 160+ nations can apply for <strong>Indian e visa online</strong> for different purpose like tourist, business and medical.</p>
 
+            <p><strong>IMPORTANT POINTS TO KNOW</strong></p>
             <ul>
-                <li><p>After the initiation or submission of an application, one must not start any other application
-                        against the same passport number. The consecutive applications will be rejected by the
-                        Government of India due to redundancy.</p>
+                <li><p>The <strong>Indian visa online</strong> allows for many entries into India.</p>
                 </li>
-                <li><p>One shall not be granted new e-Visa against the same passport until the expiry of the existing
-                        e-Visa, this is applicable even if the details are incorrect.</p></li>
+                <li><p><strong>It can take anywhere from 2 to 4 working days to get your <a href="/visas/tourist-visa"><u>Indian E-Tourist visa</u></a> approved.</strong></p></li>
                 <li><p>There can be no cancellation, amendment or refund once the visa is granted or an application is
                         submitted against a passport.</p></li>
-                <li><p>It is strictly advisable to submit only one e-Visa India application form at a timeand complete
-                        the same application that was initiated.</p></li>
-                <li><p>Applicants are advised to carefully fill in the details in the application and review the same
-                        before makingthefinalpayment.</p></li>
-                <li><p>In case if the application ID cannot be traced, then one must immediately contact the 24/7
-                        Customer Care service to get it checked before making further process.</p></li>
+                <li><p>Validity of Tourist E Visa is 1 year from the date of issue. Tourist can visit India anytime within this period.</p></li>
+                <li><p>The E-Visa holder can stay in India up to 60 days.</p></li>
+                <li><p>The <strong>India visa</strong> is valid in 26 Airports and 5 seaports for entry in India. But visitors can exit from any international airport in India.</p></li>
+                <li><p>The applicant's passport should be valid for at least 6 months from the date of arrival in India with minimum 2 blank pages.</p></li>
+                <li><p>Citizens of Yellow Fever affected countries must hold a yellow fever vaccination card at the time of arrival.</p></li>
+                <li><p>Applicants must carry the same passport they used for <a href="/visas/create"><strong><u>Indian visa application</u></strong></a>.</p></li>
             </ul>
+            <p>For any other queries regarding <strong>visa to India UK, visa to India US</strong> or from any other nations, you can <strong>chat or get email</strong> support with our customer care executives anytime without any hesitation.</p>
 
-            <p><strong>Checklist for Indian Visa Application</strong></p>
-            <ul>
-                <li><p>Scanned copy of front page of the original passport.</p></li>
-                <li><p>Recent digital photograph with white background.</p></li>
-            </ul>
-            <p>Make sure that these documents are ready and at hands reach, as it is required to upload them along with
-                the application. Also, to note that visa fees are non-refundable.</p>
-            <p><strong>e-Tourist Visa India requirement</strong></p>
-            <ul>
-                <li><p>An applicant's passport is required to have a minimum validity of six months from the date of
-                        arrival in India.</p></li>
-                <li><p>It is necessary that the passport has at least two blank pages for Visa stamping.</p></li>
-                <li><p>At the time of arrival travelers should carry an onward journey ticket or a return ticket.</p>
-                </li>
-                <li><p>Sufficient expenditure money should be at one’s disposal during the stay in India.</p></li>
-                <li><p>Applications need to be made online minimum of 4 days and maximum of 120 days prior to the date
-                        of arrival.</p></li>
-            </ul>
-            <p>The validity of Indian Visa is for 60 days from the date of arrival. The visa is to be availed during the
-                validity period.</p>
-            <p><strong> The Indian e-Visa is divided into three categories</strong></p>
-            <ul>
-                <li><p><strong>e-Tourist Visa</strong></p></li>
-                <p>Valid for two entries from the first arrival date.</p>
-                <li><p><strong>e-Business Visa </strong></p></li>
-                <p>Also Valid for two entries from the first arrival date.</p>
-                <li><p><strong>e-Medical Visa</strong></p></li>
-                <p>Two e-Medical Attendant Visas are granted against one e-Medical Visa.</p>
-            </ul>
-            <p>Valid for three entries from the first arrival date</p>
-            <p>Indian Entry Points that Accept e-Visas</p>
-            <p><strong>One can get entry through 26 international airports in India</strong></P>
-            <p>Ahmedabad, Amritsar, Bagdogra, Bangalore, Calicut, Chennai, Chandigarh, Kochi, Coimbatore, Delhi, Gaya,
-                Goa, Guwahati, Hyderabad, Jaipur, Kolkata, Lucknow, Madurai, Mangalore, Mumbai, Nagpur, Pune,
-                Tiruchirapalli, Trivandrum, Varanasi, and Vishakhapatnam</p>
-            <p><strong>One can also enter through the five designated seaports in India</strong></p>
-            <p>Kochi, Goa, Mangalore, Mumbai, Chennai.</p>
-            <p>Foreigners are allowedto exit from any of the authorized Immigration Check Posts (ICPs) in India.</p>
-            <p>Finally, the Indian Embassy reserves the authority to the grant or reject the Indian Visa.</p>
-            <p><strong> List of Countries eligible for Indian e Visa:</strong></p>
+            {{--<p><strong> List of Countries eligible for Indian e Visa:</strong></p>--}}
             {{--<p> <strong>Click here to view the complete list </strong></p>--}}
 
-            <div class="form-group">
+            {{--<div class="form-group">
                 <div class="autocomplete col-sm-5 col-xs-12">
                     <input class="visacountrysearch visacountrysearch2" id="myInput" type="text" name="myCountry" placeholder="Search your country...">
                 </div>
@@ -79,7 +38,7 @@
                     <button class="btn btn-primary btn-md" onclick="location.href='/visas/create'">Apply Visa Now</button>
                 </div>
 
-            </div>
+            </div>--}}
 <br>
 <br>
 <br>
