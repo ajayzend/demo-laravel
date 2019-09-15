@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Settings\Setting;
+use App\Models\Blogs\Blog;
 use App\Repositories\Frontend\Pages\PagesRepository;
+use App\Repositories\Backend\Blogs\BlogsRepository;
 use App\Models\Evisacountry\Evisacountry;
 use App\Models\Port\Port;
 /**
@@ -25,6 +27,36 @@ class FrontendController extends Controller
             'header_description'       => config('seo.home.description'),
             'header_keywords'       => config('seo.home.keywords')
         ]);
+    }
+
+    public function blog()
+    {
+        $blogs = Blog::all();
+       // dd($blogs);
+       // var_dump($blogdata);die;
+        // $evisacountry = Evisacountry::getSelectData('name', 1);
+        $settingData = Setting::first();
+        $google_analytics = $settingData->google_analytics;
+        return view('frontend.pages.blog', compact('google_analytics', $google_analytics))->with([
+            'header_title'       => config('seo.home.title'),
+            'header_description'       => config('seo.home.description'),
+            'header_keywords'       => config('seo.home.keywords'),
+            'h1'       => config('seo.home.keywords'),
+            'blogs'       => $blogs
+        ]);
+    }
+
+    public function blogdetail($slug, BlogsRepository $blog){
+        $result = $blog->findBySlug($slug);
+        return view('frontend.pages.blog-detail')
+            ->with([
+                'header_title'       => $result->meta_title,
+                'header_description'       => $result->meta_description,
+                'header_keywords'       => $result->meta_keywords,
+                'h1'       => config('seo.home.keywords'),
+                'blog'       => $result
+            ]);
+
     }
 
     public function privacy()

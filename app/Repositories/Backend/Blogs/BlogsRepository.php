@@ -249,4 +249,16 @@ class BlogsRepository extends BaseRepository
 
         return $this->storage->delete($this->upload_path.$fileName);
     }
+
+    /*
+   * Find page by page_slug
+   */
+    public function findBySlug($blog_slug)
+    {
+        if (!is_null($this->query()->whereslug($blog_slug)->firstOrFail())) {
+            return $this->query()->whereslug($blog_slug)->firstOrFail();
+        }
+
+        throw new GeneralException(trans('exceptions.backend.access.visas.not_found'));
+    }
 }
