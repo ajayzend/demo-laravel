@@ -38,10 +38,10 @@ class FrontendController extends Controller
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
         return view('frontend.pages.blog', compact('google_analytics', $google_analytics))->with([
-            'header_title'       => config('seo.home.title'),
-            'header_description'       => config('seo.home.description'),
-            'header_keywords'       => config('seo.home.keywords'),
-            'h1'       => config('seo.home.keywords'),
+            'header_title'       => config('seo.blog.title'),
+            'header_description'       => config('seo.blog.description'),
+            'header_keywords'       => config('seo.blog.keywords'),
+            'h1'       => config('seo.blog.h1'),
             'blogs'       => $blogs
         ]);
     }

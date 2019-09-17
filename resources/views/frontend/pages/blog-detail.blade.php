@@ -10,7 +10,7 @@
                     <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
                         <h2 style="text-align: left"><strong>{{$blog->name}}</strong></h2>
                         <img class="tick"
-                             src="{{ URL::asset('storage/img/blog/'.$blog->featured_image)}}" height="250px" width="713px" alt="E-visa India ">
+                             src="{{ URL::asset('storage/img/blog/'.$blog->featured_image)}}" height="250px" width="100%" alt="E-visa India ">
 
                         <br>
                         <br>

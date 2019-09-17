@@ -46,55 +46,62 @@ return [
     'document' => [
         'title'     => "Document Requirement For Indian E-Visa Online – Evisaindia.in",
         'description' => "EvisaIndia.in provides online services for India E-Visa applications also available for tourist, business & medical visits. Apply online today with all required document.",
-        'keywords'      => "temp"
+        'keywords'      => ""
     ],
 
     'instruction' => [
         'title'     => "Instructions For Indian E-Visa Online Application – Evisaindia.in",
         'description' => "Indian E-Visa Online: Know the instructions for the online Indian visa application. Evisaindia.in provides the Indian E-Visa online in many countries like USA, UK.",
-        'keywords'      => "temp"
+        'keywords'      => ""
     ],
 
     'faq' => [
         'title'     => "Frequently Asked Questions About Indian Visa – Evisaindia.in",
         'description' => "Apply Indian visa online: Evisaindia.in is a leading e-visa company in India. Apply for indian e visa from worldwide at less processing time and costing.",
-        'keywords'      => "temp"
+        'keywords'      => ""
     ],
 
     'privacy-policy' => [
         'title'     => "Privacy - Policy | Apply For Indian Visa Online - Evisaindia.in",
         'description' => "Visit us & know about the online visa procedure. We safe and secure you’re all information. India E-Visa applications are available for tourist, business, etc. visits.",
-        'keywords'      => "temp"
+        'keywords'      => ""
     ],
 
     'customer-care' => [
         'title'     => "Indian E Visa Customer Care 24/7 - Evisaindia.in",
         'description' => "Apply visa online and get 24x7 customer care services. Our team will try to response you as soon as possible.",
-        'keywords'      => "temp"
+        'keywords'      => ""
     ],
 
     'condition' => [
         'title'     => "Indian Visa Services | Terms And Conditions - Evisaindia.in",
         'description' => "Welcome to Evisaindia.in, here you can see website terms and conditions before applying for e visa.",
-        'keywords'      => "temp"
+        'keywords'      => ""
     ],
 
     'about-us' => [
         'title'     => "Indian E Visa Online Services | About Us - Evisaindia.in",
         'description' => "Evisaindia.in is a leading visa consultancy website to apply Indian e visa visit us now and get more details about us.",
-        'keywords'      => "temp"
+        'keywords'      => ""
     ],
 
     'disclaimer' => [
         'title'     => "E Visa | Indian Visa | Disclaimer - Evisaindia.in",
         'description' => "Evisaindia.in website provides you Indian e visa online, if you apply Indian visa application. Read all the terms and conditions before using the services.",
-        'keywords'      => "temp"
+        'keywords'      => ""
     ],
 
     'contact-us' => [
         'title'     => "Indian E Visa Online Services | Contact Us - Evisaindia.in",
         'description' => "Evisaindia.in is a leading visa consultancy website to apply Indian e visa visit us now and get more details contact us.",
-        'keywords'      => "temp",
+        'keywords'      => "",
         'h1'      => "Contact US"
+    ],
+
+    'blog' => [
+        'title'     => "Apply For Indian E Visa Online - Evisaindia.in",
+        'description' => "Application For Indian E Visa: If you are applying for Indian E visa online, then reads Evisaindia.in blogs. These blogs help a lot to apply for Indian E Visa.",
+        'keywords'      => "",
+        'h1'      => "Indian E Visa - Blogs"
     ],
 ];

@@ -5,7 +5,7 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="row">
         <div class="blog">
-            <h1 style="text-align: center"><strong>Indian Visa Blog</strong></h1>
+            <h1 style="text-align: center"><strong>{{$h1}}</strong></h1>
             <hr>
 
             <div class="row">
@@ -26,7 +26,7 @@
                     <hr>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <img class="tick"
-                         src="{{ URL::asset('storage/img/blog/'.$blog->featured_image)}}" height="150px" width="213px" alt="E-visa India ">
+                         src="{{ URL::asset('storage/img/blog/'.$blog->featured_image)}}" height="150px" width="100%" alt="E-visa India ">
                     </div>
                     <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
                     <a href="blog/{{$blog->slug}}">{{$blog->name}}</a>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <hr>
-                    <a href="{{$blog->slug}}">{{$blog->name}}...</a> <br>
+                    <a href="blog/{{$blog->slug}}">{{$blog->name}}...</a> <br>
                     Posted on {{date("M-d-Y", strtotime($blog->created_at))}}
 
                 </div>
