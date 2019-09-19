@@ -359,7 +359,23 @@ class VisasController extends Controller
                     $app_type_val = 'normal';
                 }
                 $evisacountryfee = Evisacountry::getSelectCustomDataVisaFee();
+
+
                 $visafee = $evisacountryfee[$visa->p1_nationality];
+
+                if($visafee != 0) {
+                    if ($visa->p1_visa_type == 'e-Tourist Visa') { //
+                        $visafee = 25;
+                    } else if ($visa->p1_visa_type == 'e-Tourist Visa 1 year') { //
+                        $visafee = 40;
+                    }
+                }
+               /* if($visa->p1_visa_type == 'e-Tourist Visa 5 years'){ //
+
+                }else {
+
+                    $visafee = $evisacountryfee[$visa->p1_nationality];
+                }*/
                 $consult_fee = ($app_type_val == 'normal') ? config('app.consultnfee') : config('app.consultufee');
 
                 if(!$visafee === 0)

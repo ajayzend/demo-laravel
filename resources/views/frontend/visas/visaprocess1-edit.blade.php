@@ -21,9 +21,9 @@
 
                                     <select id="p1_app_type" class="form-control" onchange="changeFunc();" name="p1_app_type">
                                         <option value="0"> Select Application Type</option>
-                                        <option value="Normal Processing (processing Time 4 To 7 Business Days" {{ $visa->p1_app_type == 'Normal Processing (processing Time 4 To 7 Business Days' ? 'selected="selected"' : '' }} > Normal Processing (processing Time 4 To 7 Business Days
+                                        <option value="Normal Processing (processing Time 4 To 7 Business Days" {{ $visa->p1_app_type == 'Normal Processing (processing Time 4 To 7 Business Days' ? 'selected="selected"' : '' }} > Normal Processing (processing Time 4 to 7 Business Days
                                         </option>
-                                        <option value="Urgent Processing (processing Time Maximum 3 Business Days)" {{ $visa->p1_app_type == 'Urgent Processing (processing Time Maximum 3 Business Days)' ? 'selected="selected"' : '' }}  > Urgent Processing (processing Time Maximum 3 Business Days)
+                                        <option value="Urgent Processing (processing Time Maximum 3 Business Days)" {{ $visa->p1_app_type == 'Urgent Processing (processing Time Maximum 3 Business Days)' ? 'selected="selected"' : '' }}  > Urgent Processing (processing Time 1 to 3 Business Days)
                                         </option>
                                     </select>
 
@@ -142,10 +142,12 @@
                                 <?php //echo $visa; ?>
                                 <select id="p1_visa_type" name="p1_visa_type" class="form-control">
                                     <option value="0">Select Visa</option>
-                                    <option value="e-Tourist Visa" {{ $visa->p1_visa_type == 'e-Tourist Visa' ? 'selected="selected"' : '' }}>e-Tourist Visa</option>
-                                    <option value="e-Medical Visa" {{ $visa->p1_visa_type == 'e-Medical Visa' ? 'selected="selected"' : '' }}>e-Medical Visa</option>
-                                    <option value="e-Business Visa" {{ $visa->p1_visa_type == 'e-Business Visa' ? 'selected="selected"' : '' }}>e-Business Visa</option>
-                                    <option value="e-Attendant Visa" {{ $visa->p1_visa_type == 'e-Attendant Visa' ? 'selected="selected"' : '' }}>e-Attendant Visa</option>
+                                    <option value="e-Tourist Visa" {{ $visa->p1_visa_type == 'e-Tourist Visa' ? 'selected="selected"' : '' }}>e-Tourist Visa(for 30 days)</option>
+                                    <option value="e-Tourist Visa 1 year" {{ $visa->p1_visa_type == 'e-Tourist Visa 1 year' ? 'selected="selected"' : '' }}>e-Tourist Visa(for 1 year)</option>
+                                    <option value="e-Tourist Visa 5 years" {{ $visa->p1_visa_type == 'e-Tourist Visa 5 years' ? 'selected="selected"' : '' }}>e-Tourist Visa(for 5 years)</option>
+                                    <option value="e-Medical Visa" {{ $visa->p1_visa_type == 'e-Medical Visa' ? 'selected="selected"' : '' }}>e-Medical Visa(for 60 days)</option>
+                                    <option value="e-Business Visa" {{ $visa->p1_visa_type == 'e-Business Visa' ? 'selected="selected"' : '' }}>e-Business Visa(for 1 year)</option>
+                                    <option value="e-Attendant Visa" {{ $visa->p1_visa_type == 'e-Attendant Visa' ? 'selected="selected"' : '' }}>e-Attendant Visa(for 60 days)</option>
                                 </select>
                             </div>
 

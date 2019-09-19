@@ -27,27 +27,47 @@
                                 {{$visa->p1_visa_type}}
                             </div>
                             <div class="col-sm-4 col-xs-12 des" >
-                                Select Visa Type You are Applying For
+                                Selected Visa Type You are Applying For
                             </div>
                         </div>
 
+                    @if($visa->p1_visa_type == 'e-Tourist Visa')
+                        <?php $p4_number_entries = 'Double';
+                        $duration_label = 'Duration of Visa (in Days)';
+                        $duration_value = '30 Days';
+                        $duration_hint = 'Duration of Visa is 30 days from date of arrival'; ?>
+                    @elseif($visa->p1_visa_type == 'e-Medical Visa' || $visa->p1_visa_type == 'e-Attendant Visa')
+                        <?php $p4_number_entries = 'Tripple';
+                        $duration_label = 'Duration of Visa (in Days)';
+                        $duration_value = '60 Days';
+                        $duration_hint = 'Duration of Visa is 60 days from date of arrival'; ?>
+                    @else
+                        <?php $p4_number_entries = 'Multiple'; ?>
+                        @if($visa->p1_visa_type == 'e-Tourist Visa 5 years')
+                            <?php $duration_label = 'Duration of Visa (in Years)';
+                            $duration_value = '5 years';
+                            $duration_hint = 'Duration of Visa is 5 years from date of arrival';?>
+                            @else
+                            <?php $duration_label = 'Duration of Visa (in Days)';
+                            $duration_value = '365 Days';
+                            $duration_hint = 'Duration of Visa is 365 days from date of arrival'; ?>
+                            @endif
+                    @endif
+
                         <div class="form-group">
-                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Duration of Visa (in Days)</label>
+                            <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>{{$duration_label}}</label>
                             <div class="col-sm-4 col-xs-12">
-                                <input class="form-control" type="text" disabled="disabled" value="60" />
+                                <input class="form-control" type="text" name="p4_visa_duration" readonly="readonly" value="{{$duration_value}}" />
                             </div>
                             <div class="col-sm-4 col-xs-12 des" >
-                                Duration of Visa is 60 days from date of arrival
+                                {{$duration_hint}}
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>No. of Entries</label>
                             <div class="col-sm-4 col-xs-12">
-
-                                <select name="visa_entry_id" class="form-control" id="old_visa_type_id">
-                                    <option value="Double" selected="selected">@if($visa->p1_visa_type == 'e-Attendant Visa')Triple @else Double @endif</option>
-                                </select >
+                                   <input type="text" class="form-control" value="{{$p4_number_entries}}" name="p4_number_entries" readonly="readonly" />
                             </div>
                             <div class="col-sm-4 col-xs-12 des" >
                                 No. of Entries
@@ -732,14 +752,14 @@
         $("#p4_submit_button").click(function() {
             var return_bool = false;
 
-            if ((!$("#p4_medical_id_flag1").is(":checked")) && (!$("#p4_medical_id_flag2").is(":checked"))) {
+            /*if ((!$("#p4_medical_id_flag1").is(":checked")) && (!$("#p4_medical_id_flag2").is(":checked"))) {
                 $("#p4_medical_id_flag1").focus();
                 $("#p4_medical_id_flag2").focus();
                 alert("Please choose Visa No. / Application id of principal e-Medical Visa holder");
                 return false;
             }else{
                 return_bool = true;
-            }
+            }*/
 
             if ((!$("#p4_visit_india_before1").is(":checked")) && (!$("#p4_visit_india_before2").is(":checked"))) {
                 $("#p4_visit_india_before1").focus();
