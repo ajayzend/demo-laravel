@@ -25,6 +25,13 @@ Route::get('paypal/ec-checkout-success', 'PayPalController@getExpressCheckoutSuc
 Route::get('paypal/adaptive-pay', 'PayPalController@getAdaptivePay');
 Route::post('paypal/notify', 'PayPalController@notify');
 
+// Razor Payment Gateway Integration
+// Get Route For Show Payment Form
+Route::get('paywithrazorpay', 'RazorpayController@payWithRazorpay')->name('paywithrazorpay');
+// Post Route For Makw Payment Request
+Route::post('payment', 'RazorpayController@payment')->name('payment');
+
+
 /* ----------------------------------------------------------------------- */
 
 /*
