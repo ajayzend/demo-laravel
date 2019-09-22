@@ -99,9 +99,9 @@ return [
     ],
 
     'blog' => [
-        'title'     => "Apply For Indian E Visa Online - Evisaindia.in",
+        'title'     => "Blogs – Apply For Indian E Visa Online - Evisaindia.in",
         'description' => "Application For Indian E Visa: If you are applying for Indian E visa online, then reads Evisaindia.in blogs. These blogs help a lot to apply for Indian E Visa.",
-        'keywords'      => "",
+        'keywords'      => "apply for Indian visa online, Indian visa online, apply for Indian visa, Indian visa application form",
         'h1'      => "Indian E Visa - Blogs"
     ],
 ];
