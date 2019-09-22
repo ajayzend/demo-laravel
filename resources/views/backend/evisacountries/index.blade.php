@@ -24,6 +24,10 @@
                             <th>{{ trans('labels.backend.evisacountries.table.id') }}</th>
                             <th>E-Visa Country</th>
                             <th>E-Visa Fee</th>
+                            <th>T_30Day_AJ Fee</th>
+                            <th>T_30Day_JM Fee</th>
+                            <th>T_1Year Fee</th>
+                            <th>T_5Years Fee</th>
                             <th>{{ trans('labels.backend.evisacountries.table.createdat') }}</th>
                             <th>Updated At</th>
                             <th>{{ trans('labels.general.actions') }}</th>
@@ -31,6 +35,10 @@
                     </thead>
                     <thead class="transparent-bg">
                         <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -61,6 +69,10 @@
                     {data: 'id', name: '{{config('module.evisacountries.table')}}.id'},
                     {data: 'name', name: '{{config('module.evisacountries.table')}}.name'},
                     {data: 'fee', name: '{{config('module.evisacountries.table')}}.fee'},
+                    {data: 'evisa_aj_30d_fee', name: '{{config('module.evisacountries.table')}}.evisa_aj_30d_fee'},
+                    {data: 'evisa_jm_30d_fee', name: '{{config('module.evisacountries.table')}}.evisa_jm_30d_fee'},
+                    {data: 'evisa_1y_fee', name: '{{config('module.evisacountries.table')}}.evisa_1y_fee'},
+                    {data: 'evisa_5y_fee', name: '{{config('module.evisacountries.table')}}.evisa_5y_fee'},
                     {data: 'created_at', name: '{{config('module.evisacountries.table')}}.created_at'},
                     {data: 'updated_at', name: '{{config('module.evisacountries.table')}}.updated_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}

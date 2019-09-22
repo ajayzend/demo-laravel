@@ -32,6 +32,10 @@ class EvisacountryRepository extends BaseRepository
                 config('module.evisacountries.table').'.id',
                 config('module.evisacountries.table').'.name',
                 config('module.evisacountries.table').'.fee',
+                config('module.evisacountries.table').'.evisa_aj_30d_fee',
+                config('module.evisacountries.table').'.evisa_jm_30d_fee',
+                config('module.evisacountries.table').'.evisa_1y_fee',
+                config('module.evisacountries.table').'.evisa_5y_fee',
                 config('module.evisacountries.table').'.created_at',
                 config('module.evisacountries.table').'.updated_at',
             ]);
