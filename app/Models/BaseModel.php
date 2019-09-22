@@ -101,12 +101,20 @@ class BaseModel extends Model
             $items[$model->id] = [
                 'id'    => $model->id,
                 'fee'  => $model->fee,
+                'evisa_aj_30d_fee'  => $model->evisa_aj_30d_fee,
+                'evisa_jm_30d_fee'  => $model->evisa_jm_30d_fee,
+                'evisa_1y_fee'  => $model->evisa_1y_fee,
+                'evisa_5y_fee'  => $model->evisa_5y_fee,
                 'model' => $model,
             ];
         }
 
         foreach ($items as $id => $item) {
-            $items[$item['id']] = $item['fee'];
+            $items[$item['id']][0] = $item['fee'];
+            $items[$item['id']][1] = $item['evisa_aj_30d_fee'];
+            $items[$item['id']][2] = $item['evisa_jm_30d_fee'];
+            $items[$item['id']][3] = $item['evisa_1y_fee'];
+            $items[$item['id']][4] = $item['evisa_5y_fee'];
         }
 
         return $items;

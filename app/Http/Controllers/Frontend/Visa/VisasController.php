@@ -359,23 +359,25 @@ class VisasController extends Controller
                     $app_type_val = 'normal';
                 }
                 $evisacountryfee = Evisacountry::getSelectCustomDataVisaFee();
+                $visafee_arr = $evisacountryfee[$visa->p1_nationality];
 
 
-                $visafee = $evisacountryfee[$visa->p1_nationality];
-
-                if($visafee != 0) {
-                    if ($visa->p1_visa_type == 'e-Tourist Visa') { //
-                        $visafee = 25;
-                    } else if ($visa->p1_visa_type == 'e-Tourist Visa 1 year') { //
-                        $visafee = 40;
+                if ($visa->p1_visa_type == 'e-Tourist Visa') { //
+                    $date = date('Y-m-d');
+                    $month = date('F', strtotime($date));
+                    if($month == 'april' || $month == 'may' || $month == 'june'){
+                        $visafee = $visafee_arr['evisa_aj_30d_fee'];
+                    }else{
+                        $visafee = $visafee_arr['evisa_jm_30d_fee'];
                     }
-                }
-               /* if($visa->p1_visa_type == 'e-Tourist Visa 5 years'){ //
-
+                } else if ($visa->p1_visa_type == 'e-Tourist Visa 1 year') { //
+                    $visafee = $visafee_arr['evisa_1y_fee'];
+                }else if ($visa->p1_visa_type == 'e-Tourist Visa 5 years') { //
+                    $visafee = $visafee_arr['evisa_5y_fee'];
                 }else {
+                    $visafee = $visafee_arr['fee'];
+                }
 
-                    $visafee = $evisacountryfee[$visa->p1_nationality];
-                }*/
                 $consult_fee = ($app_type_val == 'normal') ? config('app.consultnfee') : config('app.consultufee');
 
                 if(!$visafee === 0)
