@@ -28,6 +28,7 @@ Route::post('paypal/notify', 'PayPalController@notify');
 // Razor Payment Gateway Integration
 // Get Route For Show Payment Form
 Route::get('paywithrazorpay', 'RazorpayController@payWithRazorpay')->name('paywithrazorpay');
+Route::get('payment-success', 'RazorpayController@paymentSuccess')->name('paymentSuccess');
 // Post Route For Makw Payment Request
 Route::post('payment', 'RazorpayController@payment')->name('payment');
 

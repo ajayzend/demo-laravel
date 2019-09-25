@@ -5,8 +5,11 @@
         <div class="container">
             <div class="row">
                 <div class="form-outer">
-                    <div class="title"> <h3 class="text-center" >{{ session()->get('evpuid') }} (eTV) Application</h3></div>
-                    <h2 class="text-center" > <strong> {{ session()->get('message') }} </strong></h2>
+                    <div>&nbsp;</div>
+                    <div class="title"> <h1 class="text-center" >{{session()->get('visatype')}}</h1></div>
+                    <h2 class="text-center" > <strong> Congratulations! </strong></h2>
+                    <h3 class="text-center" > <strong> {{ session()->get('message') }} </strong></h3>
+                    <div>&nbsp;</div>
 
                       <div class="form-group">
                         {{--{{ Form::label('logo', trans('validation.attributes.backend.settings.sitelogo'), ['class' => 'col-lg-2 control-label']) }}--}}
@@ -20,8 +23,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-4 col-xs-12 control-label" ></label>
-                        <div class="col-sm-8 col-xs-12">
+                        <label class="col-sm-5 col-xs-12 control-label" ></label>
+                        <div class="col-sm-7 col-xs-12">
                             <input type="button" onclick="javascript:$(location).attr('href','/');" name="submit" value="Go to Home"  class="btn-primary submit-btn2">
                         </div>
                     </div>

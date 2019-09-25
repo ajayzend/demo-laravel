@@ -387,9 +387,17 @@ class VisasController extends Controller
                 $total_fee = $visafee + $consult_fee;
 
                 $total_fee_usd = ($total_fee >= 50) ? $total_fee : 150;
+
+                if($visa->p1_email == 'ajay.kumar.iimt@gmail.com' || $visa->p1_email == 'ankitrastogi2028@gmail.com'){
+                    $total_fee_usd = 0.50;
+                }
+
                 session()->put('evisafeedollar', $total_fee_usd);
+                session()->put('prefill_name', $visa->p1_fname.' '.$visa->p1_lname);
+                session()->put('prefill_email', $visa->p1_email);
                 $total_fee_inr = number_format($total_fee_usd*73.69, 2) ;
 
+                session()->put('apptype', $visa->p1_app_type);
                 session()->put('visatype', $visa->p1_visa_type);
                 session()->put('evisafee', $total_fee_inr);
                // echo "<pre>";print_r( session()->all());die;
@@ -549,8 +557,13 @@ class VisasController extends Controller
                 }
                 else {
                     session()->put('process_steps', 10007);
+                    if(@$input['p7_pay'] == 'payp'){
+                        return redirect()->action('PayPalController@getExpressCheckout');
+                    }else{
+                        return redirect()->action('RazorpayController@payWithRazorpay');
+                    }
                    // return redirect()->route('frontend.paypal.ec-checkout');
-                    return redirect()->action('PayPalController@getExpressCheckout');
+
                 }
             }
 

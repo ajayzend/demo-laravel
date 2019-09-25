@@ -102,7 +102,7 @@ class PayPalController extends Controller
 
             $visano = session()->get('evpuid');
             if ($invoice->paid) {
-                session()->put(['code' => 'success', 'message' => "Order $visano has been paid successfully!"]);
+                session()->put(['code' => 'success', 'message' => "Payment has been done successfully, Your Visa registration number is $visano. We will process it as soon as possible and will keep you updated regarding your visa process."]);
             } else {
                 session()->put(['code' => 'danger', 'message' => "Error processing PayPal payment for Order $visano!"]);
             }

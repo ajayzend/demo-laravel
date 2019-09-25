@@ -102,10 +102,10 @@
                     <div class="form-group text-center">
                     
                
-                            <input  type="radio" value="Yes"  id="p4_visit_india_before1" name="p4_visit_india_before"   {{ $visa->p4_visit_india_before == 'Yes' ? 'checked="checked"' : '' }}/><span><img height="30" width="50" id="spass"  src="{{ URL::asset('img/frontend/images/visa.png')}}"></span>
+                            <input  type="radio" value="razr"  name="p7_pay" /><span>&nbsp;<img height="34" width="160" id="spass"  src="{{ URL::asset('img/frontend/images/vmda_payment.png')}}"></span>
 
-     
-                            <input  type="radio" value="No" id="p4_visit_india_before2" name="p4_visit_india_before" {{ $visa->p4_visit_india_before == 'No' ? 'checked="checked"' : '' }}  /><span><img height="30" width="50" id="spass"  src="{{ URL::asset('img/frontend/images/master.png')}}"></span>
+                        &nbsp;&nbsp;
+                            <input  type="radio" value="payp" name="p7_pay" /><span>&nbsp;<img height="34" width="80" id="spass"  src="{{ URL::asset('img/frontend/images/PayPal.png')}}"></span>
                    
                     </div>
 <br />

@@ -26,3 +26,16 @@ App\Repositories\Port\PortsRepository.php
 ********************************End*******************************************
 
 
+############### Stripe Payment Integration Process
+Dummy card Detail
+4242 4242 4242 4242
+1: composer require stripe/stripe-php
+
+Testing Data
+Visa Card No. : 4242424242424242
+Mobile No. : 9898989898
+OTP No. : 123456
+
+############ Razor payment Gateway Integration
+Step1: composer require razorpay/razorpay
+
