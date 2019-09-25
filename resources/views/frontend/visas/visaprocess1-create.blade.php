@@ -197,11 +197,9 @@
                                     </ul>
                                     <p><strong>Important points to know regarding India travel e visa:</strong></p>
                                     <ul>
-                                        <li><p>Validity of tourist visa is 60 days</p></li>
-                                        <li><p><strong>Validity of India tourist e-Visa is 1 year after the date of issue.</strong></p></li>
-                                        <li><p><strong>The e-tourist visa India allows for Double Entry, up to stay of 60 days</strong></p></li>
-                                        <li><p>Non-convertible & non-extendable visa.</p></li>
-                                        <li><p>Can apply for only 2 e-visas in a year.</p></li>
+                                        <li><p>One month e-Tourist Visa allow for double entry, non-extendable and non non-convertible.</p></li>
+                                        <li><p>One year e-Tourist Visa allow for multiple entries with duration of 365 days from the date of grant of ETA.</p></li>
+                                        <li><p>Five years e-Tourist Visa allow for multiple entries with duration of Five years from the date of grant of ETA</p></li>
                                         <li><p>Must have sufficient fund for visit & stay in India.</p></li>
                                         <li><p>Travelers are required to carry a copy of their approved e-Visa India authorization at all times during their stay.</p></li>
                                         <li><p>Validity of the passport must be at least 6 months from the date of arrival with a minimum of 2 blank pages.</p></li>
