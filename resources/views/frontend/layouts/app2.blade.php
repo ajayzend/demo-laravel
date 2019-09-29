@@ -153,8 +153,9 @@ use Illuminate\Support\Facades\Route;
             buttonImageOnly: true,
             changeMonth: true,
             changeYear: true,
-            //yearRange: "+100:+0",
-            minDate: 0
+            //yearRange: "+1:+0",
+            minDate: 1,
+            maxDate: 120
         });
 
         // Visa Process2
@@ -262,6 +263,7 @@ use Illuminate\Support\Facades\Route;
     $("#p1_submit_button").click(function() {
         var p1_app_type = $("#p1_app_type").val();
         var p1_edate = $("#p1_edate").val();
+        var p1_visa_type = $("#p1_visa_type").val();
         var days = showDays(null, parseDate(p1_edate));
         var return_bool = false;
         var today = new Date();
@@ -269,20 +271,32 @@ use Illuminate\Support\Facades\Route;
             alert("Your arrival date must be greater than or equal to current date.");
             return false;
         }
-            if(days >= 28 && stringMatch(p1_app_type, 'Urgent')){
+        if (days >= 28 && stringMatch(p1_app_type, 'Urgent')) {
             alert("Please select normal processing from the drop down because your arrival date is beyond 30 days.");
-            return_bool =  false;
+            $("#p1_edate").val('');
+            $("#p1_edate").focus();
+            return_bool = false;
             return return_bool;
-        }else{
-            return_bool =  true;
+        }
+        if (days > 28 && stringMatch(p1_visa_type, 'e-Tourist Visa')) {
+            alert("For e-Tourist Visa(for 30 days) your expected Date of Arrival must be with in next 30 Days only.");
+            $("#p1_edate").val('');
+            $("#p1_edate").focus();
+            return_bool = false;
+            return return_bool;
+        }
+        else {
+            return_bool = true;
         }
 
-        if(days <= 4 && stringMatch(p1_app_type, 'Normal')){
+        if (days <= 4 && stringMatch(p1_app_type, 'Normal')) {
             alert("For travel within next 5 days please select Urgent Processing in the Application Type. With normal Processing you can only travel after 5 day.");
-            return_bool =  false;
+            $("#p1_edate").val('');
+            $("#p1_edate").focus();
+            return_bool = false;
             return return_bool;
-        }else{
-            return_bool =  true;
+        } else {
+            return_bool = true;
         }
 
         return return_bool;
