@@ -18,9 +18,11 @@
                 <li><p><strong>It can take anywhere from 2 to 4 working days to get your <a href="/visas/tourist-visa"><u>Indian E-Tourist visa</u></a> approved.</strong></p></li>
                 <li><p>There can be no cancellation, amendment or refund once the visa is granted or an application is
                         submitted against a passport.</p></li>
-                <li><p>Validity of Tourist E Visa is 1 year from the date of issue. Tourist can visit India anytime within this period.</p></li>
-                <li><p>The E-Visa holder can stay in India up to 60 days.</p></li>
-                <li><p>The <strong>India visa</strong> is valid in 26 Airports and 5 seaports for entry in India. But visitors can exit from any international airport in India.</p></li>
+                <li><p>Validity of Tourist E Visa is 30 days, 1 year & 5 years from the date of issue. Tourist can visit India anytime within this period.</p></li>
+                <li><p>One month e-Tourist Visa allow for double entry, non-extendable and non non-convertible.</p></li>
+                <li><p>One year e-Tourist Visa allow for multiple entries with duration of 365 days from the date of grant of ETA.</p></li>
+                <li><p>Five years e-Tourist Visa allow for multiple entries with duration of Five years from the date of grant of ETA.</p></li>
+                <li><p>The <strong>India visa</strong> is valid in 27 Airports and 5 seaports for entry in India. But visitors can exit from any international airport in India.</p></li>
                 <li><p>The applicant's passport should be valid for at least 6 months from the date of arrival in India with minimum 2 blank pages.</p></li>
                 <li><p>Citizens of Yellow Fever affected countries must hold a yellow fever vaccination card at the time of arrival.</p></li>
                 <li><p>Applicants must carry the same passport they used for <a href="/visas/create"><strong><u>Indian visa application</u></strong></a>.</p></li>
