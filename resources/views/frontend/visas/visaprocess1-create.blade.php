@@ -203,7 +203,7 @@
                                         <li><p>Must have sufficient fund for visit & stay in India.</p></li>
                                         <li><p>Travelers are required to carry a copy of their approved e-Visa India authorization at all times during their stay.</p></li>
                                         <li><p>Validity of the passport must be at least 6 months from the date of arrival with a minimum of 2 blank pages.</p></li>
-                                        <li><p><strong>Entry with e-tourist visa is valid through 26 Airports & 5 Seaports in India.</strong></p></li>
+                                        <li><p><strong>Entry with e-tourist visa is valid through 27 Airports & 5 Seaports in India.</strong></p></li>
                                     </ul>
                                     <p>There are many other points if you want to know more, then <strong>chat with us</strong> and we are happy to help you. So no matter if you want a <strong>visa for Goa</strong> to enjoy heavenly beaches or North India to explore the Himalayas, we are ready to serve you.</p>
                                     <?php } elseif($url_action == 'B') {?>
@@ -211,7 +211,7 @@
                                         <p><strong>India business visa</strong> is very much in demand and thus the Government of India has made it uncomplicated to attain the business visa online. Individuals who want to visit India for business or official deal can apply for electronic India visa by filling an application form online. Though, e-Visa is meant for short term visits but ideal for those who are scheduling a trip for a couple of days.</p>
                                         <p><strong>If the spouse or any dependent family member wants to visit India with e-business visa holder then they must apply for entry visa only after the visa approval of themain business visa holder</strong></p>
                                         <p><strong>Duration of E- Business Visa</strong></p>
-                                        <p><strong>An e-business visa permits you stay for up to 60 days, and you only get two times entry through 26 Airports & 5 Seaports, so that you can only leave and return once.</strong></p>
+                                        <p><strong>An e-business visa permits you stay for upto 365 days, and you only get two times entry through 27 Airports & 5 Seaports, so that you can only leave and return once.</strong></p>
                                         <p>So we at Evisaindia.in are ready to help you to get <strong>Indian e-Business Visa</strong> for a short time-span in which you can explore your business opportunities or represent your corporation in India to advance the relationship with Indian firms.</p>
                                         <p><strong>What Are the Uses of Indian Online Business Visa?</strong></p>
                                         <ol>
