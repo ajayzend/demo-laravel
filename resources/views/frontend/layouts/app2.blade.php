@@ -278,7 +278,7 @@ use Illuminate\Support\Facades\Route;
             return_bool = false;
             return return_bool;
         }
-        if (days > 28 && stringMatch(p1_visa_type, 'e-Tourist Visa')) {
+        if (days > 28 && p1_visa_type == 'e-Tourist Visa') {
             alert("For e-Tourist Visa(for 30 days) your expected Date of Arrival must be with in next 30 Days only.");
             $("#p1_edate").val('');
             $("#p1_edate").focus();
