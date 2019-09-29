@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="shortcut icon" type="image/png" href="{{ URL::asset('img/frontend/images/favicon.ico')}}"/>
     <title>@yield('title', (@$header_title) ? @$header_title : app_name())</title>
 
     <meta name="google-site-verification" content="80oFWWlwO9ySj29V2e4_L46FLzr1ceiC6TCFFjPHUPw" />
