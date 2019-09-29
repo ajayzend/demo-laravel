@@ -67,8 +67,17 @@
 
                 However, it is recommended to apply at least one (1) month in advance.</p>
             <br/>
-            <p><strong>Is the Electronic Visa (e-Visa) a single or multiple entry and can it be extended?</strong></p>
-            <p>As of April 2017, the electronic visa is a double-entry visa for the e-Tourist and e-Business and a triple entry for e-Medical, non-extendable , non-convertible & not valid for visiting Protected/Restricted and Cantonment Areas. It is valid for 60 consecutive days, starting the day of arrival in India. You can apply for an e-Visa a maximum of two (2) times per year.</p>
+            <p><strong>Is the Electronic Visa (e-Visa) a single, multiple or multiple entry and can it be extended?</strong></p>
+            <p><b>For Tourist e-Visa</b></p>
+            <ol>
+                <li><p>One Month (30 days) e-Tourist Visa Duration from the date of grant of ETA with Double Entry, non-extendable and non-convertible.</p></li>
+                <li><p>One year (365 days) e-Tourist Visa Duration from the date of grant of ETA with Multiple Entry.</p></li>
+                <li><p>Five years e-Tourist Visa Duration from the date of grant of ETA with Multiple Entry.</p></li>
+            </ol>
+            <p><b>For Business e-Visa</b></p>
+            <p>One year (365 days) e-Business Visa Duration from the date of grant of ETA with Multiple Entry.</p>
+            <p><b>For Medical e-Visa</b></p>
+            <p>Sixty days (60 days) e-Medical Visa Duration from the date of grant of ETA with Tripple Entry.</p>
             <br/>
             <p><strong>What to do in case I have made a mistake on my application?</strong></p>
             <p>In case you have entered incorrect information and only realized the mistake after having submitted your e-Visa application, you will need to re-apply for a new travel authorization. The old application will be automatically canceled.</p>
@@ -105,16 +114,18 @@
             <p><strong>Is the e-Tourist Visa (e-Visa) valid for cruise ships?</strong></p>
             <p>Yes, from April 2017 the e-Tourist visa (e-Visa) for India is valid for cruise ships docking at the following designated seaports:</p>
             <ul>
+                <li>CHENNAI</li>
                 <li>COCHIN</li>
                 <li>GOA</li>
                 <li>MANGALORE</li>
+                <li>MUMBAI</li>
             </ul>
             <p>If you are taking a cruise which docks in another seaport, you must have a traditional visa stamped inside the passport.</p>
             <p><strong>What is the difference between a traditional Indian Visa and an Electronic Visa?</strong></p>
             <p>The traditional Indian Visa can only be obtained through a presential application at the embassy or consulate. The process to obtain a traditional Indian Visa is much more complicated and takes a lot longer, as you are required to submit your original passport along with your visa application, financial and residence statements via mail in order for the visa to be approved and stamped inside the physical passport. The traditional Indian Visa allows for stays of up to ninety (90) consecutive days.
 
                 The Electronic Visa e-Visa (e-Tourist, e-Business, e-Medical) application online is a much simpler and easier process, is issued electronically and sent to the applicant via e-mail, which he or she must print out to present upon arrival in India.
-                From April 2017, the e-Visa is accepted in 24 different international airports in India as well as 3 seaports. This number will soon rise according to the Indian Government. The e-Visa also allows holders to remain in India for up to sixty (60) consecutive days. It has also been changed to a double-entry visa allowing holders to enter India twice with the same visa.</p>
+                From April 2017, the e-Visa is accepted in 27 different international airports in India as well as 5 seaports. This number will soon rise according to the Indian Government. The e-Visa also allows holders to remain in India for up to sixty (60) consecutive days. It has also been changed to a double-entry visa allowing holders to enter India twice with the same visa.</p>
             <p><strong>What vaccines do I need to travel to India?</strong></p>
             <p>While you are not required to get vaccinated before your trip to India, it is highly recommendable that you do.
 
