@@ -432,12 +432,15 @@ class VisasController extends Controller
         $vid = session()->get('vid');
         $sess_evpuid = session()->get('evpuid');
         $process_steps = session()->get('process_steps');
+        $payment_status = $visa->payment_status;
+
         if ($sess_evpuid == $input['evpuid']) {
             //Update the model using repository update method
             $input['process_steps'] = $process_steps;
             //return with successfull message
             if ($process_steps == 10001 || $process_steps == '') {
-                $this->repository->update($visa, $input);
+                if($payment_status != 'success')
+                    $this->repository->update($visa, $input);
                 session()->put('process_steps', 10002);
                 return redirect()->route('frontend.visas.edit', $vid);
             }
@@ -446,9 +449,10 @@ class VisasController extends Controller
                 $p2_changed_your_name = @$input['p2_changed_your_name'];
                 if($p2_changed_your_name != 'yes')
                     $input['p2_changed_your_name'] = 'no';
-                $this->repository->update($visa, $input);
+                if($payment_status != 'success')
+                    $this->repository->update($visa, $input);
                 session()->put('process_steps', 10003);
-                if($input['submit'] == 'Save and Temporarily Exit') {
+                if($input['submit'] == 'Save and Temporarily Exit' && $payment_status != 'success') {
                     $this->exit_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_type);
                     return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
                 }
@@ -460,9 +464,10 @@ class VisasController extends Controller
                 $p3_copy_address = @$input['p3_copy_address'];
                 if($p3_copy_address != 'yes')
                     $input['p3_copy_address'] = 'no';
-                $this->repository->update($visa, $input);
+                if($payment_status != 'success')
+                    $this->repository->update($visa, $input);
                 session()->put('process_steps', 10004);
-               if($input['submit'] == 'Save and Temporarily Exit') {
+               if($input['submit'] == 'Save and Temporarily Exit' && $payment_status != 'success') {
                    $this->exit_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_type);
                    return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
                }
@@ -502,9 +507,10 @@ class VisasController extends Controller
                     $input['p4_saarc_country_year_visit'] = '';
                 }
                 //print "<pre>";print_r($input);exit;
-                $this->repository->update($visa, $input);
+                if($payment_status != 'success')
+                    $this->repository->update($visa, $input);
                 session()->put('process_steps', 10005);
-                 if($input['submit'] == 'Save and Temporarily Exit') {
+                 if($input['submit'] == 'Save and Temporarily Exit' && $payment_status != 'success') {
                      $this->exit_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_type);
                      return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
                  }
@@ -515,9 +521,10 @@ class VisasController extends Controller
             else if ($process_steps == 10005) {
                 if(@$input['p5_passport_photo_name5'] != '')
                     $input['p5_passport_photo_name'] = @$input['p5_passport_photo_name5'];
-                $this->repository->update($visa, $input);
+                if($payment_status != 'success')
+                    $this->repository->update($visa, $input);
                 session()->put('process_steps', 100051);
-                if($input['submit'] == 'Save and Temporarily Exit') {
+                if($input['submit'] == 'Save and Temporarily Exit' && $payment_status != 'success') {
                     $this->exit_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_type);
                     return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
                 }
@@ -526,9 +533,10 @@ class VisasController extends Controller
             }
 
             else if ($process_steps == 100051) {
-                $this->repository->update($visa, $input);
+                if($payment_status != 'success')
+                 $this->repository->update($visa, $input);
                 session()->put('process_steps', 10006);
-                if($input['submit'] == 'Save and Temporarily Exit') {
+                if($input['submit'] == 'Save and Temporarily Exit' && $payment_status != 'success') {
                     $this->exit_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_type);
                     return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
                 }
@@ -548,7 +556,7 @@ class VisasController extends Controller
             }
 
             else if ($process_steps == 10007) {
-                if($input['submit'] == 'Pay Later') {
+                if($input['submit'] == 'Pay Later' && $payment_status != 'success') {
                     session()->put('process_steps', 10001);
                     //return redirect()->route('frontend.paypal.ec-checkout');
                     $this->payment_later_email($visa->p1_fname, $visa->p1_email, $visa->p1_visa_typ);
@@ -568,8 +576,8 @@ class VisasController extends Controller
             }
 
             else{
-
-                $this->repository->update($visa, $input);
+                if($payment_status != 'success')
+                    $this->repository->update($visa, $input);
                 //if($input['submit'] == 'Save and Temporarily Exit')
                     return redirect()->route('frontend.visas.index')->withFlashSuccess(trans('alerts.backend.visas.updated'));
             }
