@@ -8,7 +8,7 @@
             <br>
             <div class="row">
                     <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
-                        <h2 style="text-align: left"><strong>{{$blog->name}}</strong></h2>
+                        <h1 style="text-align: left"><strong>{{$blog->name}}</strong></h1>
                         <img class="tick"
                              src="{{ URL::asset('storage/img/blog/'.$blog->featured_image)}}" height="250px" width="100%" alt="E-visa India ">
 
@@ -17,7 +17,7 @@
                         <?php echo $blog->content; ?>
                     </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <h2 style="text-align: left"><strong>Popular Post</strong></h2>
+                    <h1 style="text-align: left"><strong>Popular Post</strong></h1>
                     <hr>
                     <a href="{{$blog->slug}}">{{$blog->name}} ...</a> <br>
                     Posted on {{date("M-d-Y", strtotime($blog->created_at))}}
