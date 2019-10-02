@@ -122,12 +122,12 @@
 
     <tr>
         <th>Date of Issue</th>
-        <td>{{ $visa->p2_passport_date_issue }}</td>
+        <td>{{ Carbon\Carbon::parse($visa->p2_passport_date_issue)->format(config('app.dateformat')) }}</td>
     </tr>
 
     <tr>
         <th>Date of Expiry</th>
-        <td>{{ $visa->p2_passport_date_expiry }}</td>
+        <td>{{ Carbon\Carbon::parse($visa->p2_passport_date_expiry)->format(config('app.dateformat')) }}</td>
     </tr>
 
     <tr>

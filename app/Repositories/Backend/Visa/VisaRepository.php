@@ -32,6 +32,7 @@ class VisaRepository extends BaseRepository
             ->select([
                 config('module.visas.table') . '.id',
                 config('module.visas.table') . '.visa_no',
+                config('module.visas.table') . '.p1_fname',
                 config('module.visas.table') . '.p1_app_type',
                 config('module.visas.table') . '.p1_visa_type',
                 config('module.evisacountries.table') . '.name',

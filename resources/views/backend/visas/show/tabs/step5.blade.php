@@ -1,22 +1,35 @@
 <table class="table table-striped table-hover">
     <tr>
-        <th colspan="2" style="text-align: center"> <h3>Please upload a scanned copy of your original passport on this page. Please do not upload your digital picture on this page which you uploaded on the last page</h3></th>
+        <th colspan="2" style="text-align: center"> <h3>Additional Question Details</h3></th>
     </tr>
     <tr>
-        <th>Passport Photo</th>
-        <td><img height="220" width="220" id="profileimg" src="{{ Storage::disk('public')->url('img/visapassport/' . $visa->p5_passport_photo_name) }}"></td>
+        <th>Have you ever been arrested/ prosecuted/ convicted by Court of Law of any country?</th>
+        <td>{{ ($visa->p51_question1 == 'No') ? 'No' : 'Yes'  }}</td>
     </tr>
-    @if($visa->p1_visa_type == 'e-Business Visa' )
-    <tr>
-        <th>Business Photo</th>
-        <td><img height="220" width="220" id="businessimg" src="{{ Storage::disk('public')->url('img/visabusiness/' . $visa->p5_business_photo_name) }}"></td>
-    </tr>
-    @endif
 
-    @if($visa->p1_visa_type == 'e-Medical Visa' )
     <tr>
-        <th>Medical Photo</th>
-        <td><img height="220" width="220" id="medicalimg" src="{{ Storage::disk('public')->url('img/visamedical/' . $visa->p5_medical_photo_name) }}"></td>
+        <th>Have you ever been refused entry / deported by any country including India?</th>
+        <td>{{ ($visa->p51_question2 == 'No') ? 'No' : 'Yes'  }}</td>
     </tr>
-    @endif
+
+    <tr>
+        <th>Have you ever been engaged in Human trafficking/ Drug trafficking/ Child abuse/ Crime against women/ Economic offense / Financial fraud?</th>
+        <td>{{ ($visa->p51_question3 == 'No') ? 'No' : 'Yes'  }}</td>
+    </tr>
+
+    <tr>
+        <th>Have you ever been engaged in Cyber crime/ Terrorist activities/ Sabotage/ Espionage/ Genocide/ Political killing/ other act of violence?</th>
+        <td>{{ ($visa->p51_question4 == 'No') ? 'No' : 'Yes'  }}</td>
+    </tr>
+
+
+    <tr>
+        <th>Have you ever by any means or medium, expressed views that justify or glorify terrorist violence or that may encourage others to terrorist acts or other serious criminal acts?</th>
+        <td>{{ ($visa->p51_question5 == 'No') ? 'No' : 'Yes'  }}</td>
+    </tr>
+
+    <tr>
+        <th>Have you sought asylum (political or otherwise)in any country?</th>
+        <td>{{ ($visa->p51_question6 == 'No') ? 'No' : 'Yes'  }}</td>
+    </tr>
 </table>

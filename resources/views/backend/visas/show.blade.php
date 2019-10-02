@@ -73,6 +73,10 @@
                     <li role="presentation">
                         <a href="#tab5" aria-controls="tab" role="tab" data-toggle="tab">Step5</a>
                     </li>
+
+                    <li role="presentation">
+                        <a href="#tab6" aria-controls="tab" role="tab" data-toggle="tab">Step6</a>
+                    </li>
                 </ul>
 
                 <div class="tab-content">
@@ -95,6 +99,10 @@
 
                     <div role="tabpanel" class="tab-pane mt-30" id="tab5">
                         @include('backend.visas.show.tabs.step5')
+                    </div><!--tab panel history-->
+
+                    <div role="tabpanel" class="tab-pane mt-30" id="tab6">
+                        @include('backend.visas.show.tabs.step6')
                     </div><!--tab panel history-->
 
                 </div><!--tab content-->

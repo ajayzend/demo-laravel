@@ -234,6 +234,12 @@
 
     <tr>
         <th>Profile Photo</th>
-        <td><img height="220" width="220" id="profileimg" src="{{ Storage::disk('public')->url('img/visaprofile/' . $visa->p4_photo_name) }}"></td>
+        <td>
+            @if($visa->ext_p4_photo_name == 'pdf')
+            <a target="_blank" href="{{ Storage::disk('public')->url('img/visaprofile/' . $visa->p4_photo_name) }}">Download Profile Image in PDF</a>
+            @else
+            <img height="220" width="220" id="profileimg" src="{{ Storage::disk('public')->url('img/visaprofile/' . $visa->p4_photo_name) }}">
+            @endif
+            </td>
     </tr>
 </table>

@@ -129,10 +129,20 @@ class VisasController extends Controller
         $result->p3_m_nationality = @$country[$result->p3_m_nationality];
         $result->p3_m_prev_nationality = @$country[$result->p3_m_prev_nationality];
         $result->p3_m_country_birth = @$country[$result->p3_m_country_birth];
+
+        $result->p3_s_nationality = @$country[$result->p3_s_nationality];
+        $result->p3_s_prev_nationality = @$country[$result->p3_s_prev_nationality];
+        $result->p3_s_country_birth = @$country[$result->p3_s_country_birth];
+
         $result->p3_current_occupation = @$occupation[$result->p3_current_occupation];
         $result->p3_past_occupation = @$occupation[$result->p3_past_occupation];
         $result->p4_expected_port_exit = @$port[$result->p4_expected_port_exit];
         $result->p4_type_visa = @$visatype[$result->p4_type_visa];
+
+        $result->ext_p4_photo_name = strtolower(pathinfo($result->p4_photo_name, PATHINFO_EXTENSION));
+        $result->ext_p5_passport_photo_name = strtolower(pathinfo($result->p5_passport_photo_name, PATHINFO_EXTENSION));
+        $result->ext_p5_business_photo_name = strtolower(pathinfo($result->p5_business_photo_name, PATHINFO_EXTENSION));
+        $result->ext_p5_medical_photo_name = strtolower(pathinfo($result->p5_medical_photo_name, PATHINFO_EXTENSION));
 
         if($result->p4_saarc_country_year_visit)
             $result->p4_saarc_country_year_visit = \GuzzleHttp\json_decode($result->p4_saarc_country_year_visit, true);
