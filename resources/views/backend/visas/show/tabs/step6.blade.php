@@ -5,7 +5,7 @@
     <tr>
         <th>Passport Photo</th>
         <td>
-            @if($visa->p5_passport_photo_name == 'pdf')
+            @if($visa->ext_p5_passport_photo_name == 'pdf')
                 <a target="_blank" href="{{ Storage::disk('public')->url('img/visapassport/' . $visa->p5_passport_photo_name) }}">Download Passport in PDF</a>
             @else
             <img height="220" width="220" id="profileimg" src="{{ Storage::disk('public')->url('img/visapassport/' . $visa->p5_passport_photo_name) }}">
@@ -16,7 +16,7 @@
         <tr>
             <th>Business Photo</th>
             <td>
-                @if($visa->p5_business_photo_name == 'pdf')
+                @if($visa->ext_p5_business_photo_name == 'pdf')
                     <a href="{{ Storage::disk('public')->url('img/visabusiness/' . $visa->p5_business_photo_name) }}">Download Business Doc PDF</a>
                 @else
                 <img height="220" width="220" id="businessimg" src="{{ Storage::disk('public')->url('img/visabusiness/' . $visa->p5_business_photo_name) }}">
@@ -29,7 +29,7 @@
         <tr>
             <th>Medical Photo</th>
             <td>
-                @if($visa->p5_medical_photo_name == 'pdf')
+                @if($visa->ext_p5_medical_photo_name == 'pdf')
                     <a href="{{ Storage::disk('public')->url('img/visamedical/' . $visa->p5_medical_photo_name) }}">Download Medical Doc PDF</a>
                 @else
                     <img height="220" width="220" id="medicalimg" src="{{ Storage::disk('public')->url('img/visamedical/' . $visa->p5_medical_photo_name) }}">
