@@ -4,8 +4,13 @@
         <div class="row bord-main">
             <div class="clearfix main-ser">
                 <!-- Why you should apply here -->
-				
-				
+
+                <?php
+                function isMobileDevice() {
+                    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+                }
+
+                ?>
 				
 				
                 <div class="provide_ser">
@@ -107,19 +112,28 @@
                                     <span>1</span>
                                     <h3>Apply online</h3>
                                     <p>Upload Recent Colored Photo and Passport Page</p>
-                                    <img src="{{ URL::asset('img/frontend/images/arrow.png')}}" alt="arrow" class="arrow-pos-evisa"> </div>
+                                    @if(!isMobileDevice())
+                                    <img src="{{ URL::asset('img/frontend/images/arrow.png')}}" alt="arrow" class="arrow-pos-evisa">
+                                    @endif
+                                </div>
                                 <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 visastep-1">
                                     <!-- <figure><img src="images/evisa-step-2.jpg" alt="evisa-step-2"></figure>-->
                                     <span>2</span>
                                     <h3>Pay e-Visa fee online</h3>
                                     <p>Using Credit / Debit card / Payment Wallet</p>
-                                    <img src="{{ URL::asset('img/frontend/images/arrow.png')}}" alt="arrow" class="arrow-pos-evisa"> </div>
+                                    @if(!isMobileDevice())
+                                    <img src="{{ URL::asset('img/frontend/images/arrow.png')}}" alt="arrow" class="arrow-pos-evisa">
+                                    @endif
+                                </div>
                                 <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 visastep-1">
                                     <!--<figure><img src="images/evisa-step-3.jpg" alt="evisa-step-3"></figure>-->
                                     <span>3</span>
                                     <h3>Receive ETA Online</h3>
                                     <p>Electronic Travel Authorization/ETA Will be sent to your e-mail</p>
-                                    <img src="{{ URL::asset('img/frontend/images/arrow.png')}}" alt="arrow" class="arrow-pos-evisa"> </div>
+                                    @if(!isMobileDevice())
+                                    <img src="{{ URL::asset('img/frontend/images/arrow.png')}}" alt="arrow" class="arrow-pos-evisa">
+                                    @endif
+                                </div>
                                 <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 visastep-1">
                                     <!--<figure><img src="images/evisa-step-4.jpg" alt="evisa-step-4"></figure>-->
                                     <span>4</span>
