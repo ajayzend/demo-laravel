@@ -178,9 +178,9 @@
         <td>{{ $visa->p3_current_occupation }}</td>
     </tr>
 
-    @if($visa->p3_current_occupation == 'Other')
+    @if($visa->p3_current_occupation == 'OTHER')
         <tr>
-            <th>If Others,please specify</th>
+            <td>If Others,please specify</td>
             <td>{{ $visa->p3_other_occupation }}</td>
         </tr>
     @endif
@@ -205,9 +205,9 @@
         <td>{{ $visa->p3_past_occupation }}</td>
     </tr>
 
-    @if($visa->p3_past_occupation == 'Other')
+    @if($visa->p3_past_occupation == 'OTHER')
         <tr>
-            <th>If Others,please specify</th>
+            <td>If Others,please specify</td>
             <td>{{ $visa->p3_other_past_occupation }}</td>
         </tr>
     @endif
