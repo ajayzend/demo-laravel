@@ -36,7 +36,7 @@
                         <li><a href="/" class="active"><img class="tick"
                                                             src="{{ URL::asset('img/frontend/images/tick.jpg')}}" alt="E-visa India ">Home</a>
                         </li>
-                        <li><a href="/visas/create"><img class="tick"
+                        <li><a href="/visas/urgent-visa"><img class="tick"
                                                   src="{{ URL::asset('img/frontend/images/tick.jpg')}}"alt="E-visa India ">
                                 Urgent e-Visa</a></li>
 
