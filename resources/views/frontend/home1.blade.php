@@ -40,9 +40,9 @@
                                                   src="{{ URL::asset('img/frontend/images/tick.jpg')}}"alt="E-visa India ">
                                 Urgent e-Visa</a></li>
 
-                        {{--<li><a href="/evisa-fee"><img class="tick"
+                        <li><a href="/evisa-fee"><img class="tick"
                                                          src="{{ URL::asset('img/frontend/images/tick.jpg')}}">
-                                e-Visa Fee</a></li>--}}
+                                e-Visa Fee</a></li>
 
                         <li><a href="instruction"><img class="tick"
                                                         src="{{ URL::asset('img/frontend/images/tick.jpg')}}" alt="E-visa India ">

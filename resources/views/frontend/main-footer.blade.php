@@ -36,8 +36,8 @@
                 <div class="links">
                     <h3>Links</h3>
                     <ul class="list-unstyled">
-                        <li><a href="/visas/create">Apply Urgent e Visa India</a></li>
-                        {{--<li><a href="/evisa-fee">e-Visa Fee</a></li>--}}
+                        <li><a href="/visas/urgent-visa">Apply Urgent e Visa India</a></li>
+                        <li><a href="/evisa-fee">e-Visa Fee</a></li>
                         <li><a href="/instruction">Instruction For Applicant</a></li>
                         <li><a href="/document">Document Requirement</a></li>
                         <li><a href="/faq">FAQ</a></li>

@@ -179,11 +179,27 @@ class FrontendController extends Controller
     public  function visafeecal()
     {
         $country = @$_GET['country'];
+        $app_type = @$_GET['app_type'];
         $visa_type = @$_GET['visa_type'];
-        if($country > 0 && $visa_type > 0) {
+        if($country > 0 && $app_type > 0 && $visa_type != '') {
             $evisacountryfee = Evisacountry::getSelectCustomDataVisaFee();
-            $visafee = $evisacountryfee[$country];
-            $consult_fee = ($visa_type == 1) ? config('app.consultnfee') : config('app.consultufee');
+            $visafee_arr = $evisacountryfee[$country];
+            if ($visa_type == 'EV30D') { //
+                $date = date('Y-m-d');
+                $month = date('F', strtotime($date));
+                if($month == 'april' || $month == 'may' || $month == 'june'){
+                    $visafee = $visafee_arr['evisa_aj_30d_fee'];
+                }else{
+                    $visafee = $visafee_arr['evisa_jm_30d_fee'];
+                }
+            } else if ($visa_type == 'EV1Y') { //
+                $visafee = $visafee_arr['evisa_1y_fee'];
+            }else if ($visa_type == 'EV5Y') { //
+                $visafee = $visafee_arr['evisa_5y_fee'];
+            }else {
+                $visafee = $visafee_arr['fee'];
+            }
+            $consult_fee = ($app_type == 1) ? config('app.consultnfee') : config('app.consultufee');
             echo $totalvisafee = $visafee + $consult_fee;
         }else{
             echo "Please select options to Calculate eVisa Fee";

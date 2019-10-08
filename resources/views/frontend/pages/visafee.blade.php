@@ -15,8 +15,8 @@
                 <li><p>The applicant must carry a copy of the eTourist Visa along with him/her at the time of travel.</li>
                 <li><p>On arrival in India the biometric details of the applicant will be mandatorily captured at Immigration. The applicant's entry is at the sole discretion of the Immigration officer at the India Airport who is a representative of the Government of India.</p></li>
             </ul>--}}
-<p>Please select below your nationality and visa type to see visa fee, It would be final price and there is no any hidden charge.</p>
-            <p>For any kind of assist, feel free to contact on chat or on email, We will respond you as soon as possible.</p>
+<p>Please select below your nationality, application type and visa type to see visa fee, It would be final price and there is no any hidden charge.</p>
+            <p>For any kind of assist, feel free to contact on chat or on email <b>support@evisaindia.in</b>, We will respond you as soon as possible.</p>
             <br>
             <div class="form-group">
                 <label class="col-sm-4 col-xs-12 control-label">Nationality
@@ -32,7 +32,7 @@
                 <label class="col-sm-4 col-xs-12 control-label">Application
                     Type</label>
                 <div class="col-sm-6 col-xs-12">
-                    <select id="visa_type" class="form-control" name="visa_type"  onchange=reseteVisaFee()>
+                    <select id="app_type" class="form-control" name="visa_type"  onchange=reseteVisaFee()>
                         <option value="0"> Select Application Type</option>
                         <option value="1"> Normal Processing (processing Time 4 To 7 Business Days
                         </option>
@@ -41,6 +41,24 @@
                     </select>
                 </div>
             </div>
+            <br>
+            <br>
+            <div class="form-group">
+                <label class="col-sm-4 col-xs-12 control-label">Visa Type</label>
+                <div class="col-sm-6 col-xs-12">
+                    <select id="visa_type" name="visa_type" class="form-control" onchange=reseteVisaFee()>
+                        <option value="">Select Visa</option>
+                        <option value="EV30D">e-Tourist Visa(for 30 days)</option>
+                        <option value="EV1Y">e-Tourist Visa(for 1 year)</option>
+                        <option value="EV5Y">e-Tourist Visa(for 5 years)</option>
+                        <option value="EVM">e-Medical Visa(for 60 days)</option>
+                        <option value="EVB">e-Business Visa(for 1 year)</option>
+                        <option value="EVA">e-Attendant Visa(for 60 days)</option>
+                    </select>
+
+                </div>
+            </div>
+
 <br>
 <br>
             <div class="form-group" style="display: none" id="mainvisafee">
@@ -81,14 +99,22 @@
 
                 $("#evisa-fee-cal").click(function() {
                 var country = $("#evisa_nationality").val();
+                var app_type = $("#app_type").val();
                 var visa_type = $("#visa_type").val();
                     var html;
                 $.ajax({
-                    url: "evisa-fee-cal?country="+country+"&visa_type="+visa_type,
+                    url: "evisa-fee-cal?country="+country+"&app_type="+app_type+"&visa_type="+visa_type,
                     cache: false,
                     success: function (response) {
                         if($.isNumeric(response)){
                             $("#mainvisafee").show();
+                            if(app_type == 2)
+                                html = "<strong><a href='/visas/urgent-visa'>$"+response+" USD</a></strong>";
+                            else if(visa_type == "EVM")
+                                html = "<strong><a href='/visas/medical-visa'>$"+response+" USD</a></strong>";
+                            else if(visa_type == "EVB")
+                                html = "<strong><a href='/visas/business-visa'>$"+response+" USD</a></strong>";
+                            else
                             html = "<strong><a href='/visas/create'>$"+response+" USD</a></strong>";
                             $("#efee").html(html);
                         }else{
