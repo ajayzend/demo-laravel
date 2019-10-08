@@ -11,11 +11,11 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><button class="btn btn-primary btn-md" onclick="location.href='/visas/create'">Apply Visa Now</button></li>
                     &nbsp;&nbsp;&nbsp;<li><a href="/" >Home</a></li>
                     <li><a href="/visas/urgent-visa"> Urgent e-Visa</a></li>
                     <li><a href="/visas/tourist-visa"> Tourist e-Visa</a></li>
                     <li><a href="/visas/medical-visa"> Medical e-Visa</a></li>
+                    <li><a href="/visas/medical-attendant-visa"> Medical Attendant e-Visa</a></li>
                     <li><a href="/visas/business-visa"> Business e-Visa</a></li>
                     {{--<li><a href="/evisa-fee">e-Visa Fee </a></li>--}}
                     <li><a href="/document">Document Requirement </a></li>

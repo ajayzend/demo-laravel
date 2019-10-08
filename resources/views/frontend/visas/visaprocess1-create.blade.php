@@ -26,7 +26,7 @@
 
                                     <select id="p1_app_type" class="form-control" name="p1_app_type">
                                         <option value="0"> Select Application Type</option>
-                                        <option  value="Normal Processing (processing Time 4 To 7 Business Days"> Normal Processing (processing Time 4 to 7 Business Days
+                                        <option  value="Normal Processing (processing Time 4 To 7 Business Days"> Normal Processing (processing Time 4 to 7 Business Days)
                                         </option>
 
                                         <option @if($url_action == 'U') selected  @endif value="Urgent Processing (processing Time Maximum 3 Business Days)"> Urgent Processing (processing Time 1 to 3 Business Days)
@@ -253,7 +253,25 @@
                                     <li><p><strong>e- Medical visa India provides you entrance in India through 26 designated airports and 5 seaports.</strong></p></li>
                                 </ul>
                                     <p>It is feasible to get a <strong>medical visa India</strong> 3 times per year and each e Medical visa will permit a stay of 60 days. In that way, you can visit India for medical treatment and apply a next electronic visa if you want to. So, go ahead and apply for e-medical visa with us, and if you have any doubt in mind then don’t hesitate to chat with our <strong>customer care executives</strong> anytime.</p>
-                            <?php } ?>
+                                    <?php } elseif($url_action == 'A') {?>
+                                    <p>The e-medical attendant visa for India is a category for the visa to get travel authorization to seek medical treatment in India. Only this visa allows travelers to enter the country to seek medical assistance.</p>
+                                    <p>The <strong>e-medical attendant visa India</strong> is a short term visa granted for medical treatment explanations. But this type of visa is only granted to the patient and not for the caretaker. Caretaker of the patient can obtain the medical attendant visa to be an adjunct to the e-Medical visa holder.</p>
+                                    <p><strong>How to apply for Indian medical visa?</strong></p>
+                                    <p>With us (Evisaindia.in) it is very easy to obtain <strong>India Medical Visa</strong>. Eligible applicants who wish to receive medical treatment can easily complete our application form by filling a few necessary details which include their full name, date, and place of birth, nationality, contact info and passport type, etc.</p>
+                                    <p>But before filling the online application form, applicants must keep in mind the points given below:</p>
+                                    <ul>
+                                        <li><p>Only triple entry is permitted with e-visa medical attendant.</p></li>
+                                        <li><p>You can visit only 3 times a year with e-medical attendant visa.</p></li>
+                                        <li><p>E-medical attendant visa is non-extendable & non-convertible.</p></li>
+                                        <li><p>You should have sufficient funds to continue their treatment.</p></li>
+                                        <li><p>You need to carry a copy of approved e-visa every time & everywhere in India.</p></li>
+                                        <li><p>You must have an advanced return ticket when applying for a medical visa.</p></li>
+                                        <li><p>Parents may not include their children in their online Visa for India application.</p></li>
+                                        <li><p>A letter from the hospital in India.</p></li>
+                                        <li><p><strong>e- Medical visa India provides you entrance in India through 26 designated airports and 5 seaports.</strong></p></li>
+                                    </ul>
+                                    <p>It is feasible to get a <strong>medical visa India</strong> 3 times per year and each e Medical visa will permit a stay of 60 days. In that way, you can visit India for medical treatment and apply a next electronic visa if you want to. So, go ahead and apply for e-medical visa with us, and if you have any doubt in mind then don’t hesitate to chat with our <strong>customer care executives</strong> anytime.</p>
+                                    <?php } ?>
                             </div>
                         </div>
                     </div>

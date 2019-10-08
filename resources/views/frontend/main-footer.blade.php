@@ -6,6 +6,9 @@
             <span><a href="/"><strong>Home</strong> |</a></span>
             <span><a href="/visas/urgent-visa"><strong>Apply Urgent Visa</strong> |</a></span>
             <span><a href="/visas/tourist-visa"><strong>Apply Tourist Visa</strong> |</a></span>
+            <span><a href="/visas/medical-visa"><strong>Apply Medical Visa</strong> |</a></span>
+            <span><a href="/visas/medical-attendant-visa"><strong>Apply Medical Attendant Visa</strong> |</a></span>
+            <span><a href="/visas/business-visa"><strong>Apply Business Visa</strong> |</a></span>
             <span><a href="/document"><strong>Document Requirement</strong> |</a></span>
             <span><a href="/blog"><strong>Blog</strong> |</a></span>
             <span><a href="/about-us"><strong>About Us</strong> |</a></span>

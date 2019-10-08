@@ -18,6 +18,8 @@ Route::group(['namespace' => 'Visa'], function () {
     Route::get('/visas/urgent-visa', 'VisasController@create')->name('create');
     Route::get('/visas/tourist-visa', 'VisasController@create')->name('create');
     Route::get('/visas/medical-visa', 'VisasController@create')->name('create');
+    Route::get('/visas/medical-attendant-visa', 'VisasController@create')->name('create');
+    Route::get('/visas/quick-visa', 'VisasController@create')->name('create');
     Route::get('/visas/business-visa', 'VisasController@create')->name('create');
 
     //For DataTables

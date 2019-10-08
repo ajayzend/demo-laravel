@@ -114,17 +114,46 @@ class VisasController extends Controller
             $h1 = config('seo.business-visa.h1');
             $url_action = 'B';
         }
+
+        elseif(strtolower($request->path()) == 'visas/medical-attendant-visa'){
+            $title = config('seo.medical-attendant-visa.title');
+            $description = config('seo.medical-attendant-visa.description');
+            $keywords = config('seo.medical-attendant-visa-visa.keywords');
+            $h1 = config('seo.medical-attendant-visa.h1');
+            $url_action = 'A';
+        }
+
+        elseif(strtolower($request->path()) == 'visas/quick-visa'){
+            $title = config('seo.quick-visa.title');
+            $description = config('seo.quick-visa.description');
+            $keywords = config('seo.quick-visa.keywords');
+            $h1 = config('seo.quick-visa.h1');
+            $url_action = 'Q';
+        }
+
         $port = Port::getSelectData();
         $evisacountry = Evisacountry::getSelectData();
-        return view('frontend.visas.visaprocess1-create')->with([
-            'header_title'       => $title,
-            'header_description'       => $description,
-            'header_keywords'       => $keywords,
-            'port_arrival'       => $port,
-            'evisa_country'       => $evisacountry,
-            'h1'       => $h1,
-            'url_action'       => $url_action
-        ]);
+        if($url_action == 'Q'){
+            return view('frontend.visas.quick-visa-create')->with([
+                'header_title'       => $title,
+                'header_description'       => $description,
+                'header_keywords'       => $keywords,
+                'port_arrival'       => $port,
+                'evisa_country'       => $evisacountry,
+                'h1'       => $h1,
+                'url_action'       => $url_action
+            ]);
+        }else{
+            return view('frontend.visas.visaprocess1-create')->with([
+                'header_title'       => $title,
+                'header_description'       => $description,
+                'header_keywords'       => $keywords,
+                'port_arrival'       => $port,
+                'evisa_country'       => $evisacountry,
+                'h1'       => $h1,
+                'url_action'       => $url_action
+            ]);
+        }
     }
 
     /**

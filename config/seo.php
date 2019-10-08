@@ -43,6 +43,20 @@ return [
         'h1'      => "Apply For Urgent E-Visa Online"
     ],
 
+    'medical-attendant-visa' => [
+        'title'     => "Medical Attendant E- Visa India | Attendant Visa Application Services – Evisaindia.in",
+        'description' => "Urgent e-Visa India online: Visit Evisaindia.in website today for hassle free processing. Apply for medical e-visa, business and e-tourist visa from anywhere across the globe.",
+        'keywords'      => "Medical Attendant e-Attendant Visa",
+        'h1'      => "Apply For Medical Attendant E-Visa Online"
+    ],
+
+    'quick-visa' => [
+        'title'     => "Quick E- Visa India | Express Visa Application Services – Evisaindia.in",
+        'description' => "Urgent e-Visa India online: Visit Evisaindia.in website today for hassle free processing. Apply for medical e-visa, business and e-tourist visa from anywhere across the globe.",
+        'keywords'      => "Quick e-tourist Visa",
+        'h1'      => "Apply For Quick E-Visa Online"
+    ],
+
     'document' => [
         'title'     => "Document Requirement For Indian E-Visa Online – Evisaindia.in",
         'description' => "EvisaIndia.in provides online services for India E-Visa applications also available for tourist, business & medical visits. Apply online today with all required document.",
