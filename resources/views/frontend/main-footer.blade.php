@@ -21,7 +21,7 @@
                 <div class="links">
                     <h3>Disclaimer</h3>
                     <hr class="hrline">
-                    <p><a href="/"><strong>This</strong></a> is the website to obtain the <a href="/"><strong>Official India e-Visa</strong></a>. This is a commercial website and you will be charged a fee for using our services. Read the Terms and Conditions carefully before submitting the <a href="/visas/create"><strong>"Indian Visa Online Application"</strong></a>.</p>
+                    <p><a href="/"><strong>This</strong></a> is the website to obtain the <a href="/"><strong>India e-Visa</strong></a>. This is a commercial website and you will be charged a fee for using our services. Read the Terms and Conditions carefully before submitting the <a href="/visas/create"><strong>"Indian Visa Online Application"</strong></a>.</p>
                 </div>
             </div>
 

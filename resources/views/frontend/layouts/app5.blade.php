@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 
     <meta name="google-site-verification" content="80oFWWlwO9ySj29V2e4_L46FLzr1ceiC6TCFFjPHUPw" />
     <!-- Meta -->
-    <meta name="description" content=<?php if(isset($header_description)) { echo "'$header_description'";} else { echo "'Official Indian e Visa website for e tourist visa (eTV) for 180+ countries across the World such as UK, USA, Australia, Canada, Japan, UAE, NZ, European Countries & Singapore and so many.'";}?> />
+    <meta name="description" content=<?php if(isset($header_description)) { echo "'$header_description'";} else { echo "'Indian e Visa website for e tourist visa (eTV) for 180+ countries across the World such as UK, USA, Australia, Canada, Japan, UAE, NZ, European Countries & Singapore and so many.'";}?> />
     <meta name="keywords" content=<?php if(isset($header_keywords)) { echo "'$header_keywords'";} else { echo "'e Tourist Visa India, Indian Visa, Visa to India, india Visa Requirement, Online Indian Visa Application, e visa india, Indian e visa, Apply Visa for India, Indian visa on arrival.'";}?> />
 
     <meta name="page-topic" content="e-Visa India" />
@@ -40,7 +40,7 @@ use Illuminate\Support\Facades\Route;
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="India Visa Online | India e-Visa Tourist & Business | eVisa India" />
-    <meta property="og:description" content=" Official Indian Visa website for e-Visa, e tourist Visa (eTV) India for 180+ countries across the Globe such as UK, USA & Canada, UAE, Australia " />
+    <meta property="og:description" content="Indian Visa website for e-Visa, e tourist Visa (eTV) India for 180+ countries across the Globe such as UK, USA & Canada, UAE, Australia " />
     <meta property="og:url" content="" />
     <meta property="og:site_name" content="" />
     <meta name="twitter:card" content="summary_large_image" />
