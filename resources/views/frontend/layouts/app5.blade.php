@@ -81,6 +81,11 @@ use Illuminate\Support\Facades\Route;
         echo $google_analytics;
     }
     ?>
+
+            <!-- Event snippet for Website-C- conversion page -->
+    <script>
+        gtag('event', 'conversion', {'send_to': 'AW-757972711/amXeCKellp0BEOf9tukC'});
+    </script>
 </head>
 <body id="app-layout">
 <div id="app">
