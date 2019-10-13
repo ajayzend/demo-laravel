@@ -7,14 +7,14 @@
             <div class="row1">
                 <h4>We are commited to provide you visa within <strong>24 to 48 business hours for urgent request</strong>. You can apply Tourist Visa, Business Visa, Medical Visa & Medical Attendant Visa. <br>There are basically three type of Tourist Visa.
                 <ol>
-                    <li><p>e-Tourist Visa(30 Days)  Visa allow for double entry, non-extendable and non non-convertible.</p></li>
-                    <li><p>e-Tourist Visa(365 Days) One year e-Tourist Visa allow for multiple entries with duration of 365 days from the date of grant of ETA.</p></li>
-                    <li><p>e-Tourist Visa(5 Years)  Five years e-Tourist Visa allow for multiple entries with duration of Five years from the date of grant of ETA</p></li>
+                    <li><p><strong>e-Tourist Visa(for 30 Days)</strong>  Visa allow for double entry, non-extendable and non non-convertible.</p></li>
+                    <li><p><strong>e-Tourist Visa(for 365 Days)</strong> One year e-Tourist Visa allow for multiple entries with duration of 365 days from the date of grant of ETA.</p></li>
+                    <li><p><strong>e-Tourist Visa(for 5 Years)</strong>  Five years e-Tourist Visa allow for multiple entries with duration of Five years from the date of grant of ETA</p></li>
                 </ol>
                 <ul>
-                    <li><p>e-Medical Visa(for 60 Days) Only triple entry is permitted with with duration of 60 days from the date of grant of ETA.</p></li>
-                    <li><p>e-Medical Attendant Visa(for 60 Days) Only triple entry is permitted with with duration of 60 days from the date of grant of ETA.</p></li>
-                    <li><p>e-Business Visa(for 365 Days) An e-business visa permits you stay for upto 365 days from the date of grant of ETA, and you only get two times entry.</p></li>
+                    <li><p><strong>e-Medical Visa(for 60 Days)</strong> Only triple entry is permitted with with duration of 60 days from the date of grant of ETA.</p></li>
+                    <li><p><strong>e-Medical Attendant Visa(for 60 Days)</strong> Only triple entry is permitted with with duration of 60 days from the date of grant of ETA.</p></li>
+                    <li><p><strong>e-Business Visa(for 365 Days)</strong> An e-business visa permits you stay for upto 365 days from the date of grant of ETA, and you only get two times entry.</p></li>
                 </ul>
                 </h4>
                 <h1 style="text-align: center"><strong><?php echo $h1;?></strong></h1>
