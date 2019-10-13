@@ -100,6 +100,7 @@ class Visa extends Model
         'p3_flag1_detail',
         'p3_current_occupation',
         'p3_other_occupation',
+        'p3_occupation_hw',
         'p3_employer',
         'p3_desination',
         'p3_address',

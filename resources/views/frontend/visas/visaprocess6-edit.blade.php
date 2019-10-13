@@ -582,6 +582,28 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
+                    @if($visa->p3_current_occupation == "OTHER")  {{--Other--}}
+                        <div class="form-group hover-div">
+                            <div class="col-sm-3 col-xs-12"></div>
+                            <label class="col-sm-3 labelcolor"></label>
+                            <div class="col-sm-1 col-xs-12"></div>
+                            <div class="col-sm-3 uppercase valuecolor">
+                                {{$visa->p3_other_occupation}}
+                            </div>
+                            <div class="col-sm-2 col-xs-12"></div>
+                        </div>
+                    @elseif($visa->p3_current_occupation == 'STUDENTS' || $visa->p3_current_occupation == "HOME WIFE")
+                        <div class="form-group hover-div">
+                            <div class="col-sm-3 col-xs-12"></div>
+                            <label class="col-sm-3 labelcolor">Specify below occupation details of</label>
+                            <div class="col-sm-1 col-xs-12"></div>
+                            <div class="col-sm-3 uppercase valuecolor">
+                                {{$visa->p3_occupation_hw}}
+                            </div>
+                            <div class="col-sm-2 col-xs-12"></div>
+                        </div>
+                     @endif
+
                     <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Employee Designation</label>
@@ -631,6 +653,17 @@
                         <div class="col-sm-2 col-xs-12"></div>
                     </div>
 
+                    @if($visa->p3_past_occupation == "OTHER")  {{--Other--}}
+                    <div class="form-group hover-div">
+                        <div class="col-sm-3 col-xs-12"></div>
+                        <label class="col-sm-3 labelcolor"></label>
+                        <div class="col-sm-1 col-xs-12"></div>
+                        <div class="col-sm-3 uppercase valuecolor">
+                            {{$visa->p3_other_past_occupation}}
+                        </div>
+                        <div class="col-sm-2 col-xs-12"></div>
+                    </div>
+                @endif
                     <div class="form-group hover-div">
                         <div class="col-sm-3 col-xs-12"></div>
                         <label class="col-sm-3 labelcolor">Security Agency/Organisation</label>

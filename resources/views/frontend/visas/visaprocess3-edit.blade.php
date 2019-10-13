@@ -395,6 +395,22 @@
                                 If Others,please specify
                             </div>
                         </div>
+
+                    <div class="form-group" id="p3_occupation_hw_div">
+                        <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Specify below occupation details of</label>
+                        <div class="col-sm-4 col-xs-12">
+                            <select id="p3_occupation_hw" name="p3_occupation_hw" class="form-control">
+                                <option value="0">Select ..</option>
+                                <option value="Father" {{ $visa->p3_occupation_hw == 'Father' ? 'selected="selected"' : '' }}>Father</option>
+                                <option value="Spouse" {{ $visa->p3_occupation_hw == 'Spouse' ? 'selected="selected"' : '' }}>Spouse</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 des">
+                            {{--/Minor--}}
+                            In case of HouseWife/Student Please specify Spouse/Parent's Occupation details.
+                        </div>
+                    </div>
+
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"><span class="star">*</span>Employer Name/business</label>
                             <div class="col-sm-4 col-xs-12">
@@ -578,6 +594,16 @@
                 }else{
                     $("#p3_other_occupation").hide();
                     $("#p3_other_occupation").attr("disabled", true);
+                }
+            }).trigger('change');
+
+            $("#p3_current_occupation").change(function() {
+                if ($("#p3_current_occupation").val() == 13 || $("#p3_current_occupation").val() == 33) { // House Wife Or Students
+                    $("#p3_occupation_hw_div").show();
+                    $("#p3_occupation_hw").attr("disabled", false);
+                }else{
+                    $("#p3_occupation_hw_div").hide();
+                    $("#p3_occupation_hw").attr("disabled", true);
                 }
             }).trigger('change');
 

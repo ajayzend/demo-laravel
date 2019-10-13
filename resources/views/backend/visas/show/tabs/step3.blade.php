@@ -183,6 +183,11 @@
             <td>If Others,please specify</td>
             <td>{{ $visa->p3_other_occupation }}</td>
         </tr>
+        @elseif($visa->p3_current_occupation == 'STUDENTS' || $visa->p3_current_occupation == "HOME WIFE")
+        <tr>
+            <td>Specify below occupation details of</td>
+            <td>{{ $visa->p3_occupation_hw }}</td>
+        </tr>
     @endif
     <tr>
         <th>Employer Name/business</th>
