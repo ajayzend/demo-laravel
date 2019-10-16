@@ -254,23 +254,18 @@
                                 </ul>
                                     <p>It is feasible to get a <strong>medical visa India</strong> 3 times per year and each e Medical visa will permit a stay of 60 days. In that way, you can visit India for medical treatment and apply a next electronic visa if you want to. So, go ahead and apply for e-medical visa with us, and if you have any doubt in mind then don’t hesitate to chat with our <strong>customer care executives</strong> anytime.</p>
                                     <?php } elseif($url_action == 'A') {?>
-                                    <p>The e-medical attendant visa for India is a category for the visa to get travel authorization to seek medical treatment in India. Only this visa allows travelers to enter the country to seek medical assistance.</p>
-                                    <p>The <strong>e-medical attendant visa India</strong> is a short term visa granted for medical treatment explanations. But this type of visa is only granted to the patient and not for the caretaker. Caretaker of the patient can obtain the medical attendant visa to be an adjunct to the e-Medical visa holder.</p>
-                                    <p><strong>How to apply for Indian medical visa?</strong></p>
+                                    <p>Coming to India to be with your family member who is seeking the best medical treatment? If yes, then you need to apply for the <strong>India Medical Attendant visa application</strong></p>
+                                    <p>A medical attendant visa or <strong>India eMedical Attendant Visa</strong> can be granted to a maximum of 2 attendants who want to come with the person granted the eMedical visa in India. But the important point to keep in mind here is, the attendants should be close relatives of the person who granted the medical visa. And Medical Visa and Medical Attendant Visa have the same validity</p>
+                                    <p>All the basic requirements of Medical Visa for India are also applicable to any Medial Attendant visa applicant. The duration validity of the medical attendant visa is up to 1 year or the period of the treatment, whichever comes first. And this visa is only valid for 3 entries in 1 year.</p>
                                     <p>With us (Evisaindia.in) it is very easy to obtain <strong>India Medical Visa</strong>. Eligible applicants who wish to receive medical treatment can easily complete our application form by filling a few necessary details which include their full name, date, and place of birth, nationality, contact info and passport type, etc.</p>
-                                    <p>But before filling the online application form, applicants must keep in mind the points given below:</p>
-                                    <ul>
-                                        <li><p>Only triple entry is permitted with e-visa medical attendant.</p></li>
-                                        <li><p>You can visit only 3 times a year with e-medical attendant visa.</p></li>
-                                        <li><p>E-medical attendant visa is non-extendable & non-convertible.</p></li>
-                                        <li><p>You should have sufficient funds to continue their treatment.</p></li>
-                                        <li><p>You need to carry a copy of approved e-visa every time & everywhere in India.</p></li>
-                                        <li><p>You must have an advanced return ticket when applying for a medical visa.</p></li>
-                                        <li><p>Parents may not include their children in their online Visa for India application.</p></li>
-                                        <li><p>A letter from the hospital in India.</p></li>
-                                        <li><p><strong>e- Medical visa India provides you entrance in India through 26 designated airports and 5 seaports.</strong></p></li>
-                                    </ul>
-                                    <p>It is feasible to get a <strong>medical visa India</strong> 3 times per year and each e Medical visa will permit a stay of 60 days. In that way, you can visit India for medical treatment and apply a next electronic visa if you want to. So, go ahead and apply for e-medical visa with us, and if you have any doubt in mind then don’t hesitate to chat with our <strong>customer care executives</strong> anytime.</p>
+                                    <p><strong>Documents & Requirements Medical Attendant Visa Applicants need to fulfill:-</strong></p>
+                                    <ol>
+                                        <li><p>Appointment letter from any recognized hospitals or treatment center in India with the mentioned name of the patient, address, contact details, name of the doctor and about the treatment.</p></li>
+                                        <li><p>The original passport that is valid for 6 months beyond stay in India with at least 2 blank passport pages.</p></li>
+                                        <li><p>Recent passport size color photograph with a plain white background.</p></li>
+                                        <li><p>Applicants must have a return or an onward ticket when applying for their e-Medical attendant visa.</p></li>
+                                    </ol>
+                                    <p>There are many other details and information applicants need to provide to the concerned department. As well as, applicants must answer many questions and for this, they need to prepare in advance. There are many other things for which applicants need to prepare in advance. But if they take services from any reputed service provider like www.evisaindia.in specialized visas online application services and <strong>medical attendant visa India</strong>, then they can get visa approval without any hassle.</p>
                                     <?php } ?>
                             </div>
                         </div>
