@@ -40,7 +40,7 @@ class RazorpayController extends Controller
 
         if (count($input) && !empty($input['razorpay_payment_id'])) {
             try {
-                $response = $api->payment->fetch($input['razorpay_payment_id'])->capture(array('amount' => $payment['amount']));
+                $response = $api->payment->fetch($input['razorpay_payment_id'])->capture(array('amount' => $payment['amount'], 'currency' => $payment['currency']));
 
             } catch (\Exception $e) {
                 return $e->getMessage();
@@ -63,6 +63,15 @@ class RazorpayController extends Controller
             $invoice->refund_status = $response->refund_status;
             $invoice->captured = $response->captured;
             $invoice->card_id = $response->card_id;
+            if(@$response->card) {
+                $invoice->card_entity = $response->card->entity;
+                $invoice->card_name = $response->card->name;
+                $invoice->card_last4 = $response->card->last4;
+                $invoice->card_network = $response->card->network;
+                $invoice->card_type = $response->card->type;
+                $invoice->card_issuer = $response->card->issuer;
+                $invoice->card_emi = $response->card->emi;
+            }
             $invoice->bank = $response->bank;
             $invoice->wallet = $response->wallet;
             $invoice->vpa = $response->vpa;
