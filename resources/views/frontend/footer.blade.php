@@ -20,29 +20,20 @@
                         <div class="ser_inner_main">
                          
                             <img src="{{ URL::asset('img/frontend/images/bag.png')}}" alt="indian e visa application guide" title="indian e visa application guide" class="img-responsive"/>
-							   <h4>SERVICES PROVIDED BY e-VISA INDIA</h4>
+							   <h4>Service Provided By E-Visa India</h4>
                             <p>
                             <div class="col-xs-1"><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class=""><span><b>Customer Care:</b> </span> Customer Care
-                                available 24X7
-                                Over the email as well as chat.
+                            <div class=""><span><b>Customer Care:</b> </span> We provide 24X7 customer service through chat and email. Feel free to contact us anytime.
                             </div>
                             </p>
                             <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class=""><span><b>Processing:</b> </span> Maximum 4-7 days
-                                processing
-                                time.
+                            <div class=""><span><b>Processing:</b> </span> The maximum processing time taken by us is 4-7 days.
                             </div>
                             </p>
                             <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class=""><span><b>Quality Check:</b> </span> Quality Check and
-                                Required
-                                Correction is done against all the
-                                information and documents provided in
-                                the applications in order to achieve
-                                maximum approval ratio.
+                            <div class=""><span><b>Quality Check:</b> </span> To achieve maximum approval request ratio, we focus on the quality check. We verify and do the required correction against all the information and documents provided in the application.
                             </div>
                             </p>
                         </div>
@@ -52,17 +43,15 @@
                         <div class="ser_inner_main">
                            
                             <img src="{{ URL::asset('img/frontend/images/hand.png')}}" alt="e visa india online application" title="e visa india online application" class="img-responsive"/>
-							 <h4>5 REASONS TO CHOOSE e-VISA INDIA</h4>
+							 <h4>5-Reasons to choose E-Visa India</h4>
                             <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class=""><span><b>Hassle-free:</b> </span> Completely online
-                                procedure, no paper work involved.
+                            <div class=""><span><b>Hassle-free:</b> </span> Innovative services and easy processes, you simply have to fill the form, attach the documents and submit online.
                             </div>
                             </p>
                             <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class=""><span><b>Convenient:</b> </span> Applicable for selective
-                                Nationalities for Air and Sea Routes.
+                            <div class=""><span><b>Convenient:</b> </span>We provide convenient service in travel domain for selective nationality.
                             </div>
                             </p>
                            {{-- <p>
@@ -73,8 +62,7 @@
                             </p>--}}
                             <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class=""><span><b>More accessible:</b> </span> Quickes and most
-                                relaible method of getting Indian Visa.
+                            <div class=""><span><b>Accessibility:</b> </span> Very simple and easy method to apply for a visa online
                             </div>
                             </p>
                         </div>
@@ -84,16 +72,15 @@
                         <div class="ser_inner_main">
                            
                             <img src="{{ URL::asset('img/frontend/images/dig.png')}}" alt="e-Visa - Indian Visa Online"  title="e-Visa - Indian Visa Online" class="img-responsive"/>
-							 <h4>e-VISA INDIA LASTEST NEWS</h4>
+							 <h4>E-VISA INDIA LASTEST NEWS</h4>
                             <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class="">More Than 700 Per cent Increase in Tourist Arrivals on
-                                E-Visa.
+                            <div class="">Tourist arrivals on E-Visa increases by more than 700%.
                             </div>
                             </p>
                             <p>
                             <div class=""><i class="fa fa-check" aria-hidden="true"></i></div>
-                            <div class="">India saw a jump in foreign tourists in April 2017.</div>
+                            <div class="">In 2017, India saw the biggest jump in foreign tourists.</div>
                             </p>
                         </div>
                     </div>
