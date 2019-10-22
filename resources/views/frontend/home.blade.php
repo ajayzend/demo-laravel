@@ -7,7 +7,7 @@
         <div class="about_us">
             <h1>Welcome to Indian</br> <span>Visa Online</span></h1>
             <h3>e-Visa India</h3>
-            <p>All tourists to India require an <strong>Indian visa</strong>, only the residents of Nepal & Bhutan can enter India without a visa. So, the visitors can apply for a regular visa or an e-Visa, it is easily available, and suitable for those who don’t want a visa for a long time. Here are some important things you should know about E Visa.</p>
+            <p>All tourists to India require an <strong>Indian visa</strong>, only the residents of Nepal & Bhutan can enter India without a visa. So, a regular visa or e-visa can be applied by the visitors who do not want a visa for a long time. The process to apply this regular visa is very easy and it is easily available for the visitors. Here are some important things you should know about E Visa.</p>
             <p>The <strong>Indian e visa</strong> is an electronic travel authorization to visit India for tourism, business or medical condition. One of the biggest advantages of applying <strong>online Indian visa application</strong> is that it is not necessary to submit your passport or other documents to the embassy. The entire procedure can be done online and we at evisaindia.in make applying for an India e-Visa simple. The e-Visa authorization will be issued beforehand electronically before your landing in India. At the immigration counter, the authentic India visa will be presented with your passport.</p>
             <p>The Indian Government introduced this e-visa program in 2014 only for 43 nations, to promote travel to India without the hassle of waiting in long lines in the front of the embassy. And in 2017, India modified <strong>e visa India</strong> program by introducing new visa subcategories for tourists, business travelers, and medical visits. And now, travelers from 160+ nations can apply for <strong>Indian e visa online</strong> for different purpose like tourist, business and medical.</p>
 
@@ -24,7 +24,7 @@
                 <li><p>Five years e-Tourist Visa allow for multiple entries with duration of Five years from the date of grant of ETA.</p></li>
                 <li><p>The <strong>India visa</strong> is valid in 27 Airports and 5 seaports for entry in India. But visitors can exit from any international airport in India.</p></li>
                 <li><p>The applicant's passport should be valid for at least 6 months from the date of arrival in India with minimum 2 blank pages.</p></li>
-                <li><p>Citizens of Yellow Fever affected countries must hold a yellow fever vaccination card at the time of arrival.</p></li>
+                <li><p>A yellow fever vaccination card must be held by the citizens from yellow fever affected countries at the time of arrival.</p></li>
                 <li><p>Applicants must carry the same passport they used for <a href="/visas/create"><strong><u>Indian visa application</u></strong></a>.</p></li>
             </ul>
             <p>For any other queries regarding <strong>visa to India UK, visa to India US</strong> or from any other nations, you can <strong>chat or get email</strong> support with our customer care executives anytime without any hesitation.</p>
