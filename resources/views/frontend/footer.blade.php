@@ -92,12 +92,12 @@
 				<div class="container">
                 <div class="clearfix in-pages-sectn">
                     <div class="process-sec">
-                            <h2><span><b>Easy Application Process</b></span></h2>
+                            <h2><span><b>Easy e-Visa Application Process</b></span></h2>
                             <div class="row">
                                 <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 visastep-1">
                                     <!-- <figure><img src="images/evisa-step-1.jpg" alt="evisa-step-1"></figure>-->
                                     <span>1</span>
-                                    <h3>Apply online</h3>
+                                    <h3>Apply Visa online</h3>
                                     <p>Upload Recent Colored Photo and Passport Page</p>
                                     @if(!isMobileDevice())
                                     <img src="{{ URL::asset('img/frontend/images/arrow.png')}}" alt="arrow" class="arrow-pos-evisa">
@@ -115,8 +115,8 @@
                                 <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 visastep-1">
                                     <!--<figure><img src="images/evisa-step-3.jpg" alt="evisa-step-3"></figure>-->
                                     <span>3</span>
-                                    <h3>Receive ETA Online</h3>
-                                    <p>Electronic Travel Authorization/ETA Will be sent to your e-mail</p>
+                                    <h3>Receive e-Visa Online</h3>
+                                    <p>e-Visa Will be sent to your e-mail</p>
                                     @if(!isMobileDevice())
                                     <img src="{{ URL::asset('img/frontend/images/arrow.png')}}" alt="arrow" class="arrow-pos-evisa">
                                     @endif
@@ -125,7 +125,7 @@
                                     <!--<figure><img src="images/evisa-step-4.jpg" alt="evisa-step-4"></figure>-->
                                     <span>4</span>
                                     <h3>Fly To India</h3>
-                                    <p>Print ETA and present at Immigration Check Post where eVisa will be stamped on passport. </p>
+                                    <p>Print e-Visa and present at Immigration Check Post where e-Visa will be stamped on passport. </p>
                                 </div>
                             </div>
                     </div>
