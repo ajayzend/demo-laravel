@@ -106,6 +106,55 @@
                                 Places to be Visited
                             </div>
                         </div>
+                    @if($visa->p1_visa_type == 'e-Tourist Visa' || $visa->p1_visa_type == 'e-Tourist Visa 1 year' || $visa->p1_visa_type == 'e-Tourist Visa 5 years')
+                    <div class="form-group">
+                        <label class="col-sm-4 col-xs-12 control-label"> <span>Have you booked any room in Hotel/Resort etc. through any Tour Operator?</span></label>
+                        <div class="col-sm-4 col-xs-12">
+                            <input  type="radio" value="Yes"  id="p4_booked_operator1" name="p4_booked_operator"   {{ $visa->p4_booked_operator == 'Yes' ? 'checked="checked"' : '' }}/><span>Yes</span>
+                            <input  type="radio" value="No" id="p4_booked_operator2" name="p4_booked_operator" {{ $visa->p4_booked_operator == 'No' ? 'checked="checked"' : '' }}  /><span>No</span>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 des">&nbsp;</div>
+                    </div>
+
+
+                    <div id="tour_operator_details">
+                        <div class="form-group" >
+                            <label class="col-sm-4 col-xs-12 control-label">Name of the tour operator </label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control" value="{{$visa->p4_name_tour_operator}}" placeholder="Name of the tour operator" id="p4_name_tour_operator" name="p4_name_tour_operator"/>
+                            </div>
+                            <div class="col-sm-4 col-xs-12 des">&nbsp;
+                            </div>
+                        </div>
+
+                        <div class="form-group" >
+                            <label class="col-sm-4 col-xs-12 control-label">Address of the tour operator</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control" value="{{$visa->p4_address_tour_operator}}" placeholder="Address of the tour operator" id="p4_address_tour_operator" name="p4_address_tour_operator"/>
+                            </div>
+                            <div class="col-sm-4 col-xs-12 des">&nbsp;
+                            </div>
+                        </div>
+
+                        <div class="form-group" >
+                            <label class="col-sm-4 col-xs-12 control-label">Name of Hotel/Resort etc</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control" value="{{$visa->p4_name_tour_hotel}}" placeholder="Name of Hotel/Resort etc" id="p4_name_tour_hotel" name="p4_name_tour_hotel"/>
+                            </div>
+                            <div class="col-sm-4 col-xs-12 des">&nbsp;
+                            </div>
+                        </div>
+
+                        <div class="form-group" >
+                            <label class="col-sm-4 col-xs-12 control-label">Place/City of Hotel/Resort etc</label>
+                            <div class="col-sm-4 col-xs-12">
+                                <input type="text" class="form-control" value="{{$visa->p4_place_hotel}}" placeholder="Place/City of Hotel/Resort etc" id="p4_place_hotel" name="p4_place_hotel"/>
+                            </div>
+                            <div class="col-sm-4 col-xs-12 des">&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    @endif
 
                     @if($visa->p1_visa_type == 'e-Business Visa')
                         <div class="title"><p>Details of Purpose "TO SET UP INDUSTRIAL/BUSINESS VENTURE"</p></div>
@@ -238,9 +287,6 @@
                     @endif
 
 					<div class="title"><p>Previous Visa/Currently valid Visa Details</p></div>
-                 
-
-
                         <div class="form-group">
                             <label class="col-sm-4 col-xs-12 control-label"> <span>Have You Ever Visited India Before?</span></label>
                             <div class="col-sm-4 col-xs-12">
@@ -729,6 +775,34 @@
                     $("#label_change").html('<span class="star">*</span>Visa number of principal e-Medical Visa holder')
                 }
             }).trigger('change');
+
+
+            $("#p4_booked_operator1").change(function() {
+                if ($("#p4_booked_operator1").is(":checked")) {
+                    $("#tour_operator_details").show();
+                    $("#p4_name_tour_operator").attr("disabled", false);
+                    $("#p4_address_tour_operator").attr("disabled", false);
+                    $("#p4_name_tour_hotel").attr("disabled", false);
+                    $("#p4_place_hotel").attr("disabled", false);
+                }
+            }).trigger('change');
+
+            $("#p4_booked_operator2").change(function() {
+                if ($("#p4_booked_operator2").is(":checked")) {
+                    $("#tour_operator_details").hide();
+                    $("#p4_name_tour_operator").attr("disabled", true);
+                    $("#p4_address_tour_operator").attr("disabled", true);
+                    $("#p4_name_tour_hotel").attr("disabled", true);
+                    $("#p4_place_hotel").attr("disabled", true);
+                }else if (!$("#p4_booked_operator1").is(":checked")) {
+                    $("#tour_operator_details").hide();
+                    $("#p4_name_tour_operator").attr("disabled", true);
+                    $("#p4_address_tour_operator").attr("disabled", true);
+                    $("#p4_name_tour_hotel").attr("disabled", true);
+                    $("#p4_place_hotel").attr("disabled", true);
+                }
+            }).trigger('change');
+
 
             // To Use Select2
             // Backend.Select2.init();

@@ -31,7 +31,30 @@
         <th>Places Likely To Be Visited</th>
         <td>{{ $visa->p4_place_likely_visit }}</td>
     </tr>
-
+    @if($visa->p1_visa_type == 'e-Tourist Visa' || $visa->p1_visa_type == 'e-Tourist Visa 1 year' || $visa->p1_visa_type == 'e-Tourist Visa 5 years')
+        <tr>
+            <th>Have you booked any room in Hotel/Resort etc. through any Tour Operator?</th>
+            <td>{{ $visa->p4_booked_operator }}</td>
+        </tr>
+        @if($visa->p4_booked_operator == 'Yes')
+            <tr>
+                <th>Name of the tour operator</th>
+                <td>{{ $visa->p4_name_tour_operator }}</td>
+            </tr>
+            <tr>
+                <th>Address of the tour operator</th>
+                <td>{{ $visa->p4_address_tour_operator }}</td>
+            </tr>
+            <tr>
+                <th>Name of Hotel/Resort etc</th>
+                <td>{{ $visa->p4_name_tour_hotel }}</td>
+            </tr>
+            <tr>
+                <th>Place/City of Hotel/Resort etc</th>
+                <td>{{ $visa->p4_place_hotel }}</td>
+            </tr>
+        @endif
+    @endif
     @if($visa->p1_visa_type == 'e-Business Visa' )
         <tr>
             <th colspan="2" style="text-align: center"> <h3>Previous Visa/Currently valid Visa Details</h3></th>

@@ -59,6 +59,8 @@
             <div class="col-lg-10">
                 <select id="india_gov_evisa_status" name="india_gov_evisa_status" class="form-control box-size">
                     <option value="0">Select Payment Status</option>
+                    <option value="open" {{ $visa->india_gov_evisa_status == 'open' ? 'selected="selected"' : '' }}>Open</option>
+                    <option value="granted" {{ $visa->india_gov_evisa_status == 'granted' ? 'selected="selected"' : '' }}>Granted</option>
                     <option value="wip" {{ $visa->india_gov_evisa_status == 'wip' ? 'selected="selected"' : '' }}>WIP</option>
                     <option value="success" {{ $visa->india_gov_evisa_status == 'success' ? 'selected="selected"' : '' }}>Success</option>
                     <option value="failed" {{ $visa->india_gov_evisa_status == 'failed' ? 'selected="selected"' : '' }}>Failed</option>

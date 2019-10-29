@@ -23,13 +23,13 @@
                         <tr>
                             <th>{{ trans('labels.backend.visas.table.id') }}</th>
                             <th>{{ trans('labels.backend.visas.table.visa_no') }}</th>
-                            <th>Name</th>
+                            <th>Email</th>
                             <th>{{ trans('labels.backend.visas.table.p1_app_type') }}</th>
-                            <th>Visa Type</th>
-                            <th>Nationality</th>
-                            <th>Payment Staus</th>
-                            <th>Fee($)</th>
-                            <th>Gov Payment Staus</th>
+                           {{-- <th>Visa Type</th>--}}
+                           {{-- <th>Nationality</th>--}}
+                            <th>Fee</th>
+                            <th>Staus</th>
+                            <th>G Staus</th>
                             <th>{{ trans('labels.backend.visas.table.createdat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
@@ -40,8 +40,8 @@
                             <th></th>
                             <th></th>
                             <th></th>
-                            <th></th>
-                            <th></th>
+                           {{-- <th></th>--}}
+                            {{--<th></th>--}}
                             <th></th>
                             <th></th>
                             <th></th>
@@ -72,12 +72,12 @@
                 columns: [
                     {data: 'id', name: '{{config('module.visas.table')}}.id'},
                     {data: 'visa_no', name: '{{config('module.visas.table')}}.visa_no'},
-                    {data: 'p1_fname', name: '{{config('module.visas.table')}}.p1_fname'},
+                    {data: 'p1_email', name: '{{config('module.visas.table')}}.p1_email'},
                     {data: 'p1_app_type', name: '{{config('module.visas.table')}}.p1_app_type'},
-                    {data: 'p1_visa_type', name: '{{config('module.visas.table')}}.p1_visa_type'},
-                    {data: 'name', name: '{{config('module.visas.table')}}.name'},
-                    {data: 'payment_status', name: '{{config('module.visas.table')}}.payment_status'},
+                    /*{data: 'p1_visa_type', name: '{{config('module.visas.table')}}.p1_visa_type'},*/
+                    /*{data: 'name', name: '{{config('module.visas.table')}}.name'},*/
                     {data: 'payment_price', name: '{{config('module.visas.table')}}.payment_price'},
+                    {data: 'payment_status', name: '{{config('module.visas.table')}}.payment_status'},
                     {data: 'india_gov_evisa_status', name: '{{config('module.visas.table')}}.india_gov_evisa_status'},
                     {data: 'created_at', name: '{{config('module.visas.table')}}.created_at'},
                     {data: 'actions', name: 'actions', searchable: true, sortable: false}
