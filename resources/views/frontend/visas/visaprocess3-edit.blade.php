@@ -588,7 +588,7 @@
             }).trigger('change');
 
             $("#p3_current_occupation").change(function() {
-                if ($("#p3_current_occupation").val() == 23) { // Other
+                if ($("#p3_current_occupation").val() == "OTHERS") { // Other
                     $("#p3_other_occupation").show();
                     $("#p3_other_occupation").attr("disabled", false);
                 }else{
@@ -598,7 +598,7 @@
             }).trigger('change');
 
             $("#p3_current_occupation").change(function() {
-                if ($("#p3_current_occupation").val() == 13 || $("#p3_current_occupation").val() == 33) { // House Wife Or Students
+                if ($("#p3_current_occupation").val() == "HOUSE WIFE" || $("#p3_current_occupation").val() == "STUDENT") { // House Wife Or Students
                     $("#p3_occupation_hw_div").show();
                     $("#p3_occupation_hw").attr("disabled", false);
                 }else{
@@ -608,7 +608,7 @@
             }).trigger('change');
 
             $("#p3_past_occupation").change(function() {
-                if ($("#p3_past_occupation").val() == 23) { // Other
+                if ($("#p3_past_occupation").val() == "OTHERS") { // Other
                     $("#p3_other_past_occupation").show();
                     $("#p3_other_past_occupation").attr("disabled", false);
                 }else{
