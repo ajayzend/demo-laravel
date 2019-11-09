@@ -181,7 +181,7 @@ class FrontendController extends Controller
         $country = @$_GET['country'];
         $app_type = @$_GET['app_type'];
         $visa_type = @$_GET['visa_type'];
-        if($country > 0 && $app_type > 0 && $visa_type != '') {
+        if($country && $app_type && $visa_type != '') {
             $evisacountryfee = Evisacountry::getSelectCustomDataVisaFee();
             $visafee_arr = $evisacountryfee[$country];
             if ($visa_type == 'EV30D') { //
