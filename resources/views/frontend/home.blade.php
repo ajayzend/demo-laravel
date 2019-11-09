@@ -22,7 +22,7 @@
                 <li><p>One month e-Tourist Visa allow for double entry, non-extendable and non non-convertible.</p></li>
                 <li><p>One year e-Tourist Visa allow for multiple entries with duration of 365 days from the date of grant of ETA.</p></li>
                 <li><p>Five years e-Tourist Visa allow for multiple entries with duration of Five years from the date of grant of ETA.</p></li>
-                <li><p>The <strong>India visa</strong> is valid in 27 Airports and 5 seaports for entry in India. But visitors can exit from any international airport in India.</p></li>
+                <li><p>The <strong>India visa</strong> is valid in 28 Airports and 5 seaports for entry in India. But visitors can exit from any international airport in India.</p></li>
                 <li><p>The applicant's passport should be valid for at least 6 months from the date of arrival in India with minimum 2 blank pages.</p></li>
                 <li><p>A yellow fever vaccination card must be held by the citizens from yellow fever affected countries at the time of arrival.</p></li>
                 <li><p>Applicants must carry the same passport they used for <a href="/visas/create"><strong><u>Indian visa application</u></strong></a>.</p></li>

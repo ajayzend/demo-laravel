@@ -125,7 +125,7 @@
             <p>The traditional Indian Visa can only be obtained through a presential application at the embassy or consulate. The process to obtain a traditional Indian Visa is much more complicated and takes a lot longer, as you are required to submit your original passport along with your visa application, financial and residence statements via mail in order for the visa to be approved and stamped inside the physical passport. The traditional Indian Visa allows for stays of up to ninety (90) consecutive days.
 
                 The Electronic Visa e-Visa (e-Tourist, e-Business, e-Medical) application online is a much simpler and easier process, is issued electronically and sent to the applicant via e-mail, which he or she must print out to present upon arrival in India.
-                From April 2017, the e-Visa is accepted in 27 different international airports in India as well as 5 seaports. This number will soon rise according to the Indian Government. The e-Visa also allows holders to remain in India for up to sixty (60) consecutive days. It has also been changed to a double-entry visa allowing holders to enter India twice with the same visa.</p>
+                From April 2017, the e-Visa is accepted in 28 different international airports in India as well as 5 seaports. This number will soon rise according to the Indian Government. The e-Visa also allows holders to remain in India for up to sixty (60) consecutive days. It has also been changed to a double-entry visa allowing holders to enter India twice with the same visa.</p>
             <p><strong>What vaccines do I need to travel to India?</strong></p>
             <p>While you are not required to get vaccinated before your trip to India, it is highly recommendable that you do.
 
