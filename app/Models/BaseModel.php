@@ -16,10 +16,10 @@ class BaseModel extends Model
      */
     public static function getSelectData($field_name = 'name', $req = 0)
     {
-        $req_filename =  str_replace('\\', '_', get_called_class());
-        $json_filename =  $req_filename.$req.'.txt';
+        $req_filename = str_replace('\\', '_', get_called_class());
+        $json_filename = $req_filename . $req . '.txt';
         //Retrieve the data from our text file.
-        if(file_exists('Masters/'.$json_filename)) {
+        if (file_exists('Masters/' . $json_filename)) {
             $fileContents = file_get_contents('Masters/' . $json_filename);
             if ($fileContents) {
                 //Convert the JSON string back into an array.
@@ -30,7 +30,10 @@ class BaseModel extends Model
         }
 
         $collection = parent::all();
-        return self::getItems($collection, $field_name, $req, $json_filename);
+        if ($collection[0]->table == "blog_categories" || $collection[0]->table == "blog_tags")
+            return self::getItems($collection, $field_name, $req, $json_filename);
+        else
+            return self::getItemsNew($collection, $field_name, $req, $json_filename);
     }
 
     /**
@@ -46,6 +49,37 @@ class BaseModel extends Model
         foreach ($collection as $model) {
             $items[$model->id] = [
                 'id'    => $model->id,
+                'name'  => $model->$field_name,
+                'model' => $model,
+            ];
+        }
+
+        foreach ($items as $id => $item) {
+            $items[$item['id']] = $item['name'];
+        }
+
+        //dd($items);
+        if($req == 1) {
+            unset($items[0]);
+            sort($items);
+        }else{
+            asort($items);
+        }
+
+        //Encode the array into a JSON string.
+        $encodedString = json_encode($items);
+//Save the JSON string to a text file.
+        file_put_contents('Masters/'.$json_filename, $encodedString);
+
+        return $items;
+    }
+
+    public static function getItemsNew($collection, $field_name, $req, $json_filename)
+    {
+        $items = [];
+        foreach ($collection as $model) {
+            $items[$model->id_str] = [
+                'id'    => $model->id_str,
                 'name'  => $model->$field_name,
                 'model' => $model,
             ];
@@ -98,8 +132,8 @@ class BaseModel extends Model
         $items = [];
 
         foreach ($collection as $model) {
-            $items[$model->id] = [
-                'id'    => $model->id,
+            $items[$model->id_str] = [
+                'id'    => $model->id_str,
                 'fee'  => $model->fee,
                 'evisa_aj_30d_fee'  => $model->evisa_aj_30d_fee,
                 'evisa_jm_30d_fee'  => $model->evisa_jm_30d_fee,
