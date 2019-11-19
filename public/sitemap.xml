@@ -1,140 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+  <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
-<url>
-  <loc>https://evisaindia.in/</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/visas/urgent-visa</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/visas/tourist-visa</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/visas/medical-visa</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/visas/medical-attendant-visa</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/visas/business-visa</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/document</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/visas/create</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/visaamendprocess</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/paymentprocess</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/customer-care</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/evisa-fee</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/instruction</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/faq</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/privacy-policy</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/condition</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/about-us</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/disclaimer</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/contact-us</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/blog</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evisaindia.in/sitemap</loc>
-  <lastmod>2019-10-12T08:02:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+  <url>
+    <loc>https://evisaindia.in/</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/visas/urgent-visa</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/visas/tourist-visa</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/visas/medical-visa</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/visas/medical-attendant-visa</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/visas/business-visa</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/document</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/visas/create</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/visaamendprocess</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/paymentprocess</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/customer-care</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/evisa-fee</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/instruction</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/faq</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/privacy-policy</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/condition</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/about-us</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/disclaimer</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/contact-us</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/blog</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://evisaindia.in/sitemap</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
   <url>
     <loc>https://evisaindia.in/blog/apply-for-indian-visa-online-the-steps-involved-in-getting-a-visa</loc>
-    <lastmod>2019-10-12T08:02:15+00:00</lastmod>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://evisaindia.in/blog/important-information-about-indian-e-business-visa</loc>
-    <lastmod>2019-10-12T08:02:15+00:00</lastmod>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://evisaindia.in/blog/how-to-issue-e-visa-india-from-australia</loc>
-    <lastmod>2019-10-12T08:02:15+00:00</lastmod>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://evisaindia.in/blog/reasons-why-to-choose-e-business-visa-india</loc>
-    <lastmod>2019-10-12T08:02:15+00:00</lastmod>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://evisaindia.in/blog/reasons-why-to-choose-e-business-visa-india</loc>
-    <lastmod>2019-10-12T08:02:15+00:00</lastmod>
+    <loc>https://evisaindia.in/blog/benefits-of-e-visa-as-compared-to-traditional-visa-application-process</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+  <url>
+    <loc>https://evisaindia.in/blog/how-can-anyone-apply-for-indian-visa-online</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+
 </urlset>
