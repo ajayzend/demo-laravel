@@ -57,7 +57,7 @@
     @endif
     @if($visa->p1_visa_type == 'e-Business Visa' )
         <tr>
-            <th colspan="2" style="text-align: center"> <h3>Previous Visa/Currently valid Visa Details</h3></th>
+            <th colspan="2" style="text-align: center"> <h3>Details of Purpose "TO SET UP INDUSTRIAL/BUSINESS VENTURE"</h3></th>
         </tr>
 
         <tr>

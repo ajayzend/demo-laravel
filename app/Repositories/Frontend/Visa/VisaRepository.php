@@ -64,7 +64,7 @@ class VisaRepository extends BaseRepository
         $this->visa_profile_path = 'img'.DIRECTORY_SEPARATOR.'visaprofile'.DIRECTORY_SEPARATOR;
         $this->visa_passport_path = 'img'.DIRECTORY_SEPARATOR.'visapassport'.DIRECTORY_SEPARATOR;
         $this->visa_medical_path = 'img'.DIRECTORY_SEPARATOR.'visamedical'.DIRECTORY_SEPARATOR;
-        $this->visa_business_path = 'img'.DIRECTORY_SEPARATOR.'visbusiness'.DIRECTORY_SEPARATOR;
+        $this->visa_business_path = 'img'.DIRECTORY_SEPARATOR.'visabusiness'.DIRECTORY_SEPARATOR;
         $this->storage = Storage::disk('public');
     }
 
