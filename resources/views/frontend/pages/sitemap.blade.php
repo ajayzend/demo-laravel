@@ -7,6 +7,8 @@
         <div class="about_us">
             <h4>Site <span>Map</span></h4>
             <?php
+            $xml=simplexml_load_file("sitemap.xml");
+
             header("Content-Type: application/xml; charset=utf-8");
 
             echo '<?xml version="1.0" encoding="UTF-8"?>'.PHP_EOL;
@@ -19,8 +21,11 @@
             {
                 $p=parse_url($row->loc);
                 $url = $p['path'];
+                $url = str_replace('/visas/', '',$url);
                 $url = str_replace('/', '',$url);
+                $url = str_replace('blog', '',$url);
                 $url = ($url) ? $url : 'Home';
+                $url = ucfirst($url);
 //                            /print_r($url);
                 echo '<url>' . PHP_EOL;
                 //  echo '<loc>'.$row->loc.'/</loc>' . PHP_EOL;
