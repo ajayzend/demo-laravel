@@ -143,7 +143,7 @@
                                     <option value="e-Tourist Visa 5 years">e-Tourist Visa(for 5 years)</option>
                                     <option @if($url_action == 'M') selected @endif value="e-Medical Visa">e-Medical Visa(for 60 days)</option>
                                     <option @if($url_action == 'B') selected @endif value="e-Business Visa">e-Business Visa(for 1 year)</option>
-                                    <option value="e-Attendant Visa">e-Attendant Visa(for 60 days)</option>
+                                    <option value="e-Attendant Visa">e-Medical Attendant Visa(for 60 days)</option>
                                 </select>
                             </div>
 
