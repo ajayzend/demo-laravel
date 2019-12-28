@@ -47,8 +47,10 @@ class FrontendController extends Controller
     }
 
     public function blogdetail($slug, BlogsRepository $blog){
+        $settingData = Setting::first();
+        $google_analytics = $settingData->google_analytics;
         $result = $blog->findBySlug($slug);
-        return view('frontend.pages.blog-detail')
+        return view('frontend.pages.blog-detail', compact('google_analytics', $google_analytics))
             ->with([
                 'header_title'       => $result->meta_title,
                 'header_description'       => $result->meta_description,

@@ -133,8 +133,12 @@ class VisasController extends Controller
 
         $port = Port::getSelectData();
         $evisacountry = Evisacountry::getSelectData();
+
+        $settingData = Setting::first();
+        $google_analytics = $settingData->google_analytics;
+
         if($url_action == 'Q'){
-            return view('frontend.visas.quick-visa-create')->with([
+            return view('frontend.visas.quick-visa-create', compact('google_analytics', $google_analytics))->with([
                 'header_title'       => $title,
                 'header_description'       => $description,
                 'header_keywords'       => $keywords,
@@ -144,7 +148,7 @@ class VisasController extends Controller
                 'url_action'       => $url_action
             ]);
         }else{
-            return view('frontend.visas.visaprocess1-create')->with([
+            return view('frontend.visas.visaprocess1-create', compact('google_analytics', $google_analytics))->with([
                 'header_title'       => $title,
                 'header_description'       => $description,
                 'header_keywords'       => $keywords,
