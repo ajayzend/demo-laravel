@@ -22,8 +22,8 @@
                 $p=parse_url($row->loc);
                 $url = $p['path'];
                 $url = str_replace('/visas/', '',$url);
+                $url = str_replace('/blog/', '',$url);
                 $url = str_replace('/', '',$url);
-                $url = str_replace('blog', '',$url);
                 $url = ($url) ? $url : 'Home';
                 $url = ucfirst($url);
 //                            /print_r($url);
