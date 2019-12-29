@@ -48,12 +48,12 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://evisaindia.in/visaamendprocess</loc>
+    <loc>https://evisaindia.in/visa-amend-process</loc>
     <lastmod>2019-11-19T15:18:52+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://evisaindia.in/paymentprocess</loc>
+    <loc>https://evisaindia.in/visa-payment-process</loc>
     <lastmod>2019-11-19T15:18:52+00:00</lastmod>
     <priority>0.80</priority>
   </url>
@@ -139,6 +139,18 @@
   </url>
   <url>
     <loc>https://evisaindia.in/blog/how-can-anyone-apply-for-indian-visa-online</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+<url>
+    <loc>https://evisaindia.in/blog/important-things-to-know-about-online-indian-visa-application</loc>
+    <lastmod>2019-11-19T15:18:52+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+<url>
+    <loc>https://evisaindia.in/blog/how-to-get-india-business-visa-evisaindiain</loc>
     <lastmod>2019-11-19T15:18:52+00:00</lastmod>
     <priority>0.64</priority>
   </url>
