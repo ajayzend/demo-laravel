@@ -104,7 +104,7 @@
                 <div class="form-group">
                     <label class="col-sm-4 col-xs-12 control-label" ></label>
                     <div class="col-sm-8 col-xs-12">
-                        <input type="submit"   value="Submit"   class="btn-primary submit-btn2">
+                        <input type="submit"   value="Complete Partially Filled"   class="btn-primary submit-btn2">
                     </div>
                 </div>
 

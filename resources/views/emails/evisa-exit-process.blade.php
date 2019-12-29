@@ -34,9 +34,16 @@
                 <tr>
                     <td style="width:200px;text-align:center;margin-top:10px;padding:0px 20px;">
                         <p style="border:1px solid red; padding:18px 50px; border-radius:12px;box-shadow:2px 2px 2px #333333;background:#e34323;text-decoration:none;color:#fff;font-weight:700;">
-                            Visa Registration Number : {{ session()->get('evpuid') }}</p>
+                            Visa Temporary Application ID : {{ session()->get('evpuid') }}</p>
                     </td>
                 </tr>
+
+                <tr>
+                    <td>
+                        <p style="margin-top:20px;padding:0px 20px;">To complete your application kindly open {{config('app.url')}}visa-amend-process and enter your temporary application-id {{ session()->get('evpuid') }}</p>
+                    </td>
+                </tr>
+
                 <tr>
                     <td>
                         <p style="margin-top:20px;padding:0px 20px;">Please feel free to get in touch in case of any assistant required.</p>

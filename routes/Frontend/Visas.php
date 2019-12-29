@@ -7,8 +7,11 @@
 
 
 Route::group(['namespace' => 'Visa'], function () {
+    Route::get('/visa-amend-process', 'VisasController@getvisaamendprocess')->name('visaamendprocess');
     Route::get('/visaamendprocess', 'VisasController@getvisaamendprocess')->name('visaamendprocess');
     Route::get('/paymentprocess', 'VisasController@dopaymentprocess')->name('paymentprocess');
+    Route::get('/visa-payment-process', 'VisasController@dopaymentprocess')->name('paymentprocess');
+
     Route::get('/payment-update', 'VisasController@getpaymentresponse')->name('payment-update');
     Route::post('/visaamendprocess', 'VisasController@setvisaamendprocess')->name('visaamendprocess');
     Route::get('/contact-us', 'VisasController@contactus')->name('contactus');

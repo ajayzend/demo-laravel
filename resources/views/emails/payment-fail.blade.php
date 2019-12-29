@@ -34,19 +34,19 @@
 
                 <tr>
                     <td>
-                        <p style="margin-top:10px;padding:0px 20px;"><a href="{{config('app.url')}}/paymentprocess">Pay Now</a></p>
+                        <p style="margin-top:10px;padding:0px 20px;"><a href="{{config('app.url')}}visa-payment-process">Pay Now</a></p>
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <p style="margin-top:10px;padding:0px 20px;">Please note down below your registration number to complete payment process.</p>
+                        <p style="margin-top:10px;padding:0px 20px;">Please note down below your Visa Temporary Application ID to complete payment process.</p>
                     </td>
                 </tr>
                 <tr>
                     <td style="width:200px;text-align:center;margin-top:10px;padding:0px 20px;">
                         <p style="border:1px solid red; padding:18px 50px; border-radius:12px;box-shadow:2px 2px 2px #333333;background:#e34323;text-decoration:none;color:#fff;font-weight:700;">
-                            Visa Registration Number : {{ session()->get('evpuid') }}</p>
+                            Visa Temporary Application ID : {{ session()->get('evpuid') }}</p>
                     </td>
                 </tr>
                 <tr>
