@@ -6,13 +6,36 @@
     <div class="row">
         <div class="about_us">
             <h1>Instructions for <span>the Applicant</span></h1>
-            <p><strong>Important points to know before applying for Indian Visa</strong></p>
-            <p>This blog is for the citizens of the US, UK, Australia, and many other countries, who want to apply for Visa or e-Visa for India as a tourist or any other purpose. You are very lucky because now getting a visa for India is much easier and cheaper than before. Citizens of Canada, US, UK, Australia (and others) are all eligible for a 5-years tourist visa for India. To know about <strong>Indian E-Visa Information</strong> and points of e-Visa India read this blog till the end.</p>
-            <p><strong>Visa Note</strong></p>
-            <p>Generally, there are 5 subcategories in e-Visa for India- Tourist visa, e-Business visa, e-Medical visa and e-Medical Attendant visa. You must apply at least 4 days before you want to arrive in India.</p>
-            <p>Few parts of India have been designated protected or restricted regions that need special permission and in some cases before government approval. For these regions, you have to describe your intent to visit when applying for the visa.</p>
+            <p>E- Visa application is a very best initiative from the government of India to make the process hassle-free. Application for e- Visa needs to apply online a minimum of 4 days and a maximum of 120 days before you want to travel to India. Important points regarding <strong>Indian E-Visa</strong> Information that you should keep in mind before applying are given below.</p>
+            <p><strong>Online Application Form:</strong></p>
+            <ul>
+                <li><p>Indian Visa or e-Visa is meant for the foreigners, to get the permission of entry in India.</p></li>
+                <li><p>Visa application form is meant for single per only.</p></li>
+                <li><p>It is very important to fill the form in exact manners, especially the name, address, and DOB column.</p></li>
+                <li><p>Check the details before submitting the form, once the form is submitted then there is no scope of modification.</p></li>
+                <li><p>Keep the application ID after submission of the form for further communication.</p></li>
+            </ul>
+            <p><strong>Photo Requirements</strong></p>
+            <p>Your digital photo for the e-visa application should meet the fixed requirements of the authority, which are given below:</p>
+            <ul>
+                <li><p>JPEG in format and not greater than 300 KB in size</p></li>
+                <li><p>Equal height & width</p></li>
+                <li><p>Front view & full face</p></li>
+                <li><p>Plain, light-colored or white background</p></li>
+                <li><p>No shadows on the face or the background</p></li>
+            </ul>
+            <p><strong>Basic requirements</strong></p>
+            <p>The <strong>E-Visa Application</strong> is a very simple process with us, so only if you have the required documents in sequence, your homework will be stress-free. For this you need to do:</p>
+            <ul>
+                <li><p>Register yourself in online service</p></li>
+                <li><p>Fill every detail correctly</p></li>
+                <li><p>Attach the copy of your passport</p></li>
+                <li><p>Attach your passport size photographs as well.</p></li>
+                <li><p>Attach a copy of your passport size photograph</p></li>
+                <li><p>Pay the application fees</p></li>
+            </ul>
+            <p>If you are looking for any type of visa or e-visa India, e-Visa India can help you obtain the same very rapidly. So, don’t hesitate and contact us for the best services.</p>
 
-            <p><strong>Instructions for <a href="/">E-Visa Application</a></strong></p>
             <p><strong>Validity</strong></p>
             <ul>
                 <li><p><strong>e-Tourist Visa(for 30 Days)</strong>  Visa allow for double entry, non-extendable and non non-convertible.</p></li>
@@ -22,9 +45,6 @@
                 <li><p><strong>e-Medical Attendant Visa(for 60 Days)</strong> Only triple entry is permitted with with duration of 60 days from the date of grant of ETA.</p></li>
                 <li><p><strong>e-Business Visa(for 365 Days)</strong> An e-business visa permits you stay for upto 365 days from the date of grant of ETA, and you only get two times entry.</p></li>
             </ul>
-
-            <p><strong>Application to</strong></p>
-            <p>The consular selection at your nearest embassy or Indian high commission or for the hassle-free application process you can go through <a href="/">www.evisaindia.in</a>. They will help and assist you to get any type of e-visa India. </p>
             <p><strong>e-Visa Facility is available for holders of passport of following countries</strong></p>
             <?php $visa_count = count($evisa_country);?>
             <p>Citizens of the <?=$visa_count;?> countries listed below are eligible for the e-Visa, including the US, the UK, Canada and Australia (see full list below). Note all Pakistani nationals and foreign citizens who have Pakistani relatives, are required to apply for the traditional Indian Visa. Please find below the complete list of the <?=$visa_count;?> countries whose citizens are eligible to apply for the e-Visa:</p>

@@ -162,110 +162,97 @@
                          <div class="row">
                             <div class="about_us">
                                 <?php if($url_action == 'C') {?>
-                                    <p>The Indian e-Visa is a program that allows citizens of other counties to <strong>apply for Indian Visa</strong> online and at their comfort. Currently, thousands of travelers from different countries can apply for the visa online for different categories like tourist visa, medical visa, business visa and urgent visa based on the purpose of visit India. And the entire process can be done without having to visit the Indian Embassy. Tourists are therefore positive to use this scheme to get their Indian e-Visa as the process is well-organized and easy.</p>
-                                    <p><strong>Understanding The Indian E-Visa Process</strong></p>
-                                    <p>E-Visa is applied & received online without submitting your passport. The process of applying and getting a traditional Indian visa is very much complicated and take longer time in comparison to <strong>apply for Indian visa online</strong>. Generally, you have to wait about weeks for approval of traditional Visa instead of few days for e-Visa.</p>
-                                    <p>The online visa process is made straightforward and easy to allow travelers from different countries of the world to <strong>apply visa to India</strong>.  To apply for an <a href="/"><strong><u>Indian visa from USA</u></strong></a> or any other country you need to follow 3 simple steps:</p>
+                                    <p>All foreign nationals, their children and even as newly born babies need to <strong>apply for Indian visa</strong>. But the citizens of Nepal & Bhutan can enter India without any visa, but if they (citizens of Nepal & Bhutan) enter India from China then they need a visa. </p>
+                                    <p>Fees of visas are non-refundable even if the requested service is customized or not arranged. And one more important thing here is the validity of the visa begins from the date of issue not from the date of travel. Citizens from yellow fever affected countries who <strong>apply visa to India</strong> must have a valid vaccination certificate.</p>
+                                    <p>Visa holders <strong>apply for Indian visa online</strong> for long term visas valid for more than 180 days should fulfill the related registration official procedure. Individuals who have Student Visa, Employment Visa and Business Visa with the validity of more than 180 days are mandatory to get themselves registered in the nearby Foreign Registration Office or Foreigners Regional Registration Office within 14 days of arrival in India.</p>
+                                    <p><strong>Online Visa Application Steps</strong></p>
+                                    <p>The website <a href="/">http://e-visa-india.in/</a> helps the applicants to <strong>apply for Indian visa from USA</strong> or other nation with all legal formalities. Through this website you will get any type of visa very easily by providing the following information:-</p>
                                     <ul>
-                                        <li><p>Visit the www.evisaindia.in and fill out the application form with correct details.</p></li>
-                                        <li><p>Make an online payment using a PayPal, credit or debit card or netbanking.</p></li>
-                                        <li><p>Check your email address e-Visa will be sent to your email within a fixed time limit.</p></li>
+                                        <li><p><strong>The nation you are applying for a visa from</strong> - The applicants need to choose the country they apply from.</p></li>
+                                        <li><p><strong>Indian Mission</strong> - Choose the appropriate Indian Mission/Post applicable to your location</p></li>
+                                        <li><p><strong>Nationality</strong> – Reveal your nationality</p></li>
+                                        <li><p><strong>Date of Birth</strong> – Without any mistake in DD/MM/YYYY format</p></li>
+                                        <li><p><strong>Email ID</strong> - The soft copy of sanctioned visa is sent to this email</p></li>
+                                        <li><p><strong>Expected Date of Arrival</strong> - Without any mistake in DD/MM/YYYY format</p></li>
+                                        <li><p><strong>Visa Type</strong> – Depend on the purpose of the travel, the aspirant must opt for the types of visa he/she is applying for.</p></li>
+                                        <li><p><strong>Reason</strong> – There are different types of visas depends on the purpose of visit in India, applicants must reveal their purpose of visit.</p></li>
                                     </ul>
-                                    <p>It is very important to know the process of <strong>apply visa to India</strong>. Once an <strong>Indian visa application form</strong> is submitted online then you must not submit any other visa application against the same passport number at any other source.</p>
-                                    <p>If you have any doubt in your mind or you are unable to trace the application status then feel free to <strong>chat</strong> with our24x7 customer care service and get the <strong>e-mail support</strong> for your every problem regarding e-Visa India.</p>
+                                    <p>So, if you are ready to fill <strong>Indian visa application form</strong> then contact us, we will happy to help you.</p>
                                     <?php } elseif($url_action == 'U') {?>
-                                        <p>Are you in an emergency and want to come to India urgently in the next few days but still have not applied for Visa to India? But now you don’t need to take tension.</p>
-                                        <p>The Government of India has made efforts to make sure that you can easily travel to India when life presents any unpredictable incidences like illness, the death of any family member or legal engagements that require your availability in India. With <strong>Urgent Indian eVisa Application</strong>, the processing of your India Visa sanction letter (the eVisa) will be completed within 24 working hours and we are (evisaindia.in) also here to handle your every problem & uncertainties regarding urgent visa.</p>
-                                        <p><strong>Things to keep in mind before applying for urgent e visa:</strong></p>
+                                       <p>Generally, <strong>urgent e-tourist Visa</strong> for India is only approved to individuals who are from an Indian origin, in case of any emergency in their families like death or illness. In this visa type, the decision of the Consular Officer will be ultimate on the subject of what comprises an emergency.</p>
+                                        <p>Emergency Visa services will not exist to aspirants falling under reference categories. Marriage ceremonies, visits for a religious purpose or visits for tourism, etc. do not come under this category.</p>
+                                        <p><strong>The eligibility criteria for Emergency Visa to India</strong></p>
+                                        <p><strong>Urgent Indian eVisa Application</strong> is valid for 6-months to naturalize US citizens of Indian origin. If you want an emergency visa, then you need to submit your application with us, with all the necessary details of your visa requirement.</p>
+                                        <p>There are many important documents you need to arrange when applying for an <strong>emergency visa to India.</strong></p>
                                     <ul>
-                                        <li><p>The urgent or emergency visa to India is subject to approval only.</p></li>
-                                        <li><p><strong>Applicant can get their Urgent Visa within 24 working hours</strong></p></li>
-                                        <li><p>In emergency cases, like medical requirement or death of nearest & dearest, you will be asked to submit a copy of letters from the hospital to prove the happening.</p></li>
-                                        <li><p>It is mandatory to provide correct details like email, contact number, and other data.</p></li>
-                                        <li><p><strong>Urgent e-tourist Visa</strong> application system does not work on the National holidays of India.</p></li>
-                                        <li><p>This visa is valid for Double or Tripple entry.</p></li>
-                                        <li><p>Once your urgent visa will process, we will send you a copy. Travelers will need to show a hard copy of the visa to the immigration officers.</p></li>
+                                        <li><p>Valid Passport with 6-month validity</p></li>
+                                        <li><p>Passport size photograph with a plain background.</p></li>
+                                        <li><p>Proof of local address</p></li>
+                                        <li><p>Proof of emergency</p></li>
+                                        <li><p>Certificate for Renunciation of Indian Citizenship or any other relevant document</p></li>
                                     </ul>
-                                    <p>With evisaindia.in visa service, it's sure to get any type of Indian Visa without any hassle. Should you require any further assistance about <strong>Emergency Visa to India</strong>, and then don’t hesitate to <strong>chat</strong> with our customer care executives anytime & any day.  Or you can get <strong>email support</strong> at support@evisaindia.in, we will respond to you as soon as possible. So, apply now for the urgent visa to India with us and see the difference.</p>
+                                    <p>Urgent Indian eVisa applicants should upload their application online for the processing of their emergency visas. It is very important to fill every detail correctly; if there is any mistake your e-visa application will not be approved. And that’s why we are here to help you to move every step towards Urgent Indian eVisa.</p>
+                                    <p><strong>Duration & Validity</strong></p>
+                                    <p>Once you completed the application with valid documents and confirmation of full payment, you will get your emergency India e-visa with 1 to 3 days. But application for the emergency visas does not process on Indian National Holidays.</p>
+                                    <p>It is very hard to get an emergency visa to India and a minor mistake can reject your application. So, it is very important to take the help of an expert and we are always ready to help you. If you have any queries regarding an emergency visa then feel free to contact us.</p>
                                     <?php } elseif($url_action == 'T') {?>
-                                        <p>Indian Government was launched <strong>India tourist e visa</strong> system to allow the citizens of other nations to apply for the visa electronically.  And it is mandatory to all the foreign travelers in India to keep a valid visa while traveling.</p>
-                                        <p><strong>Evisaindia.in ASSISTANCE FOR INDIA VISA APPLICATION</strong></p>
-                                    <p>With the introduction of <strong>e tourist visa India</strong>, it has significantly made it trouble-free to get India Visa. And we are also there to make it easier when you apply for the tourist visa through us. We will apply on your behalf at a very nominal service charge plus Indian Government visa fee, but this can save yours lots of time and keep you away from tension.</p>
-                                    <p><strong>Indian tourist visa</strong> allows travelers to visit India for touristic uses. Some of the big reasons to visit India with this type of visa are:</p>
+                                        <p><strong>E tourist visa India</strong> is an online approval for the travelers whose only intention is visiting India for tourism. Recently, the Government of India has opened this facility for the citizens of 165 countries. Not worry, if your country is not available on the list of 165 countries you may go for the normal visa which may take a slightly longer time. However, in the end, you will be able to visit India as a tourist.</p>
+                                        <p><strong>The eligibility criteria for Indian e-Tourist visa</strong></p>
                                     <ul>
-                                        <li><p>Visiting the attractions of India</p></li>
-                                        <li><p>Visiting family or friends</p></li>
-                                        <li><p>Attending yoga & meditation classes</p></li>
+                                        <li><p>Foreign citizens whose purpose for visiting India is recreation & tourism for the short duration can apply for e-tourist visa</p></li>
+                                        <li><p>Passport with minimum 6 months validity and at least two blank pages</p></li>
+                                        <li><p>Return ticket or onward journey ticket</p></li>
+                                        <li><p>Sufficient funds to spend</p></li>
+                                        <li><p>India travel e visa not available to Diplomatic / Official Passport Holders</p></li>
+                                        <li><p>Children & newly born babies also need a valid e-visa</p></li>
                                     </ul>
-                                    <p><strong>Important points to know regarding India travel e visa:</strong></p>
-                                    <ul>
-                                        <li><p>One month e-Tourist Visa allow for double entry, non-extendable and non non-convertible.</p></li>
-                                        <li><p>One year e-Tourist Visa allow for multiple entries with duration of 365 days from the date of grant of ETA.</p></li>
-                                        <li><p>Five years e-Tourist Visa allow for multiple entries with duration of Five years from the date of grant of ETA</p></li>
-                                        <li><p>Must have sufficient fund for visit & stay in India.</p></li>
-                                        <li><p>Travelers are required to carry a copy of their approved e-Visa India authorization at all times during their stay.</p></li>
-                                        <li><p>Validity of the passport must be at least 6 months from the date of arrival with a minimum of 2 blank pages.</p></li>
-                                        <li><p><strong>Entry with e-tourist visa is valid through 27 Airports & 5 Seaports in India.</strong></p></li>
-                                    </ul>
-                                    <p>There are many other points if you want to know more, then <strong>chat with us</strong> and we are happy to help you. So no matter if you want a <strong>visa for Goa</strong> to enjoy heavenly beaches or North India to explore the Himalayas, we are ready to serve you.</p>
-                                    <?php } elseif($url_action == 'B') {?>
-                                        <p>Getting a chance to travel to India for business purpose, you will possibly be desperate to seize the opportunity anyhow. India is the best place to visit, even if you’ll mainly be there for business.</p>
-                                        <p><strong>India business visa</strong> is very much in demand and thus the Government of India has made it uncomplicated to attain the business visa online. Individuals who want to visit India for business or official deal can apply for electronic India visa by filling an application form online. Though, e-Visa is meant for short term visits but ideal for those who are scheduling a trip for a couple of days.</p>
-                                        <p><strong>If the spouse or any dependent family member wants to visit India with e-business visa holder then they must apply for entry visa only after the visa approval of themain business visa holder</strong></p>
-                                        <p><strong>Duration of E- Business Visa</strong></p>
-                                        <p><strong>An e-business visa permits you stay for upto 365 days, and you only get two times entry through 27 Airports & 5 Seaports, so that you can only leave and return once.</strong></p>
-                                        <p>So we at Evisaindia.in are ready to help you to get <strong>Indian e-Business Visa</strong> for a short time-span in which you can explore your business opportunities or represent your corporation in India to advance the relationship with Indian firms.</p>
-                                        <p><strong>What Are the Uses of Indian Online Business Visa?</strong></p>
-                                        <ol>
-                                            <li><p>For company or workshop meetings</p></li>
-                                            <li><p>To start a new venture whether its manufacturing or IT</p></li>
-                                            <li><p>For attending or giving the lectures under GIAN (Global Initiative for Academic Network)</p></li>
-                                            <li><p>For hiring manpower from India</p></li>
-                                            <li><p>For the sale & purchase</p></li>
-                                            <li><p>For attending seminars, business or trade fairs</p></li>
-                                        </ol>
-                                    <p><strong>Documents Required For Indian e-Business Visa</strong></p>
-                                    <ul>
-                                        <li><p>Scanned copy of passport Bio page</p></li>
-                                        <li><p>Digitally scanned photograph</p></li>
-                                        <li><p>Copy of the business card</p></li>
-                                        <li><p>Letter from the company to specify the reason for the visit on letterhead</p></li>
-                                        <li><p>Latest photograph of the applicant</p></li>
-                                        <li><p>PayPal or Credit card or Debit card or NetBanking account to complete the process</p></li>
-                                    </ul>
-                                    <p><strong>Apply for e business visa</strong></p>
-                                    <p>The process is very simple and won’t take much time for completion. You just need to fill the form on our website with correct details and submit the online application. And after that, it is our responsibility to provide you <strong>e business visa India</strong>.</p>
-                                    <?php } elseif($url_action == 'M') {?>
-                                    <p>The e-medical visa for India is a category for the visa to get travel authorization to seek medical treatment in India. Only this visa allows travelers to enter the country to seek medical assistance.</p>
-                                <p>The <strong>e-medical visa India</strong> is a short term visa granted for medical treatment explanations. But this type of visa is only granted to the patient and not for the caretaker. Caretaker of the patient can obtain the medical attendant visa to be an adjunct to the e-Medical visa holder.</p>
-                                <p><strong>How to apply for Indian medical visa?</strong></p>
-                                <p>With us (Evisaindia.in) it is very easy to obtain <strong>India Medical Visa</strong>. Eligible applicants who wish to receive medical treatment can easily complete our application form by filling a few necessary details which include their full name, date, and place of birth, nationality, contact info and passport type, etc.</p>
-                                <p>But before filling the online application form, applicants must keep in mind the points given below:</p>
-                                <ul>
-                                    <li><p>Only triple entry is permitted with e-visa medical.</p></li>
-                                    <li><p>You can visit only 3 times a year with e-medical visa.</p></li>
-                                    <li><p>E-medical visa is non-extendable & non-convertible.</p></li>
-                                    <li><p>You should have sufficient funds to continue their treatment.</p></li>
-                                    <li><p>You need to carry a copy of approved e-visa every time & everywhere in India.</p></li>
-                                    <li><p>You must have an advanced return ticket when applying for a medical visa.</p></li>
-                                    <li><p>Parents may not include their children in their online Visa for India application.</p></li>
-                                    <li><p>A letter from the hospital in India.</p></li>
-                                    <li><p><strong>e- Medical visa India provides you entrance in India through 26 designated airports and 5 seaports.</strong></p></li>
-                                </ul>
-                                    <p>It is feasible to get a <strong>medical visa India</strong> 3 times per year and each e Medical visa will permit a stay of 60 days. In that way, you can visit India for medical treatment and apply a next electronic visa if you want to. So, go ahead and apply for e-medical visa with us, and if you have any doubt in mind then don’t hesitate to chat with our <strong>customer care executives</strong> anytime.</p>
-                                    <?php } elseif($url_action == 'A') {?>
-                                    <p>Coming to India to be with your family member who is seeking the best medical treatment? If yes, then you need to apply for the <strong>India Medical Attendant visa application</strong></p>
-                                    <p>A medical attendant visa or <strong>India eMedical Attendant Visa</strong> can be granted to a maximum of 2 attendants who want to come with the person granted the eMedical visa in India. But the important point to keep in mind here is, the attendants should be close relatives of the person who granted the medical visa. And Medical Visa and Medical Attendant Visa have the same validity</p>
-                                    <p>All the basic requirements of Medical Visa for India are also applicable to any Medial Attendant visa applicant. The duration validity of the medical attendant visa is up to 1 year or the period of the treatment, whichever comes first. And this visa is only valid for 3 entries in 1 year.</p>
-                                    <p>With us (Evisaindia.in) it is very easy to obtain <strong>India Medical Visa</strong>. Eligible applicants who wish to receive medical treatment can easily complete our application form by filling a few necessary details which include their full name, date, and place of birth, nationality, contact info and passport type, etc.</p>
-                                    <p><strong>Documents & Requirements Medical Attendant Visa Applicants need to fulfill:-</strong></p>
+                                    <p><strong>Duration & Validity</strong></p>
+                                    <p><strong>Indian tourist visa</strong> has 3 special validities and a number of possible entries into India to choose from considering better flexibility for travelers.</p>
                                     <ol>
-                                        <li><p>Appointment letter from any recognized hospitals or treatment center in India with the mentioned name of the patient, address, contact details, name of the doctor and about the treatment.</p></li>
-                                        <li><p>The original passport that is valid for 6 months beyond stay in India with at least 2 blank passport pages.</p></li>
-                                        <li><p>Recent passport size color photograph with a plain white background.</p></li>
-                                        <li><p>Applicants must have a return or an onward ticket when applying for their e-Medical attendant visa.</p></li>
+                                        <li><p>If you choose a double entry e-Tourist visa, it comes with a validity of 30 days from the date of issue and gives you permission for a stay of 30 days.</p></li>
+                                        <li><p>If you choose multiple entry e-Tourist visa, it comes with the validity of 1 year from the day of issue and you can say up to 180 days.</p></li>
+                                        <li><p>Another multiple entry visa comes with 5 years of validity from the day of issue for stay up to 180 days per entry.</p></li>
                                     </ol>
-                                    <p>There are many other details and information applicants need to provide to the concerned department. As well as, applicants must answer many questions and for this, they need to prepare in advance. There are many other things for which applicants need to prepare in advance. But if they take services from any reputed service provider like www.evisaindia.in specialized visas online application services and <strong>medical attendant visa India</strong>, then they can get visa approval without any hassle.</p>
+                                    <p><strong>India tourist e visa</strong> is very simple to apply through <a href="/">https://www.e-visa-india.in/</a>. So, if you are looking for <strong>visa for Goa</strong> to visit India but have many doubts in your mind regarding visa and other legal formalities, you can chat with us anytime without any hesitation.</p>
+                                    <?php } elseif($url_action == 'B') {?>
+                                        <p><strong>Indian Business Visas</strong> or e-business visa India is issued to individuals who want to visit India for specific business purposes like promotion, negotiations, and establishment related business activities in India. As well as, people who want to set up a contact for future business relations are permitted to travel on an e-business visa in India.</p>
+                                        <p>But here you should keep in mind that, if you are entering India to work as employees then you need to apply for an employment visa, not for an <strong>e business visa India</strong></p>
+                                        <p><strong>An e-business visa India is granted to the following types of individuals:</strong></p>
+                                    <ul>
+                                        <li><p>You are approaching India for a legal business reason, such as establishing some international business, dealing with commercial products, for business meetings, hiring people for your business, participating in a trade fair, or other valid business activities.</p></li>
+                                        <li><p>You should be of “guaranteed financial position” - i.e. you should have sufficient funds (you should also be able to verify this to be granted a business visa).</p></li>
+                                        <li><p>You’re not coming to India to lend money, or to run an irrelevant business.</p></li>
+                                        <li><p>You stick to any tax liabilities you might face</p></li>
+                                        <li><p>As we mentioned in the upper paragraph, you are not going to be employed in India, for that you need to apply for an employment visa.</p></li>
+                                    </ul>
+                                    <p><strong>Duration & Validity</strong></p>
+                                    <p>An <strong>Indian e-Business Visa</strong> may be valid for 1 year or more with numerous entries. Citizens from the United States can stay only 180 days in India unless the individual obtains a residential permit. Businessmen who want to set up their own business or initiate a joint venture in India can apply for 1 years visa with multiple entries. For any queries regarding the eBusiness visa in India, you can contact us anytime.</p>
+                                    <?php } elseif($url_action == 'M') {?>
+                                    <p>A medical visa is a very good initiative for the individual who seeks the best & affordable treatment in India. Individuals can <strong>apply for Indian medical visa</strong> to get treatment from any reputed and government recognized hospitals or medical centers. If you want to take any attendant with you then only up to 2 attendants are permissible who must be your blood relative with separate medical attendant visas and equal visa validity as the Medical Visa. The serious disorders or medical conditions would be of key consideration for the medical visa for India</p>
+                                    <p><strong>Required documents for India Medical Visa seekers</strong></p>
+                                    <ul>
+                                        <li><p><strong>Passport with personal details:</strong> Passport with minimum 6 months validity, at least two blank pages, photocopy of passport with signature page.</p></li>
+                                        <li><p><strong>Passport size photographs:</strong> Most recent 2 x 2 passport size colored photograph with front view and plain background.</p></li>
+                                        <li><p><strong>Hospital Letter:</strong> An official document of preliminary medical recommendation from the country of origin/country of residence that certifies the aspirant has been counseled to go for particular medical treatment. In cases where the aspirant requests to go for treatment under the Indian system of Medicine, the case may also be considered.</p></li>
+                                        <li><p><strong>Deceleration of funds:</strong> Aspirants with the occupation of Student, Retired or Unemployed; 3 most recent bank statements are recommended for the deceleration of sufficient funds.</p></li>
+                                    </ul>
+                                    <p><strong>Duration & Validity</strong></p>
+                                    <p>The opening duration of the <strong>e-medical visa India</strong> is up to 60 days or the time of the treatment, whichever is less. The medical visa will be valid for a maximum of 3 entries in one year. And the duration starts from day one from the issue day, not on the day of entry.</p>
+                                    <p>If you want the medical visa India without any hassle then we can help you. For any queries or uncertainties in your mind regarding visa, feel free to call us.</p>
+                                    <?php } elseif($url_action == 'A') {?>
+                                    <p>India is not only a tourist but one of the most preferred medical hubs in the world, thanks to its modern and affordable best quality healthcare facilities. And that’s why many patients from developed nations or third world countries come here with the expectations of best medical treatments. </p>
+                                    <p>But, just like other foreign individuals, they need to take a visa permit from the Government of India. When the patients get their e-medical visa, but they also need attendants to take care of them while they get treatment. Most patients have deadly illnesses like cancer and therefore need personalized care from a family member. And if any of their family members want to come with them as an attendant then they need to apply for the e-Medical attendant visa.</p>
+                                    <p><strong>Indian e-Medical Attendant Visa </strong></p>
+                                    <p>Indian e-Medical Attendant Visa is only granted to a maximum of 2 relatives of the patient. This visa demands that the attendant of the patient remains with the patient during the treatment period.</p>
+                                   <p>The applicant for the attended visa is compulsory to produce a letter from a recognized /specialized Hospital/ in India validating that assistance is required by the patient with the Medical Attendant's name mentioned in the letter.</p>
+                                   <p><strong>Requirements:</strong></p>
+                                    <ul>
+                                        <li><p>A recent colored photograph of medical attendant visa applicants should be not more than 3 MB in size (2inch X 2inch), white background and no shadow on the face.</p></li>
+                                        <li>Passport with a minimum of 6 months validity, the passport should have at least 2 blank pages. </li>
+                                    </ul>
+                                    <p><strong>E-Medical Attendant Visa Fees & possession</strong></p>
+                                    <p>Upon successful fulfilling the requirements and paperwork, a medical attendant visa applicant will be prompted to pay for this service.</p>
+                                   <p>After the submission of the application, applicants will receive a notification through their email address of the successful application of e medical attendant visa. In the emergency cases Indian e-Medical Attendant Visa, applicants get the notification within 1 to 3 working days.</p>
                                     <?php } ?>
                             </div>
                         </div>

@@ -6,25 +6,40 @@
     <div class="row">
         <div class="about_us">
             <h1>Frequently Asked Questions</h1>
-            <p><strong>What is the Electronic Visa (e-Visa)?</strong></p>
-            <p>The Electronic Visa or e-Visa is an online visa issued by the Indian Government for citizens of 167 countries, who wish to visit India for tourist, medical, medical attendant or business reasons, for a continuous stay of 30 days, 90 days and 180 days, depending on your visa type and nationality.
+            <p><strong>Q1. What is an India Tourist e Visa?</strong></p>
+            <p>This is an official permit to enter in India and this permit is electronically attached with your passport.</p>
 
-                A valid Indian visa and an international travel document, eg; a valid and current passport, are required for all foreign visitors going to India</p>
-            <a href="/"><strong>Apply Online</strong></a>
-            <br/><br/>
-            <p><strong>What do I need to apply for an e-Tourist Visa?</strong></p>
+            <p><strong>Q2. India Tourist e Visa Validity, Number of Entries and Max Stay?</strong></p>
+            <p>There are 3 types of e Visa validity:</p>
 
-            <p>Current passport, picture, credit/debit card. If deemed necessary you may be required to provide additional information such as your home address, occupation, and family information.
+            <p><strong>30 days after issued Entries: </strong> Double Entry</p>
+            <p><strong>1 year after issued Entries:</strong> Several Entries. Continuous stay during each stay shall not more than 90 days, but the citizens of the USA, UK, Canada, and Japan can stay up to 180 days on each visit.</p>
+            <p><strong>5 years after issued</strong></p>
+            <p><strong>Entries:</strong> Several Entries. Continuous stay during each stay shall not more than 90 days, but the citizens of the USA, UK, Canada, and Japan can stay up to 180 days on each visit.</p>
 
-                It is necessary to supply extra information or documentation for business or medical visas.
+            <p><strong>Q3. Do I need to apply for the tourist e Visa if I am traveling to India on a ship?</strong></p>
 
-                For business visas for India, applicants must submit a Business Card giving information of the receiving organization.
+            <p>Of course, however, there are five entry points in India through waterway which are:</p>
+            <ul>
+                <li><p>CHENNAI</p></li>
+                <li><p>COCHIN</p></li>
+                <li><p>GOA</p></li>
+                <li><p>MANGALORE</p></li>
+                <li><p>MUMBAI</p></li>
+            </ul>
 
-                For medical visas for India, applicants must submit a letter from the participating hospital.
-
-                At the moment of application, it is not necessary to have the extra information as you can provide them at a later date.</p>
-<tr></tr>
-            <p><strong>Who is eligible to apply for Electronic Visa (e-Visa)?</strong></p>
+            <p><strong>Q4. Do I need a hard copy of the India Tourist e Visa?</strong></p>
+            <p>Yes, you will need a hardcopy of the Indian Tourist e visa upon arrival. Just after the approval of your visa, we will forward it to your email with other important details like your application ID, visa number, and validity of Visa. We recommend everyone to print this authentication and always keep a copy with your passport.</p>
+            <p><strong>Q5. Can I extend my stay beyond the limit?</strong></p>
+            <p>No, the duration of stay cannot be extended.</p>
+            <p><strong>Q6. How long does it take to get an India Tourist e Visa?</strong></p>
+            <p>It depends on your selected process timing. Generally, there are three process timing options which are:</p>
+            <ol>
+                <li><p>Standard Processing which takes 5 days.</p></li>
+                <li><p>Rush Processing takes 3 days.</p></li>
+                <li><p>Super Rush Processing takes 2 days.</p></li>
+            </ol>
+            <p><strong>Q7. Who is eligible to apply for Electronic Visa (e-Visa)?</strong></p>
             <?php $visa_count = count($evisa_country);?>
             <p>Citizens of the <?=$visa_count;?> countries listed below are eligible for the e-Visa, including the US, the UK, Canada and Australia (see full list below). Note all Pakistani nationals and foreign citizens who have Pakistani relatives, are required to apply for the traditional Indian Visa. Please find below the complete list of the <?=$visa_count;?> countries whose citizens are eligible to apply for the e-Visa:</p>
             <div class="panel clum_new" style="display: block;">
@@ -62,12 +77,12 @@
                 </div>
             </div>
 <p><strong>Note:</strong> If your country is not on this list, this does not mean you will not be able to travel to India. You will need to apply for a traditional Indian Visa at the nearest Embassy or Consulate</p>
-            <p><strong>How long before my trip to India should I apply for the e-Tourist Visa?</strong></p>
+            <p><strong>Q8. How long before my trip to India should I apply for the e-Tourist Visa?</strong></p>
             <p>You must apply for Electronic Visa (e-Visa) at least four (4) days before departing for India.
 
                 However, it is recommended to apply at least one (1) month in advance.</p>
             <br/>
-            <p><strong>Is the Electronic Visa (e-Visa) a single, multiple or multiple entry and can it be extended?</strong></p>
+            <p><strong>Q9. Is the Electronic Visa (e-Visa) a single, multiple or multiple entry and can it be extended?</strong></p>
             <p><b>For Tourist e-Visa</b></p>
             <ol>
                 <li><p>One Month (30 days) e-Tourist Visa Duration from the date of grant of ETA with Double Entry, non-extendable and non-convertible.</p></li>
@@ -79,17 +94,9 @@
             <p><b>For Medical e-Visa</b></p>
             <p>Sixty days (60 days) e-Medical Visa Duration from the date of grant of ETA with Tripple Entry.</p>
             <br/>
-            <p><strong>What to do in case I have made a mistake on my application?</strong></p>
+            <p><strong>Q10. What to do in case I have made a mistake on my application?</strong></p>
             <p>In case you have entered incorrect information and only realized the mistake after having submitted your e-Visa application, you will need to re-apply for a new travel authorization. The old application will be automatically canceled.</p>
-            <p><strong>What to do after I receive my eVisa online?</strong></p>
-            <p>You will receive your approved e-Tourist or e-business or e-Medical Visa application via email. You must save this email, as it is the official confirmation of your approved Visa.
-
-                You are required to print at least one copy and have it on you at all times, during your entire stay in India.
-
-                Upon arrival at one of the designated airports, you will be required to show your printed Electronic Visa (e-Visa) and your passport.
-
-                Once your documents have been verified, you have an obligation to provide your fingerprints and photo (biometric information). Then an immigration officer will place a visa sticker in your passport.</p>
-            <p><strong>Are there any restrictions to enter India with an Electronic Visa (e-Visa)?</strong></p>
+            <p><strong>Q11. Are there any restrictions to enter India with an Electronic Visa (e-Visa)?</strong></p>
             <p>Yes, foreign nationals who enter India with an e-Visa must arrive in one of the following airports:</p>
             <ul>
         <?php
@@ -109,9 +116,9 @@
             <p>Attempting to enter the country through any other entry port other than the ones specified above will result in having your entrance to India denied.
 
                 Those who wish to enter the country by land or different sea or airports must have previously applied and received a traditional Visa.</p>
-            <p><strong>Are there any restrictions to exit India with an e-Visa?</strong></p>
+            <p><strong>Q12. Are there any restrictions to exit India with an e-Visa?</strong></p>
             <p>No. You can exit India through any authorised Immigration Check Post (ICP).</p>
-            <p><strong>Is the e-Tourist Visa (e-Visa) valid for cruise ships?</strong></p>
+            <p><strong>Q13. Is the e-Tourist Visa (e-Visa) valid for cruise ships?</strong></p>
             <p>Yes, from April 2017 the e-Tourist visa (e-Visa) for India is valid for cruise ships docking at the following designated seaports:</p>
             <ul>
                 <li>CHENNAI</li>
@@ -121,12 +128,7 @@
                 <li>MUMBAI</li>
             </ul>
             <p>If you are taking a cruise which docks in another seaport, you must have a traditional visa stamped inside the passport.</p>
-            <p><strong>What is the difference between a traditional Indian Visa and an Electronic Visa?</strong></p>
-            <p>The traditional Indian Visa can only be obtained through a presential application at the embassy or consulate. The process to obtain a traditional Indian Visa is much more complicated and takes a lot longer, as you are required to submit your original passport along with your visa application, financial and residence statements via mail in order for the visa to be approved and stamped inside the physical passport. The traditional Indian Visa allows for stays of up to ninety (90) consecutive days.
-
-                The Electronic Visa e-Visa (e-Tourist, e-Business, e-Medical) application online is a much simpler and easier process, is issued electronically and sent to the applicant via e-mail, which he or she must print out to present upon arrival in India.
-                From April 2017, the e-Visa is accepted in 28 different international airports in India as well as 5 seaports. This number will soon rise according to the Indian Government. The e-Visa also allows holders to remain in India for up to sixty (60) consecutive days. It has also been changed to a double-entry visa allowing holders to enter India twice with the same visa.</p>
-            <p><strong>What vaccines do I need to travel to India?</strong></p>
+            <p><strong>Q14. What vaccines do I need to travel to India?</strong></p>
             <p>While you are not required to get vaccinated before your trip to India, it is highly recommendable that you do.
 
                 Following are the most commonly spread diseases for which you should get vaccinated:</p>
@@ -138,7 +140,7 @@
                 <li>Yellow fever</li>
             </ul>
             <p>Find more information regarding the health regulations <a target="_blank" href="https://wwwnc.cdc.gov/travel/destinations/traveler/none/india"><u>here</u></a>.</p>
-            <p><strong>Do I need a Yellow Fever Vaccination Card to enter India?</strong></p>
+            <p><strong>Q15. Do I need a Yellow Fever Vaccination Card to enter India?</strong></p>
             <p><strong>A</strong> Angola, Argentina</p>
             <p><strong>B</strong> Benin,Bolivia, Brazil, Burkina Faso, Burundi</p>
             <p><strong>C</strong> Cameroon,Central African Republic, Chad, Colombia, Congo, Cote d’Ivoire</p>
